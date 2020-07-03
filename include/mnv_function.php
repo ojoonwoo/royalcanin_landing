@@ -100,6 +100,9 @@ class mnv_function extends mnv_dbi
 		$result 	= mysqli_query($my_db, $query);
 		$data		= mysqli_fetch_array($result);
 
+		$query		= "UPDATE serial_info SET useYN='Y', use_date='".date('Y-m-d H:i:s')."' WHERE 1 AND serial_code='".$data['serial_code']."'";
+		$result 	= mysqli_query($my_db, $query);
+
 		return $data['serial_code'];
 	}
 
