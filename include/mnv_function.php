@@ -88,11 +88,10 @@ class mnv_function extends mnv_dbi
 	{
 		global $my_db;
 
-		$serial = sprintf('%12d',rand(100000000000,999999999999));
-
 		// $serial	= 111111111111;
 		$i = 0;
 		while($i < 200000) {
+			$serial = sprintf('%12d',rand(100000000000,999999999999));
 			$query		= "INSERT INTO serial_info(serial_code) values('".$serial."')";
 			$result 	= mysqli_query($my_db, $query);
 			$i++;
