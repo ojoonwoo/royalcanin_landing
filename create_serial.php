@@ -5,4 +5,6 @@
     $mobileYN      = $mnv_f->MobileCheck();
 
     $serial = $mnv_f->create_serial();
+
+    print_r($serial);
 ?>
