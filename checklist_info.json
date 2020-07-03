@@ -1,0 +1,132 @@
+{
+    "skin": {
+        "order": "2",
+        "list": [
+            {
+                "question": "식이 알러지나 피부질환 진단을 받은 적이 있나요?",
+                "counseling": "Y"
+            },
+            {
+                "question": "탈모가 발생 했나요?",
+                "counseling": "Y"
+            },
+            {
+                "question": "원래 피부가 민감한 견종 인가요?",
+                "counseling": "N"
+            },
+            {
+                "question": "때로 가려워하거나 자주 긁나요?",
+                "counseling": "N"
+            }
+        ]
+    },
+    "weight": {
+        "order": "1",
+        "list": [
+            {
+                "question": "과체중으로 인해 건강적인 문제가 발생한 적이 있나요?",
+                "counseling": "Y"
+            },
+            {
+                "question": "반려견의 허리를 만졌을때 갈비뼈가 잘 만져지지 않나요?",
+                "counseling": "Y"
+            },
+            {
+                "question": "원래 살이 찌는 경향이 있나요?",
+                "counseling": "N"
+            },
+            {
+                "question": "평소 움직이는 것을 귀찮아 하나요?",
+                "counseling": "N"
+            },
+            {
+                "question": "최근 조금만 먹어도 살이 찌는거 같나요?",
+                "counseling": "N"
+            }
+        ]
+    },
+    "digest": {
+        "order": "3",
+        "list": [
+            {
+                "question": "단시간에 수차례 설사나 구토를 하나요?",
+                "counseling": "Y"
+            },
+            {
+                "question": "대변이나 구토에 피가 섞여 나오나요?",
+                "counseling": "Y"
+            },
+            {
+                "question": "자주 가스를 배출 하나요?",
+                "counseling": "N"
+            },
+            {
+                "question": "평소보다 배변 횟수가 증가했나요?",
+                "counseling": "N"
+            },
+            {
+                "question": "평소보다 변이 붉은 경향이 있나요?",
+                "counseling": "N"
+            }
+        ]
+    },
+    "fur": {
+        "order": "6",
+        "list": [
+            {
+                "question": "비듬이나 탈모, 붉은 반점이 관찰 되나요?",
+                "counseling": "Y"
+            },
+            {
+                "question": "최근 털이 푸석해 졌나요?",
+                "counseling": "N"
+            },
+            {
+                "question": "예전에 비해 윤기가 없거나 색이 선명하지 않나요?",
+                "counseling": "N"
+            }
+        ]
+    },
+    "stress": {
+        "order": "5",
+        "list": [
+            {
+                "question": "사료 혹은 물을 섭취하지 못하나요?",
+                "counseling": "Y"
+            },
+            {
+                "question": "경련을 일으킨적이 있나요?",
+                "counseling": "Y"
+            },
+            {
+                "question": "바뀐 환경에 민감한 반응을 보이나요? (낯선사람, 환경 등)",
+                "counseling": "N"
+            },
+            {
+                "question": "갑갑한 도시생활로 인해 스트레스를 받나요?",
+                "counseling": "N"
+            },
+            {
+                "question": "평소보다 불안해 하거나 숨으려 하나요?",
+                "counseling": "N"
+            }
+        ]
+    },
+    "neutral": {
+        "order": "4",
+        "list": [
+            {
+                "question": "중성화 이후 이미 과체중이나 비만인 상태인가요?",
+                "counseling": "Y"
+            },
+            {
+                "question": "중성화 수술을 받았나요?",
+                "counseling": "N"
+            },
+            {
+                "question": "중성화 이후 체중이 급격하게 불어나는 사실을 알고 계신가요?",
+                "counseling": "N"
+            }
+        ]
+    }
+}

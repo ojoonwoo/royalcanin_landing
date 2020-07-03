@@ -1,0 +1,42 @@
+{
+    "skin": [
+        {
+            "question": "식이 알러지나 피부질환 진단을 받은 적이 있나요?",
+            "checked": "Y"
+        },
+        {
+            "question": "탈모가 발생 했나요?",
+            "checked": "Y"
+        },
+        {
+            "question": "원래 피부가 민감한 견종 인가요?",
+            "checked": "N"
+        },
+        {
+            "question": "때로 가려워하거나 자주 긁나요?",
+            "checked": "N"
+        }
+    ],
+    "weight": [
+        {
+            "question": "과체중으로 인해 건강적인 문제가 발생한 적이 있나요?",
+            "checked": "Y"
+        },
+        {
+            "question": "반려견의 허리를 만졌을때 갈비뼈가 잘 만져지지 않나요?",
+            "checked": "Y"
+        },
+        {
+            "question": "원래 살이 찌는 경향이 있나요?",
+            "checked": "N"
+        },
+        {
+            "question": "평소 움직이는 것을 귀찮아 하나요?",
+            "checked": "N"
+        },
+        {
+            "question": "최근 조금만 먹어도 살이 찌는거 같나요?",
+            "checked": "N"
+        }
+    ]
+}

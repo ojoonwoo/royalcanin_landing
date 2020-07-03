@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoyalCanin</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link href="https://vjs.zencdn.net/7.8.2/video-js.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <script src="./js/jquery-3.3.1.min.js"></script> -->
+    <script src="./js/jquery-1.11.2.min.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div class="inner">
+                <a href="./" class="logo">
+                    <img src="./images/logo.png" alt="로얄캐닌 홈으로">
+                </a>
+                <nav class="menu">
+                    <ul>
+                        <li class="active">
+                            <a href="javascript:void(0)" data-url="#section1">메인</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-url="#section2">제품소개</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-url="#section3">체험 프로그램</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-url="#section4">구매 프로모션</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="content _main">
+            <section class="section _01" id="section1">
+                <div class="inner">
+                    <h1 class="title-img">
+                        <img src="./images/main_01_title.png" alt="건강을 생각한다면 작은 신호도 지나치지 마세요">
+                    </h1>
+                    <div class="main-obj">
+                        <div class="product">
+                            <img src="./images/main_01_product.png" alt="제품 목록">
+                        </div>
+                        <div class="pome">
+                            <img src="./images/main_01_pome.png" alt="포메라니안">
+                        </div>    
+                    </div>
+                    <div class="button-wrap">
+                        <button type="button" class="type-01 with-icon icon-req">무료체험 신청</button>
+                        <button type="button" class="type-01 with-img img-feedbox">특별한 구매혜택</button>
+                    </div>
+                </div>
+            </section>
+            <section class="section _02" id="section2">
+                <!-- 활성탭에 따른 컨텐츠 변경 -->
+                <!-- json ajax -->
+                <div class="title-object _1">제품소개</div>
+                <h2 class="sec-title">반려견 건강 맞춤 사료 찾기</h2>
+                <p class="sec-sub">강아지의 <b>건강상태에 꼭 맞는 건강기능사료</b>를 만나보세요</p>
+                <ul class="tab-container">
+                    <li>
+                        <button type="button" class="tab-trigger skin is-active" data-key="skin">피부</button>
+                    </li>
+                    <li>
+                        <button type="button" class="tab-trigger weight" data-key="weight">체중</button>
+                    </li>
+                    <li>
+                        <button type="button" class="tab-trigger digest" data-key="digest">소화</button>
+                    </li>
+                    <li>
+                        <button type="button" class="tab-trigger neutral" data-key="neutral">중성화</button>
+                    </li>
+                    <li>
+                        <button type="button" class="tab-trigger fur" data-key="fur">털</button>
+                    </li>
+                    <li>
+                        <button type="button" class="tab-trigger stress" data-key="stress">스트레스</button>
+                    </li>
+                </ul>
+                <div class="product-container" data-key="className">
+                    <div class="title-block">
+                        <div class="inner">
+                            <div class="title">
+                                <span data-key="title"></span>
+                                <span>로얄캐닌 <em data-key="productName"></em></span>
+                            </div>
+                            <img class="prd-img" data-key="productImage" src="./images/main_02_product_skin.png" alt="더마 컴포트">
+                            <video playsinline controlslist="nodownload" class="video-player video-js vjs-matrix vjs-big-play-centered" data-key="video" id="video-player">
+                                <source src="./images/video_skin.mp4" type="video/mp4">
+                            </video>
+                            <div class="navi">
+                                <span id="current-num">1</span>
+                                <span>/</span>
+                                <span>6</span>
+                                <div class="arrow">
+                                    <a href="javascript:void(0)"><img src="./images/slider_arrow.png" alt="" class="move-arrow pre-slide"></a>
+                                    <a href="javascript:void(0)"><img src="./images/slider_arrow.png" alt="" class="move-arrow next-slide"></a>
+                                </div>
+                            </div>
+                            <!-- <video loop controlslist="nodownload" poster="" class="video-player video" data-key="video" type="video/mp4" src=""> -->
+                                <!-- <source src="" type="video/mp4"> -->
+                            <!-- </video> -->
+                            <!-- <button type="button" class="video-control"></button> -->
+                        </div>
+                    </div>
+                    <div class="button-wrap" data-key="buttonUrl">
+                        <button type="button" class="type-01 with-img img-feedbox2 link-btn">특별한 구매혜택</button>
+                        <button type="button" class="type-01 with-icon icon-magni link-btn" data-type="_self">제품 보러 가기</button>
+                    </div>
+                    <div class="review-block">
+                        <div class="title"><em data-key="productName"></em> 급여 후기</div>
+                        <div class="slick-container review-swiper">
+                            <ul class="slick-wrapper" data-key="reviewList"></ul>
+                        </div>
+                    </div>
+                    <div class="article-block">
+                        <div class="title"><em class="" data-key="issue"></em> 위한 TIP</div>
+                        <ul class="list" data-key="articleList"></ul>
+                    </div>
+                </div>
+            </section>
+            <section class="section _03" id="section3">
+                <div class="">
+
+                </div>
+                <!-- 체크리스트 1단계 -->
+                <!-- 선택값에 따른 링크값 변경 -->
+                <div class="title-object _2">셀프 견강 체크</div>
+                <h2 class="sec-title">가장 걱정되는 ‘견’강문제가 있나요?</h2>
+                <p class="sec-sub"><b>건강상태를 체크</b>해 보시고<br><b>추천받은 맞춤 건강사료를 체험</b>해 보세요!</p>
+                <div class="product">
+                    <img src="./images/main_03_step1_product.png" alt="">
+                </div>
+                <div class="checklist">
+                    <div class="row">
+                        <button type="button" class="check-circle" data-key="skin">
+                            <div class="inner">
+                                <!-- <img class="object svg" src="./images/checklist_obj_skin.svg" alt="피부 건강"> -->
+                                <div class="object"></div>
+                                <span>피부 건강</span>
+                            </div>
+                        </button>
+                        <button type="button" class="check-circle" data-key="weight">
+                            <div class="inner">
+                                <div class="object"></div>
+                                <span>체중 관리</span>
+                            </div>
+                        </button>
+                        <button type="button" class="check-circle" data-key="digest">
+                            <div class="inner">
+                                <div class="object"></div>
+                                <span>소화 관리</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="row">
+                        <button type="button" class="check-circle" data-key="neutral">
+                            <div class="inner">
+                                <div class="object"></div>
+                                <span>중성화 후 관리</span>
+                            </div>
+                        </button>
+                        <button type="button" class="check-circle" data-key="fur">
+                            <div class="inner">
+                                <div class="object"></div>
+                                <span>털 케어</span>
+                            </div>
+                        </button>
+                        <button type="button" class="check-circle" data-key="stress">
+                            <div class="inner">
+                                <div class="object"></div>
+                                <span>스트레스 관리</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="next-step">
+                    <!-- <button type="button" class="type-02" id="go-sub" data-popup="#step2-layer">다음 단계로</button> -->
+                    <button type="button" class="type-02" id="go-sub">다음 단계로</button>
+                    <span>* 최대 2개 선택 가능</span>
+                </div>
+            </section>
+            <section class="section _04" id="section4">
+                <div class="title-object _4">100% 증정 이벤트</div>
+                <h2 class="sec-title">건강 관리의 첫 단계를 위한<br><b>로얄캐닌 건강기능 사료</b></h2>
+                <img src="./images/main_promo_img.png" alt="사료구매시 사료통, 샘플 증정" class="promo-img">
+                <button type="button" class="type-01 link-btn" data-url="https://smartstore.naver.com/petcore2018/products/4811682558">구매 혜택 받기</button>
+            </section>
+        </div>
+        <div id="footer">
+            <span class="for-a11y">Copyright © 2020. ROYAL CANIN all rights reserved.</span>
+        </div>
+    </div>
+    <div class="popup" id="step2-layer">
+        <div class="inner">
+            <div id="container">
+                <div class="content _sub __checklist">
+                    <button type="button" class="popup-prev"  data-popup="@close"></button>
+                    <div class="title-block">
+                        <h1>발견하셨나요?</h1>
+                        <p>강아지의 <b>모든 신호를 선택</b>해주세요</p>
+                    </div>
+                    <ul class="checklist step2"></ul>
+                    <button type="button" class="type-01" id="go-result">건강 맞춤 사료 추천 받기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="result-layer">
+        <div class="inner">
+            <div id="container">
+                <div class="content _sub __result">
+                    <button type="button" class="popup-close"  data-popup="@close"></button>
+                    <div class="title-block">
+                        <div class="title">
+                            반려견의 <em data-key="issue"></em><br><b data-key="statusMsg"></b>
+                        </div>
+                        <!-- 수의사 상담 필요 메시지 -->
+                        <div class="need-doctor msg1-doctor">
+                            <img src='./images/result_doctor_icon.png'>
+                            <span data-key="text1_doctor"></span>
+                        </div>
+                        <!-- end 수의사 상담 필요 메시지 -->
+                    </div>
+                    <div class="product-area">
+                        <div class="info-wrap">
+                            <div class="img">
+                                <img src="" alt="" data-key="productResultImage">
+                            </div>
+                            <div class="desc">
+                                <!-- 수의사 상담 필요 메시지 -->
+                                <div class="need-doctor msg2-doctor">
+                                    <span class="product-subtitle" data-key="subTitle"></span>
+                                    <div class="product-title">
+                                        <span data-key="productTitle"></span>
+                                    </div>
+                                </div>
+                                <!-- end 수의사 상담 필요 메시지 -->
+                                <!-- 수의사 상담 불필요 메시지 -->
+                                <div class="needless-doctor product-title">
+                                    <span data-key="productTitle"></span>
+                                </div>
+                                <!-- 수의사 상담 불필요 메시지 -->
+                                <div class="needless-doctor">
+                                    <span class="product-subtitle" data-key="subTitle"></span>
+                                </div>
+                                <!-- end 수의사 상담 불필요 메시지 -->
+                                <!-- end 수의사 상담 불필요 메시지 -->
+                                <ul data-key="productInfo"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-wrap" data-key="buttonUrl">
+                        <button type="button" class="type-01 with-icon icon-req">무료체험 신청</button>
+                        <button type="button" class="type-01 with-img img-feedbox">특별한 구매혜택</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/slick.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.8.2/video.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollToPlugin.min.js"></script>
+    <script>
+        $(".menu li a").on("click", function(){
+            console.log('click');
+            $(".menu li").removeClass("active");
+            $(this).parent('li').addClass("active");
+            var targetURL = $(this).attr('data-url');
+            sectionMove(targetURL);
+        })
+        
+        // // 메뉴레이어 섹션 클릭 이벤트 -> 메뉴레이어 닫고 섹션 이동으로
+        // $(document).on('click', '#menu-layer li a', function(e) {
+        //     e.preventDefault();
+        //     var targetURL = $(this).attr('data-url');
+        //     sectionMove(targetURL);
+        // });
+
+        // 섹션 이동
+        function sectionMove(target) {
+            gsap.to(window, {duration: 1, scrollTo: { y: target, offsetY: 56.5 }, ease: "power2"});
+        }
+
+    </script>
+</body>
+</html>
