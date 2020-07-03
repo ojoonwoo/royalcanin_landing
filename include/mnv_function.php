@@ -88,14 +88,6 @@ class mnv_function extends mnv_dbi
 	{
 		global $my_db;
 
-		// $i = 0;
-		// while($i < 200000) {
-		// 	$serial = sprintf('%12d',rand(100000000000,999999999999));
-		// 	$query		= "INSERT INTO serial_info(serial_code) values('".$serial."')";
-		// 	$result 	= mysqli_query($my_db, $query);
-		// 	$i++;
-		// }
-
 		$query		= "SELECT serial_code FROM serial_info WHERE 1 AND useYN='N' ORDER BY idx ASC LIMIT 1";
 		$result 	= mysqli_query($my_db, $query);
 		$data		= mysqli_fetch_array($result);
