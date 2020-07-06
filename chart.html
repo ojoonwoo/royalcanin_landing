@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <title>Document</title>
+    <style>
+        .chart-wrapper {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-wrapper">
+        <canvas id="myChart" width="300" height="300"></canvas>
+    </div>
+    <script>
+        // the initial seed
+        Math.seed = Date.now();
+ 
+        // in order to work 'Math.seed' must NOT be undefined,
+        // so in any case, you HAVE to provide a Math.seed
+        Math.seededRandom = function(max, min) {
+            max = max || 1;
+            min = min || 0;
+ 
+            Math.seed = (Math.seed * 9301 + 49297) % 233280;
+            var rnd = Math.seed / 233280;
+ 
+            return min + rnd * (max - min);
+        }
+        var pointData = [90, 40, 40, 40, 40];
+        var ctx = document.getElementById('myChart');
+        var myChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ['체중 관리', '스트레스 관리', '요로계 질환', '신장 질환', '위장관 질환'],
+                datasets: [{
+                    label: 'Result',
+                    data: [90, 40, 40, 40, 40],
+                    // data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
+                    backgroundColor: [
+                        'rgba(227, 0, 26, 0.7)',
+                        'rgba(227, 0, 26, 0.7)',
+                        'rgba(227, 0, 26, 0.7)',
+                        'rgba(227, 0, 26, 0.7)',
+                        'rgba(227, 0, 26, 0.7)',
+                    ],
+                    borderColor: [
+                        'rgba(227, 0, 26, 0.7)',
+                        'rgba(227, 0, 26, 0.7)',
+                        'rgba(227, 0, 26, 0.7)',
+                        'rgba(227, 0, 26, 0.7)',
+                        'rgba(227, 0, 26, 0.7)',
+                    ],
+                    borderWidth: 0,
+                    pointRadius: 0,
+                }]
+            },
+            options: {
+                animation: {
+                    // easing: 'easeInQuad',
+                    duration: 1000,
+                    onComplete: function() {
+                        // drawResult();
+                    }
+                },
+                legend: {
+                    display: false
+                },
+                scale: {
+                    pointLabels:{
+                        fontColor: ['red', '#666', '#666', '#666', '#666'],
+                        fontSize: '13'
+                    },
+                    gridLines: {
+                        zeroLineColor: 'red',
+                        zeroLineBorderDash: [4, 4],
+                        color: ['rgba(0, 0, 0, 0.2)', 'rgba(0, 0, 0, 0.2)', 'rgba(0, 0, 0, 0.2)', 'rgba(0, 0, 0, 1)'],
+                        // color: setColor(),
+                        // borderDash: setDash(),
+                        // borderDashOffset: 100
+                    },
+                    angleLines: {
+                        color: 'rgba(0, 0, 0, 0.2)',
+                    },
+                    ticks: {
+                        display: false,
+                        stepSize: 25,
+                        max: 100,
+                        suggestedMin: 10,
+                        suggestedMax: 100,
+                        beginAtZero: true
+                    },
+                }
+            }
+        });
+        
+        function drawResult() {
+
+
+            // 점수배열로 차트 그림
+            // 높은 점수 인덱스로 myChart.options.scale.pointLabels[idx] 컬러값 바꿈
+
+
+
+            setTimeout(function() {
+                myChart.data.datasets[0].data = pointData;
+                // myChart.data.datasets.forEach(function(dataset) {
+                // });
+                myChart.update();
+            }, 200);
+        }
+        
+        function randomPoint() {
+            myChart.data.datasets.forEach(function(dataset) {
+                dataset.data = dataset.data.map(function() {
+                    console.log(randomScalingFactor());
+                    return randomScalingFactor();
+                });
+            })
+            myChart.update();
+        }
+        function randomScalingFactor() {
+            return Math.round(Math.seededRandom(0, 100));
+        };
+        // myChart.options.scale.gridLines.borderDash = [0, 0];
+        console.log(myChart.options.scale.pointLabels);
+        // myChart.update();
+        
+    </script>
+</body>
+</html>
