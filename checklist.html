@@ -4,74 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body, ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .checklist-container {
+            overflow: hidden;
+        }
+        .list-wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        .list-wrapper .group {
+            width: 100%;
+            padding: 0 24px;
+            flex-shrink: 0;
+        }
+        .list-wrapper li {
+            margin-bottom: 10px;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .list-wrapper .group:first-child li {
+            opacity: 1;
+            visibility: visible;
+        }
+        .chk-trigger {
+            font-size: 14px;
+            padding: 10px 0;
+        }
+    </style>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
 </head>
 <body>
     <div id="container">
         <div id="sub-header">
-            
+            <button type="button" class="go-prev">이전</button>
         </div>
         <div class="content _checklist">
-            <div class="checklist-wrapper">
-                <ul class="group" data-cate="skin">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <ul class="group" data-cate="stress">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <ul class="group" data-cate="urinary">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <ul class="group" data-cate="kidney">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <ul class="group" data-cate="digest">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+            <div class="checklist-container">
+                <div class="list-wrapper">
+                    <ul class="group is-current" data-cate="skin"></ul>
+                    <ul class="group" data-cate="stress"></ul>
+                    <ul class="group" data-cate="urinary"></ul>
+                    <ul class="group" data-cate="kidney"></ul>
+                    <ul class="group" data-cate="gastro"></ul>
+                </div>
             </div>
-            <button type="button">다음</button>
+            <button type="button" class="go-next">다음</button>
         </div>
     </div>
     <script>
-        
+        // serial 없으면 고양이 정보입력으로 튕길것
+        var $doc = $(document);
+        $doc.ready(function() {
+            catTest.init();
+        });
 
-        var checklist = function() {
+        var catTest = function() {
             var currentStep = 0;
+            var checklist = {};
+            var isAnimate = false;
+            var $wrapperEl = $('.list-wrapper');
+            var $groupEl = $('.list-wrapper .group');
             return {
                 init: function() {
                     // 초기화
                     // checklist json 가져와서 뿌림
+                    $.ajax({
+                        url: "./checklist_info.json",
+                        cache: false,
+                        dataType: "json",
+                        type: 'get',
+                        success: function (data) {
+                            var object = data;
+                            
+                            for (var key in object) {
+                                var checklistEl = "";
+                                checklist[key] = {};
+                                checklist[key].list = [];
+                                object[key].list.forEach(function(item) {
+                                    var el = "<li>";
+                                        el += "<button type='button' class='chk-trigger'>";
+                                        el += "<span class='chk-shape'></span>";
+                                        el += "<span class='text'>"+item.question+"</span>";
+                                        el += "</button>";
+                                        el += "</li>";
+                            
+                                    checklistEl += el;
+                                });
+                                $('[data-cate="'+key+'"]').html(checklistEl);
+                            }
+                        },
+                        error: function(jqXHR, errMsg) {
+                            // Handle error
+                            alert(errMsg);
+                        }
+                    });
+                    this.bind();
                 },
                 bind: function() {
                     // 이벤트 바인딩
+                    var _this = this;
+                    $doc.on('click', '.chk-trigger', function() {
+                        var $this = $(this);
+                        $this.toggleClass('is-active');
+                    });
+                    $doc.on('click', '.go-next', function() {
+                        if(isAnimate) return false;
+                        _this.nextStep();
+                    });
+                    $doc.on('click', '.go-prev', function() {
+                        if(isAnimate) return false;
+                        _this.prevStep();
+                    });
                 },
                 prevStep: function() {
-
+                    if(currentStep<1) {
+                        alert('반려묘 정보 페이지로 돌아갑니다.');
+                        return;
+                    } else {
+                        this.stepAnimate('prev');
+                    }
+                    console.log(currentStep);
                 },
                 nextStep: function() {
-
+                    if(currentStep>3) {
+                        alert('로딩&결과 페이지로 이동합니다.');
+                        this.submit();
+                        return;
+                    } else {
+                        this.stepAnimate('next');
+                    }
+                    console.log(currentStep);
+                },
+                stepAnimate: function(direction) {
+                    console.log('step animation start');
+                    isAnimate = true;
+                    var stepTl = gsap.timeline({onComplete: function(){
+                        (direction==='next') ? currentStep++ : currentStep--;
+                        isAnimate = false;
+                        $('.list-wrapper .group').removeClass('is-current').eq(currentStep).addClass('is-current');
+                        console.log('step animation end');
+                    }});
+                    if(direction === 'next') {
+                        stepTl
+                        .to($wrapperEl, {duration: 0.55, x: "-="+100+'%'})
+                        .to($groupEl.eq(currentStep+1).find('li'), {stagger: 0.15, autoAlpha: 1}, "-=0.45")
+                        .set($groupEl.eq(currentStep).find('li'), {autoAlpha: 0});
+                        
+                    } else {
+                        stepTl
+                        .to($wrapperEl, {duration: 0.55, x: "+="+100+'%'})
+                        .to($groupEl.eq(currentStep-1).find('li'), {stagger: 0.15, autoAlpha: 1}, "-=0.45")
+                        .set($groupEl.eq(currentStep).find('li'), {autoAlpha: 0});
+                    }
                 },
                 submit: function() {
-                    // 체크 정보 db update 후 callback에서 form 만들어 result로
+                    $('.chk-trigger').each(function(idx, el) {
+                        var key = $(this).closest('.group').attr('data-cate');
+                        var question = $(this).find('.text').text();
+                        var pushVal = {"question": question, "checked": $(el).hasClass('is-active') ? "Y" : "N"};
+                        checklist[key].list.push(pushVal);
+                    });
+
+                    for (var key in checklist) {
+                        var len = 0;
+                        checklist[key].list.forEach(function(item) {
+                            if(item.checked == 'Y') {
+                                len++;
+                            }
+                        });
+                        checklist[key].checkedLength = len;
+                        // console.log('key:', key);
+                        // console.log('length:', len);
+                    }
+
+                    console.log(checklist);
+                    // 체크 정보 db update 후 callback에서 result로 serial같이 넘김
+
                 }
             };
         }();

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body, ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+    </style>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="sub-header">
+            <button type="button" class="go-prev">이전</button>
+        </div>
+        <div class="content _result">
+            
+        </div>
+    </div>
+    <script>
+        // serial 없으면 고양이 정보입력으로 튕길것
+        var $doc = $(document);
+        var keyInfo = {
+            "skin": {
+                "text": "체중 관리"
+            },
+            "stress": {
+                "text": "스트레스 관리"
+            },
+            "urinary": {
+                "text": "요로계 질환"
+            },
+            "kidney": {
+                "text": "신장 질환"
+            },
+            "gastro": {   
+                "text": "위장관 질환"
+            }  
+        };
+        $doc.ready(function() {
+            // db에서 serial로 로우 셀렉
+            // 반려묘 정보, 체크정보
+            // 체크정보 for in
+            // 권고할 key 배열 생성
+            // key 돌면서 if(checkedLength>=3) adviceArr.push(key);
+            // (checklist[key].checkedLength/checklist[key].list.length)*100 -> 각 key 지표 점수
+            // if(adviceArr.length>0 && adviceArr.length<2)
+            // adviceArr[0] 권고
+            // else if(adviceArr.length>=2)
+            // adviceArr[i] 권고
+            // else
+            // 권고없음
+
+        });
+
+
+        
+    </script>
+</body>
+</html>

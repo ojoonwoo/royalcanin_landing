@@ -1,0 +1,287 @@
+{
+    "skin": {
+        "className": "_skin",
+        "issue": "건강한 피부 관리를",
+        "title": "긁는 행동은 이제 안녕!",
+        "productName": "더마 컴포트",
+        "productImage": "images/main_02_product_skin.png",
+        "video": {
+            "poster": "images/poster_skin.jpg",
+            "src": "images/video_skin.mp4"
+        },
+        "buttonUrl": [
+            "https://smartstore.naver.com/petcore2018/products/4811682558", "detail.php?it_key=skin"
+        ],
+        "trackingCode": [
+            "lbReload('RCK_2020CCN_BTN_SpecialBenefit','','','');", "lbReload('RCK_2020CCN_BTN_SeeProduct_DERMA','','','');"
+        ],
+        "gaTrackingCode": [
+            "gtag('event', 'GA_RCK_2020CCN_BTN_SpecialBenefit')", "gtag('event', 'GA_RCK_2020CCN_BTN_SeeProduct_DERMA')"
+        ],
+        "review": [
+            {
+                "img": "images/main_02_review_01_skin.jpg",
+                "text1": "<b>피부가 깨끗해진 게</b> 느껴졌어요",
+                "text2": "호두의 급여 후기",
+                "url": "https://blog.naver.com/3120ann/221622627772"
+            },
+            {
+                "img": "images/main_02_review_02_skin.jpg",
+                "text1": "<b>비듬같은 각질</b>이 안 보여요",
+                "text2": "랑이의 급여 후기",
+                "url": "https://blog.naver.com/aroomon/221625023664"
+            },
+            {
+                "img": "images/main_02_review_03_skin.jpg",
+                "text1": "사료를 바꾸고 <b>긁는 횟수가 줄었어요</b>",
+                "text2": "꼬야의 급여 후기",
+                "url": "https://blog.naver.com/llo314ll/221639969591"
+            }
+        ],
+        "article": [
+            {
+                "img": "images/main_02_article_01_skin.png",
+                "text": "샴푸도 바꿨는데<br/><b>왜 자꾸 긁을까요?</b>",
+                "url": "https://www.royalcanin.com/kr/dogs/health-and-wellbeing/common-skin-conditions-in-dogs"
+            },
+            {
+                "img": "images/main_02_article_02_skin.png",
+                "text": "가려워하는 강아지<br/><b>알고 보면 알러지?</b>",
+                "url": "https://www.royalcanin.com/kr/dogs/health-and-wellbeing/why-does-my-dog-keep-scratching"
+            }
+        ]
+    },
+    "weight": {
+        "className": "_weight",
+        "issue": "건강한 체중 유지를",
+        "title": "건강한 체중 관리를 위해!",
+        "productName": "라이트웨이트 케어",
+        "productImage": "images/main_02_product_weight.png",
+        "video": {
+            "poster": "images/poster_weight.jpg",
+            "src": "images/video_weight.mp4"
+        },
+        "buttonUrl": [
+            "https://smartstore.naver.com/petcore2018/products/4811682558", "detail.php?it_key=weight"
+        ],
+        "trackingCode": [
+            "lbReload('RCK_2020CCN_BTN_SpecialBenefit','','','');", "lbReload('RCK_2020CCN_BTN_SeeProduct_LIGHT','','','');"
+        ],
+        "gaTrackingCode": [
+            "gtag('event', 'GA_RCK_2020CCN_BTN_SpecialBenefit')", "gtag('event', 'GA_RCK_2020CCN_BTN_SeeProduct_LIGHT')"
+        ],
+        "review": [
+            {
+                "img": "images/main_02_review_01_weight.jpg",
+                "text1": "<b>도넛모양</b>이라 더 좋아해요",
+                "text2": "패리스의 급여 후기",
+                "url": "https://blog.naver.com/wj_2169/221637289382"
+            },
+            {
+                "img": "images/main_02_review_02_weight.jpg",
+                "text1": "<b>일주일만에 0.3kg</b> 감량했어요",
+                "text2": "콩이의 급여 후기",
+                "url": "https://blog.naver.com/dbsgml9045/221640424191"
+            },
+            {
+                "img": "images/main_02_review_03_weight.jpg",
+                "text1": "단백질은 높이고 <b>지방은 적게</b>",
+                "text2": "당근이의 급여 후기",
+                "url": "https://blog.naver.com/xkzn19/221632003090"
+            }
+        ],
+        "article": [
+            {
+                "img": "images/main_02_article_01_weight.png",
+                "text": "우리집 강아지는<br/><b>설마 과체중?</b>",
+                "url": "https://www.royalcanin.com/kr/dogs/health-and-wellbeing/the-risks-to-your-dog-if-they-are-obese"
+            },
+            {
+                "img": "images/main_02_article_02_weight.png",
+                "text": "사람도 힘든 다이어트<br/><b>어떻게 시켜야 하죠?</b>",
+                "url": "https://www.royalcanin.com/kr/dogs/health-and-wellbeing/how-to-help-your-dog-lose-weight"
+            }
+        ]
+    },
+    "digest": {
+        "className": "_digest",
+        "issue": "건강한 배변 활동을",
+        "title": "편안한 소화의 상징, 건강한 변!",
+        "productName": "다이제스티브 케어",
+        "productImage": "images/main_02_product_digest.png",
+        "video": {
+            "poster": "images/poster_digest.jpg",
+            "src": "images/video_digest.mp4"
+        },
+        "buttonUrl": [
+            "https://smartstore.naver.com/petcore2018/products/4811682558", "detail.php?it_key=digest"
+        ],
+        "trackingCode": [
+            "lbReload('RCK_2020CCN_BTN_SpecialBenefit','','','');", "lbReload('RCK_2020CCN_BTN_SeeProduct_DIGEST','','','');"
+        ],
+        "gaTrackingCode": [
+            "gtag('event', 'GA_RCK_2020CCN_BTN_SpecialBenefit')", "gtag('event', 'GA_RCK_2020CCN_BTN_SeeProduct_DIGEST')"
+        ],
+        "review": [
+            {
+                "img": "images/main_02_review_01_digest.jpg",
+                "text1": "<b>응가상태</b>가 달라졌어요",
+                "text2": "빵이의 급여 후기",
+                "url": "https://blog.naver.com/tnstnqorqo/221639760542"
+            },
+            {
+                "img": "images/main_02_review_02_digest.jpg",
+                "text1": "배변판에서 <b>끙끙거리지 않아요</b>",
+                "text2": "다정이의 급여 후기",
+                "url": "https://blog.naver.com/ymodee/222001754462"
+            },
+            {
+                "img": "images/main_02_review_03_digest.jpg",
+                "text1": "묽은 변에서 <b>탱글한 응가로</b>",
+                "text2": "쿠키의 급여 후기",
+                "url": "https://blog.naver.com/ego1982/221980264464"
+            }
+        ],
+        "article": [
+            {
+                "img": "images/main_02_article_01_digest.png",
+                "text": "평소보다 화장실을<br/><b>더 자주 가요</b>",
+                "url": "https://www.royalcanin.com/kr/dogs/health-and-wellbeing/spotting-signs-of-digestive-problems-in-your-dog"
+            },
+            {
+                "img": "images/main_02_article_02_digest.png",
+                "text": "강아지도<br/><b>변비가 있나요</b>",
+                "url": "https://www.royalcanin.com/kr/dogs/health-and-wellbeing/is-your-dog-constipated"
+            }
+        ]
+    },
+    "neutral": {
+        "className": "_neutral",
+        "issue": "중성화 체중관리를",
+        "title": "중성화 후 체중관리를 위한",
+        "productName": "스테럴라이즈드",
+        "productImage": "images/main_02_product_neutral.png",
+        "video": {
+            "poster": "images/poster_neutral.jpg",
+            "src": "images/video_neutral.mp4"
+        },
+        "buttonUrl": [
+            "https://smartstore.naver.com/petcore2018/products/4811682558", "detail.php?it_key=neutral"
+        ],
+        "trackingCode": [
+            "lbReload('RCK_2020CCN_BTN_SpecialBenefit','','','');", "lbReload('RCK_2020CCN_BTN_SeeProduct_STERIL','','','');"
+        ],
+        "gaTrackingCode": [
+            "gtag('event', 'GA_RCK_2020CCN_BTN_SpecialBenefit')", "gtag('event', 'GA_RCK_2020CCN_BTN_SeeProduct_STERIL')"
+        ],
+        "review": [
+            {
+                "img": "images/main_02_review_01_neutral.jpg",
+                "text1": "급여 후에 <b>훨씬 활발해졌어요</b>",
+                "text2": "리토의 급여 후기",
+                "url": "https://blog.naver.com/blue_bells82/221744432227"
+            }
+
+        ],
+        "article": [
+            {
+                "img": "images/main_02_article_01_neutral.png",
+                "text": "암컷 강아지도<br/><b>중성화가 필요한가요?</b>",
+                "url": "https://www.royalcanin.com/kr/dogs/puppy/when-to-spay-a-female-dog"
+            },
+            {
+                "img": "images/main_02_article_02_neutral.png",
+                "text": "중성화 수술 후<br/><b>식욕이 늘었어요</b>",
+                "url": "https://www.royalcanin.com/kr/dogs/puppy/should-i-neuter-my-male-dog"
+            }
+        ]
+    },
+    "fur": {
+        "className": "_fur",
+        "issue": "",
+        "title": "빛나고 윤기있게!",
+        "productName": "코트 케어",
+        "productImage": "images/main_02_product_fur.png",
+        "video": {
+            "poster": "images/poster_fur.jpg",
+            "src": "images/video_fur.mp4"
+        },
+        "buttonUrl": [
+            "https://smartstore.naver.com/petcore2018/products/4811682558", "detail.php?it_key=fur"
+        ],
+        "trackingCode": [
+            "lbReload('RCK_2020CCN_BTN_SpecialBenefit','','','');", "lbReload('RCK_2020CCN_BTN_SeeProduct_COAT','','','');"
+        ],
+        "gaTrackingCode": [
+            "gtag('event', 'GA_RCK_2020CCN_BTN_SpecialBenefit')", "gtag('event', 'GA_RCK_2020CCN_BTN_SeeProduct_COAT')"
+        ],
+        "review": [
+            {
+                "img": "images/main_02_review_01_fur.jpg",
+                "text1": "코트케어 먹고 <b>털이 윤기가 나요</b>",
+                "text2": "쏨이의 급여 후기",
+                "url": "https://blog.naver.com/mouche007/221640451263"
+            },
+            {
+                "img": "images/main_02_review_02_fur.jpg",
+                "text1": "<b>푸석한 털 엉킴</b>이 개선됐어요",
+                "text2": "바다와 랑이의 급여 후기",
+                "url": "https://blog.naver.com/aroomon/221980385740"
+            },
+            {
+                "img": "images/main_02_review_03_fur.jpg",
+                "text1": "푸석한 털에서 <b>윤기나는 털로</b>",
+                "text2": "쿠키의 급여 후기",
+                "url": "https://blog.naver.com/ego1982/221637292791"               
+            }
+        ],
+        "article": []
+    },
+    "stress": {
+        "className": "_stress",
+        "issue": "안정감 유지를",
+        "title": "불안해 보인다면?",
+        "productName": "릴렉스 케어",
+        "productImage": "images/main_02_product_stress.png",
+        "video": {
+            "poster": "images/poster_stress.jpg",
+            "src": "images/video_stress.mp4"
+        },
+        "buttonUrl": [
+            "https://smartstore.naver.com/petcore2018/products/4811682558", "detail.php?it_key=stress"
+        ],
+        "trackingCode": [
+            "lbReload('RCK_2020CCN_BTN_SpecialBenefit','','','');", "lbReload('RCK_2020CCN_BTN_SeeProduct_RELAX','','','');"
+        ],
+        "gaTrackingCode": [
+            "gtag('event', 'GA_RCK_2020CCN_BTN_SpecialBenefit')", "gtag('event', 'GA_RCK_2020CCN_BTN_SeeProduct_RELAX')"
+        ],
+        "review": [
+            {
+                "img": "images/main_02_review_01_stress.jpg",
+                "text1": "<b>안정감을 주고 싶을땐</b> 릴렉스 케어",
+                "text2": "보리와 완두의 급여 후기",
+                "url": "https://blog.naver.com/anfrlrl/221623852731"
+            },
+            {
+                "img": "images/main_02_review_02_stress.jpg",
+                "text1": "<b>심하게 짖고, 떠는 행동</b>이 줄었어요",
+                "text2": "럭스와 로니의 급여 후기",
+                "url": "https://blog.naver.com/sohyun1989/222001465619"
+            },
+            {
+                "img": "images/main_02_review_03_stress.jpg",
+                "text1": "<b>예민한 강아지</b>에게 추천해요",
+                "text2": "푸딩이의 급여 후기",
+                "url": "https://blog.naver.com/happypudding/221980941011"
+            }
+        ],
+        "article": [
+            {
+                "img": "images/main_02_article_01_stress.png",
+                "text": "자꾸만 숨는 강아지<br/><b>아픈건가요?</b>",
+                "url": "https://www.royalcanin.com/kr/dogs/thinking-of-getting-a-dog/how-to-care-for-a-dog"
+            }
+        ]
+    }
+}
