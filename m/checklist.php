@@ -1,64 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        body, ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-        .checklist-container {
-            overflow: hidden;
-        }
-        .list-wrapper {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-        }
-        .list-wrapper .group {
-            width: 100%;
-            padding: 0 24px;
-            flex-shrink: 0;
-        }
-        .list-wrapper li {
-            margin-bottom: 10px;
-            opacity: 0;
-            visibility: hidden;
-        }
-        .list-wrapper .group:first-child li {
-            opacity: 1;
-            visibility: visible;
-        }
-        .chk-trigger {
-            font-size: 14px;
-            padding: 10px 0;
-        }
-    </style>
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
-</head>
+<?php
+    include_once "./head.php";
+?>
 <body>
     <div id="container">
-        <div id="sub-header">
-            <button type="button" class="go-prev">이전</button>
-        </div>
-        <div class="content _checklist">
-            <div class="checklist-container">
-                <div class="list-wrapper">
-                    <ul class="group is-current" data-cate="skin"></ul>
-                    <ul class="group" data-cate="stress"></ul>
-                    <ul class="group" data-cate="urinary"></ul>
-                    <ul class="group" data-cate="kidney"></ul>
-                    <ul class="group" data-cate="gastro"></ul>
+        <div class="content _sub __checklist">
+            <div class="sub-header">
+                <a href="javascript:void(0)" id="go-before"></a>
+                <a href="./" id="go-index"></a>
+            </div>
+            <div class="title-block">
+                <div class="prj-title">
+                    <img src="./images/project_logo.svg" class="project-logo" alt="고양이 주치의 프로젝트">
+                    <span class="text">
+                        <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>테스트</em></span>
+                </div>
+                <div class="subject">
+                    우리 반려묘 OO!<br><b>혹시 이런 모습을 보이나요?</b>
                 </div>
             </div>
-            <button type="button" class="go-next">다음</button>
+            <div class="indicator-block">
+                <div class="guide">
+                    <img src="./images/icon_chkguide.png" alt="터치 가이드 이미지" class="icon">
+                    <span>해당되는 항목을 모두 터치해주세요.</span>
+                </div>
+                <ul class="indicator">
+                    <li class="is-current"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="checklist-container">
+                <div class="list-wrapper">
+                    <ul class="group is-current" data-cate="weight"></ul>
+                    <ul class="group" data-cate="gastro"></ul>
+                    <ul class="group" data-cate="kidney"></ul>
+                    <ul class="group" data-cate="urinary"></ul>
+                    <ul class="group" data-cate="stress"></ul>
+                </div>
+            </div>
+            <button type="button" class="type-01" id="go-next">다음으로</button>
+        </div>
+        <div id="footer">
+            <span class="for-a11y">Copyright © 2020. ROYAL CANIN all rights reserved.</span>
         </div>
     </div>
     <script>
@@ -74,12 +59,13 @@
             var isAnimate = false;
             var $wrapperEl = $('.list-wrapper');
             var $groupEl = $('.list-wrapper .group');
+            var $indicatorEl = $('.indicator');
             return {
                 init: function() {
                     // 초기화
                     // checklist json 가져와서 뿌림
                     $.ajax({
-                        url: "./checklist_info.json",
+                        url: "../checklist_info.json",
                         cache: false,
                         dataType: "json",
                         type: 'get',
@@ -117,11 +103,11 @@
                         var $this = $(this);
                         $this.toggleClass('is-active');
                     });
-                    $doc.on('click', '.go-next', function() {
+                    $doc.on('click', '#go-next', function() {
                         if(isAnimate) return false;
                         _this.nextStep();
                     });
-                    $doc.on('click', '.go-prev', function() {
+                    $doc.on('click', '#go-before', function() {
                         if(isAnimate) return false;
                         _this.prevStep();
                     });
@@ -133,7 +119,6 @@
                     } else {
                         this.stepAnimate('prev');
                     }
-                    console.log(currentStep);
                 },
                 nextStep: function() {
                     if(currentStep>3) {
@@ -143,7 +128,6 @@
                     } else {
                         this.stepAnimate('next');
                     }
-                    console.log(currentStep);
                 },
                 stepAnimate: function(direction) {
                     console.log('step animation start');
@@ -151,19 +135,28 @@
                     var stepTl = gsap.timeline({onComplete: function(){
                         (direction==='next') ? currentStep++ : currentStep--;
                         isAnimate = false;
+                        if(Number(currentStep)===4) {
+                            $('#go-next').text('결과 보기');
+                        } else {
+                            $('#go-next').text('다음으로');
+                        }
                         $('.list-wrapper .group').removeClass('is-current').eq(currentStep).addClass('is-current');
                         console.log('step animation end');
                     }});
                     if(direction === 'next') {
                         stepTl
-                        .to($wrapperEl, {duration: 0.55, x: "-="+100+'%'})
+                        .to($groupEl.eq(currentStep).find('li'), {duration: 0.55, autoAlpha: 0})
+                        .to($wrapperEl, {duration: 0.55, x: "-="+100+'%'}, "-=0.55")
                         .to($groupEl.eq(currentStep+1).find('li'), {stagger: 0.15, autoAlpha: 1}, "-=0.45")
-                        .set($groupEl.eq(currentStep).find('li'), {autoAlpha: 0});
+                        .to($indicatorEl.find('li').eq(currentStep), {duration: 0.2, width: 6}, "-=1.1")
+                        .to($indicatorEl.find('li').eq(currentStep+1), {duration: 0.5, width: 21, ease: "elastic.out(1, 0.6)"}, "-=0.6");
                         
                     } else {
                         stepTl
                         .to($wrapperEl, {duration: 0.55, x: "+="+100+'%'})
                         .to($groupEl.eq(currentStep-1).find('li'), {stagger: 0.15, autoAlpha: 1}, "-=0.45")
+                        .to($indicatorEl.find('li').eq(currentStep), {duration: 0.2, width: 6}, "-=1.1")
+                        .to($indicatorEl.find('li').eq(currentStep-1), {duration: 0.5, width: 21, ease: "elastic.out(1, 0.6)"}, "-=0.6")
                         .set($groupEl.eq(currentStep).find('li'), {autoAlpha: 0});
                     }
                 },

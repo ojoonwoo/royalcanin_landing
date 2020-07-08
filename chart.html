@@ -73,18 +73,21 @@
                 },
                 scale: {
                     pointLabels:{
+                        display: false,
                         fontColor: ['red', '#666', '#666', '#666', '#666'],
                         fontSize: '13'
                     },
                     gridLines: {
-                        zeroLineColor: 'red',
-                        zeroLineBorderDash: [4, 4],
-                        color: ['rgba(0, 0, 0, 0.2)', 'rgba(0, 0, 0, 0.2)', 'rgba(0, 0, 0, 0.2)', 'rgba(0, 0, 0, 1)'],
+                        display: false,
+                        // zeroLineColor: 'red',
+                        // zeroLineBorderDash: [4, 4],
+                        // color: ['rgba(0, 0, 0, 0.2)', 'rgba(0, 0, 0, 0.2)', 'rgba(0, 0, 0, 0.2)', 'rgba(0, 0, 0, 1)'],
                         // color: setColor(),
-                        // borderDash: setDash(),
-                        // borderDashOffset: 100
+                        // borderDash: [5, 15],
+                        // borderDashOffset: 4
                     },
                     angleLines: {
+                        display: false,
                         color: 'rgba(0, 0, 0, 0.2)',
                     },
                     ticks: {
@@ -128,7 +131,8 @@
             return Math.round(Math.seededRandom(0, 100));
         };
         // myChart.options.scale.gridLines.borderDash = [0, 0];
-        console.log(myChart.options.scale.pointLabels);
+        // console.log(myChart.options.scale.pointLabels);
+        console.log(myChart);
         // myChart.update();
         
     </script>

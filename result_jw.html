@@ -15,7 +15,9 @@
         }
         
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
     <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
 </head>
 <body>
@@ -24,7 +26,20 @@
             <button type="button" class="go-prev">이전</button>
         </div>
         <div class="content _result">
-            
+            <div class="wrapper">
+                <div class="sect-pre">
+                    <div class="title-block"></div>
+                    <img src="" alt="" class="obj-cat">
+                </div>
+                <div class="sect-chart">
+                    <div class="chart-wrapper">
+                        <canvas id="myChart" width="300" height="300"></canvas>
+                    </div>
+                </div>
+                <div class="sect-advice">
+                    
+                </div>
+            </div>        
         </div>
     </div>
     <script>
