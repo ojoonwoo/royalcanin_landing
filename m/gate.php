@@ -102,7 +102,6 @@
             $('.fake-radio').removeClass('is-active');
             $this.toggleClass('is-active');
             visit_hospital = $this.text();
-            console.log(visit_hospital);
         });
 
         $(document).on('click', '#go-next', function() {
@@ -125,18 +124,22 @@
                 data: {
                     "exec"          : "insert_cat_data",
                     "cat-name"      : $("#cat-name").val(),
-                    "cat-age"      : $("#cat-age").val(),
+                    "cat-age"       : $("#cat-age").val(),
+                    "cat-visit"     : visit_hospital,
+                    "cat-serial"    : "<?php echo $serial?>"
                 },
-                // data: JSON.stringify(checkedList),
                 success: function (response) {
-                    var param = "?issue="+resultIssue+"&counseling="+counselingFlag;
-                    setTimeout(function() {
-                        location.href = "./result.php"+param;
-                    }, 200);
+                    if (response == "Y") {
+                        setTimeout(function() {
+                            location.href = "./checklist.php?serial=<?php echo $serial?>";
+                        }, 200);
+                    }else{
+
+                    }
                 },
                 error: function(jqXHR, errMsg) {
                     // Handle error
-                    alert(errMsg);
+                    console.log(errMsg);
                 }
             });
         });
