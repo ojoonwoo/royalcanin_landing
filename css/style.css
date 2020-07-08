@@ -987,6 +987,9 @@ select.select-box {
 	border-bottom: 1px solid #e3001a;
 	margin-bottom: 25px;
 }
+.content.__gate .cat-block img {
+	margin: 0 auto;
+}
 .content.__gate .input-wrapper .message {
 	text-align: center;
 	font-size: 17px;
