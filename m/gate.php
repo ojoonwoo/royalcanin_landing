@@ -62,7 +62,8 @@
                         <option value="2016">2016</option>
                         <option value="2017">2017</option>
                         <option value="2018">2018</option>
-                        <option value="2020" selected>2020</option>
+                        <option value="2020">2020</option>
+                        <option value="" selected>선택해주세요</option>
                     </select>
                 </div>
                 <div class="radio-wrap">
@@ -105,12 +106,31 @@
         });
 
         $(document).on('click', '#go-next', function() {
+            var cat_name = $("#cat-name").val();
+            var cat_age = $("#cat-age").val();
+            var cat_name = $("#cat-name").val();
             var agree_num = 0;
             $('.chk-trigger').each(function(idx, el) {
                 if($(el).hasClass('is-active')) {
                     agree_num++;
                 }
             });
+
+            if (cat_name == "") {
+                alert("반려묘의 이름을 입력해 주세요.");
+                $("#cat-name").focus();
+                return false;
+            }
+
+            if (cat_age == "") {
+                alert("반려묘의 출생연도를 선택해 주세요.");
+                return false;
+            }
+
+            if (visit_hospital == "") {
+                alert("최근 1년내 동물병원에 방문하신적이 있으신지 선택해 주세요.");
+                return false;
+            }
 
             if (agree_num < 2) {
                 alert("약관에 모두 동의하셔야만 이벤트에 참여하실 수 있습니다.")
@@ -123,8 +143,8 @@
                 type: 'POST',
                 data: {
                     "exec"          : "insert_cat_data",
-                    "cat-name"      : $("#cat-name").val(),
-                    "cat-age"       : $("#cat-age").val(),
+                    "cat-name"      : cat_name,
+                    "cat-age"       : cat_age,
                     "cat-visit"     : visit_hospital,
                     "cat-serial"    : "<?php echo $serial?>"
                 },
