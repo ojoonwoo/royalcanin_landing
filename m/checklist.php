@@ -190,13 +190,13 @@
                         type: 'POST',
                         data: {
                             "exec"          : "insert_check_data",
-                            "mb_check"      : checklist,
+                            "mb_check"      : JSON.stringify(checklist),
                             "mb_serial"    : "<?php echo $serial?>"
                         },
                         success: function (response) {
                             if (response == "Y") {
                                 setTimeout(function() {
-                                    location.href = "./checklist.php?serial=<?php echo $serial?>";
+                                    location.href = "./result.php?serial=<?php echo $serial?>";
                                 }, 200);
                             }else{
 
