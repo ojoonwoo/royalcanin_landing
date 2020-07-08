@@ -93,9 +93,9 @@ img {
 	right: -11px;
 	content: '';
 	/* display: inline-block; */
-	width: 7px;
-	height: 7px;
-	background: #e3001a;
+	width: 1px;
+	height: 15px;
+	background: #c5c5c5;
 	border-radius: 50%;
 	transition: all 0.1s ease-out;
 	/* vertical-align: top; */
