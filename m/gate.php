@@ -1,5 +1,9 @@
 <?php
     include_once "./head.php";
+
+    $serial = $mnv_f->create_serial();
+
+    print_r($serial);
 ?>
 <body>
     <!-- Google Tag Manager (noscript) -->
