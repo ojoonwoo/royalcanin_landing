@@ -3,7 +3,7 @@
 
     $serial = $mnv_f->create_serial();
 
-    print_r($serial);
+    // print_r($serial);
 ?>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -83,7 +83,8 @@
                     </button>
                 </div>
             </div>
-            <a href="./checklist.php" class="type-01 go-next" id="go-next">다음으로</a>
+            <!-- <a href="./checklist.php" class="type-01 go-next" id="go-next">다음으로</a> -->
+            <a href="javascript:void(0)" class="type-01 go-next" id="go-next">다음으로</a>
         </div>
         <div id="footer">
             <span class="for-a11y">Copyright © 2020. ROYAL CANIN all rights reserved.</span>
@@ -102,81 +103,16 @@
         });
 
         $(document).on('click', '#go-result', function() {
-            // 초기화
-            var resultIssue = "";
-            counselingFlag = "N";
-            for(var i = 0; i < paramValArr.length; i++) {
-                var key = paramValArr[i];
-                checklist[key].list = [];
-            }
-
-            // ga 이벤트 param1&param2 보냄
-
+            var agree_num = 0;
             // $('.chk-trigger.is-active').each(function(idx, el) {
             $('.chk-trigger').each(function(idx, el) {
-                var key = $(this).attr('data-key');
-                var question = $(this).find('.text').text();
-                // var pushVal = {"question": question, "checked": "Y"};
-                var pushVal = {"question": question, "checked": $(el).hasClass('is-active') ? "Y" : "N"};
-                checklist[key].list.push(pushVal);
-                if($(el).hasClass('is-active') && $(el).attr('data-counseling') == 'Y') {
-                    counselingFlag = "Y";
+                if($(el).hasClass('is-active')) {
+                    agree_num++;
                 }
             });
 
-            // result 산출
-            // 우선 순위
-            // 1 weight(체중)
-            // 2 skin(피부)
-            // 3 digest(소화)
-            // 4 neutral(중성화)
-            // 5 stress(스트레스)
-            // 6 fur(털)
-        
-            var key1 = paramValArr[0],
-                key2 = paramValArr[1];
-
-            for (var key in checklist) {
-                var len = 0;
-                checklist[key].list.forEach(function(item) {
-                    if(item.checked == 'Y') {
-                        len++;
-                    }
-                });
-                checklist[key].checkedLength = len;
-                // console.log('key:', key);
-                // console.log('length:', len);
-            }
-
-            if(paramValArr.length > 1) {
-                var num = (Number(checklist[key1].checkedLength) - Number(checklist[key2].checkedLength));
-                if (num > 0) {
-                    // 1번키의 리스트 개수가 많음
-                    resultIssue = key1;
-                } else if (num < 0) {
-                    // 2번키의 리스트 개수가 많음
-                    resultIssue = key2;
-                } else {
-                    // 개수 동률 우선순위값으로 result 산출
-                    // console.log(key1+' order:', Number(checklist[key1].order));
-                    // console.log(key2+' order:', Number(checklist[key2].order));
-                    resultIssue = (Number(checklist[key1].order) < Number(checklist[key2].order)) ? key1 : key2;
-                }
-
-                // 불필요 값 삭제
-                // delete checklist[key2].order;
-                // delete checklist[key2].checkedLength;
-            } else {
-                resultIssue = paramValArr[0];
-            }
-
-            // 불필요 값 삭제
-            // delete checklist[key1].order;
-            // delete checklist[key1].checkedLength;
-            
-            // alert(resultIssue);
-            // console.log(checklist);
-
+console.log(agree_num);
+return false;
             // 데이터 저장
             $.ajax({
                 url: "../main_exec.php",
@@ -197,9 +133,6 @@
                     alert(errMsg);
                 }
             });
-        });
-        $(document).ready(function() {
-
         });
     </script>
 </body>
