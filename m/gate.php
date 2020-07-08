@@ -68,7 +68,8 @@
                 <div class="radio-wrap">
                     <span>최근 1년 내 동물병원에 방문한 적 있나요?</span>
                     <div>
-                        <button type="button" class="fake-radio is-active">Y</button>
+                        <!-- <button type="button" class="fake-radio is-active">Y</button> -->
+                        <button type="button" class="fake-radio">Y</button>
                         <button type="button" class="fake-radio">N</button>
                     </div>
                 </div>
@@ -91,12 +92,7 @@
         </div>
     </div>
     <script>
-        var paramObj = {};
-        var paramValArr = [];
-        var checklistEl = "";
-        var checklist = {};
-        var counselingFlag = "N";
-
+        var visit_hospital = "";
         $(document).on('click', '.chk-trigger', function() {
             var $this = $(this);
             $this.toggleClass('is-active');
@@ -105,6 +101,8 @@
             var $this = $(this);
             $('.fake-radio').removeClass('is-active');
             $this.toggleClass('is-active');
+            visit_hospital = $this.text();
+            console.log(visit_hospital);
         });
 
         $(document).on('click', '#go-next', function() {
