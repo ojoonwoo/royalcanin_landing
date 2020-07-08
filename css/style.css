@@ -84,22 +84,19 @@ img {
 	font-size: 18px;
 	font-weight: 500;
 	color: #140d0d;
-	margin-left: 52px;
+	margin-left: 24px;
 }
 #header nav li:after {
 	position: absolute;
-	/* top: 8px; */
-	top: -10px;
-	right: -11px;
+	top: 1px;
+	right: -26px;
 	content: '';
-	/* display: inline-block; */
 	width: 1px;
 	height: 15px;
 	background: #c5c5c5;
-	border-radius: 50%;
-	transition: all 0.1s ease-out;
-	/* vertical-align: top; */
-	/* margin: 0 0 0 6px; */
+}
+#header nav li:last-child:after {
+	display: none;
 }
 #header nav li.active{
 	position: relative;
