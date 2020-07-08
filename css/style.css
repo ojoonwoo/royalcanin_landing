@@ -894,7 +894,7 @@ select.select-box {
 }
 .content .title-block .prj-title .text {
 	display: inline-block;
-	padding: 2px 8px;
+	padding: 4px 14px;
 	background-color: #e3001a;
 	vertical-align: middle;
 	font-size: 0;
@@ -909,7 +909,7 @@ select.select-box {
 }
 .content .title-block .prj-title .text .icon {
 	display: inline-block;
-	margin: 0 4px 0 2px;
+	margin: 0 5px 0 4px;
 	vertical-align: middle;
 	width: 30px;
 	height: 21.5px;
