@@ -24,14 +24,15 @@ switch ($_REQUEST['exec'])
 		echo $flag;
 
 	break;
-	case "insert_checked_data" :
+	case "insert_check_data" :
 		$mnv_f          = new mnv_function();
 		$my_db          = $mnv_f->Connect_MySQL();
 		$gubun          = $mnv_f->MobileCheck();
 
-		$check_data		= $_REQUEST['check-data'];
+		$mb_check		= $_REQUEST['mb_check'];
+		$mb_serial		= $_REQUEST['mb_serial'];
 
-		$query 		= "INSERT INTO check_info(check_ipaddr, check_media, check_gubun, check_data, check_date) values('".$_SERVER['REMOTE_ADDR']."','".$_SESSION['ss_media']."','".$gubun."','".$check_data."','".date("Y-m-d H:i:s")."')";
+		$query 		= "UPDATE member_info SET mb_check='".$mb_check."' WHERE mb_serial='".$mb_serial."'";
 		$result 	= mysqli_query($my_db, $query);
 
 		if ($result)
@@ -39,7 +40,7 @@ switch ($_REQUEST['exec'])
 		else
 			$flag ="N";
 
-		echo $query;
+		echo $flag;
 
 	break;
 }

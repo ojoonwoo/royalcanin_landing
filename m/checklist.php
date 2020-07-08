@@ -1,5 +1,7 @@
 <?php
     include_once "./head.php";
+
+    $serial = $_GET['serial'];
 ?>
 <body>
     <div id="container">
@@ -182,6 +184,29 @@
 
                     console.log(checklist);
                     // 체크 정보 db update 후 callback에서 result로 serial같이 넘김
+                    // 데이터 저장
+                    $.ajax({
+                        url: "../main_exec.php",
+                        type: 'POST',
+                        data: {
+                            "exec"          : "insert_check_data",
+                            "mb_check"      : checklist,
+                            "mb_serial"    : "<?php echo $serial?>"
+                        },
+                        success: function (response) {
+                            if (response == "Y") {
+                                setTimeout(function() {
+                                    location.href = "./checklist.php?serial=<?php echo $serial?>";
+                                }, 200);
+                            }else{
+
+                            }
+                        },
+                        error: function(jqXHR, errMsg) {
+                            // Handle error
+                            console.log(errMsg);
+                        }
+                    });
 
                 }
             };
