@@ -79,19 +79,14 @@ img {
 	vertical-align: middle;
 }
 #header nav li {
+	position: relative;
 	display: inline-block;
 	font-size: 18px;
 	font-weight: 500;
 	color: #140d0d;
 	margin-left: 52px;
 }
-#header nav li.active{
-	position: relative;
-	font-size: 18px;
-	font-weight: 700;
-	color: #e3001a;
-}
-#header nav li.active:after {
+#header nav li:after {
 	position: absolute;
 	/* top: 8px; */
 	top: -10px;
@@ -105,6 +100,14 @@ img {
 	transition: all 0.1s ease-out;
 	/* vertical-align: top; */
 	/* margin: 0 0 0 6px; */
+}
+#header nav li.active{
+	position: relative;
+	font-size: 18px;
+	font-weight: 700;
+	color: #e3001a;
+}
+#header nav li.active:after {
 }
 
 
