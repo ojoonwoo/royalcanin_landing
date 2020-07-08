@@ -88,6 +88,7 @@
                         'src': object[key].productImage,
                         'alt': object[key].productTitle
                     });
+
                     var prdDesc = "";
                     object[key].productDesc.forEach(function(item) {
                         var el = "<li>";
