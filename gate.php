@@ -25,13 +25,13 @@
                             <a href="javascript:void(0)" data-url="#section1">메인</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)" data-url="#section2">제품소개</a>
+                            <a href="javascript:void(0)" data-url="#section2">주치의 프로젝트</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)" data-url="#section3" onclick="lbReload('RCK_2020CCN_BTN_menu_gotoEvent','','','');gtag('event', 'GA_RCK_2020CCN_BTN_menu_gotoEvent');">셀프견강체크&무료체험</a>
+                            <a href="javascript:void(0)" data-url="#section3">주치의력 테스트</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)" data-url="#section4" onclick="lbReload('RCK_2020CCN_BTN_menu_gotoPromo','','','');gtag('event', 'GA_RCK_2020CCN_BTN_menu_gotoPromo');">100% 증정 이벤트</a>
+                            <a href="javascript:void(0)" data-url="#section4">주치의력 업그레이드 TIPS</a>
                         </li>
                     </ul>
                 </nav>
