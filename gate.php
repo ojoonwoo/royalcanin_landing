@@ -14,6 +14,29 @@
 
     <!-- End Google Tag Manager (noscript) -->
     <div id="container">
+        <div id="header">
+            <div class="inner">
+                <a href="./" class="logo">
+                    <img src="./images/logo.png" alt="로얄캐닌 홈으로">
+                </a>
+                <nav class="menu">
+                    <ul>
+                        <li class="active">
+                            <a href="javascript:void(0)" data-url="#section1">메인</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-url="#section2">제품소개</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-url="#section3" onclick="lbReload('RCK_2020CCN_BTN_menu_gotoEvent','','','');gtag('event', 'GA_RCK_2020CCN_BTN_menu_gotoEvent');">셀프견강체크&무료체험</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-url="#section4" onclick="lbReload('RCK_2020CCN_BTN_menu_gotoPromo','','','');gtag('event', 'GA_RCK_2020CCN_BTN_menu_gotoPromo');">100% 증정 이벤트</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
         <div class="content _sub __gate">
             <div class="sub-header">
                 <a href="javascript:history.back()" id="go-before"></a>
