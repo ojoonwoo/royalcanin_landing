@@ -3,14 +3,17 @@ include_once "./include/autoload.php";
 
 switch ($_REQUEST['exec'])
 {
-	case "insert_checked_data" :
+	case "insert_cat_data" :
 		$mnv_f          = new mnv_function();
 		$my_db          = $mnv_f->Connect_MySQL();
 		$gubun          = $mnv_f->MobileCheck();
 
-		$check_data		= $_REQUEST['check-data'];
+		$mb_cat_name		= $_REQUEST['cat-name'];
+		$mb_cat_birth		= $_REQUEST['cat-age'];
+		$mb_visit_hospital	= $_REQUEST['cat-visit'];
+		$mb_serial			= $_REQUEST['cat-serial'];
 
-		$query 		= "INSERT INTO check_info(check_ipaddr, check_media, check_gubun, check_data, check_date) values('".$_SERVER['REMOTE_ADDR']."','".$_SESSION['ss_media']."','".$gubun."','".$check_data."','".date("Y-m-d H:i:s")."')";
+		$query 		= "INSERT INTO member_info(mb_ipaddr, mb_gubun, mb_cat_name, mb_cat_birth, mb_visit_hospital, mb_serial) values('".$_SERVER['REMOTE_ADDR']."','".$gubun."','".$mb_cat_name."','".$mb_cat_birth."','".$mb_visit_hospital."','".$mb_serial."')";
 		$result 	= mysqli_query($my_db, $query);
 
 		if ($result)
@@ -18,7 +21,26 @@ switch ($_REQUEST['exec'])
 		else
 			$flag ="N";
 
-		echo $query;
+		echo $flag;
+
+	break;
+	case "insert_check_data" :
+		$mnv_f          = new mnv_function();
+		$my_db          = $mnv_f->Connect_MySQL();
+		$gubun          = $mnv_f->MobileCheck();
+
+		$mb_check		= $_REQUEST['mb_check'];
+		$mb_serial		= $_REQUEST['mb_serial'];
+
+		$query 		= "UPDATE member_info SET mb_check='".$mb_check."' WHERE mb_serial='".$mb_serial."'";
+		$result 	= mysqli_query($my_db, $query);
+
+		if ($result)
+			$flag ="Y"; 
+		else
+			$flag ="N";
+
+		echo $flag;
 
 	break;
 }

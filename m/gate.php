@@ -1,5 +1,9 @@
 <?php
     include_once "./head.php";
+
+    $serial = $mnv_f->create_serial();
+
+    // print_r($serial);
 ?>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -58,13 +62,15 @@
                         <option value="2016">2016</option>
                         <option value="2017">2017</option>
                         <option value="2018">2018</option>
-                        <option value="2020" selected>2020</option>
+                        <option value="2020">2020</option>
+                        <option value="" selected>선택해주세요</option>
                     </select>
                 </div>
                 <div class="radio-wrap">
                     <span>최근 1년 내 동물병원에 방문한 적 있나요?</span>
                     <div>
-                        <button type="button" class="fake-radio is-active">Y</button>
+                        <!-- <button type="button" class="fake-radio is-active">Y</button> -->
+                        <button type="button" class="fake-radio">Y</button>
                         <button type="button" class="fake-radio">N</button>
                     </div>
                 </div>
@@ -79,123 +85,83 @@
                     </button>
                 </div>
             </div>
-            <a href="./checklist.php" class="type-01 go-next" id="go-next">다음으로</a>
+            <!-- <a href="./checklist.php" class="type-01 go-next" id="go-next">다음으로</a> -->
+            <a href="javascript:void(0)" class="type-01 go-next" id="go-next">다음으로</a>
         </div>
         <div id="footer">
             <span class="for-a11y">Copyright © 2020. ROYAL CANIN all rights reserved.</span>
         </div>
     </div>
     <script>
-        var paramObj = {};
-        var paramValArr = [];
-        var checklistEl = "";
-        var checklist = {};
-        var counselingFlag = "N";
-
+        var visit_hospital = "";
         $(document).on('click', '.chk-trigger', function() {
             var $this = $(this);
             $this.toggleClass('is-active');
         });
+        $(document).on('click', '.fake-radio', function() {
+            var $this = $(this);
+            $('.fake-radio').removeClass('is-active');
+            $this.toggleClass('is-active');
+            visit_hospital = $this.text();
+        });
 
-        $(document).on('click', '#go-result', function() {
-            // 초기화
-            var resultIssue = "";
-            counselingFlag = "N";
-            for(var i = 0; i < paramValArr.length; i++) {
-                var key = paramValArr[i];
-                checklist[key].list = [];
-            }
-
-            // ga 이벤트 param1&param2 보냄
-
-            // $('.chk-trigger.is-active').each(function(idx, el) {
+        $(document).on('click', '#go-next', function() {
+            var cat_name = $("#cat-name").val();
+            var cat_age = $("#cat-age").val();
+            var cat_name = $("#cat-name").val();
+            var agree_num = 0;
             $('.chk-trigger').each(function(idx, el) {
-                var key = $(this).attr('data-key');
-                var question = $(this).find('.text').text();
-                // var pushVal = {"question": question, "checked": "Y"};
-                var pushVal = {"question": question, "checked": $(el).hasClass('is-active') ? "Y" : "N"};
-                checklist[key].list.push(pushVal);
-                if($(el).hasClass('is-active') && $(el).attr('data-counseling') == 'Y') {
-                    counselingFlag = "Y";
+                if($(el).hasClass('is-active')) {
+                    agree_num++;
                 }
             });
 
-            // result 산출
-            // 우선 순위
-            // 1 weight(체중)
-            // 2 skin(피부)
-            // 3 digest(소화)
-            // 4 neutral(중성화)
-            // 5 stress(스트레스)
-            // 6 fur(털)
-        
-            var key1 = paramValArr[0],
-                key2 = paramValArr[1];
-
-            for (var key in checklist) {
-                var len = 0;
-                checklist[key].list.forEach(function(item) {
-                    if(item.checked == 'Y') {
-                        len++;
-                    }
-                });
-                checklist[key].checkedLength = len;
-                // console.log('key:', key);
-                // console.log('length:', len);
+            if (cat_name == "") {
+                alert("반려묘의 이름을 입력해 주세요.");
+                $("#cat-name").focus();
+                return false;
             }
 
-            if(paramValArr.length > 1) {
-                var num = (Number(checklist[key1].checkedLength) - Number(checklist[key2].checkedLength));
-                if (num > 0) {
-                    // 1번키의 리스트 개수가 많음
-                    resultIssue = key1;
-                } else if (num < 0) {
-                    // 2번키의 리스트 개수가 많음
-                    resultIssue = key2;
-                } else {
-                    // 개수 동률 우선순위값으로 result 산출
-                    // console.log(key1+' order:', Number(checklist[key1].order));
-                    // console.log(key2+' order:', Number(checklist[key2].order));
-                    resultIssue = (Number(checklist[key1].order) < Number(checklist[key2].order)) ? key1 : key2;
-                }
-
-                // 불필요 값 삭제
-                // delete checklist[key2].order;
-                // delete checklist[key2].checkedLength;
-            } else {
-                resultIssue = paramValArr[0];
+            if (cat_age == "") {
+                alert("반려묘의 출생연도를 선택해 주세요.");
+                return false;
             }
 
-            // 불필요 값 삭제
-            // delete checklist[key1].order;
-            // delete checklist[key1].checkedLength;
-            
-            // alert(resultIssue);
-            // console.log(checklist);
+            if (visit_hospital == "") {
+                alert("최근 1년내 동물병원에 방문하신적이 있으신지 선택해 주세요.");
+                return false;
+            }
+
+            if (agree_num < 2) {
+                alert("약관에 모두 동의하셔야만 이벤트에 참여하실 수 있습니다.")
+                return false;
+            }
 
             // 데이터 저장
             $.ajax({
                 url: "../main_exec.php",
                 type: 'POST',
                 data: {
-                    "exec"          : "insert_checked_data",
-                    "check-data"    : JSON.stringify(checklist)
+                    "exec"          : "insert_cat_data",
+                    "cat-name"      : cat_name,
+                    "cat-age"       : cat_age,
+                    "cat-visit"     : visit_hospital,
+                    "cat-serial"    : "<?php echo $serial?>"
                 },
-                // data: JSON.stringify(checkedList),
                 success: function (response) {
-                    var param = "?issue="+resultIssue+"&counseling="+counselingFlag;
-                    setTimeout(function() {
-                        location.href = "./result.php"+param;
-                    }, 200);
+                    if (response == "Y") {
+                        setTimeout(function() {
+                            location.href = "./checklist.php?serial=<?php echo $serial?>";
+                        }, 200);
+                    }else{
+
+                    }
                 },
                 error: function(jqXHR, errMsg) {
                     // Handle error
-                    alert(errMsg);
+                    console.log(errMsg);
                 }
             });
-        });
-        $(document).ready(function() {
-
         });
     </script>
 </body>
