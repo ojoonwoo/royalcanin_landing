@@ -947,9 +947,9 @@ select.select-box {
 }
 .content._sub .title-block .prj-title .project-logo {
 	display: inline-block;
-	width: 28px;
-	height: 28px;
-	margin-right: 4px;
+	width: 46px;
+	height: 46px;
+	margin-right: 6px;
 	vertical-align: middle;
 }
 .content._sub .title-block .subject {
@@ -974,12 +974,12 @@ select.select-box {
 }
 
 .content.__gate .title-block .prj-title .text em {
-	font-size: 16px;
+	font-size: 23px;
 }
 
 .content.__gate .title-block .prj-title .text .icon {
-	width: 30px;
-	height: 21.5px;
+	width: 31px;
+	height: 22px;
 }
 
 .content.__gate .cat-block {
