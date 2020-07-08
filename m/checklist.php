@@ -2,6 +2,10 @@
     include_once "./head.php";
 
     $serial = $_GET['serial'];
+
+    if ($_SESSION['miniver_serial'] != $serial || !$_SESSION['miniver_serial']) {
+        echo "<script>location.href = 'index.php';</script>";
+    }
 ?>
 <body>
     <div id="container">
