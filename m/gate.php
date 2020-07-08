@@ -101,25 +101,33 @@
             var $this = $(this);
             $this.toggleClass('is-active');
         });
+        $(document).on('click', '.fake-radio', function() {
+            var $this = $(this);
+            $('.fake-radio').removeClass('is-active');
+            $this.toggleClass('is-active');
+        });
 
         $(document).on('click', '#go-next', function() {
             var agree_num = 0;
-            // $('.chk-trigger.is-active').each(function(idx, el) {
             $('.chk-trigger').each(function(idx, el) {
                 if($(el).hasClass('is-active')) {
                     agree_num++;
                 }
             });
 
-console.log(agree_num);
-return false;
+            if (agree_num < 2) {
+                alert("약관에 모두 동의하셔야만 이벤트에 참여하실 수 있습니다.")
+                return false;
+            }
+
             // 데이터 저장
             $.ajax({
                 url: "../main_exec.php",
                 type: 'POST',
                 data: {
-                    "exec"          : "insert_checked_data",
-                    "check-data"    : JSON.stringify(checklist)
+                    "exec"          : "insert_cat_data",
+                    "cat-name"      : $("#cat-name").val(),
+                    "cat-age"      : $("#cat-age").val(),
                 },
                 // data: JSON.stringify(checkedList),
                 success: function (response) {
