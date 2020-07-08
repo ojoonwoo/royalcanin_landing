@@ -102,7 +102,7 @@
             $this.toggleClass('is-active');
         });
 
-        $(document).on('click', '#go-result', function() {
+        $(document).on('click', '#go-next', function() {
             var agree_num = 0;
             // $('.chk-trigger.is-active').each(function(idx, el) {
             $('.chk-trigger').each(function(idx, el) {
