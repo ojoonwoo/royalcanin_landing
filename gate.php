@@ -61,11 +61,11 @@
                         세심한 관찰이 필요한 <b>반려묘 정보를 입력</b>해 주세요.
                     </div>
                     <div class="input-group">
-                        <label for="cat-name">반려묘 이름</label>
+                        <label for="cat-name" class="cat-name-label">반려묘 이름</label>
                         <input type="text" id="cat-name" class="input-text" placeholder="반려묘 이름을 입력해주세요.">
                     </div>
                     <div class="input-group">
-                        <label for="cat-age">반려묘 출생년도</label>
+                        <label for="cat-age" class="cat-age-label">반려묘 출생년도</label>
                         <select id="cat-age" class="select-box">
                             <option value="2000">2000</option>
                             <option value="2001">2001</option>
