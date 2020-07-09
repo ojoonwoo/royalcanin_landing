@@ -1122,18 +1122,19 @@ select.select-box {
 	text-align: center;
 	margin-bottom: 30px;
 }
-.content.__checklist .indicator-block .guide {
+.content.__checklist .guide {
 	margin-bottom: 27px;
 	font-size: 0;
+	text-align: center;
 }
-.content.__checklist .indicator-block .guide .icon {
+.content.__checklist .guide .icon {
 	display: inline-block;
 	width: 22px;
 	height: 22px;
 	margin-right: 4px;
 	vertical-align: middle;
 }
-.content.__checklist .indicator-block .guide span {
+.content.__checklist .guide span {
 	display: inline-block;
 	font-size: 20px;
 	font-weight: 700;

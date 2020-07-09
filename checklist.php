@@ -47,19 +47,19 @@
                     우리 반려묘 OO!<br><b>혹시 이런 모습을 보이나요?</b>
                 </div>
             </div>
-            <div class="indicator-block">
+            <!-- <div class="indicator-block"> -->
                 <div class="guide">
                     <img src="./images/icon_chkguide.png" alt="터치 가이드 이미지" class="icon">
                     <span>해당되는 항목을 모두 터치해주세요.</span>
                 </div>
-                <ul class="indicator">
+                <!-- <ul class="indicator">
                     <li class="is-current"></li>
                     <li></li>
                     <li></li>
                     <li></li>
                     <li></li>
-                </ul>
-            </div>
+                </ul> -->
+            <!-- </div> -->
             <div class="checklist-container">
                 <div class="list-wrapper">
                     <ul class="group is-current" data-cate="weight"></ul>
@@ -68,6 +68,15 @@
                     <ul class="group" data-cate="urinary"></ul>
                     <ul class="group" data-cate="stress"></ul>
                 </div>
+            </div>
+            <div class="indicator-block">
+                <ul class="indicator">
+                    <li class="is-current"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
             </div>
             <button type="button" class="type-01" id="go-next">다음으로</button>
         </div>
