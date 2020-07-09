@@ -1357,6 +1357,9 @@ select.select-box {
 	margin-top: 32px;
 }
 
+.content.__request {
+	padding: 60px 0 36px;
+}
 .content.__request .title-block {
 	margin-bottom: 26px;
 }
@@ -1478,6 +1481,9 @@ select.select-box {
 	font-size: 10px;
 	letter-spacing: -0.05em;
 	text-align: center;
+}
+.content.__request .go-next {
+	margin-top: 36px;
 }
 
 /* end sub */
