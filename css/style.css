@@ -1064,7 +1064,7 @@ select.select-box {
 }
 .content.__gate .input-wrapper .agree-wrap .chk-trigger {
 	border: 1px solid #f0f0f0;
-	height: 33px;
+	height: 40px;
 }
 .content.__gate .input-wrapper .agree-wrap .chk-trigger:first-child {
 	margin-bottom: 10px;
