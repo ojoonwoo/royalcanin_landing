@@ -1016,6 +1016,9 @@ select.select-box {
 	margin-bottom: 17px;
 	font-size: 0;
 }
+.content.__gate .input-wrapper .input-group:last-child {
+	margin-bottom: 29px;
+}
 .content.__gate .input-wrapper .input-group label {
 	/* flex-basis: 18%; */
 	/* flex-shrink: 0; */
@@ -1061,6 +1064,12 @@ select.select-box {
 }
 .content.__gate .input-wrapper .radio-wrap .fake-radio.is-active {
 	background-color: #e3001a;
+}
+.content.__gate .input-wrapper .agree-wrap {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 30px;
+	border-top: 1px solid #e6e6e6;
 }
 .content.__gate .input-wrapper .agree-wrap .chk-trigger {
 	border: 1px solid #f0f0f0;
