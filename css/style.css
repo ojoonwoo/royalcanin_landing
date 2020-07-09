@@ -933,6 +933,7 @@ select.select-box {
 	margin: 0 auto;
 }
 .content._sub.__result .inner {
+	width: inherit;
 	margin: 0 auto;
 }
 .content._sub #go-before {
