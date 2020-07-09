@@ -89,13 +89,13 @@
                             <option value="2020">2020</option>
                             <option value="" selected>선택해주세요</option>
                         </select>
-                    </div>
-                    <div class="radio-wrap">
-                        <span>최근 1년 내 동물병원에 방문한 적 있나요?</span>
-                        <div>
-                            <!-- <button type="button" class="fake-radio is-active">Y</button> -->
-                            <button type="button" class="fake-radio">Y</button>
-                            <button type="button" class="fake-radio">N</button>
+                        <div class="radio-wrap">
+                            <span>최근 1년 내 동물병원에 방문한 적 있나요?</span>
+                            <div>
+                                <!-- <button type="button" class="fake-radio is-active">Y</button> -->
+                                <button type="button" class="fake-radio">Y</button>
+                                <button type="button" class="fake-radio">N</button>
+                            </div>
                         </div>
                     </div>
                     <div class="agree-wrap">
