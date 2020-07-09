@@ -88,12 +88,14 @@
                             <img src="./images/result_graph_guide.svg" alt="" class="chart-guideline">
                         </div>
                     </div>
-                    <div class="icon-wrap"></div>
-                    <h5 class="adv-subject"></h5>
-                    <p class="adv-text">
-                        <span class="adv-msg"></span>
-                        <span class="default-msg">지금 무료 건강검진권을 신청하고<br>가까운 병원에서 수의사님을 만나보세요.</span>
-                    </p>
+                    <div class="desc-block">
+                        <div class="icon-wrap"></div>
+                        <h5 class="adv-subject"></h5>
+                        <p class="adv-text">
+                            <span class="adv-msg"></span>
+                            <span class="default-msg">지금 무료 건강검진권을 신청하고<br>가까운 병원에서 수의사님을 만나보세요.</span>
+                        </p>
+                    </div>
                 </div>
                 <a href="./request.php?serial=<?php echo $serial?>" class="type-01 go-next">건강검진권 신청하기</a>
             </div>
