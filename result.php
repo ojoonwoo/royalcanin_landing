@@ -19,59 +19,61 @@
 <body>
     <div id="container">
         <div class="content _sub __result">
-            <div class="sub-header">
-                <a href="javascript:void(0)" id="go-before"></a>
-                <a href="./" id="go-index"></a>
-            </div>
-            <div class="loading-layer">
-                <div class="wrapper">
-                    <img src="./images/project_logo.svg" class="project-logo" alt="고양이 주치의 프로젝트">
-                    <h2>관찰한 행동을 분석 중 이에요!</h2>
-                    <p>정확한 진단을 위해서는 <b>수의사님과의 상담이 필요</b>합니다.</p>
-                    <!-- <span style="display:block; margin: 10px">로딩 애니메이션 필요!</span> -->
+            <div class="inner">
+                <div class="sub-header">
+                    <a href="javascript:void(0)" id="go-before"></a>
+                    <a href="./" id="go-index"></a>
                 </div>
-            </div>
-            <div class="title-block">
-                <div class="prj-title">
-                    <img src="./images/project_logo.svg" class="project-logo" alt="고양이 주치의 프로젝트">
-                    <span class="text">
-                        <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>테스트</em></span>
-                </div>
-                <div class="subject">
-                    <b><?=$cat_info['mb_cat_name']?>의 행동을 분석한 결과..</b>
-                </div>
-            </div>
-            <div class="cat-block">
-                <img src="./images/result_cat.jpg" alt="고양이">
-                <div class="info">
-                    <div class="name-bx"><span>이름:</span><span><?=$cat_info['mb_cat_name']?></span></div>
-                    <div class="age-bx"><span>나이:</span><span><?=(date("Y")-$cat_info['mb_cat_birth'])?>세</span></div>
-                </div>
-            </div>
-            <div class="chart-block">
-                <div class="chart-wrapper">
-                    <div class="labels">
-                        <span class="weight">체중 관리</span>
-                        <span class="stress">스트레스 관리</span>
-                        <span class="urinary">요로계 질환</span>
-                        <span class="kidney">신장 질환</span>
-                        <span class="gastro">위장관 질환</span>
+                <div class="loading-layer">
+                    <div class="wrapper">
+                        <img src="./images/project_logo.svg" class="project-logo" alt="고양이 주치의 프로젝트">
+                        <h2>관찰한 행동을 분석 중 이에요!</h2>
+                        <p>정확한 진단을 위해서는 <b>수의사님과의 상담이 필요</b>합니다.</p>
+                        <!-- <span style="display:block; margin: 10px">로딩 애니메이션 필요!</span> -->
                     </div>
-                    <div class="graph-container">
-                        <canvas id="health-graph"></canvas>
-                    </div>
-                    <img src="./images/result_graph_guide.svg" alt="" class="chart-guideline">
                 </div>
+                <div class="title-block">
+                    <div class="prj-title">
+                        <img src="./images/project_logo.svg" class="project-logo" alt="고양이 주치의 프로젝트">
+                        <span class="text">
+                            <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>테스트</em></span>
+                    </div>
+                    <div class="subject">
+                        <b><?=$cat_info['mb_cat_name']?>의 행동을 분석한 결과..</b>
+                    </div>
+                </div>
+                <div class="cat-block">
+                    <img src="./images/result_cat.jpg" alt="고양이">
+                    <div class="info">
+                        <div class="name-bx"><span>이름:</span><span><?=$cat_info['mb_cat_name']?></span></div>
+                        <div class="age-bx"><span>나이:</span><span><?=(date("Y")-$cat_info['mb_cat_birth'])?>세</span></div>
+                    </div>
+                </div>
+                <div class="chart-block">
+                    <div class="chart-wrapper">
+                        <div class="labels">
+                            <span class="weight">체중 관리</span>
+                            <span class="stress">스트레스 관리</span>
+                            <span class="urinary">요로계 질환</span>
+                            <span class="kidney">신장 질환</span>
+                            <span class="gastro">위장관 질환</span>
+                        </div>
+                        <div class="graph-container">
+                            <canvas id="health-graph"></canvas>
+                        </div>
+                        <img src="./images/result_graph_guide.svg" alt="" class="chart-guideline">
+                    </div>
+                </div>
+                <div class="advice-block">
+                    <div class="icon-wrap"></div>
+                    <h5 class="adv-subject"></h5>
+                    <p class="adv-text">
+                        <span class="adv-msg"></span>
+                        <span class="default-msg">지금 무료 건강검진권을 신청하고<br>가까운 병원에서 수의사님을 만나보세요.</span>
+                    </p>
+                </div>
+                <a href="./request.php?serial=<?php echo $serial?>" class="type-01 go-next">건강검진권 신청하기</a>
             </div>
-            <div class="advice-block">
-                <div class="icon-wrap"></div>
-                <h5 class="adv-subject"></h5>
-                <p class="adv-text">
-                    <span class="adv-msg"></span>
-                    <span class="default-msg">지금 무료 건강검진권을 신청하고<br>가까운 병원에서 수의사님을 만나보세요.</span>
-                </p>
-            </div>
-            <a href="./request.php?serial=<?php echo $serial?>" class="type-01 go-next">건강검진권 신청하기</a>
         </div>
         <div id="footer">
             <span class="for-a11y">Copyright © 2020. ROYAL CANIN all rights reserved.</span>
