@@ -857,8 +857,8 @@ select.select-box {
 	top: 50%;
 	left: 33px;
 	transform: translateY(-50%);
-	width: 17px;
-	height: 17px;
+	width: 21px;
+	height: 21px;
 	background-color: #a4a4a4;
 	border-radius: 50%;
 	transition: all 0.25s ease;
@@ -866,13 +866,13 @@ select.select-box {
 .content .chk-trigger .chk-shape:after {
 	content: "";
 	position: absolute;
-	top: 2px;
-	left: 4px;
-	width: 14px;
-	height: 10px;
+	top: 3px;
+	left: 6px;
+	width: 15px;
+	height: 12px;
 	background-image: url(../images/checklist_chk_shape.png);
 	background-repeat: no-repeat;
-	background-size: 14px 10px;
+	background-size: 15px 12px;
 }
 .content .chk-trigger .text {
 	font-size: 16px;
