@@ -94,7 +94,7 @@
                     // 초기화
                     // checklist json 가져와서 뿌림
                     $.ajax({
-                        url: "../checklist_info.json",
+                        url: "./checklist_info.json",
                         cache: false,
                         dataType: "json",
                         type: 'get',
@@ -213,7 +213,7 @@
                     // 체크 정보 db update 후 callback에서 result로 serial같이 넘김
                     // 데이터 저장
                     $.ajax({
-                        url: "../main_exec.php",
+                        url: "./main_exec.php",
                         type: 'POST',
                         data: {
                             "exec"          : "insert_check_data",
