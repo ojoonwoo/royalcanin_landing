@@ -974,6 +974,14 @@ select.select-box {
 	font-weight: 800;
 	color: #e3001a;
 }
+.content._sub .title-block .prj-title .text em {
+	font-size: 23px;
+}
+
+.content._sub .title-block .prj-title .text .icon {
+	width: 31px;
+	height: 22px;
+}
 /* .content.__gate {
 	padding-bottom: 35px;
 } */
@@ -984,15 +992,6 @@ select.select-box {
 	margin-bottom: 36px;
 	text-align: center;
 	font-size: 0;
-}
-
-.content.__gate .title-block .prj-title .text em {
-	font-size: 23px;
-}
-
-.content.__gate .title-block .prj-title .text .icon {
-	width: 31px;
-	height: 22px;
 }
 
 .content.__gate .cat-block {
