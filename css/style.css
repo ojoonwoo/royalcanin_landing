@@ -1283,6 +1283,7 @@ select.select-box {
 	/* padding: 0 33.8%; */
 	text-align: center;
 	display: inline-block;
+	top: 33px;
 }
 .content.__result .chart-block .chart-wrapper {
 	display: inline-block;
@@ -1348,14 +1349,15 @@ select.select-box {
 }
 .content.__result .desc-block {
 	display: inline-block;
+	position: relative;
+	top: 55px;
 }
 .content.__result .advice-block {
 	margin-top: 54px;
 	background-color: #f0f0f0;
-	/* padding: 27px 60px 30px; */
-	padding: 27px 20px 30px;
-	/* padding: 27px 17% 30px; */
+	/* padding: 27px 20px 30px; */
 	text-align: center;
+	height: 368px;
 }
 .content.__result .advice-block .icon-wrap {
 	font-size: 0;
