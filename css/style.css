@@ -1035,6 +1035,7 @@ select.select-box {
 	/* align-items: center; */
 	/* margin: 25px 0 21px; */
 	margin-left: 116px;
+	display: inline-block;
 }
 .content.__gate .input-wrapper .radio-wrap span {
 	font-size: 18px;
@@ -1047,16 +1048,16 @@ select.select-box {
 	margin-left: 32px;
 }
 .content.__gate .input-wrapper .radio-wrap .fake-radio:first-child {
-	margin-right: 5px;
+	margin-right: 7px;
 }
 .content.__gate .input-wrapper .radio-wrap .fake-radio {
 	border-radius: 50%;
 	color: #ffffff;
-	font-size: 13px;
+	font-size: 16px;
 	font-weight: 800;
 	background-color: #a4a4a4;
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 }
 .content.__gate .input-wrapper .radio-wrap .fake-radio.is-active {
 	background-color: #e3001a;
