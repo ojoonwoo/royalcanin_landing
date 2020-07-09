@@ -829,15 +829,15 @@ select.select-box {
 
 .content .chk-trigger {
 	position: relative;
-	width: 100%;
-	display: flex;
+	width: 404px;
+	/* display: flex; */
 	padding-right: 20px;
 	padding-left: 66px;
-	justify-content: flex-start;
-	align-items: center;
+	/* justify-content: flex-start; */
+	/* align-items: center; */
 	border: 2px solid #f0f0f0;
 	border-radius: 28px;
-	height: 45px;
+	height: 40px;
 	text-align: left;
 	background-color: #f0f0f0;
 	transition: background-color 0.05s ease, transform 0.05s ease, box-shadow 0.05s ease, border 0.05s ease;
@@ -867,10 +867,10 @@ select.select-box {
 	background-size: 14px 10px;
 }
 .content .chk-trigger .text {
-	font-size: 13px;
+	font-size: 16px;
 	/* font-weight: 700; */
 	font-weight: 500;
-	font-size: 3.46vw;
+	/* font-size: 3.46vw; */
 	letter-spacing: -0.05em;
 	color: #333333;
 	line-height: 1.2;
