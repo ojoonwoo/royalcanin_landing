@@ -1392,7 +1392,7 @@ select.select-box {
 }
 .content.__result .advice-block .adv-text .default-msg {
 	display: block;
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: 800;
 	letter-spacing: -0.05em;
 	line-height: 1.35;
