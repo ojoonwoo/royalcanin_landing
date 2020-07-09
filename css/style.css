@@ -773,13 +773,13 @@ button.with-icon:after {
 }
 
 #footer {
-	background: url(../images/copyright.png) center / 364px auto #333333 no-repeat;
-	height: 115px;
+	background: url(../images/copyright.png) center / 338px auto #333333 no-repeat;
+	height: 120px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
 	#footer {
-		background: url(../images/copyright2x.png) center / 364px auto #333333 no-repeat;
-		height: 115px;
+		background: url(../images/copyright2x.png) center / 338px auto #333333 no-repeat;
+		height: 120px;
 	}
 }
 
@@ -972,9 +972,9 @@ select.select-box {
 	font-weight: 800;
 	color: #e3001a;
 }
-.content.__gate {
+/* .content.__gate {
 	padding-bottom: 35px;
-}
+} */
 .content.__gate .title-block {
 	margin-bottom: 22px;
 }
