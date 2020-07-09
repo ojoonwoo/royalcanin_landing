@@ -172,14 +172,14 @@ button {
 }
 a.type-01 {
 	position: relative;
-	width: 201px;
+	width: 278px;
 	display: block;
 	margin: 0 auto;
-	padding: 19px 0;
+	padding: 23px 0;
 	background-color: #e3001a;
-	border-radius: 26px;
+	border-radius: 34px;
 	color: #ffffff;
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: 800;
 	letter-spacing: -0.05em;
 	/* padding: 18px 0; */
@@ -1075,9 +1075,9 @@ select.select-box {
 	border: 1px solid #f0f0f0;
 	height: 40px;
 }
-.content.__gate .input-wrapper .agree-wrap .chk-trigger:first-child {
+/* .content.__gate .input-wrapper .agree-wrap .chk-trigger:first-child {
 	margin-bottom: 10px;
-}
+} */
 .content.__gate .input-wrapper .agree-wrap .chk-trigger.is-active {
 	border: 1px solid #e3001a;
 	box-shadow: none;
@@ -1097,7 +1097,8 @@ select.select-box {
 	background: url(../images/agree_arrow_active.png) 50% / 6.5px 11.5px no-repeat;
 }
 .content.__gate #go-next {
-	margin-top: 34px;
+	margin-top: 60px;
+	margin-bottom: 89px;
 }
 
 
