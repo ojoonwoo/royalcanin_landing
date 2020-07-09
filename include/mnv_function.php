@@ -96,6 +96,7 @@ class mnv_function extends mnv_dbi
 			$query		= "UPDATE serial_info SET useYN='Y', use_date='".date('Y-m-d H:i:s')."' WHERE 1 AND serial_code='".$data['serial_code']."'";
 			$result 	= mysqli_query($my_db, $query);
 
+			$_SESSION['miniver_serial']		= $data['serial_code'];
 			return $data['serial_code'];
 		}else{
 			return $serial = $mnv_f->create_serial();

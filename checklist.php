@@ -3,17 +3,35 @@
 
     $serial = $_GET['serial'];
 
-    if ($_SESSION['miniver_serial'] != $serial || !$_SESSION['miniver_serial']) {
-        echo "<script>location.href = 'index.php';</script>";
-    }
-    
-    $query = "SELECT mb_cat_name FROM member_info WHERE 1 AND mb_serial = '".$serial."'";
-    $result = mysqli_query($my_db, $query);
-        
-    $cat_info = mysqli_fetch_array($result);
+    // if ($_SESSION['miniver_serial'] != $serial || !$_SESSION['miniver_serial'] || !$serial) {
+    //     echo "<script>location.href = 'index.php';</script>";
+    // }
 ?>
 <body>
     <div id="container">
+        <div id="header">
+            <div class="inner">
+                <a href="./" class="logo">
+                    <img src="./images/logo.png" alt="로얄캐닌 홈으로">
+                </a>
+                <nav class="menu">
+                    <ul>
+                        <li class="active">
+                            <a href="javascript:void(0)" data-url="#section1">메인</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-url="#section2">주치의 프로젝트</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-url="#section3">주치의력 테스트</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-url="#section4">주치의력 업그레이드 TIPS</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
         <div class="content _sub __checklist">
             <div class="sub-header">
                 <a href="javascript:void(0)" id="go-before"></a>
@@ -26,22 +44,22 @@
                         <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>테스트</em></span>
                 </div>
                 <div class="subject">
-                    우리 반려묘 <?=$cat_info['mb_cat_name']?>!<br><b>혹시 이런 모습을 보이나요?</b>
+                    우리 반려묘 OO!<br><b>혹시 이런 모습을 보이나요?</b>
                 </div>
             </div>
-            <div class="indicator-block">
+            <!-- <div class="indicator-block"> -->
                 <div class="guide">
                     <img src="./images/icon_chkguide.png" alt="터치 가이드 이미지" class="icon">
                     <span>해당되는 항목을 모두 터치해주세요.</span>
                 </div>
-                <ul class="indicator">
+                <!-- <ul class="indicator">
                     <li class="is-current"></li>
                     <li></li>
                     <li></li>
                     <li></li>
                     <li></li>
-                </ul>
-            </div>
+                </ul> -->
+            <!-- </div> -->
             <div class="checklist-container">
                 <div class="list-wrapper">
                     <ul class="group is-current" data-cate="weight"></ul>
@@ -50,6 +68,15 @@
                     <ul class="group" data-cate="urinary"></ul>
                     <ul class="group" data-cate="stress"></ul>
                 </div>
+            </div>
+            <div class="indicator-block">
+                <ul class="indicator">
+                    <li class="is-current"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
             </div>
             <button type="button" class="type-01" id="go-next">다음으로</button>
         </div>
@@ -76,7 +103,7 @@
                     // 초기화
                     // checklist json 가져와서 뿌림
                     $.ajax({
-                        url: "../checklist_info.json",
+                        url: "./checklist_info.json",
                         cache: false,
                         dataType: "json",
                         type: 'get',
@@ -141,7 +168,7 @@
                     }
                 },
                 stepAnimate: function(direction) {
-                    // console.log('step animation start');
+                    console.log('step animation start');
                     isAnimate = true;
                     var stepTl = gsap.timeline({onComplete: function(){
                         (direction==='next') ? currentStep++ : currentStep--;
@@ -152,7 +179,7 @@
                             $('#go-next').text('다음으로');
                         }
                         $('.list-wrapper .group').removeClass('is-current').eq(currentStep).addClass('is-current');
-                        // console.log('step animation end');
+                        console.log('step animation end');
                     }});
                     if(direction === 'next') {
                         stepTl
@@ -195,7 +222,7 @@
                     // 체크 정보 db update 후 callback에서 result로 serial같이 넘김
                     // 데이터 저장
                     $.ajax({
-                        url: "../main_exec.php",
+                        url: "./main_exec.php",
                         type: 'POST',
                         data: {
                             "exec"          : "insert_check_data",
