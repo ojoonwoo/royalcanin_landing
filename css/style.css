@@ -792,7 +792,7 @@ select.select-box {
 	-webkit-appearance: none;
 	   -moz-appearance: none;
 	        appearance: none;
-	width: 100%;
+	width: 210px;
 	height: 45px;
 	background-color: #f0f0f0;
 	background-image: url(../images/select_arrow.png);
@@ -1010,9 +1010,9 @@ select.select-box {
 	padding: 0 120px;
 }
 .content.__gate .input-wrapper .input-group {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	/* display: flex; */
+	/* align-items: center; */
+	/* justify-content: space-between; */
 	margin-bottom: 17px;
 }
 .content.__gate .input-wrapper .input-group label {
