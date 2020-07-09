@@ -78,7 +78,8 @@
                     <li></li>
                 </ul>
             </div>
-            <button type="button" class="type-01" id="go-next">다음으로</button>
+            <!-- <button type="button" class="type-01" id="go-next">다음으로</button> -->
+            <a href="javascript:void(0)" class="type-01 go-next" id="go-next">다음으로</a>
         </div>
         <div id="footer">
             <span class="for-a11y">Copyright © 2020. ROYAL CANIN all rights reserved.</span>
