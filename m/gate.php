@@ -154,7 +154,7 @@
                             location.href = "./checklist.php?serial=<?php echo $serial?>";
                         }, 200);
                     }else{
-
+                        alert('error');
                     }
                 },
                 error: function(jqXHR, errMsg) {

@@ -2,6 +2,11 @@
     include_once "./head.php";
 
     $serial = $_GET['serial'];
+
+    $query = "SELECT mb_cat_name FROM member_info WHERE 1 AND mb_serial = '".$serial."'";
+    $result = mysqli_query($my_db, $query);
+    
+    $cat_info = mysqli_fetch_array($result);
 ?>
 <body>
     <div id="container">
@@ -17,7 +22,7 @@
                         <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>테스트</em></span>
                 </div>
                 <div class="subject">
-                    우리 반려묘 OO!<br><b>혹시 이런 모습을 보이나요?</b>
+                    우리 반려묘 <?=$cat_info['mb_cat_name']?>!<br><b>혹시 이런 모습을 보이나요?</b>
                 </div>
             </div>
             <div class="indicator-block">
@@ -132,7 +137,7 @@
                     }
                 },
                 stepAnimate: function(direction) {
-                    console.log('step animation start');
+                    // console.log('step animation start');
                     isAnimate = true;
                     var stepTl = gsap.timeline({onComplete: function(){
                         (direction==='next') ? currentStep++ : currentStep--;
@@ -143,7 +148,7 @@
                             $('#go-next').text('다음으로');
                         }
                         $('.list-wrapper .group').removeClass('is-current').eq(currentStep).addClass('is-current');
-                        console.log('step animation end');
+                        // console.log('step animation end');
                     }});
                     if(direction === 'next') {
                         stepTl
