@@ -1278,6 +1278,7 @@ select.select-box {
 	/* padding: 0 20px; */
 	/* padding: 0 33.8%; */
 	text-align: center;
+	display: inline-block;
 }
 .content.__result .chart-block .chart-wrapper {
 	display: inline-block;
@@ -1340,6 +1341,9 @@ select.select-box {
 	height: 111px;
 	position: relative;
 	z-index: 2;
+}
+.content.__result .desc-block {
+	display: inline-block;
 }
 .content.__result .advice-block {
 	margin-top: 54px;
