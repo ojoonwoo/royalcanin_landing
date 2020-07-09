@@ -988,7 +988,7 @@ select.select-box {
 }
 
 .content.__gate .cat-block {
-	margin-bottom: 25px;
+	margin-bottom: 36px;
 }
 .content.__gate .cat-block img {
 	margin: 0 auto;
@@ -1000,6 +1000,7 @@ select.select-box {
 	line-height: 1.2;
 	margin-bottom: 30px;
 	border-bottom: 1px solid #e3001a;
+	padding-bottom: 10px;
 }
 .content.__gate .input-wrapper .message b {
 	font-weight: 800;
@@ -1017,7 +1018,7 @@ select.select-box {
 .content.__gate .input-wrapper .input-group label {
 	flex-basis: 30%;
 	flex-shrink: 0;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: 700;
 	letter-spacing: -0.05em;
 }
