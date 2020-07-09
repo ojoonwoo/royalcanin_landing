@@ -807,7 +807,8 @@ select.select-box {
 	background-position: 94% 50%;
 	background-repeat: no-repeat;
 	font-family: 'Noto Sans Korean';
-	font-weight: 700;
+	font-weight: 500;
+	font-size: 18px;
 	letter-spacing: -0.05em;
 	padding: 0 20px;
 	box-sizing: border-box;
