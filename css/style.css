@@ -1175,7 +1175,7 @@ select.select-box {
 	text-align: center;
 }
 .content.__checklist .list-wrapper li {
-	margin-bottom: 10px;
+	margin-bottom: 26px;
 	opacity: 0;
 	visibility: hidden;
 }
@@ -1185,6 +1185,7 @@ select.select-box {
 }
 .content.__checklist .list-wrapper .group li button {
 	width: 860px;
+	height: 45px;
 	text-align: center;
 }
 .content.__checklist .list-wrapper .group li button .chk-shape {
