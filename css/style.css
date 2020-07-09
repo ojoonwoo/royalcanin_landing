@@ -1014,6 +1014,7 @@ select.select-box {
 	/* align-items: center; */
 	/* justify-content: space-between; */
 	margin-bottom: 17px;
+	font-size: 0;
 }
 .content.__gate .input-wrapper .input-group label {
 	/* flex-basis: 18%; */
@@ -1029,18 +1030,21 @@ select.select-box {
 	margin-right: 33px;
 }
 .content.__gate .input-wrapper .radio-wrap {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin: 25px 0 21px;
+	/* display: flex; */
+	/* justify-content: space-between; */
+	/* align-items: center; */
+	/* margin: 25px 0 21px; */
+	margin-left: 116px;
 }
 .content.__gate .input-wrapper .radio-wrap span {
-	font-size: 14px;
+	font-size: 18px;
 	letter-spacing: -0.05em;
 	font-weight: 700;
 }
 .content.__gate .input-wrapper .radio-wrap div {
 	font-size: 0;
+	display: inline-block;
+	margin-left: 32px;
 }
 .content.__gate .input-wrapper .radio-wrap .fake-radio:first-child {
 	margin-right: 5px;
