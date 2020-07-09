@@ -58,7 +58,7 @@
                 </div>
                 <div class="input-wrapper">
                     <div class="message">
-                        세심한 관찰이 필요한<br><b>반려묘 정보를 입력</b>해 주세요
+                        세심한 관찰이 필요한 <b>반려묘 정보를 입력</b>해 주세요.
                     </div>
                     <div class="input-group">
                         <label for="cat-name">반려묘 이름</label>

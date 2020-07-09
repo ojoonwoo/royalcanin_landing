@@ -996,7 +996,7 @@ select.select-box {
 }
 .content.__gate .input-wrapper .message {
 	text-align: left;
-	font-size: 17px;
+	font-size: 20px;
 	letter-spacing: -0.05em;
 	line-height: 1.2;
 	margin-bottom: 30px;
@@ -1007,7 +1007,7 @@ select.select-box {
 	color: #e3001a;
 }
 .content.__gate .input-wrapper {
-	padding: 0 20px;
+	padding: 0 120px;
 }
 .content.__gate .input-wrapper .input-group {
 	display: flex;
