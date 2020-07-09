@@ -1113,7 +1113,7 @@ select.select-box {
 	min-height: calc(100% - 63px);
 }
 .content.__checklist .title-block {
-	margin-bottom: 18px;
+	margin-bottom: 38px;
 }
 .content.__checklist .prj-title {
 	margin-bottom: 20px;
@@ -1128,8 +1128,8 @@ select.select-box {
 }
 .content.__checklist .indicator-block .guide .icon {
 	display: inline-block;
-	width: 18.5px;
-	height: 28px;
+	width: 22px;
+	height: 22px;
 	margin-right: 4px;
 	vertical-align: middle;
 }
@@ -1170,6 +1170,7 @@ select.select-box {
 	width: 100%;
 	padding: 0 24px;
 	flex-shrink: 0;
+	text-align: center;
 }
 .content.__checklist .list-wrapper li {
 	margin-bottom: 10px;
@@ -1179,6 +1180,9 @@ select.select-box {
 .content.__checklist .list-wrapper .group:first-child li {
 	opacity: 1;
 	visibility: visible;
+}
+.content.__checklist .list-wrapper .group li button {
+	width: 860px;
 }
 .content.__checklist #go-next {
 	display: block;
