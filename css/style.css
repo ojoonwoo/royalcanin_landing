@@ -1197,9 +1197,9 @@ select.select-box {
 	/* width: 201px; */
 }
 
-.content.__result {
+/* .content.__result {
 	padding: 60px 0 31px;
-}
+} */
 .content.__result .loading-layer {
 	position: fixed;
 	top: 0;
