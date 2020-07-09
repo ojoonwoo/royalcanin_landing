@@ -164,7 +164,7 @@
 
             // 데이터 저장
             $.ajax({
-                url: "../main_exec.php",
+                url: "./main_exec.php",
                 type: 'POST',
                 data: {
                     "exec"          : "insert_cat_data",
