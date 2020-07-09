@@ -72,22 +72,22 @@
                         <div class="age-bx"><span>나이:</span><span><?=(date("Y")-$cat_info['mb_cat_birth'])?>세</span></div>
                     </div>
                 </div>
-                <div class="chart-block">
-                    <div class="chart-wrapper">
-                        <div class="labels">
-                            <span class="weight">체중 관리</span>
-                            <span class="stress">스트레스 관리</span>
-                            <span class="urinary">요로계 질환</span>
-                            <span class="kidney">신장 질환</span>
-                            <span class="gastro">위장관 질환</span>
-                        </div>
-                        <div class="graph-container">
-                            <canvas id="health-graph"></canvas>
-                        </div>
-                        <img src="./images/result_graph_guide.svg" alt="" class="chart-guideline">
-                    </div>
-                </div>
                 <div class="advice-block">
+                    <div class="chart-block">
+                        <div class="chart-wrapper">
+                            <div class="labels">
+                                <span class="weight">체중 관리</span>
+                                <span class="stress">스트레스 관리</span>
+                                <span class="urinary">요로계 질환</span>
+                                <span class="kidney">신장 질환</span>
+                                <span class="gastro">위장관 질환</span>
+                            </div>
+                            <div class="graph-container">
+                                <canvas id="health-graph"></canvas>
+                            </div>
+                            <img src="./images/result_graph_guide.svg" alt="" class="chart-guideline">
+                        </div>
+                    </div>
                     <div class="icon-wrap"></div>
                     <h5 class="adv-subject"></h5>
                     <p class="adv-text">
