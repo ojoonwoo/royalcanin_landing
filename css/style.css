@@ -773,8 +773,14 @@ button.with-icon:after {
 }
 
 #footer {
-	background: url(../images/copyright.png) center / 247px auto #333333 no-repeat;
-	height: 63px;
+	background: url(../images/copyright.png) center / 364px auto #333333 no-repeat;
+	height: 115px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+	#footer {
+		background: url(../images/copyright2x.png) center / 364px auto #333333 no-repeat;
+		height: 115px;
+	}
 }
 
 /* input component */
