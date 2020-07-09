@@ -995,11 +995,12 @@ select.select-box {
 	margin: 0 auto;
 }
 .content.__gate .input-wrapper .message {
-	text-align: center;
+	text-align: left;
 	font-size: 17px;
 	letter-spacing: -0.05em;
 	line-height: 1.2;
 	margin-bottom: 30px;
+	border-bottom: 1px solid #e3001a;
 }
 .content.__gate .input-wrapper .message b {
 	font-weight: 800;
