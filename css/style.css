@@ -1183,6 +1183,10 @@ select.select-box {
 }
 .content.__checklist .list-wrapper .group li button {
 	width: 860px;
+	text-align: center;
+}
+.content.__checklist .list-wrapper .group li button .chk-shape {
+	left: 48px;
 }
 .content.__checklist #go-next {
 	display: block;
