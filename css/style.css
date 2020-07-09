@@ -1247,7 +1247,7 @@ select.select-box {
 	margin-bottom: 20px;
 }
 .content.__result .cat-block {
-	margin-bottom: 50px;
+	margin-bottom: 31px;
 }
 .content.__result .cat-block img {
 	margin: 0 auto;
@@ -1284,6 +1284,7 @@ select.select-box {
 	text-align: center;
 	display: inline-block;
 	top: 33px;
+	margin: 0 170px 0 122px;
 }
 .content.__result .chart-block .chart-wrapper {
 	display: inline-block;
