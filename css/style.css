@@ -1399,7 +1399,7 @@ select.select-box {
 	color: #e3001a;
 }
 .content.__result .go-next {
-	margin-top: 32px;
+	margin: 61px auto 89px;
 }
 
 .content.__request {
