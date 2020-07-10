@@ -45,10 +45,13 @@
                 <img src="./images/result_cat.jpg" alt="고양이">
                 <div class="info">
                     <div class="name-bx"><span>이름:</span><span><?=$cat_info['mb_cat_name']?></span></div>
-                    <div class="age-bx"><span>나이:</span><span><?=(date("Y")-$cat_info['mb_cat_birth'])?>세</span></div>
+                    <div class="age-bx"><span>나이:</span><span><em id="age-num"><?=(date("Y")-$cat_info['mb_cat_birth'])?></em>세</span></div>
                 </div>
             </div>
             <div class="chart-block">
+                <div class="logo">
+                    <span class="for-a11y">KSFM</span>
+                </div>
                 <div class="chart-wrapper">
                     <div class="labels">
                         <span class="weight">체중 관리</span>
@@ -71,6 +74,7 @@
                     <span class="default-msg">지금 무료 건강검진권을 신청하고<br>가까운 병원에서 수의사님을 만나보세요.</span>
                 </p>
             </div>
+            <img src="./images/result_notice.png" alt="* 결과는 보호자가 인식하는 반려묘 신호 정도에 따라 상이할 수 있는 참고용으로, 수의사 선생님의 소견이나 수의학적 치료를 대체할 수 없습니다." class="noti-msg">
             <a href="./request.php?serial=<?php echo $serial?>" class="type-01 go-next">건강검진권 신청하기</a>
         </div>
         <div id="footer">
@@ -146,6 +150,7 @@
             // adviceArray[i] 권고
             // else
             // 권고없음
+
             var adv_subject = "";
             var adv_icon = [];
             var adv_msg = "";
@@ -231,17 +236,12 @@
             },
             options: {
                 responsive: true,
-                // aspectRatio: 0.93,
-                aspectRatio: 1,
+                aspectRatio: 0.95,
+                // aspectRatio: 1,
                 animation: {
                     // easing: 'easeInQuad',
                     duration: 5000,
-                    render: function() {
-                        console.log('render');
-                    },
-                    onComplete: function() {
-                        // drawResult();
-                    }
+                    onComplete: function() {}
                 },
                 legend: {
                     display: false

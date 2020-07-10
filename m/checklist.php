@@ -6,8 +6,8 @@
     if ($_SESSION['miniver_serial'] != $serial || !$_SESSION['miniver_serial']) {
         echo "<script>location.href = 'index.php';</script>";
     }
-    
-    $query = "SELECT mb_cat_name FROM member_info WHERE 1 AND mb_serial = '".$serial."'";
+
+    $query = "SELECT mb_cat_name, mb_cat_birth FROM member_info WHERE 1 AND mb_serial = '".$serial."'";
     $result = mysqli_query($my_db, $query);
         
     $cat_info = mysqli_fetch_array($result);
@@ -28,6 +28,7 @@
                 <div class="subject">
                     우리 반려묘 <?=$cat_info['mb_cat_name']?>!<br><b>혹시 이런 모습을 보이나요?</b>
                 </div>
+                <input type="hidden" id="cat-age" value="<?=(date("Y")-$cat_info['mb_cat_birth'])?>">
             </div>
             <div class="indicator-block">
                 <div class="guide">
@@ -172,6 +173,12 @@
                     }
                 },
                 submit: function() {
+                    // 초기화 필요할 시 
+                    // checklist[key].list = [];
+                    // checklist[key].checkedLength = 0;
+                    
+                    var hematuria = "N";
+
                     $('.chk-trigger').each(function(idx, el) {
                         var key = $(this).closest('.group').attr('data-cate');
                         var question = $(this).find('.text').text();
@@ -191,7 +198,10 @@
                         // console.log('length:', len);
                     }
 
-                    console.log(checklist);
+                    if(checklist.urinary.checkedLength >= 3 || Number($('#cat-age').val()) >= 8) {
+                        hematuria = "Y";
+                    }
+                    alert(hematuria);
                     // 체크 정보 db update 후 callback에서 result로 serial같이 넘김
                     // 데이터 저장
                     $.ajax({
@@ -200,7 +210,8 @@
                         data: {
                             "exec"          : "insert_check_data",
                             "mb_check"      : JSON.stringify(checklist),
-                            "mb_serial"    : "<?php echo $serial?>"
+                            "mb_serial"    : "<?php echo $serial?>",
+                            "mb_result"     : hematuria
                         },
                         success: function (response) {
                             if (response == "Y") {

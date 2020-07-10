@@ -85,8 +85,34 @@
                     </button>
                 </div>
             </div>
-            <!-- <a href="./checklist.php" class="type-01 go-next" id="go-next">다음으로</a> -->
             <a href="javascript:void(0)" class="type-01 go-next" id="go-next">다음으로</a>
+            <!-- 팝업 결정 나면 작업 -->
+            <!-- <div class="popup _agree" id="other-popup">
+                <div class="inner">
+                    <button type="button" class="popup-close" data-popup="@close"></button>
+                    <div class="title-block">
+                        <p class="title">가까운 병원을 검색해 선택해주세요!</p>
+                    </div>
+                    <div class="guide-icon">
+                        <img src="./images/naver_search_guide.png" alt="">
+                    </div>
+                    <a href="https://map.naver.com/v5/search/" class="naver-search" target="_blank">
+                        <img src="./images/button_naver.png" alt="네이버에서 가까운 동물병원 찾기">
+                    </a>
+                    <div class="input-wrapper">
+                        <div class="input-group">
+                            <label for="nv-h-name">동물병원 명</label>
+                            <input type="text" id="nv-h-name" class="input-text" placeholder="동물병원 명을 기입해 주세요.">
+                        </div>
+                        <div class="input-group">
+                            <label for="nv-h-name">동물병원 주소</label>
+                            <input type="text" id="nv-h-addr" class="input-text" placeholder="복사한 동물병원 주소를 붙여넣어 주세요.">
+                        </div>
+                    </div>
+                    <button type="button" class="type-01 hospi-select">입력 완료</button>
+                    <p class="guide-msg">* 병원 선택 전, 해당 주소지가 맞는지 확인해주세요!</p>
+                </div>
+            </div> -->
         </div>
         <div id="footer">
             <span class="for-a11y">Copyright © 2020. ROYAL CANIN all rights reserved.</span>

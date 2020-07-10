@@ -1,6 +1,6 @@
 $(function(){
 
-	window.royalcaninDog = {};
+	window.royalcaninCat = {};
 
 	var $win = $(window),
 		$doc = $(document),
@@ -11,7 +11,7 @@ $(function(){
 	var locationArray = location.href.split('/');
 	var currentLocation = locationArray[locationArray.length-1].split('.')[0];
 
-	royalcaninDog.popup = {
+	royalcaninCat.popup = {
 		bind : function(){
 			$doc
 				.on('click', '[data-popup]', function(e){
@@ -20,13 +20,9 @@ $(function(){
 					val = $this.attr('data-popup');
 
 				if (val.match('@close')){
-					royalcaninDog.popup.close($this.closest('.popup'));
+					royalcaninCat.popup.close($this.closest('.popup'));
 				} else {
-					if($this.attr('data-popup-idx')) {
-						royalcaninDog.popup.contentChange($(val), $this.attr('data-popup-idx'));
-					} else {
-						royalcaninDog.popup.show($(val));
-					}
+					royalcaninCat.popup.show($(val));
 				}
 
 				if ($this.is('a')){
@@ -37,7 +33,7 @@ $(function(){
 				var $this = $(this),
 					val = $this.attr('data-popup-close');
 
-					royalcaninDog.popup.close($(val));
+					royalcaninCat.popup.close($(val));
 
 				if ($this.is('a')){
 					e.preventDefault();
@@ -83,18 +79,14 @@ $(function(){
 
 					//					$popup.trigger('afterpopupClosed', $wrap);
 				});
-				if($popup.attr('data-popup-info')) {
-					click_tracking($popup.attr('data-popup-info')+' 팝업 클로즈');
-				}
-				stopVideo();
-				playerFlag = false;
+				// if($popup.attr('data-popup-info')) {
+				// 	click_tracking($popup.attr('data-popup-info')+' 팝업 클로즈');
+				// }
 				$popup.trigger('popupClosed', $wrap);
 			}
-		},
-		contentChange: function($popup, popupIdx) {
 		}
 	};
-	royalcaninDog.popup.bind();
+	royalcaninCat.popup.bind();
 
 	// 버튼 링크
 	$('.link-btn').on('click', function() {
