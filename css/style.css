@@ -1228,19 +1228,19 @@ select.select-box {
 	text-align: center;
 }
 .content.__result .loading-layer .wrapper .project-logo {
-	width: 100px;
-	height: 100px;
+	width: 113px;
+	height: 113px;
 	margin: 0 auto 20px;
 }
 .content.__result .loading-layer .wrapper h2 {
-	font-size: 21px;
+	font-size: 28px;
 	color: #e3001a;
 	letter-spacing: -0.05em;
 	font-weight: 800;
 	margin-bottom: 7px;
 }
 .content.__result .loading-layer .wrapper p {
-	font-size: 11px;
+	font-size: 14px;
 	letter-spacing: -0.05em;
 }
 .content.__result .loading-layer .wrapper p b {
