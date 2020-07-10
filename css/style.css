@@ -1256,6 +1256,11 @@ select.select-box {
 /* .content.__result .cat-block {
 	margin-bottom: 31px;
 } */
+.content.__result .cat-block {
+	position: relative;
+	width: 1100px;
+	margin: 0 auto;
+}
 .content.__result .cat-block img {
 	margin: 0 auto;
 }
@@ -1283,6 +1288,11 @@ select.select-box {
 }
 .content.__result .cat-block .info > div span:first-child {
 	margin-right: 3px;
+}
+.content.__result .cat-block .info .ksfm-logo {
+	position: absolute;
+	right: 0;
+	bottom: -26px;
 }
 .content.__result .chart-block {
 	position: relative;

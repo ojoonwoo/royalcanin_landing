@@ -70,7 +70,7 @@
                     <div class="info">
                         <div class="name-bx"><span>이름:</span><span><?=$cat_info['mb_cat_name']?></span></div>
                         <div class="age-bx"><span>나이:</span><span><?=(date("Y")-$cat_info['mb_cat_birth'])?>세</span></div>
-                        <div>
+                        <div class="ksfm-logo">
                             <img src="./images/result_graph_logo.png" alt="">
                         </div>
                     </div>
