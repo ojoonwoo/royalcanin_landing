@@ -41,7 +41,7 @@
             <div class="inner">
                 <div class="sub-header">
                     <a href="javascript:history.back()" id="go-before"></a>
-                    <a href="./" id="go-index"></a>
+                    <!-- <a href="./" id="go-index"></a> -->
                 </div>
                 <div class="title-block">
                     <div class="prj-title">
