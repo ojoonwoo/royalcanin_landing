@@ -1420,9 +1420,9 @@ select.select-box {
 	margin: 61px auto 89px;
 }
 
-.content.__request {
+/* .content.__request {
 	padding: 60px 0 36px;
-}
+} */
 .content.__request .title-block {
 	margin-bottom: 26px;
 }
