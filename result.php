@@ -203,9 +203,9 @@
             $('.advice-block .adv-msg').html(adv_msg);
 
             
-            // setTimeout(function() {
-            //     gsap.to($('.loading-layer'), {duration: 0.3, autoAlpha: 0, onComplete: loadingEnd});
-            // }, 2000);
+            setTimeout(function() {
+                gsap.to($('.loading-layer'), {duration: 0.3, autoAlpha: 0, onComplete: loadingEnd});
+            }, 2000);
         });
         function loadingEnd() {
             myChart.data.datasets[0].data = [resultObject.weight.point, resultObject.stress.point, resultObject.urinary.point, resultObject.kidney.point, resultObject.gastro.point];
