@@ -33,55 +33,58 @@
             </div>
         </div>
         <div class="content _sub __checklist">
-            <div class="sub-header">
-                <a href="javascript:void(0)" id="go-before"></a>
-                <a href="./" id="go-index"></a>
-            </div>
-            <div class="title-block">
-                <div class="prj-title">
-                    <img src="./images/project_logo.svg" class="project-logo" alt="고양이 주치의 프로젝트">
-                    <span class="text">
-                        <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>테스트</em></span>
+            <div class="inner">
+                <div class="sub-header">
+                    <a href="javascript:void(0)" id="go-before"></a>
+                    <a href="./" id="go-index"></a>
                 </div>
-                <div class="subject">
-                    우리 반려묘 OO!<br><b>혹시 이런 모습을 보이나요?</b>
+                <div class="title-block">
+                    <div class="prj-title">
+                        <img src="./images/project_logo.svg" class="project-logo" alt="고양이 주치의 프로젝트">
+                        <span class="text">
+                            <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>테스트</em></span>
+                    </div>
+                    <div class="subject">
+                        우리 반려묘 OO!<br><b>혹시 이런 모습을 보이나요?</b>
+                    </div>
                 </div>
-            </div>
-            <!-- <div class="indicator-block"> -->
-                <div class="guide">
-                    <img src="./images/icon_chkguide.png" alt="터치 가이드 이미지" class="icon">
-                    <span>해당되는 항목을 모두 터치해주세요.</span>
+                <!-- <div class="indicator-block"> -->
+                    <div class="guide">
+                        <img src="./images/icon_chkguide.png" alt="터치 가이드 이미지" class="icon">
+                        <span>해당되는 항목을 모두 터치해주세요.</span>
+                    </div>
+                    <!-- <ul class="indicator">
+                        <li class="is-current"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul> -->
+                <!-- </div> -->
+                <div class="checklist-container">
+                    <div class="list-wrapper">
+                        <ul class="group is-current" data-cate="weight"></ul>
+                        <ul class="group" data-cate="gastro"></ul>
+                        <ul class="group" data-cate="kidney"></ul>
+                        <ul class="group" data-cate="urinary"></ul>
+                        <ul class="group" data-cate="stress"></ul>
+                    </div>
                 </div>
-                <!-- <ul class="indicator">
-                    <li class="is-current"></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul> -->
-            <!-- </div> -->
-            <div class="checklist-container">
-                <div class="list-wrapper">
-                    <ul class="group is-current" data-cate="weight"></ul>
-                    <ul class="group" data-cate="gastro"></ul>
-                    <ul class="group" data-cate="kidney"></ul>
-                    <ul class="group" data-cate="urinary"></ul>
-                    <ul class="group" data-cate="stress"></ul>
+                <div class="indicator-block">
+                    <ul class="indicator">
+                        <li class="is-current"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
+                <!-- <button type="button" class="type-01" id="go-next">다음으로</button> -->
+                <a href="javascript:void(0)" class="type-01 go-next" id="go-next">다음으로</a>
             </div>
-            <div class="indicator-block">
-                <ul class="indicator">
-                    <li class="is-current"></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+            <div id="footer">
+                <span class="for-a11y">Copyright © 2020. ROYAL CANIN all rights reserved.</span>
             </div>
-            <button type="button" class="type-01" id="go-next">다음으로</button>
-        </div>
-        <div id="footer">
-            <span class="for-a11y">Copyright © 2020. ROYAL CANIN all rights reserved.</span>
         </div>
     </div>
     <script>
