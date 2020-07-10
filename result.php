@@ -29,7 +29,7 @@
                             <a href="javascript:void(0)" data-url="#section1">메인</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)" data-url="#section2">주치의 프로젝트</a>
+                            <a href="javascript:void(0)" data-url="#section2">주치의 프로젝트</a>
                         </li>
                         <li>
                             <a href="javascript:void(0)" data-url="#section3">주치의력 테스트</a>
