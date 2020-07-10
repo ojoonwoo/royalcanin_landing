@@ -1253,9 +1253,9 @@ select.select-box {
 .content.__result .title-block .prj-title {
 	margin-bottom: 20px;
 }
-.content.__result .cat-block {
+/* .content.__result .cat-block {
 	margin-bottom: 31px;
-}
+} */
 .content.__result .cat-block img {
 	margin: 0 auto;
 }
@@ -1361,7 +1361,7 @@ select.select-box {
 	top: 55px;
 }
 .content.__result .advice-block {
-	margin-top: 54px;
+	margin-top: 30px;
 	background-color: #f0f0f0;
 	/* padding: 27px 20px 30px; */
 	text-align: center;
