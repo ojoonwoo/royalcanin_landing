@@ -198,9 +198,9 @@
             $doc.on('click', '.loc-trigger', function() {
                 var $this = $(this);
                 var location = $(this).attr('data-loc');
-                if($this.hasClass('is-active')) {
-                    return;
-                }
+                // if($this.hasClass('is-active')) {
+                //     return;
+                // }
                 $('.loc-trigger').not($this).removeClass('is-active');
                 $this.addClass('is-active');
 
@@ -232,7 +232,6 @@
                     if(popupId==='other-popup') {
                         $('.for-central').hide();
                     }
-
                     royalcaninCat.popup.close($('#'+popupId));
                 } else {
                     alert("병원정보를 "+act+"해주세요!");

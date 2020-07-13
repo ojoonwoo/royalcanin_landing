@@ -364,20 +364,18 @@
             height: playerWidth*9/16,
             width: playerWidth,
             videoId: '3_6h0o-t3Vw',
-            playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': 'http://royalcaninevent2020.com', 'playsinline': 1},
+            playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': window.location.href, 'playsinline': 1, 'widget_refferer:': window.location.href},
             events: {
                 'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
             }
         });
         playerTips = new YT.Player('player-tips', {
             height: playerWidth*9/16,
             width: playerWidth,
             videoId: 'SauuYLbs_FI',
-            playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': 'http://royalcaninevent2020.com', 'playsinline': 1},
+            playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': window.location.href, 'playsinline': 1, 'widget_refferer:': window.location.href},
             events: {
                 'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
             }
         });
     }
@@ -391,15 +389,6 @@
     //    The function indicates that when playing a video (state=1),
     //    the player should play for six seconds and then stop.
     var done = false;
-    function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-            // setTimeout(stopVideo, 6000);
-            // done = true;
-        }
-    }
-    function stopVideo() {
-        // player.stopVideo();
-    }
     </script>
     <script>
         $(document).ready(function() {
