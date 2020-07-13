@@ -235,7 +235,35 @@
             });
             $doc.on('click', '#addr-search', function() {
                 // 주소검색 ajax callback {
-                royalcaninCat.popup.show($('#hospi-popup'));
+                if ($("#sido").val() == "") {
+                    alert("시/도를 선택해 주세요.");
+                    return false;
+                }
+
+                if ($("#sigugun").val() == "") {
+                    alert("시/구/군을 선택해 주세요.");
+                    return false;
+                }
+
+                $.ajax({
+                    url: "./ajax_find_hospital.php",
+                    type: 'POST',
+                    data: {
+                        "sido"       : $("#sido").val(),
+                        "sigungu"    : $("#sigugun").val()
+                    },
+                    // data: JSON.stringify(checkedList),
+                    success: function (response) {
+                        console.log(response);
+                        royalcaninCat.popup.show($('#hospi-popup'));
+                        $(".list-block ul").html(response);
+                    },
+                    error: function(jqXHR, errMsg) {
+                        // Handle error
+                        console.log(errMsg);
+                    }
+                });
+                // royalcaninCat.popup.show($('#hospi-popup'));
                 // }
             });
             $doc.on('change', '#sido', function() {
