@@ -418,6 +418,28 @@ button.with-icon:after {
 	left: -16.5px;
 	z-index: 0;
 }
+.content .section._02 .infl-video-container .yt-container img._tail.shake {
+	animation-name: shakeTail;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: both;
+	/* animation-play-state: paused; */
+	animation-iteration-count: infinite;
+}
+@keyframes shakeTail {
+	0% {
+		transform: rotate(0deg);
+	}
+	30% {
+		transform: rotate(9deg);	
+	}
+	70% {
+		transform: rotate(-9deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
 .content .section._02 .tab-container-wrap {
 	padding: 0 20px;
 }
@@ -453,7 +475,7 @@ button.with-icon:after {
 	background-color: #e3001a;
 	border-radius: 50%;
 	transform: scale(0);
-	transition: scale 1s ease;
+	transition: all 0.1s ease;
 }
 .content .section._02 .tab-container li .tab-trigger .thumb {
 	border-radius: 5px;
@@ -470,12 +492,14 @@ button.with-icon:after {
 }
 .content .section._02 .tab-container li .tab-trigger.is-active {
 	background-color: #e3001a;
+	transition: all 0.1s linear;
 }
 .content .section._02 .tab-container li .tab-trigger.is-active:before {
 	transform: scale(1);
 }
 .content .section._02 .tab-container li .tab-trigger.is-active span {
 	opacity: 1;
+	transition: all 0.1s linear;
 }
 
 .content .section._03 {
@@ -626,12 +650,33 @@ button.with-icon:after {
 	border-top: 1px solid #e3001a;
 	border-bottom: 3px solid #e4e4e4;
 }
+.content .section._04 .tab-container li:first-child {
+	flex-basis: 150px;
+}
 .content .section._04 .tab-container li {
+	flex-basis: 100px;
+	flex-grow: 1;
 	flex-shrink: 0;
+	position: relative;
+}
+.content .section._04 .tab-container li:last-child:after {
+	content: none;
+}
+.content .section._04 .tab-container li:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 1px;
+	height: 29px;
+	margin-top: -14px;
+	background-color: #cbcdcf;
 }
 .content .section._04 .tab-container li button {
 	position: relative;
-	padding: 8px 27px 17px;
+	/* padding: 8px 27px 17px; */
+	padding: 8px 15px 17px;
 	text-align: center;
 }
 .content .section._04 .tab-container li button:after {
@@ -646,6 +691,7 @@ button.with-icon:after {
 	border-radius: 50%;
 	margin-left: -3px;
 	transform: scale(0);
+	transition: all 0.1s ease;
 }
 .content .section._04 .tab-container li button .icon {
 	margin: 0 auto 5px;
@@ -660,6 +706,7 @@ button.with-icon:after {
 	font-weight: 700;
 	letter-spacing: -0.05em;
 	line-height: 1.3;
+	transition: color 0.1s ease;
 }
 .content .section._04 .tab-container li button.is-active span {
 	color: #e3001a;
