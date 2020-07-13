@@ -23,7 +23,8 @@
                 <div class="prj-title">
                     <img src="./images/project_logo.svg" class="project-logo" alt="고양이 주치의 프로젝트">
                     <span class="text">
-                        <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>테스트</em></span>
+                        <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>테스트</em>
+                    </span>
                 </div>
                 <div class="subject">
                     반려묘가 보이는 행동으로<br><b>주치의력을 테스트해보세요!</b>

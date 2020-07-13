@@ -43,12 +43,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-url="#section3" onclick="lbReload('RCK_2020CCN_BTN_menu_gotoEvent','','','');gtag('event', 'GA_RCK_2020CCN_BTN_menu_gotoEvent');">
+                        <a href="#" data-url="#section3" onclick="">
                             <span class="p-name">주치의력 테스트</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" data-url="#section4" onclick="lbReload('RCK_2020CCN_BTN_menu_gotoPromo','','','');gtag('event', 'GA_RCK_2020CCN_BTN_menu_gotoPromo');">
+                        <a href="#" data-url="#section4" onclick="">
                             <span class="p-name">주치의력 업그레이드 TIPS</span>
                         </a>
                     </li>
@@ -92,12 +92,13 @@
                             <span>반려묘를 꿰뚫어보는 <br><b>프로 집사도 주치의가 필요해요</b></span>
                             <!-- <span>사랑하는 반려묘 앞에서는 <br><b>누구보다 예민해져야해요</b></span> -->
                         </div>
-                        <div class="yt-container">
-                            <img src="" alt="" class="object _body">
-                            <img src="" alt="" class="object _tail">
-                            <div id="yt-player">
-                                <!-- youtube video -->
-                            </div>
+                    </div>
+                    <div class="yt-container">
+                        <img src="./images/yt_container_cat_body.png" alt="" class="object _body">
+                        <img src="./images/yt_container_cat_tail.png" alt="" class="object _tail">
+                        <div id="yt-player">
+                            <!-- youtube video -->
+                            <img src="./images/infl_video_sample.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -106,19 +107,19 @@
                     <ul class="tab-container">
                         <li>
                             <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw">
-                                <img src="" alt="" class="thumb">
+                                <img src="./images/infl_tab_thumb_sample.jpg" alt="" class="thumb">
                                 <span>프로 집사의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="CAInhDnQFaA">
-                                <img src="" alt="" class="thumb">
+                                <img src="./images/infl_tab_thumb_sample.jpg" alt="" class="thumb">
                                 <span>예민보스 집사의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM">
-                                <img src="" alt="" class="thumb">
+                                <img src="./images/infl_tab_thumb_sample.jpg" alt="" class="thumb">
                                 <span>현명 집사의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
@@ -128,25 +129,63 @@
             <section class="section _03" id="section3">
                 <div class="title-block">
                     <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
-                    <p class="tt">변경예정 타이틀</p>
+                    <p class="prj-title">
+                        <span class="text">
+                            <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>테스트</em>
+                        </span>
+                    </p>
                     <p class="sub">
                         아픈 것을 잘 드러내지 않는 반려묘이기에<br>
                         세심하게 살펴주는 가장 가까운 주치의로써의 관찰 능력은 필수!<br>
-                        <b>나의 주치의력을 테스트 해 보시고 반려묘의 시그널은 물론<br>
-                        무료 건강검진권의 기회도 잡으세요!</b>
+                        <b>나의 주치의력을 테스트 해 보시고 반려묘의 신호는 물론<br>
+                        무료 건강검진권 당첨의 기회도 잡으세요!</b>
                     </p>
-                    <div style="padding: 50px 0; background-color: #ececec">
-                        변경 후 작업
+                    <div class="date-block">
+                        <dl>
+                            <dt>참여기간</dt>
+                            <dd>0000. 00. 00 ~ 0000. 00. 00</dd>
+                        </dl>
+                        <dl>
+                            <dt>당첨자 확인</dt>
+                            <dd>0000. 00. 00</dd>
+                        </dl>
+                    </div>
+                    <img src="./images/section_03_group.png" alt="" class="img-group">
+                    <a href="./gate.php" class="type-01" id="go-sub">시작하기</a>
+                    <div class="dash-line"></div>
+                    <div class="benefit-area">
+                        <p class="tt">참여 혜택!</p>
+                        <p class="sub">증정품은 추첨을 통해 제공됩니다.</p>
+                        <ul>
+                            <li>
+                                <div class="cnt-ball">
+                                    <span>100명</span>
+                                </div>
+                                <img src="./images/benefit_img_01.png" alt="10만원 상당의 건강검진권 100명">
+                                <p>10만원 상당의<br><b>건강검진권</b></p>
+                                <button type="button">건강검진권 사용안내</button>
+                            </li>
+                            <li>
+                                <div class="cnt-ball">
+                                    <span>50명</span>
+                                </div>
+                                <img src="./images/benefit_img_02.png" alt="혈뇨검출 체외진단기 헤마츄리아 디텍션 50명">
+                                <p>혈뇨검출 체외진단기<br><b>헤마츄리아 디텍션</b></p>
+                                <button type="button">헤마츄리아 사용법</button>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <button type="button" class="type-01" id="go-sub" onclick="lbReload('RCK_2020CCN_BTN_CONV1_checklist','','','');gtag('event', 'GA_RCK_2020CCN_BTN_CONV1_checklist');">다음 단계로</button>
             </section>
             <section class="section _04" id="section4">
                 <img src="" alt="고양이" class="cute">
                 <div class="title-block">
                     <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
-                    <p class="tt">변경예정 타이틀</p>
-                    <p class="sub"></p>
+                    <p class="prj-title">
+                        <span class="text">
+                            <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>업그레이드 TIPS</em>
+                        </span>
+                    </p>
                 </div>
                 <div class="tab-container-wrap">
                     <ul class="tab-container">

@@ -23,7 +23,8 @@
                 <div class="prj-title">
                     <img src="./images/project_logo.svg" class="project-logo" alt="고양이 주치의 프로젝트">
                     <span class="text">
-                        <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>테스트</em></span>
+                        <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>테스트</em>
+                    </span>
                 </div>
                 <div class="subject">
                     <b><?=$cat_info['mb_cat_name']?>의 건강검진권 신청하기</b>
