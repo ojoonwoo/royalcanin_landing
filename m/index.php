@@ -310,6 +310,7 @@
                     <p class="title">반려묘에게<br><b>건강함을 선물하세요</b></p>
                 </div>
                 <img src="./images/popup_reward_01_img.png" alt="" class="r-img">
+                <p class="text"><b>10만원 상당의 건강검진권</b>이<br>추첨을 통해 제공됩니다.</p>
                 <div class="guide-block">
                     <dl>
                         <dt>사용 기간 : </dt>
@@ -335,7 +336,6 @@
                     <img src="./images/popup_reward_02_prd_img.png" alt="" class="prd-img">
                 </div>
                 <img src="./images/popup_reward_02_img.png" alt="" class="r-img">
-                <p class="text"><b>10만원 상당의 건강검진권</b>이<br>추첨을 통해 제공됩니다.</p>
                 <div class="guide-block">
                     <p>헤마츄리아 디텍션 사용방법</p>
                     <img src="./images/popup_reward_02_guide_img.png" alt="">
