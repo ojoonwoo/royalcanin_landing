@@ -1673,10 +1673,10 @@ html.popup-opened {
 	text-align: center;
 }
 .popup .popup-close {
-	width: 20px;
-	height: 20px;
+	width: 26px;
+	height: 26px;
 	position: absolute;
-	top: -25px;
+	top: -26px;
 	right: 0;
 	background: url(../images/popup_close.png) 50% / cover no-repeat;
 }
