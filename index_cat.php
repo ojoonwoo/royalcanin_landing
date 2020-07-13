@@ -87,7 +87,7 @@
                 <div class="infl-video-container">
                     <div class="title-block">
                         <div class="title">
-                            <span>반려묘를 꿰뚫어보는 <br><b>프로 집사도 주치의가 필요해요</b></span>
+                            <span>반려묘를 꿰뚫어보는 <b>프로 집사도 주치의가 필요해요</b></span>
                             <!-- <span>사랑하는 반려묘 앞에서는 <br><b>누구보다 예민해져야해요</b></span> -->
                         </div>
                     </div>
