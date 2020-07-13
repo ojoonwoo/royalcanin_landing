@@ -1450,10 +1450,11 @@ select.select-box {
 	font-size: 0;
 	text-align: left;
 	width: 50%;
-	padding: 10px 0 6px;
+	padding: 10px 0 6px 130px;
 }
 .content.__request .location-selector .loc-trigger:first-child {
 	text-align: right;
+	padding-right: 120px;
 }
 .content.__request .location-selector .loc-trigger:first-child:after {
 	display: block;
@@ -1471,12 +1472,12 @@ select.select-box {
 	vertical-align: middle;
 	margin-right: 7px;
 }
-.content.__request .location-selector .loc-trigger[data-loc="central"] img {
+/* .content.__request .location-selector .loc-trigger[data-loc="central"] img {
 	width: 23px;
-}
-.content.__request .location-selector .loc-trigger[data-loc="other"] img {
+} */
+/* .content.__request .location-selector .loc-trigger[data-loc="other"] img {
 	width: 23.5px;
-}
+} */
 .content.__request .location-selector .loc-trigger p {
 	position: relative;
 	display: inline-block;
