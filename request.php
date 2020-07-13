@@ -87,6 +87,8 @@
                     </div>
                     <div class="row">
                         <div class="input-group">
+                            <div class="label">
+                            </div>
                             <div class="input">
                                 <input type="text" class="input-text" id="req-addr" placeholder="내가 선택한 병원" readonly>
                                 <p class="guide-msg">* 건강검진권, 헤마츄리아 당첨 시 선택한 동물병원에서만 검진 및 수령이 가능하며 변경이 불가하니 신중하게 선택해주세요.</p>
