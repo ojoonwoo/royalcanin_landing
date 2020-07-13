@@ -168,7 +168,7 @@
                                 </div>
                                 <img src="./images/benefit_img_01.png" alt="10만원 상당의 건강검진권 100명">
                                 <p>10만원 상당의<br><b>건강검진권</b></p>
-                                <button type="button">건강검진권 사용안내</button>
+                                <button type="button" data-popup="#reward1-popup">건강검진권 사용안내</button>
                             </li>
                             <li>
                                 <div class="cnt-ball">
@@ -176,7 +176,7 @@
                                 </div>
                                 <img src="./images/benefit_img_02.png" alt="혈뇨검출 체외진단기 헤마츄리아 디텍션 50명">
                                 <p>혈뇨검출 체외진단기<br><b>헤마츄리아 디텍션</b></p>
-                                <button type="button">헤마츄리아 사용법</button>
+                                <button type="button" data-popup="#reward2-popup">헤마츄리아 사용법</button>
                             </li>
                         </ul>
                     </div>
@@ -303,6 +303,45 @@
                 </ul>
             </section>
         </div>
+        <div class="popup _reward" id="reward1-popup">
+            <div class="inner">
+                <button type="button" class="popup-close" data-popup="@close"></button>
+                <div class="title-block">
+                    <p class="title">반려묘에게<br><b>건강함을 선물하세요</b></p>
+                </div>
+                <img src="./images/popup_reward_01_img.png" alt="" class="r-img">
+                <div class="guide-block">
+                    <dl>
+                        <dt>사용 기간 : </dt>
+                        <dd> 2020. 9. 15 ~ 2020. 12. 31</dd>
+                    </dl>
+                    <dl>
+                        <dt>유의사항 : </dt>
+                        <dd>10만원 이상 발생하는 비용은 본인 부담입니다. 보다 자세한 관련 사항은 000을 참고하세요.</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="popup _reward" id="reward2-popup">
+            <div class="inner">
+                <button type="button" class="popup-close" data-popup="@close"></button>
+                <div class="title-block">
+                    <p class="title">
+                        소변에 혈액이 섞여 있는 것은<br>여러가지 질병의 신호! 
+                    </p>
+                    <p class="sub">
+                        대표적으로 재발하는 경향이 있는 요로계 질환
+                    </p>
+                    <img src="./images/popup_reward_02_prd_img.png" alt="" class="prd-img">
+                </div>
+                <img src="./images/popup_reward_02_img.png" alt="" class="r-img">
+                <p class="text"><b>10만원 상당의 건강검진권</b>이<br>추첨을 통해 제공됩니다.</p>
+                <div class="guide-block">
+                    <p>헤마츄리아 디텍션 사용방법</p>
+                    <img src="./images/popup_reward_02_guide_img.png" alt="">
+                </div>
+            </div>
+        </div>
         <div id="footer">
             <span class="for-a11y">Copyright © 2020. ROYAL CANIN all rights reserved.</span>
         </div>
@@ -385,8 +424,6 @@
             //     defaultKey = paramObj.it_key;
             //     $(window).scrollTop($('#section2').offset().top-56.5);
             // }
-            // 하단 TIPS영역 정보 불러오기
-            // getTips(defaultKey, 'init');
 
             // if(paramObj.event && paramObj.event.toLowerCase() == 'y') {
             //     setTimeout(function() {
@@ -459,7 +496,6 @@
             if($this.hasClass('is-active')) {
                 return;
             }
-            // $container.find('.tab-trigger').not($this).removeClass('is-active');
             $container.find('.tab-trigger').each(function (idx, el) {
                 var $img = $(el).find('img');
                 if($(el).is($this)) {
@@ -478,131 +514,7 @@
             }
         });
 
-        // 서브페이지로 이동
-        $(document).on('click', '#go-sub', function() {
-            
-        });
 
-
-        // 제품영역 정보 불러오기
-        // function getProductInfo(key, init) {
-        //     $('.tab-trigger[data-key="'+key+'"]').addClass('is-active');
-        //     $('.product-nav li').removeClass('is-active');
-        //     $('.product-nav li[data-key="'+key+'"]').addClass('is-active');
-        //     if($('.slick-wrapper').hasClass('slick-initialized')) {
-        //         $('.slick-wrapper').slick('unslick');
-        //     }
-        //     $.ajax({
-        //         url: "../product_info.json",
-        //         // cache: false,
-        //         dataType: "json",
-        //         type: 'get',
-        //         beforeSend: function() {
-        //         },
-        //         success: function (data) {
-        //             var object = data;
-        //             var reviewElem = "";
-        //             var reviewCount = 0;
-        //             var articleElem = "";
-        //             $('.section._02 [data-key="className"]').removeClass('_skin _weight _digest _neutral _fur _stress').addClass(object[key].className);
-        //             $('.section._02 [data-key="productName"]').text(object[key].productName);
-        //             $('.section._02 [data-key="title"]').text(object[key].title);
-        //             $('.section._02 [data-key="productImage"]').attr({
-        //                 'src': object[key].productImage,
-        //                 'alt': object[key].productName,
-        //             });
-        //             $('.section._02 [data-key="buttonUrl"] button').each(function(idx, el) {
-        //                 $(this).attr('data-url', object[key].buttonUrl[idx]);
-        //                 $(this).attr('onclick', object[key].trackingCode[idx]+""+object[key].gaTrackingCode[idx]);
-        //             });
-                    
-        //             object[key].review.forEach(function(item, index) {
-        //                 var el = "<li class='review-slide' data-key='review' style='width: 183px;'>";
-        //                     el += "<a href='"+item.url+"' data-key='url' target='_blank' onclick=\"gtag(\'event\', \'GA_RCK_2020CCN_BTN_Review_"+key+'_'+(index+1)+"\');\">";
-        //                     el += "<div class='img'><img src='"+item.img+"' alt='"+item.text2+"' class='' data-key='img'></div>";
-        //                     el += "<div class='text'><div class='tt' data-key='text1'>"+item.text1+"</div><div class='sub' data-key='text2'>"+item.text2+"</div></div>";
-        //                     el += "</a></li>";
-        //                 reviewElem += el;
-        //                 reviewCount++;
-        //             });
-        //             if(reviewCount<1) {
-        //                 $('.review-block').hide();
-        //             } else {
-        //                 $('.review-block').show();
-        //             }
-        //             $('.section._02 [data-key="reviewList"]').empty().html(reviewElem);
-        //             if(object[key].issue) {
-        //                 $('.article-block').show();
-        //                 $('.section._02 [data-key="issue"]').text(object[key].issue);
-        //                 object[key].article.forEach(function(item, index) {
-        //                     var txt = "<div class='text'>"+item.text+"</div>";
-        //                     var btn = "<span>보기</span>";
-        //                     // var btn = "<a href='"+item.url+"' target='_blank' onclick=lbReload(\'RCK_2020CCN_BTN_Tips\',\'\',\'\',\'\');>보기</a>";
-        //                     articleElem += "<a href='"+item.url+"' target='_blank' onclick=\"lbReload(\'RCK_2020CCN_BTN_Tips\',\'\',\'\',\'\');gtag(\'event\', \'GA_RCK_2020CCN_BTN_Tips_"+key+'_'+(index+1)+"\');\"><li>"+txt+btn+"</li></a>";
-        //                 });
-        //                 $('.section._02 [data-key="articleList"]').empty().html(articleElem);
-        //             } else {
-        //                 $('.article-block').hide();
-        //             }
-        //             reviewSwiperSetting(reviewCount);
-                    
-        //             // if(!init) {
-        //             player.poster(object[key].video.poster);
-        //             player.src({
-        //                 type: 'video/mp4',
-        //                 src: object[key].video.src
-        //             });
-                    
-        //             setTimeout(function() {
-        //                 player.play();
-        //             }, 1500);
-
-        //             // if(!init) {
-        //             //     $(window).scrollTop($('#section2').offset().top-56.5);
-        //             // }
-        //                 // var videoId = object[key].video.src;
-        //                 // player.loadVideoById(videoId, 0);
-        //             // }
-        //             currentKey = key;
-        //         },
-        //         error: function(jqXHR, errMsg) {
-        //             // Handle error
-        //             alert(errMsg);
-        //         }
-        //     });
-        // }
-
-        // 제품영역 리뷰 세팅
-        function reviewSwiperSetting(count) {
-            var reviewCount = Number(count);
-            var infiniteVal = false,
-                dotsVal = true,
-                initialSlideVal = 0;
-
-            
-            if(reviewCount<2) {
-                dotsVal = false;
-                $('.review-slide').css('opacity', '1');
-            }
-            if(reviewCount<3) {
-                infiniteVal = false;
-            }
-            if(reviewCount>2) {
-                infiniteVal = false;
-                initialSlideVal = 1;
-            }
-            $('.slick-wrapper').slick({
-                infinite: infiniteVal,
-                slidesToShow: 1,
-                centerMode: true,
-                initialSlide: initialSlideVal,
-                centerPadding: '84px',
-                variableWidth: true,
-                arrows: false,
-                dots: dotsVal,
-            });
-        }
-        
     </script>
 </body>
 </html>
