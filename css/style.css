@@ -408,10 +408,12 @@ button.with-icon:after {
 	opacity: 0.2;
 }
 .content .section._02 .infl-video-container .yt-container {
-	position: absolute;
+	/* position: absolute;
 	left: 20px;
 	right: 20px;
-	top: 76px;
+	top: 76px; */
+	width: 568px;
+	height: 318px;
 }
 
 .content .section._02 .infl-video-container .yt-container img.object {
