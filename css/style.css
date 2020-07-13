@@ -250,6 +250,18 @@ button.with-icon:after {
 .content .section._01 .title-block .title {
 	width: 46.2%;
 }
+.content .section._01 .title-block .main-title {
+	font-size: 66px;
+	font-weight: 500;
+	color: #e3001a;
+}
+.content .section._01 .title-block .main-title .bg-line {
+	font-weight: 800;
+	color: #fff;
+	background: #e3001a;
+}
+.content .section._01 .title-block .sub-title {
+}
 .content .section._01 .cat {
 	position: absolute;
 	width: auto;
