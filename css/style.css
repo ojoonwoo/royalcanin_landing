@@ -1590,7 +1590,7 @@ select.select-box {
 	color: #e3001a;
 }
 .content.__request .input-wrapper .row .input-group .guide-msg {
-	margin-top: 10px;
+	margin-top: 8px;
 	font-size: 12px;
 	line-height: 1.3;
 	letter-spacing: -0.05em;
@@ -1602,6 +1602,199 @@ select.select-box {
 
 /* end sub */
 
+/*popup*/
+html.menu-opened,
+html.popup-opened {
+	overflow: hidden;
+}
+.popup-wrap {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* z-index: 2000; */
+	z-index: 99;
+	overflow-y: scroll;
+	overflow-x: auto;
+	font-size: 0;
+	/*	line-height: 0;*/
+	opacity: 0;
+	text-align: center;
+	white-space: normal;
+	word-break: normal;
+	word-wrap: normal;
+	background: rgba(0, 0, 0, 0.5);
+	-webkit-transition: opacity 0.1s ease;
+	transition: opacity 0.1s ease;
+}
+
+.popup-wrap.is-opened {
+	display: block;
+	opacity: 1;
+}
+.popup-wrap:before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.popup-wrap .popup {
+	display: inline-block;
+}
+.popup-wrap.is-opened .popup {
+	transform: scale(1) translateY(0);
+}
+.popup {
+	display: none;
+	position: relative;
+	vertical-align: middle;
+	white-space: normal;
+	word-break: keep-all;
+	word-wrap: break-word;
+	text-align: left;
+	/* -webkit-transition: all 0.35s ease; */
+	transition: all 0.35s ease;
+	transform: scale(0) translateY(10px);
+	width: 100%;
+	padding: 0 20px;
+	margin: 40px 0;
+	background-color: transparent;
+}
+.popup .inner {
+	position: relative;
+	background-color: #ffffff;
+	padding: 56px 0 50px;
+	border-radius: 11px;
+	text-align: center;
+}
+.popup .popup-close {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: -25px;
+	right: 0;
+	background: url(../images/popup_close.png) 50% / cover no-repeat;
+}
+.popup._req .title-block {
+	margin-bottom: 30px;
+}
+.popup._req .title-block .title {
+	font-size: 17px;
+	font-weight: 800;
+	letter-spacing: -0.05em;
+	color: #e3001a;
+}
+.popup._req .title-block .sub {
+	margin-top: 10px;
+	font-size: 10px;
+	letter-spacing: -0.05em;
+}
+.popup._req .title-block .sub b {
+	color: #e3001a;
+	font-weight: 800;
+}
+.popup._req .list-block {
+	border-top: 1px solid #8c8c8c;
+	border-bottom: 1px solid #8c8c8c;
+	margin-bottom: 30px;
+}
+.popup._req .list-block ul {
+	padding: 0 20px;
+	max-height: 300px;
+	overflow-y: auto;
+}
+.popup._req .list-block ul li {
+	border-bottom: 1px solid #d1d1d1;
+}
+.popup._req .list-block ul li:last-child {
+	border-bottom: 0;
+}
+.popup._req .list-block ul li .hospi-trigger {
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 20px 0 20px 37px;
+	text-align: left;
+}
+.popup._req .list-block ul li .hospi-trigger .chk-shape {
+	content: "";
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: 17px;
+	height: 17px;
+	background-color: #a4a4a4;
+	border-radius: 50%;
+	transition: all 0.25s ease;
+}
+.popup._req .list-block ul li .hospi-trigger .chk-shape:after {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 4px;
+	width: 14px;
+	height: 10px;
+	background-image: url(../images/checklist_chk_shape.png);
+	background-repeat: no-repeat;
+	background-size: 14px 10px;
+}
+/* :active, */
+.popup._req .list-block ul li .hospi-trigger.is-active .chk-shape {
+	background-color: #e3001a;
+}
+.popup._req .list-block ul li .hospi-trigger .h-name {
+	font-size: 13px;
+	font-weight: 800;
+	letter-spacing: -0.05em;
+	margin-bottom: 5px;
+}
+.popup._req .list-block ul li .hospi-trigger .h-addr {
+	font-size: 12px;
+	letter-spacing: -0.05em;
+	line-height: 1.2;
+}
+.popup._req .hospi-select {
+	width: 201px;
+	margin-bottom: 13px;
+}
+.popup._req .guide-msg {
+	color: #e3001a;
+	font-size: 10px;
+	letter-spacing: -0.05em;
+}
+#other-popup .inner {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+#other-popup .title-block {
+	margin-bottom: 20px;
+}
+#other-popup .naver-search {
+	display: block;
+	margin: 27px 0;
+}
+#other-popup .input-wrapper {
+	padding: 0;
+	margin-bottom: 32px;
+}
+#other-popup .input-wrapper .input-group {
+	margin-bottom: 20px;
+}
+#other-popup .input-wrapper .input-group:last-child {
+	margin-bottom: 0;
+}
+#other-popup .input-wrapper .input-group label {
+	display: block;
+	font-size: 14px;
+	letter-spacing: -0.05em;
+	margin-bottom: 15px;
+	text-align: left;
+	font-weight: 700;
+}
 
 /* .content-wrap .inner .box-area .box img,
 .content-wrap .inner .box-area .box video {
