@@ -417,7 +417,7 @@ button.with-icon:after {
 	right: 20px;
 	top: 76px; */
 	width: 568px;
-	height: 318px;
+	height: 319px;
 }
 
 .content .section._02 .infl-video-container .yt-container img.object {
@@ -441,7 +441,7 @@ button.with-icon:after {
 	z-index: 0;
 }
 .content .section._02 .tab-container-wrap {
-	padding: 0 20px;
+	/* padding: 0 20px; */
 }
 .content .section._02 .tab-container {
 	font-size: 0;
@@ -452,7 +452,7 @@ button.with-icon:after {
 	margin-right: 2%;
 	vertical-align: top; */
 	width: 532px;
-	height: 106px;
+	height: 107px;
 }
 .content .section._02 .tab-container li:last-child {
 	margin-right: 0;
