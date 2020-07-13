@@ -393,14 +393,19 @@ button.with-icon:after {
 }
 .content .section._02 .infl-video-container .title-block .title span {
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 24px;
 	letter-spacing: -0.05em;
-	font-weight: 700;
+	font-weight: 500;
 	line-height: 1.4;
 }
 .content .section._02 .infl-video-container .title-block .title span b {
-	font-size: 17px;
+	font-size: 24px;
 	font-weight: 800;
+}
+.content .section._02 .infl-video-container .title-block .title .quotes {
+	font-size: 50px;
+	font-weight: 800;
+	opacity: 0.2;
 }
 .content .section._02 .infl-video-container .yt-container {
 	position: absolute;
