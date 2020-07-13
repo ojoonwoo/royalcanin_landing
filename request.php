@@ -83,7 +83,7 @@
 
     while($data = mysqli_fetch_array($result)) {
 ?>
-                            <option value="<?php echo $data['sido']?>" selected><?php echo $data['sido']?></option>
+                            <option value="<?php echo $data['sido']?>"><?php echo $data['sido']?></option>
 <?php        
     }
 ?>                            
@@ -279,6 +279,23 @@
                 // 주소검색 ajax callback {
                 royalcaninCat.popup.show($('#hospi-popup'));
                 // }
+            });
+            $doc.on('change', '#sido', function() {
+                $.ajax({
+                    url: "./ajax_sigungu.php",
+                    type: 'POST',
+                    data: {
+                        "sido"    : $(this).val()
+                    },
+                    // data: JSON.stringify(checkedList),
+                    success: function (response) {
+                        $("#sigugun").html(response);
+                    },
+                    error: function(jqXHR, errMsg) {
+                        // Handle error
+                        console.log(errMsg);
+                    }
+                });
             });
         });
         
