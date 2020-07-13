@@ -310,8 +310,8 @@ button.with-icon:after {
 	top: 0;
 	left: 50%;
 	margin-left: -9.5px;
-	width: 19px;
-	height: 23px;
+	width: 21px;
+	height: 24px;
 	background: url(../images/main_scroll_obj_01.png) 50% / cover no-repeat;
 	animation-name: footDown;
 	animation-iteration-count: infinite;
@@ -322,8 +322,8 @@ button.with-icon:after {
 	position: relative;
 	display: block;
 	margin: 0 auto 20px;
-	width: 19px;
-	height: 34.5px;
+	width: 21px;
+	height: 37px;
 	background: url(../images/main_scroll_obj_02.png) 50% / cover no-repeat;
 }
 .content .section._01 .scoll-down-group .anim._2:before {
