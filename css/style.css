@@ -1662,10 +1662,13 @@ html.popup-opened {
 	margin: 40px 0;
 	background-color: transparent;
 }
+.popup._req {
+	width: 520px;
+}
 .popup .inner {
 	position: relative;
 	background-color: #ffffff;
-	padding: 56px 0 50px;
+	padding: 70px 0 50px;
 	border-radius: 11px;
 	text-align: center;
 }
@@ -1681,14 +1684,14 @@ html.popup-opened {
 	margin-bottom: 30px;
 }
 .popup._req .title-block .title {
-	font-size: 17px;
+	font-size: 26px;
 	font-weight: 800;
 	letter-spacing: -0.05em;
 	color: #e3001a;
 }
 .popup._req .title-block .sub {
 	margin-top: 10px;
-	font-size: 10px;
+	font-size: 16px;
 	letter-spacing: -0.05em;
 }
 .popup._req .title-block .sub b {
