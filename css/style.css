@@ -271,6 +271,12 @@ button.with-icon:after {
 	margin: 10px 0 5px;
 }
 .content .section._01 .title-block .sub-title {
+	font-size: 20px;
+	font-weight: 500;
+}
+.content .section._01 .title-block .sub-title b {
+	color: #e3001a;
+	font-weight: 800;
 }
 .content .section._01 .cat {
 	position: absolute;
