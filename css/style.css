@@ -241,12 +241,14 @@ button.with-icon:after {
 	margin: 0 auto;
 }
 .content .section._01 .title-block {
-	position: relative;
-	padding-top: 11.6%;
+	position: absolute;
+	/* padding-top: 11.6%; */
 	padding-left: 36px;
 	z-index: 1;
 	display: inline-block;
 	text-align: left;
+	top: 227px;
+	left: 50px;
 }
 .content .section._01 .title-block .project-logo {
 	width: 83px;
