@@ -277,7 +277,17 @@
             });
             $doc.on('click', '#addr-search', function() {
                 // 주소검색 ajax callback {
-                    $.ajax({
+                if ($("#sido").val() == "") {
+                    alert("시/도를 선택해 주세요.");
+                    return false;
+                }
+
+                if ($("#sigugun").val() == "") {
+                    alert("시/구/군을 선택해 주세요.");
+                    return false;
+                }
+
+                $.ajax({
                     url: "./ajax_find_hospital.php",
                     type: 'POST',
                     data: {
