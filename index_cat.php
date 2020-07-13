@@ -29,52 +29,45 @@
 
     <!-- End Google Tag Manager (noscript) -->
     <div id="container">
-        <div id="menu-layer">
-            <div class="inner">
-                <ul>
-                    <li>
-                        <a href="#" data-url="#section1">
-                            <span class="p-name">메인</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" data-url="#section2">
-                            <span class="p-name">주치의 프로젝트</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" data-url="#section3" onclick="">
-                            <span class="p-name">주치의력 테스트</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" data-url="#section4" onclick="">
-                            <span class="p-name">주치의력 업그레이드 TIPS</span>
-                        </a>
-                    </li>
-                </ul>
-                <img src="./images/menu_cat.png" alt="" class="cat">
-            </div>
-        </div>
-        <div class="menu-transition-layer"></div>
         <div id="header">
-            <a href="./" class="logo">
-                <img src="./images/logo.png" alt="로얄캐닌 홈으로">
-            </a>
-            <button type="button" class="gnb-toggle">
-                <div class="wrapper">
-                    <div class="line _01"></div>
-                    <div class="line _02"></div>
-                    <div class="line _03"></div>
-                </div>
-            </button>
+            <div class="inner">
+                <a href="./" class="logo">
+                    <img src="./images/logo.png" alt="로얄캐닌 홈으로">
+                </a>
+                <nav class="menu">
+                    <ul>
+                        <li class="active">
+                            <a href="javascript:void(0)" data-url="#section1">메인</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-url="#section2">주치의 프로젝트</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-url="#section3">주치의력 테스트</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-url="#section4">주치의력 업그레이드 TIPS</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <div class="content _main">
             <section class="section _01" id="section1">
                 <div class="wrapper">
                     <h1 class="title-block">
                         <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
-                        <img src="./images/main_01_title.png" alt="고양이는 아파도 숨기는 사실, 알고 계세요? 반려묘가 숨기고 있을지 모를 건강 신호 확인해보고 무료 건강검진의 기회도 받아보세요!" class="title">
+                        <div class="main-title">
+                            <p>고양이는</p>
+                            <p class="bg-line">아파도 숨기는 사실,</p>
+                            <p>알고 계세요?</p>
+                        </div>
+                        <div class="sub-title">
+                            <p>반려묘가 숨기고 있을지 모를</p>
+                            <p>건강 이상 신호 확인해보고</p>
+                            <p>무료 건강검진의 기회도 받아보세요!</p>
+                        </div>
+                        <!-- <img src="./images/main_01_title.png" alt="고양이는 아파도 숨기는 사실, 알고 계세요? 반려묘가 숨기고 있을지 모를 건강 신호 확인해보고 무료 건강검진의 기회도 받아보세요!" class="title"> -->
                     </h1>
                     <img src="./images/main_01_cat.png" alt="고양이" class="cat resize-elm" data-width="0.51">
                     <!-- scroll down -->
@@ -408,30 +401,20 @@
             paramValArr = get_param_arr(paramObj);
 
             // 메인 섹션 1 한화면에 보일 수 있도록 조정
-            var winwidth = $(window).width();
-            var vh = $(window).height();
-            $('.section._01').attr('style', 'height:'+ $(window).height()+'px');
-            $('.section._01 .resize-elm').each(function() {
-                var wid = vh*$(this).attr('data-width');
-                $(this).attr('style', 'width:'+(wid/winwidth)*100+'%');  
-            })
-            $('.menu-transition-layer').css({
-                'width': winwidth*4,
-                'height': winwidth*4,
-                'top': -winwidth+'px',
-                'right': -winwidth+'px',
-            })
+            // var winwidth = $(window).width();
+            // var vh = $(window).height();
+            // $('.section._01').attr('style', 'height:'+ $(window).height()+'px');
+            // $('.section._01 .resize-elm').each(function() {
+            //     var wid = vh*$(this).attr('data-width');
+            //     $(this).attr('style', 'width:'+(wid/winwidth)*100+'%');  
+            // })
+            // $('.menu-transition-layer').css({
+            //     'width': winwidth*4,
+            //     'height': winwidth*4,
+            //     'top': -winwidth+'px',
+            //     'right': -winwidth+'px',
+            // })
 
-            // if(paramObj.it_key) {
-            //     defaultKey = paramObj.it_key;
-            //     $(window).scrollTop($('#section2').offset().top-56.5);
-            // }
-
-            // if(paramObj.event && paramObj.event.toLowerCase() == 'y') {
-            //     setTimeout(function() {
-            //         sectionMove('#section3');
-            //     }, 200);
-            // }
         });
 
 
