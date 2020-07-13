@@ -1448,9 +1448,12 @@ select.select-box {
 	position: relative;
 	display: inline-block;
 	font-size: 0;
-	text-align: center;
+	text-align: left;
 	width: 50%;
 	padding: 10px 0 6px;
+}
+.content.__request .location-selector .loc-trigger:first-child {
+	text-align: right;
 }
 .content.__request .location-selector .loc-trigger:first-child:after {
 	display: block;
@@ -1486,10 +1489,10 @@ select.select-box {
 	content: "";
 	display: block;
 	position: absolute;
-	top: -6px;
-	right: -9px;
-	width: 4px;
-	height: 4px;
+	top: -3px;
+	right: -10px;
+	width: 5px;
+	height: 5px;
 	background-color: #e3001a;
 	border-radius: 50%;
 	transform: scale(0);
