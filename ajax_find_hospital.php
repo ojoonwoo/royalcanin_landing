@@ -5,7 +5,7 @@
 
     $sido       = $_REQUEST['sido'];
     $sigungu    = $_REQUEST['sigungu'];
-    $query = "SELECT hospital_name, hospital_addr FROM hospital_list WHERE 1 AND hospital_addr = '".$sido." ".$sigungu."'";
+    $query = "SELECT hospital_name, hospital_addr FROM hospital_list WHERE 1 AND hospital_addr like '%".$sido." ".$sigungu."%'";
     $result = mysqli_query($my_db, $query);
 
     while($data = mysqli_fetch_array($result)) {
