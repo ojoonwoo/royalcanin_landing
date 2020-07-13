@@ -112,19 +112,19 @@
                     <ul class="tab-container" data-video-target="infl">
                         <li>
                             <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw">
-                                <img src="./images/infl_tab_thumb_sample.jpg" alt="" class="thumb">
+                                <img src="./images/infl_tab_thumb_01_active.png" alt="" class="thumb">
                                 <span>프로 집사의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="CAInhDnQFaA">
-                                <img src="./images/infl_tab_thumb_sample.jpg" alt="" class="thumb">
+                                <img src="./images/infl_tab_thumb_02_common.png" alt="" class="thumb">
                                 <span>예민보스 집사의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM">
-                                <img src="./images/infl_tab_thumb_sample.jpg" alt="" class="thumb">
+                                <img src="./images/infl_tab_thumb_03_common.png" alt="" class="thumb">
                                 <span>현명 집사의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
@@ -454,13 +454,22 @@
         $(document).on('click', '.tab-trigger', function() {
             var $this = $(this);
             var $container = $this.closest('.tab-container');
-            var targetKey = $(this).attr('data-key');
+            var targetKey = $this.attr('data-key');
             var targetVideo = $container.attr('data-video-target');
             if($this.hasClass('is-active')) {
                 return;
             }
-            $container.find('.tab-trigger').not($this).removeClass('is-active');
-            $this.addClass('is-active');
+            // $container.find('.tab-trigger').not($this).removeClass('is-active');
+            $container.find('.tab-trigger').each(function (idx, el) {
+                var $img = $(el).find('img');
+                if($(el).is($this)) {
+                    $(el).addClass('is-active');
+                    $img.attr('src', $img.attr('src').replace('common', 'active'));
+                } else {
+                    $(el).removeClass('is-active');
+                    $img.attr('src', $img.attr('src').replace('active', 'common'));
+                }
+            });
 
             if(targetVideo == 'infl') {
                 playerInfl.loadVideoById(targetKey, 0);

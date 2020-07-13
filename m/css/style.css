@@ -463,12 +463,17 @@ button.with-icon:after {
 	letter-spacing: -0.05em;
 	line-height: 1.27;
 	color: #ffffff;
+	/* color: rgba(255, 255, 255, 0.7); */
+	opacity: 0.7;
 }
 .content .section._02 .tab-container li .tab-trigger.is-active {
 	background-color: #e3001a;
 }
 .content .section._02 .tab-container li .tab-trigger.is-active:before {
 	transform: scale(1);
+}
+.content .section._02 .tab-container li .tab-trigger.is-active span {
+	opacity: 1;
 }
 
 .content .section._03 {
