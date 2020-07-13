@@ -209,7 +209,7 @@ button.with-icon:after {
 }
 .content._main {
 	min-height: 100%;
-	padding: 157px 0 0;
+	padding: 147px 0 0;
 
 }
 .content .section {
@@ -230,7 +230,7 @@ button.with-icon:after {
 }
 .content .section._01 {
 	background-color: #ffffff;
-	padding: 21.6% 0 0;
+	/* padding: 21.6% 0 0; */
 	height: 100%;
 }
 .content .section._01 .wrapper {
