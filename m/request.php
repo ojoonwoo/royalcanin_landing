@@ -47,7 +47,7 @@
                 <div class="row">
                     <div class="input-group _addr">
                         <label for="sido">동물병원 찾기</label>
-                        <select id="sido" class="select-box">
+                        <select id="sido" class="select-box for-central">
                             <option value="" selected>시/도</option>
 <?php
     $query = "SELECT sido FROM juso_info WHERE 1 GROUP BY sido";
@@ -60,10 +60,10 @@
     }
 ?>                            
                         </select>
-                        <select id="sigugun" class="select-box">
+                        <select id="sigugun" class="select-box for-central">
                             <option value="" selected>시/구/군</option>
                         </select>
-                        <button type="button" id="addr-search"><span class="for-a11y">찾기</span></button>
+                        <button type="button" id="addr-search" class="for-central"><span class="for-a11y">찾기</span></button>
                     </div>
                 </div>
                 <div class="row">
@@ -206,9 +206,8 @@
 
                 if(location=='other') {
                     royalcaninCat.popup.show($('#other-popup'));
-                    // sido sigugun addr-search
                 } else {
-
+                    $('.for-central').show();
                 }
             });
             $doc.on('click', '.hospi-trigger', function() {
@@ -230,12 +229,18 @@
                 }
 
                 if(hospiName.length>0 && hospiAddr.length>0) {
-                    royalcaninCat.popup.close($('#'+popupId));
+                    if(popupId==='other-popup') {
+                        $('.for-central').hide();
+                    }
 
+                    royalcaninCat.popup.close($('#'+popupId));
                 } else {
                     alert("병원정보를 "+act+"해주세요!");
                     return;
                 }
+            });
+            $doc.on('click', '#other-popup .popup-close', function() {
+                $('[data-loc="central"]').trigger('click');
             });
             $doc.on('click', '#addr-search', function() {
                 // 주소검색 ajax callback {
