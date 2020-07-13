@@ -1519,7 +1519,7 @@ select.select-box {
 	padding: 0 20px;
 }
 .content.__request .input-wrapper .tip {
-	margin: 23px 0 26px;
+	margin: 28px 0 38px;
 	font-size: 0;
 	text-align: center;
 }
@@ -1528,7 +1528,7 @@ select.select-box {
 	vertical-align: middle;
 	background-color: #e3001a;
 	color: #ffffff;
-	font-size: 10px;
+	font-size: 16px;
 	font-weight: 800;
 	letter-spacing: -0.05em;
 	border-radius: 9px;
@@ -1538,7 +1538,7 @@ select.select-box {
 .content.__request .input-wrapper .tip em {
 	display: inline-block;
 	letter-spacing: -0.05em;
-	font-size: 10px;
+	font-size: 16px;
 	line-height: 1.2;
 	font-weight: 800;
 	vertical-align: middle;
