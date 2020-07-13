@@ -49,6 +49,17 @@
                         <label for="sido">동물병원 찾기</label>
                         <select id="sido" class="select-box">
                             <option value="" selected>시/도</option>
+<?php
+    $query = "SELECT sido FROM juso_info WHERE 1 GROUP BY sido";
+    $result = mysqli_query($my_db, $query);
+
+    while($data = mysqli_fetch_array($result)) {
+?>
+                            <option value="<?php echo $data['sido']?>" selected><?php echo $data['sido']?></option>
+<?php        
+    }
+
+?>                            
                         </select>
                         <select id="sigugun" class="select-box">
                             <option value="" selected>시/구/군</option>

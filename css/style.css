@@ -1597,7 +1597,7 @@ select.select-box {
 	text-align: right;
 }
 .content.__request .go-next {
-	margin-top: 51px;
+	margin: 51px auto 74px;
 }
 
 /* end sub */
