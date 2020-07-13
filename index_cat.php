@@ -74,6 +74,16 @@
                 <div class="wrapper">
                     <h1 class="title-block">
                         <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
+                        <div class="main-title">
+                            <p>고양이는</p>
+                            <p class="bg-line">아파도 숨기는 사실,</p>
+                            <p>알고 계세요?</p>
+                        </div>
+                        <div class="sub-title">
+                            <p>반려묘가 숨기고 있을지 모를</p>
+                            <p>건강 이상 신호 확인해보고</p>
+                            <p>무료 건강검진의 기회도 받아보세요!</p>
+                        </div>
                         <img src="./images/main_01_title.png" alt="고양이는 아파도 숨기는 사실, 알고 계세요? 반려묘가 숨기고 있을지 모를 건강 신호 확인해보고 무료 건강검진의 기회도 받아보세요!" class="title">
                     </h1>
                     <img src="./images/main_01_cat.png" alt="고양이" class="cat resize-elm" data-width="0.51">
