@@ -71,35 +71,49 @@
                     </p>
                     <div class="row">
                         <div class="input-group _addr">
-                            <label for="sido">동물병원 찾기</label>
-                            <select id="sido" class="select-box">
-                                <option value="" selected>시/도</option>
-                            </select>
-                            <select id="sigugun" class="select-box">
-                                <option value="" selected>시/구/군</option>
-                            </select>
-                            <button type="button" id="addr-search"><span class="for-a11y">찾기</span></button>
+                            <div class="label">
+                                <label for="sido">동물병원 찾기</label>
+                            </div>
+                            <div class="input">
+                                <select id="sido" class="select-box">
+                                    <option value="" selected>시/도</option>
+                                </select>
+                                <select id="sigugun" class="select-box">
+                                    <option value="" selected>시/구/군</option>
+                                </select>
+                                <button type="button" id="addr-search"><span class="for-a11y">찾기</span></button>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-group">
-                            <input type="text" class="input-text" id="req-addr" placeholder="내가 선택한 병원" readonly>
-                            <p class="guide-msg">* 건강검진권, 헤마츄리아 당첨 시 선택한 동물병원에서만 검진 및 수령이 가능하며 변경이 불가하니 신중하게 선택해주세요.</p>
+                            <div class="input">
+                                <input type="text" class="input-text" id="req-addr" placeholder="내가 선택한 병원" readonly>
+                                <p class="guide-msg">* 건강검진권, 헤마츄리아 당첨 시 선택한 동물병원에서만 검진 및 수령이 가능하며 변경이 불가하니 신중하게 선택해주세요.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-group">
-                            <label for="req-name">보호자 이름</label>
-                            <input type="text" class="input-text" id="req-name" placeholder="">
+                            <div class="label">
+                                <label for="req-name">보호자 이름</label>
+                            </div>
+                            <div class="input">
+                                <input type="text" class="input-text" id="req-name" placeholder="">
+                            </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-group _tel">
-                            <label for="req-phone1">휴대 전화번호</label>
-                            <input type="text" class="input-text" id="req-phone1" placeholder="">
-                            <input type="text" class="input-text" id="req-phone2" placeholder="">
-                            <input type="text" class="input-text" id="req-phone3" placeholder="">
-                            <p class="guide-msg">* 본 무료 건강검진권과 헤마츄리아는 추첨을 통해 제공되며, 추첨은 별개로 진행됩니다.</p>
+                            <div class="label">
+                                <label for="req-phone1">휴대 전화번호</label>
+                            </div>
+                            <div class="input">
+                                <input type="text" class="input-text" id="req-phone1" placeholder="">
+                                <input type="text" class="input-text" id="req-phone2" placeholder="">
+                                <input type="text" class="input-text" id="req-phone3" placeholder="">
+                                <p class="guide-msg">* 본 무료 건강검진권과 헤마츄리아는 추첨을 통해 제공되며, 추첨은 별개로 진행됩니다.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
