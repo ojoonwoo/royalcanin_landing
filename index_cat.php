@@ -67,7 +67,7 @@
                             <p>건강 이상 신호 확인해보고</p>
                             <p>무료 건강검진의 기회도 받아보세요!</p>
                         </div>
-                        <img src="./images/main_01_title.png" alt="고양이는 아파도 숨기는 사실, 알고 계세요? 반려묘가 숨기고 있을지 모를 건강 신호 확인해보고 무료 건강검진의 기회도 받아보세요!" class="title">
+                        <!-- <img src="./images/main_01_title.png" alt="고양이는 아파도 숨기는 사실, 알고 계세요? 반려묘가 숨기고 있을지 모를 건강 신호 확인해보고 무료 건강검진의 기회도 받아보세요!" class="title"> -->
                     </h1>
                     <img src="./images/main_01_cat.png" alt="고양이" class="cat resize-elm" data-width="0.51">
                     <!-- scroll down -->
@@ -401,30 +401,20 @@
             paramValArr = get_param_arr(paramObj);
 
             // 메인 섹션 1 한화면에 보일 수 있도록 조정
-            var winwidth = $(window).width();
-            var vh = $(window).height();
-            $('.section._01').attr('style', 'height:'+ $(window).height()+'px');
-            $('.section._01 .resize-elm').each(function() {
-                var wid = vh*$(this).attr('data-width');
-                $(this).attr('style', 'width:'+(wid/winwidth)*100+'%');  
-            })
-            $('.menu-transition-layer').css({
-                'width': winwidth*4,
-                'height': winwidth*4,
-                'top': -winwidth+'px',
-                'right': -winwidth+'px',
-            })
+            // var winwidth = $(window).width();
+            // var vh = $(window).height();
+            // $('.section._01').attr('style', 'height:'+ $(window).height()+'px');
+            // $('.section._01 .resize-elm').each(function() {
+            //     var wid = vh*$(this).attr('data-width');
+            //     $(this).attr('style', 'width:'+(wid/winwidth)*100+'%');  
+            // })
+            // $('.menu-transition-layer').css({
+            //     'width': winwidth*4,
+            //     'height': winwidth*4,
+            //     'top': -winwidth+'px',
+            //     'right': -winwidth+'px',
+            // })
 
-            // if(paramObj.it_key) {
-            //     defaultKey = paramObj.it_key;
-            //     $(window).scrollTop($('#section2').offset().top-56.5);
-            // }
-
-            // if(paramObj.event && paramObj.event.toLowerCase() == 'y') {
-            //     setTimeout(function() {
-            //         sectionMove('#section3');
-            //     }, 200);
-            // }
         });
 
 

@@ -235,6 +235,8 @@ button.with-icon:after {
 	position: relative;
 	overflow: hidden;
 	height: 100%;
+	width: 1100px;
+	margin: 0 auto;
 }
 .content .section._01 .title-block {
 	position: relative;
