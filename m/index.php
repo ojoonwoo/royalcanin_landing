@@ -364,6 +364,7 @@
             height: playerWidth*9/16,
             width: playerWidth,
             videoId: '3_6h0o-t3Vw',
+            playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': 'http://localhost', 'playsinline': 1},
             events: {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
@@ -373,6 +374,7 @@
             height: playerWidth*9/16,
             width: playerWidth,
             videoId: 'SauuYLbs_FI',
+            playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': 'http://localhost', 'playsinline': 1},
             events: {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
