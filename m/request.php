@@ -49,6 +49,16 @@
                         <label for="sido">동물병원 찾기</label>
                         <select id="sido" class="select-box">
                             <option value="" selected>시/도</option>
+<?php
+    $query = "SELECT sido FROM juso_info WHERE 1 GROUP BY sido";
+    $result = mysqli_query($my_db, $query);
+
+    while($data = mysqli_fetch_array($result)) {
+?>
+                            <option value="<?php echo $data['sido']?>"><?php echo $data['sido']?></option>
+<?php        
+    }
+?>                            
                         </select>
                         <select id="sigugun" class="select-box">
                             <option value="" selected>시/구/군</option>
@@ -227,6 +237,23 @@
                 // 주소검색 ajax callback {
                 royalcaninCat.popup.show($('#hospi-popup'));
                 // }
+            });
+            $doc.on('change', '#sido', function() {
+                $.ajax({
+                    url: "../ajax_sigungu.php",
+                    type: 'POST',
+                    data: {
+                        "sido"    : $(this).val()
+                    },
+                    // data: JSON.stringify(checkedList),
+                    success: function (response) {
+                        $("#sigugun").html(response);
+                    },
+                    error: function(jqXHR, errMsg) {
+                        // Handle error
+                        console.log(errMsg);
+                    }
+                });
             });
         });
         

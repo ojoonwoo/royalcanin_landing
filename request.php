@@ -1,7 +1,7 @@
 <?php
     include_once "./head.php";
 
-    include_once "../include/autoload.php";
+    include_once "./include/autoload.php";
     $mnv_f 			= new mnv_function();
     $my_db      = $mnv_f->Connect_MySQL();
 
@@ -39,6 +39,7 @@
         </div>
         <div class="content _sub __request">
             <div class="inner">
+
                 <div class="sub-header">
                     <a href="javascript:void(0)" id="go-before"></a>
                     <a href="./" id="go-index"></a>
@@ -47,7 +48,8 @@
                     <div class="prj-title">
                         <img src="./images/project_logo.svg" class="project-logo" alt="고양이 주치의 프로젝트">
                         <span class="text">
-                            <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>테스트</em></span>
+                            <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>테스트</em>
+                        </span>
                     </div>
                     <div class="subject">
                         <b><?=$cat_info['mb_cat_name']?>의 건강검진권 신청하기</b>
@@ -69,134 +71,160 @@
                     </p>
                     <div class="row">
                         <div class="input-group _addr">
-                            <label for="sido">동물병원 찾기</label>
-                            <select id="sido" class="select-box">
-                                <option value="" selected>시/도</option>
-                            </select>
-                            <select id="sigugun" class="select-box">
-                                <option value="" selected>시/구/군</option>
-                            </select>
-                            <button type="button" id="addr-search"><span class="for-a11y">찾기</span></button>
+                            <div class="label">
+                                <label for="sido">동물병원 찾기</label>
+                            </div>
+                            <div class="input">
+                                <select id="sido" class="select-box">
+                                    <option value="" selected>시/도</option>
+<?php
+    $query = "SELECT sido FROM juso_info WHERE 1 GROUP BY sido";
+    $result = mysqli_query($my_db, $query);
+
+    while($data = mysqli_fetch_array($result)) {
+?>
+                            <option value="<?php echo $data['sido']?>"><?php echo $data['sido']?></option>
+<?php        
+    }
+?>                            
+                                </select>
+                                <select id="sigugun" class="select-box">
+                                    <option value="" selected>시/구/군</option>
+                                </select>
+                                <button type="button" id="addr-search"><span class="for-a11y">찾기</span></button>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-group">
-                            <input type="text" class="input-text" id="req-addr" placeholder="내가 선택한 병원" readonly>
-                            <p class="guide-msg">* 건강검진권, 헤마츄리아 당첨 시 선택한 동물병원에서만 검진 및 수령이 가능하며 변경이 불가하니 신중하게 선택해주세요.</p>
+                            <div class="label">
+                            </div>
+                            <div class="input">
+                                <input type="text" class="input-text" id="req-addr" placeholder="내가 선택한 병원" readonly>
+                                <p class="guide-msg">* 건강검진권, 헤마츄리아 당첨 시 선택한 동물병원에서만 검진 및 수령이 가능하며 변경이 불가하니 신중하게 선택해주세요.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-group">
-                            <label for="req-name">보호자 이름</label>
-                            <input type="text" class="input-text" id="req-name" placeholder="">
+                            <div class="label">
+                                <label for="req-name">보호자 이름</label>
+                            </div>
+                            <div class="input">
+                                <input type="text" class="input-text" id="req-name" placeholder="">
+                            </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-group _tel">
-                            <label for="req-phone1">휴대 전화번호</label>
-                            <input type="text" class="input-text" id="req-phone1" placeholder="">
-                            <input type="text" class="input-text" id="req-phone2" placeholder="">
-                            <input type="text" class="input-text" id="req-phone3" placeholder="">
-                            <p class="guide-msg">* 본 무료 건강검진권과 헤마츄리아는 추첨을 통해 제공되며, 추첨은 별개로 진행됩니다.</p>
+                            <div class="label">
+                                <label for="req-phone1">휴대 전화번호</label>
+                            </div>
+                            <div class="input">
+                                <input type="text" class="input-text" id="req-phone1" placeholder="">
+                                <input type="text" class="input-text" id="req-phone2" placeholder="">
+                                <input type="text" class="input-text" id="req-phone3" placeholder="">
+                                <p class="guide-msg">* 본 무료 건강검진권과 헤마츄리아는 추첨을 통해 제공되며, 추첨은 별개로 진행됩니다.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <a href="javascript:void(0)" class="type-01 go-next" id="go-next">신청완료</a>
-            <div class="popup _req" id="other-popup">
-                <div class="inner">
-                    <button type="button" class="popup-close" data-popup="@close"></button>
-                    <div class="title-block">
-                        <p class="title">가까운 병원을 검색해 선택해주세요!</p>
-                    </div>
-                    <div class="guide-icon">
-                        <img src="./images/naver_search_guide.png" alt="">
-                    </div>
-                    <a href="https://map.naver.com/v5/search/" class="naver-search" target="_blank">
-                        <img src="./images/button_naver.png" alt="네이버에서 가까운 동물병원 찾기">
-                    </a>
-                    <div class="input-wrapper">
-                        <div class="input-group">
-                            <label for="nv-h-name">동물병원 명</label>
-                            <input type="text" id="nv-h-name" class="input-text" placeholder="동물병원 명을 기입해 주세요.">
+                <a href="javascript:void(0)" class="type-01 go-next" id="go-next">신청 완료</a>
+                <div class="popup _req" id="other-popup">
+                    <div class="inner">
+                        <button type="button" class="popup-close" data-popup="@close"></button>
+                        <div class="title-block">
+                            <p class="title">가까운 병원을 검색해 선택해주세요!</p>
                         </div>
-                        <div class="input-group">
-                            <label for="nv-h-name">동물병원 주소</label>
-                            <input type="text" id="nv-h-addr" class="input-text" placeholder="복사한 동물병원 주소를 붙여넣어 주세요.">
+                        <div class="guide-icon">
+                            <img src="./images/naver_search_guide.png" alt="">
                         </div>
+                        <a href="https://map.naver.com/v5/search/" class="naver-search" target="_blank">
+                            <img src="./images/button_naver.png" alt="네이버에서 가까운 동물병원 찾기">
+                        </a>
+                        <div class="input-wrapper">
+                            <div class="input-group">
+                                <label for="nv-h-name">동물병원 명</label>
+                                <input type="text" id="nv-h-name" class="input-text" placeholder="동물병원 명을 기입해 주세요.">
+                            </div>
+                            <div class="input-group">
+                                <label for="nv-h-name">동물병원 주소</label>
+                                <input type="text" id="nv-h-addr" class="input-text" placeholder="복사한 동물병원 주소를 붙여넣어 주세요.">
+                            </div>
+                        </div>
+                        <button type="button" class="type-01 hospi-select">입력 완료</button>
+                        <p class="guide-msg">* 병원 선택 전, 해당 주소지가 맞는지 확인해주세요!</p>
                     </div>
-                    <button type="button" class="type-01 hospi-select">입력 완료</button>
-                    <p class="guide-msg">* 병원 선택 전, 해당 주소지가 맞는지 확인해주세요!</p>
                 </div>
-            </div>
-            <div class="popup _req" id="hospi-popup">
-                <div class="inner">
-                    <button type="button" class="popup-close" data-popup="@close"></button>
-                    <div class="title-block">
-                        <p class="title">가까운 동물병원에서 쉽게 진단 받으세요!</p>
-                        <p class="sub"><b>총 <em>?</em>건</b>이 검색되었습니다.</p>
+                <div class="popup _req" id="hospi-popup">
+                    <div class="inner">
+                        <button type="button" class="popup-close" data-popup="@close"></button>
+                        <div class="title-block">
+                            <p class="title">가까운 동물병원에서 쉽게 진단 받으세요!</p>
+                            <p class="sub"><b>총 <em>?</em>건</b>이 검색되었습니다.</p>
+                        </div>
+                        <div class="list-block">
+                            <ul>
+                                <li>
+                                    <button type="button" class="hospi-trigger">
+                                        <div>
+                                            <span class="chk-shape"></span>
+                                        </div>
+                                        <div>
+                                            <p class="h-name">로얄 동물병원</p>
+                                            <p class="h-addr">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</p>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="hospi-trigger">
+                                        <div>
+                                            <span class="chk-shape"></span>
+                                        </div>
+                                        <div>
+                                            <p class="h-name">로얄 동물병원</p>
+                                            <p class="h-addr">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</p>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="hospi-trigger">
+                                        <div>
+                                            <span class="chk-shape"></span>
+                                        </div>
+                                        <div>
+                                            <p class="h-name">로얄 동물병원</p>
+                                            <p class="h-addr">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</p>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="hospi-trigger">
+                                        <div>
+                                            <span class="chk-shape"></span>
+                                        </div>
+                                        <div>
+                                            <p class="h-name">로얄 동물병원</p>
+                                            <p class="h-addr">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</p>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="hospi-trigger">
+                                        <div>
+                                            <span class="chk-shape"></span>
+                                        </div>
+                                        <div>
+                                            <p class="h-name">로얄 동물병원</p>
+                                            <p class="h-addr">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</p>
+                                        </div>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <button type="button" class="type-01 hospi-select">선택 완료</button>
+                        <p class="guide-msg">* 병원 선택 전, 해당 주소지가 맞는지 확인해주세요!</p>
                     </div>
-                    <div class="list-block">
-                        <ul>
-                            <li>
-                                <button type="button" class="hospi-trigger">
-                                    <div>
-                                        <span class="chk-shape"></span>
-                                    </div>
-                                    <div>
-                                        <p class="h-name">로얄 동물병원</p>
-                                        <p class="h-addr">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li>
-                                <button type="button" class="hospi-trigger">
-                                    <div>
-                                        <span class="chk-shape"></span>
-                                    </div>
-                                    <div>
-                                        <p class="h-name">로얄 동물병원</p>
-                                        <p class="h-addr">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li>
-                                <button type="button" class="hospi-trigger">
-                                    <div>
-                                        <span class="chk-shape"></span>
-                                    </div>
-                                    <div>
-                                        <p class="h-name">로얄 동물병원</p>
-                                        <p class="h-addr">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li>
-                                <button type="button" class="hospi-trigger">
-                                    <div>
-                                        <span class="chk-shape"></span>
-                                    </div>
-                                    <div>
-                                        <p class="h-name">로얄 동물병원</p>
-                                        <p class="h-addr">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</p>
-                                    </div>
-                                </button>
-                            </li>
-                            <li>
-                                <button type="button" class="hospi-trigger">
-                                    <div>
-                                        <span class="chk-shape"></span>
-                                    </div>
-                                    <div>
-                                        <p class="h-name">로얄 동물병원</p>
-                                        <p class="h-addr">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</p>
-                                    </div>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                    <button type="button" class="type-01 hospi-select">선택 완료</button>
-                    <p class="guide-msg">* 병원 선택 전, 해당 주소지가 맞는지 확인해주세요!</p>
                 </div>
             </div>
         </div>
@@ -251,6 +279,23 @@
                 // 주소검색 ajax callback {
                 royalcaninCat.popup.show($('#hospi-popup'));
                 // }
+            });
+            $doc.on('change', '#sido', function() {
+                $.ajax({
+                    url: "./ajax_sigungu.php",
+                    type: 'POST',
+                    data: {
+                        "sido"    : $(this).val()
+                    },
+                    // data: JSON.stringify(checkedList),
+                    success: function (response) {
+                        $("#sigugun").html(response);
+                    },
+                    error: function(jqXHR, errMsg) {
+                        // Handle error
+                        console.log(errMsg);
+                    }
+                });
             });
         });
         
