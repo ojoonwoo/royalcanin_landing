@@ -206,6 +206,9 @@
 
                 if(location=='other') {
                     royalcaninCat.popup.show($('#other-popup'));
+                    // sido sigugun addr-search
+                } else {
+
                 }
             });
             $doc.on('click', '.hospi-trigger', function() {
@@ -228,6 +231,7 @@
 
                 if(hospiName.length>0 && hospiAddr.length>0) {
                     royalcaninCat.popup.close($('#'+popupId));
+
                 } else {
                     alert("병원정보를 "+act+"해주세요!");
                     return;
