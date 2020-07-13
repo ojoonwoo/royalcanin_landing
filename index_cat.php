@@ -93,36 +93,38 @@
                             <!-- <span>사랑하는 반려묘 앞에서는 <br><b>누구보다 예민해져야해요</b></span> -->
                         </div>
                     </div>
-                    <div class="yt-container">
-                        <img src="./images/yt_container_cat_body.png" alt="" class="object _body">
-                        <img src="./images/yt_container_cat_tail.png" alt="" class="object _tail">
-                        <div id="player-infl">
-                            <!-- youtube video -->
-                            <!-- <img src="./images/infl_video_sample.jpg" alt=""> -->
+                    <div class="review-area">
+                        <div class="yt-container">
+                            <img src="./images/yt_container_cat_body.png" alt="" class="object _body">
+                            <img src="./images/yt_container_cat_tail.png" alt="" class="object _tail">
+                            <div id="player-infl">
+                                <!-- youtube video -->
+                                <!-- <img src="./images/infl_video_sample.jpg" alt=""> -->
+                            </div>
                         </div>
-                    </div>
-                    <!-- 활성탭에 따른 컨텐츠 변경 -->
-                    <div class="tab-container-wrap">
-                        <ul class="tab-container" data-video-target="infl">
-                            <li>
-                                <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw">
-                                    <img src="./images/infl_tab_thumb_01_active.png" alt="" class="thumb">
-                                    <span>프로 집사의<br>#주치의 프로젝트</span>
-                                </button>
-                            </li>
-                            <li>
-                                <button type="button" class="tab-trigger" data-key="CAInhDnQFaA">
-                                    <img src="./images/infl_tab_thumb_02_common.png" alt="" class="thumb">
-                                    <span>예민보스 집사의<br>#주치의 프로젝트</span>
-                                </button>
-                            </li>
-                            <li>
-                                <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM">
-                                    <img src="./images/infl_tab_thumb_03_common.png" alt="" class="thumb">
-                                    <span>현명 집사의<br>#주치의 프로젝트</span>
-                                </button>
-                            </li>
-                        </ul>
+                        <!-- 활성탭에 따른 컨텐츠 변경 -->
+                        <div class="tab-container-wrap">
+                            <ul class="tab-container" data-video-target="infl">
+                                <li>
+                                    <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw">
+                                        <img src="./images/infl_tab_thumb_01_active.png" alt="" class="thumb">
+                                        <span>프로 집사의<br>#주치의 프로젝트</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="tab-trigger" data-key="CAInhDnQFaA">
+                                        <img src="./images/infl_tab_thumb_02_common.png" alt="" class="thumb">
+                                        <span>예민보스 집사의<br>#주치의 프로젝트</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM">
+                                        <img src="./images/infl_tab_thumb_03_common.png" alt="" class="thumb">
+                                        <span>현명 집사의<br>#주치의 프로젝트</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
