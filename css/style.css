@@ -937,7 +937,16 @@ select.select-box {
 	width: inherit;
 	margin: 0 auto;
 }
+.content._sub.__request .inner {
+	width: inherit;
+	margin: 0 auto;
+}
 .content._sub.__result .inner .sub-header {
+	position: relative;
+	width: 1100px;
+	margin: 0 auto;
+}
+.content._sub.__request .inner .sub-header {
 	position: relative;
 	width: 1100px;
 	margin: 0 auto;
