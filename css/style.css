@@ -245,6 +245,8 @@ button.with-icon:after {
 	padding-top: 11.6%;
 	padding-left: 36px;
 	z-index: 1;
+	display: inline-block;
+	text-align: left;
 }
 .content .section._01 .title-block .project-logo {
 	width: 83px;
