@@ -1770,8 +1770,9 @@ html.popup-opened {
 	letter-spacing: -0.05em;
 }
 #other-popup .inner {
-	padding-left: 20px;
-	padding-right: 20px;
+	/* padding-left: 20px;
+	padding-right: 20px; */
+	padding: 0 50px;
 }
 #other-popup .title-block {
 	margin-bottom: 41px;
@@ -1781,7 +1782,10 @@ html.popup-opened {
 }
 #other-popup .naver-search {
 	display: block;
-	margin: 30px 0;
+	margin: 30px 0 23px;
+}
+#other-popup .naver-search img {
+	margin: 0 auto;
 }
 #other-popup .input-wrapper {
 	padding: 0;
@@ -1795,11 +1799,14 @@ html.popup-opened {
 }
 #other-popup .input-wrapper .input-group label {
 	display: block;
-	font-size: 14px;
+	font-size: 16px;
 	letter-spacing: -0.05em;
 	margin-bottom: 15px;
 	text-align: left;
 	font-weight: 700;
+}
+#other-popup .input-wrapper .input-group input {
+	width: 100%;
 }
 
 /* .content-wrap .inner .box-area .box img,
