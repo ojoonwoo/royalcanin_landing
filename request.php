@@ -286,6 +286,7 @@
                     },
                     // data: JSON.stringify(checkedList),
                     success: function (response) {
+                        console.log(response);
                         royalcaninCat.popup.show($('#hospi-popup'));
                         $(".list-block ul").html(response);
                     },
