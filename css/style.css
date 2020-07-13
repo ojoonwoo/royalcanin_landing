@@ -1440,7 +1440,7 @@ select.select-box {
 }
 .content.__request .location-selector {
 	border-top: 1px solid #e3001a;
-	border-bottom: 4px solid #f0f0f0;
+	border-bottom: 7px solid #f0f0f0;
 	font-size: 0;
 	margin-bottom: 25px;
 }
@@ -1477,7 +1477,7 @@ select.select-box {
 .content.__request .location-selector .loc-trigger p {
 	position: relative;
 	display: inline-block;
-	font-size: 13px;
+	font-size: 20px;
 	vertical-align: middle;
 	letter-spacing: -0.05em;
 	font-weight: 700;
@@ -1498,17 +1498,17 @@ select.select-box {
 	transform: scale(1);
 }
 .content.__request .location-selector .loc-trigger.is-active p {
-	font-weight: 800;
+	font-weight: 700;
 	color: #e3001a;
 }
 .content.__request .location-selector .loc-trigger:last-child p {
 	font-weight: 500;
-	font-size: 12px;
+	font-size: 18px;
 }
 .content.__request .location-selector .loc-trigger:last-child p b {
 	display: block;
 	margin-top: 3px;
-	font-size: 18px;
+	font-size: 30px;
 	font-weight: 800;
 }
 .content.__request .input-wrapper {
