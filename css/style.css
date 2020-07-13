@@ -1863,22 +1863,22 @@ video::-webkit-media-controls-fullscreen-button {
 /* end video customize */
 
 /* media query */
-@media screen and (min-height: 950px) {
+@media screen and (max-height: 950px) {
 	.content .section._01 .title-block .main-title {
 		font-size: 64px;
 	}
 }
-@media screen and (min-height: 900px) {
+@media screen and (max-height: 900px) {
 	.content .section._01 .title-block .main-title {
 		font-size: 62px;
 	}
 }
-@media screen and (min-height: 850px) {
+@media screen and (max-height: 850px) {
 	.content .section._01 .title-block .main-title {
 		font-size: 60px;
 	}
 }
-@media screen and (min-height: 800px) {
+@media screen and (max-height: 800px) {
 	.content .section._01 .title-block .main-title {
 		font-size: 58px;
 	}
