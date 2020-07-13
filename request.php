@@ -119,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="javascript:void(0)" class="type-01 go-next" id="go-next">신청완료</a>
+                <a href="javascript:void(0)" class="type-01 go-next" id="go-next">신청 완료</a>
                 <div class="popup _req" id="other-popup">
                     <div class="inner">
                         <button type="button" class="popup-close" data-popup="@close"></button>
