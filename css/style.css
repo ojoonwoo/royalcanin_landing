@@ -407,6 +407,10 @@ button.with-icon:after {
 	font-weight: 800;
 	opacity: 0.2;
 }
+.content .section._02 .infl-video-container .review-area {
+	display: flex;
+	justify-content: center;
+}
 .content .section._02 .infl-video-container .yt-container {
 	/* position: absolute;
 	left: 20px;
@@ -443,10 +447,12 @@ button.with-icon:after {
 	font-size: 0;
 }
 .content .section._02 .tab-container li {
-	display: inline-block;
+	/* display: inline-block;
 	width: 32%;
 	margin-right: 2%;
-	vertical-align: top;
+	vertical-align: top; */
+	width: 532px;
+	height: 106px;
 }
 .content .section._02 .tab-container li:last-child {
 	margin-right: 0;
