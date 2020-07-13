@@ -358,12 +358,12 @@ button.with-icon:after {
 	}
 }
 .content .section .project-logo {
-	width: 47px;
-	height: 47px;
-	margin: 0 auto 6px;
+	width: 84px;
+	height: 84px;
+	margin: 0 auto 13px;
 }
 .content .section._02 {
-	padding: 40px 0 49px;
+	padding: 60px 0 49px;
 }
 .content .section._02 > .title-block {
 	margin-bottom: 20px;
@@ -371,15 +371,15 @@ button.with-icon:after {
 .content .section._02 .title-block .tt {
 	display: inline-block;
 	padding: 4px 12px;
-	margin-bottom: 5px;
-	font-size: 20px;
+	margin-bottom: 6px;
+	font-size: 38px;
 	font-weight: 800;
 	letter-spacing: -0.05em;
 	background-color: #e3001a;
 	color: #ffffff;
 }
 .content .section._02 .title-block .sub {
-	font-size: 12px;
+	font-size: 20px;
 	font-weight: 700;
 	color: #e3001a;
 	letter-spacing: -0.05em;
