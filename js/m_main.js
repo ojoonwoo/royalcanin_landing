@@ -38,6 +38,12 @@ $(function(){
 				if ($this.is('a')){
 					e.preventDefault();
 				}
+			})
+				.on('click', '.popup-wrap.is-opened .out-area', function(e) {
+					// var $target = $(e.target);
+					var $this = $(this);
+					royalcaninCat.popup.close($this.siblings('.popup'));
+					// if(e.target)
 			});
 		},
 		show : function($popup){
@@ -49,6 +55,7 @@ $(function(){
 				if (!$wrap.hasClass('popup-wrap')){
 					$popup.wrap('<div class="popup-wrap"></div>');
 					$wrap = $popup.parent();
+					$wrap.append('<div class="out-area"></div>');
 				}
 
 				if (!$wrap.hasClass('is-opened')){
