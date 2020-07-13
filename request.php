@@ -282,7 +282,7 @@
                     type: 'POST',
                     data: {
                         "sido"       : $("#sido").val(),
-                        "sigungu"    : $("#sigungu").val()
+                        "sigungu"    : $("#sigugun").val()
                     },
                     // data: JSON.stringify(checkedList),
                     success: function (response) {

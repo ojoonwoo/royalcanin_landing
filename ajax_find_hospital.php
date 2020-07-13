@@ -10,7 +10,7 @@
 
     print_r($query);
     while($data = mysqli_fetch_array($result)) {
-        "<li><button type='button' class='hospi-trigger'><div><span class='chk-shape'></span></div><div><p class='h-name'>".$data['hospital_name']."</p><p class='h-addr'>".$data['hospital_addr']."</p></div></button></li>";
+        echo "<li><button type='button' class='hospi-trigger'><div><span class='chk-shape'></span></div><div><p class='h-name'>".$data['hospital_name']."</p><p class='h-addr'>".$data['hospital_addr']."</p></div></button></li>";
 
     }
 ?>
