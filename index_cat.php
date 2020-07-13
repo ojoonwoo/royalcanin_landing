@@ -29,45 +29,28 @@
 
     <!-- End Google Tag Manager (noscript) -->
     <div id="container">
-        <div id="menu-layer">
-            <div class="inner">
-                <ul>
-                    <li>
-                        <a href="#" data-url="#section1">
-                            <span class="p-name">메인</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" data-url="#section2">
-                            <span class="p-name">주치의 프로젝트</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" data-url="#section3" onclick="">
-                            <span class="p-name">주치의력 테스트</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" data-url="#section4" onclick="">
-                            <span class="p-name">주치의력 업그레이드 TIPS</span>
-                        </a>
-                    </li>
-                </ul>
-                <img src="./images/menu_cat.png" alt="" class="cat">
-            </div>
-        </div>
-        <div class="menu-transition-layer"></div>
         <div id="header">
-            <a href="./" class="logo">
-                <img src="./images/logo.png" alt="로얄캐닌 홈으로">
-            </a>
-            <button type="button" class="gnb-toggle">
-                <div class="wrapper">
-                    <div class="line _01"></div>
-                    <div class="line _02"></div>
-                    <div class="line _03"></div>
-                </div>
-            </button>
+            <div class="inner">
+                <a href="./" class="logo">
+                    <img src="./images/logo.png" alt="로얄캐닌 홈으로">
+                </a>
+                <nav class="menu">
+                    <ul>
+                        <li class="active">
+                            <a href="javascript:void(0)" data-url="#section1">메인</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-url="#section2">주치의 프로젝트</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-url="#section3">주치의력 테스트</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" data-url="#section4">주치의력 업그레이드 TIPS</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
         <div class="content _main">
             <section class="section _01" id="section1">
