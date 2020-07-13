@@ -76,9 +76,14 @@
                         <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                         <img src="./images/main_01_title.png" alt="고양이는 아파도 숨기는 사실, 알고 계세요? 반려묘가 숨기고 있을지 모를 건강 신호 확인해보고 무료 건강검진의 기회도 받아보세요!" class="title">
                     </h1>
-                    <img src="./images/main_01_cat.png" alt="고양이" class="cat">
+                    <img src="./images/main_01_cat.png" alt="고양이" class="cat resize-elm" data-width="0.51">
+                    <!-- scroll down -->
+                    <div class="scoll-down-group">
+                        <span class="anim _1"></span>
+                        <span class="anim _2"></span>
+                        <span class="txt">scroll down</span>
+                    </div>
                 </div>
-                <!-- scroll down -->
             </section>
             <section class="section _02" id="section2">
                 <div class="title-block">
@@ -96,15 +101,15 @@
                     <div class="yt-container">
                         <img src="./images/yt_container_cat_body.png" alt="" class="object _body">
                         <img src="./images/yt_container_cat_tail.png" alt="" class="object _tail">
-                        <div id="yt-player">
+                        <div id="player-infl">
                             <!-- youtube video -->
-                            <img src="./images/infl_video_sample.jpg" alt="">
+                            <!-- <img src="./images/infl_video_sample.jpg" alt=""> -->
                         </div>
                     </div>
                 </div>
                 <!-- 활성탭에 따른 컨텐츠 변경 -->
                 <div class="tab-container-wrap">
-                    <ul class="tab-container">
+                    <ul class="tab-container" data-video-target="infl">
                         <li>
                             <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw">
                                 <img src="./images/infl_tab_thumb_sample.jpg" alt="" class="thumb">
@@ -178,7 +183,7 @@
                 </div>
             </section>
             <section class="section _04" id="section4">
-                <img src="" alt="고양이" class="cute">
+                <img src="./images/section_04_cutie.png" alt="고양이" class="cute">
                 <div class="title-block">
                     <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                     <p class="prj-title">
@@ -188,54 +193,54 @@
                     </p>
                 </div>
                 <div class="tab-container-wrap">
-                    <ul class="tab-container">
+                    <ul class="tab-container" data-video-target="tips">
                         <li>
                             <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw">
                                 <img src="" alt="" class="icon">
-                                <span>10 TRAVEL<br>TIPS</span>
+                                <span>고양이를 병원에<br>데려가는 꿀팁</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="CAInhDnQFaA">
                                 <img src="" alt="" class="icon">
-                                <span>수의사님<br>영상</span>
+                                <span>OOO질병이<br>궁금하시다면?</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM">
                                 <img src="" alt="" class="icon">
-                                <span>1/5</span>
+                                <span>5가지 징후<br>1/5</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="3_6h0o-t3Vw">
                                 <img src="" alt="" class="icon">
-                                <span>2/5</span>
+                                <span>5가지 징후<br>2/5</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="CAInhDnQFaA">
                                 <img src="" alt="" class="icon">
-                                <span>3/5</span>
+                                <span>5가지 징후<br>3/5</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM">
                                 <img src="" alt="" class="icon">
-                                <span>4/5</span>
+                                <span>5가지 징후<br>4/5</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM">
                                 <img src="" alt="" class="icon">
-                                <span>5/5</span>
+                                <span>5가지 징후<br>5/5</span>
                             </button>
                         </li>
                     </ul>
                 </div>
                 <div class="tips-video-container">
                     <div class="yt-container">
-                        <div id="yt-player">
+                        <div id="player-tips">
                             <!-- youtube video -->
                         </div>
                     </div>
@@ -243,7 +248,7 @@
                 <ul class="article-list">
                     <li>
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/is-your-cat-stressed" target="_blank">
-                            <span class="thumb"></span>
+                            <img src="./images/article_img_01.png" alt="" class="thumb">
                             <span class="text">
                                 <span>반려묘 스트레스 확인 방법</span>
                                 <span>자세히 보기 ></span>
@@ -252,7 +257,7 @@
                     </li>
                     <li>
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/keeping-your-cat-at-a-healthy-weight" target="_blank">
-                            <span class="thumb"></span>
+                            <img src="./images/article_img_02.png" alt="" class="thumb">
                             <span class="text">
                                 <span>체중 유지 방법</span>
                                 <span>자세히 보기 ></span>
@@ -261,7 +266,7 @@
                     </li>
                     <li>
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/my-cat-is-losing-its-hair" target="_blank">
-                            <span class="thumb"></span>
+                            <img src="./images/article_img_03.png" alt="" class="thumb">
                             <span class="text">
                                 <span>털이 빠지는 이유</span>
                                 <span>자세히 보기 ></span>
@@ -270,7 +275,7 @@
                     </li>
                     <li>
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/common-illnesses-in-older-cats" target="_blank">
-                            <span class="thumb"></span>
+                            <img src="./images/article_img_04.png" alt="" class="thumb">
                             <span class="text">
                                 <span>노령묘 질환</span>
                                 <span>자세히 보기 ></span>
@@ -279,7 +284,7 @@
                     </li>
                     <li>
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/how-your-cats-diet-affects-its-urinary-health" target="_blank">
-                            <span class="thumb"></span>
+                            <img src="./images/article_img_05.png" alt="" class="thumb">
                             <span class="text">
                                 <span>요로기계 건강이 중요한 이유</span>
                                 <span>자세히 보기 ></span>
@@ -288,7 +293,7 @@
                     </li>
                     <li>
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/what-makes-a-cats-digestive-system-healthy" target="_blank">
-                            <span class="thumb"></span>
+                            <img src="./images/article_img_06.png" alt="" class="thumb">
                             <span class="text">
                                 <span>소화기계</span>
                                 <span>자세히 보기 ></span>
@@ -302,10 +307,59 @@
             <span class="for-a11y">Copyright © 2020. ROYAL CANIN all rights reserved.</span>
         </div>
     </div>
-    <script src="../js/slick.min.js"></script>
-    <!-- <script src="https://vjs.zencdn.net/7.8.2/video.js"></script> -->
-    <script src="https://vjs.zencdn.net/7.6.0/video.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollToPlugin.min.js"></script>
+    <script>
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var playerInfl, playerTips;
+    var playerWidth = $('.yt-container').width();
+    function onYouTubeIframeAPIReady() {
+        playerInfl = new YT.Player('player-infl', {
+            height: playerWidth*9/16,
+            width: playerWidth,
+            videoId: '3_6h0o-t3Vw',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+        playerTips = new YT.Player('player-tips', {
+            height: playerWidth*9/16,
+            width: playerWidth,
+            videoId: '3_6h0o-t3Vw',
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    }
+
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    var done = false;
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+            // setTimeout(stopVideo, 6000);
+            // done = true;
+        }
+    }
+    function stopVideo() {
+        // player.stopVideo();
+    }
+    </script>
     <script>
         $(document).ready(function() {
             paramObj = get_query();
@@ -316,10 +370,10 @@
             var winwidth = $(window).width();
             var vh = $(window).height();
             $('.section._01').attr('style', 'height:'+ $(window).height()+'px');
-            // $('.section._01 .resize-elm').each(function() {
-            //     var wid = vh*$(this).attr('data-width');
-            //     $(this).attr('style', 'width:'+(wid/winwidth)*100+'%');  
-            // })
+            $('.section._01 .resize-elm').each(function() {
+                var wid = vh*$(this).attr('data-width');
+                $(this).attr('style', 'width:'+(wid/winwidth)*100+'%');  
+            })
             $('.menu-transition-layer').css({
                 'width': winwidth*4,
                 'height': winwidth*4,
@@ -327,18 +381,18 @@
                 'right': -winwidth+'px',
             })
 
-            if(paramObj.it_key) {
-                defaultKey = paramObj.it_key;
-                $(window).scrollTop($('#section2').offset().top-56.5);
-            }
+            // if(paramObj.it_key) {
+            //     defaultKey = paramObj.it_key;
+            //     $(window).scrollTop($('#section2').offset().top-56.5);
+            // }
             // 하단 TIPS영역 정보 불러오기
             // getTips(defaultKey, 'init');
 
-            if(paramObj.event && paramObj.event.toLowerCase() == 'y') {
-                setTimeout(function() {
-                    sectionMove('#section3');
-                }, 200);
-            }
+            // if(paramObj.event && paramObj.event.toLowerCase() == 'y') {
+            //     setTimeout(function() {
+            //         sectionMove('#section3');
+            //     }, 200);
+            // }
         });
 
 
@@ -357,7 +411,7 @@
                     var closeTl = gsap.timeline({onComplete: menuTimelineEnd});
                     closeTl
                         .to($('#menu-layer li'), {duration: 0.15, y: 5, autoAlpha: 0})
-                        .to($('#menu-layer .cat'), {duration: 0.1, y: 5, autoAlpha: 0, rotation: -2})
+                        .to($('#menu-layer .cat'), {duration: 0.1, y: 5, autoAlpha: 0})
                         .set($('#menu-layer'), {display: 'none'})
                         .to($('#header .logo'), {duration: 0.45, x: 0, ease: "power3.out"})
                         .to($('.menu-transition-layer'), {duration: 0.45, scale: 0, ease: "sine"}, "-=0.3")
@@ -369,7 +423,7 @@
                         .to($('#header .logo'), {duration: 0.45, x: -($(window).width()/2-($('#header .logo').width()/2+20)), ease: "power3.out"}, "-=0.3")
                         .set($('#menu-layer'), {display: 'block'}, "-=0.3")
                         .to($('#menu-layer .cat'), {duration: 0.1, y: 0, autoAlpha: 1}, "-=0.3")
-                        .to($('#menu-layer .cat'), {duration: 0.2, rotation: 0, ease: "linear"}, "-=0.3")
+                        .to($('#menu-layer .cat'), {duration: 0.2, ease: "linear"}, "-=0.3")
                         .to($('#menu-layer li'), {duration: 0.35, stagger: 0.15, y: 0, autoAlpha: 1}, "-=0.2")
                 }
                 $('.gnb-toggle').toggleClass('is-active');
@@ -399,13 +453,20 @@
         // 상품영역 탭 이벤트
         $(document).on('click', '.tab-trigger', function() {
             var $this = $(this);
+            var $container = $this.closest('.tab-container');
             var targetKey = $(this).attr('data-key');
+            var targetVideo = $container.attr('data-video-target');
             if($this.hasClass('is-active')) {
                 return;
             }
-            $('.tab-container .tab-trigger').not($this).removeClass('is-active');
-            // $this.addClass('is-active');
-            // getProductInfo(targetKey);
+            $container.find('.tab-trigger').not($this).removeClass('is-active');
+            $this.addClass('is-active');
+
+            if(targetVideo == 'infl') {
+                playerInfl.loadVideoById(targetKey, 0);
+            } else {
+                playerTips.loadVideoById(targetKey, 0);
+            }
         });
 
         // 서브페이지로 이동
