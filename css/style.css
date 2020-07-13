@@ -1253,8 +1253,13 @@ select.select-box {
 .content.__result .title-block .prj-title {
 	margin-bottom: 20px;
 }
-.content.__result .cat-block {
+/* .content.__result .cat-block {
 	margin-bottom: 31px;
+} */
+.content.__result .cat-block {
+	position: relative;
+	width: 1100px;
+	margin: 0 auto;
 }
 .content.__result .cat-block img {
 	margin: 0 auto;
@@ -1283,6 +1288,11 @@ select.select-box {
 }
 .content.__result .cat-block .info > div span:first-child {
 	margin-right: 3px;
+}
+.content.__result .cat-block .info .ksfm-logo {
+	position: absolute;
+	right: 0;
+	bottom: -26px;
 }
 .content.__result .chart-block {
 	position: relative;
@@ -1361,7 +1371,7 @@ select.select-box {
 	top: 55px;
 }
 .content.__result .advice-block {
-	margin-top: 54px;
+	margin-top: 30px;
 	background-color: #f0f0f0;
 	/* padding: 27px 20px 30px; */
 	text-align: center;
@@ -1410,9 +1420,9 @@ select.select-box {
 	margin: 61px auto 89px;
 }
 
-.content.__request {
+/* .content.__request {
 	padding: 60px 0 36px;
-}
+} */
 .content.__request .title-block {
 	margin-bottom: 26px;
 }
