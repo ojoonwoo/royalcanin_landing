@@ -191,7 +191,7 @@ button.type-01 {
 	border-radius: 26px;
 	color: #ffffff;
 	/* font-size: 16px; */
-	font-size: 15px;
+	font-size: 20px;
 	/* font-size: calc(11px + 1.3vw); */
 	font-weight: 800;
 	letter-spacing: -0.05em;
@@ -1766,13 +1766,12 @@ html.popup-opened {
 }
 .popup._req .guide-msg {
 	color: #e3001a;
-	font-size: 10px;
+	font-size: 12px;
 	letter-spacing: -0.05em;
 }
 #other-popup .inner {
-	/* padding-left: 20px;
-	padding-right: 20px; */
-	padding: 0 50px;
+	padding-left: 50px;
+	padding-right: 50px;
 }
 #other-popup .title-block {
 	margin-bottom: 41px;
@@ -1789,7 +1788,7 @@ html.popup-opened {
 }
 #other-popup .input-wrapper {
 	padding: 0;
-	margin-bottom: 32px;
+	margin-bottom: 26px;
 }
 #other-popup .input-wrapper .input-group {
 	margin-bottom: 20px;
@@ -1801,7 +1800,7 @@ html.popup-opened {
 	display: block;
 	font-size: 16px;
 	letter-spacing: -0.05em;
-	margin-bottom: 15px;
+	margin-bottom: 12px;
 	text-align: left;
 	font-weight: 700;
 }
