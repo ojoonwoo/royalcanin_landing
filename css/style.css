@@ -464,6 +464,7 @@ button.with-icon:after {
 	/* border-radius: 11px; */
 	padding: 6px 7px 10px;
 	text-align: center;
+	width: 100%;
 }
 .content .section._02 .tab-container li .tab-trigger:before {
 	content: "";
