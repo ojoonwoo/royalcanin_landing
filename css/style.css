@@ -283,7 +283,7 @@ button.with-icon:after {
 .content .section._01 .cat {
 	position: absolute;
 	width: auto;
-	/* height: 71.5%; */
+	height: 69.1%;
 	top: 157px;
 	/* right: -18%; */
 	right: 0;
@@ -1863,20 +1863,31 @@ video::-webkit-media-controls-fullscreen-button {
 /* end video customize */
 
 /* media query */
-@media screen and (min-height: 630px) {
-	#menu-layer .dog {
-		position: absolute;
-		bottom: 0;
-		left: 3%;
-		right: 3%;
-		margin: 0;
+@media screen and (min-height: 950px) {
+	.content .section._01 .title-block .main-title {
+		font-size: 64px;
+	}
+}
+@media screen and (min-height: 900px) {
+	.content .section._01 .title-block .main-title {
+		font-size: 62px;
+	}
+}
+@media screen and (min-height: 850px) {
+	.content .section._01 .title-block .main-title {
+		font-size: 60px;
+	}
+}
+@media screen and (min-height: 800px) {
+	.content .section._01 .title-block .main-title {
+		font-size: 58px;
 	}
 }
 /* @media screen and (max-width: 340px) { */
-@media screen and (max-width: 345px) {
+/* @media screen and (max-width: 345px) {
 	
 }
 @media screen and (min-width: 600px) {
 	
-}
+} */
 /* end media query */
