@@ -1867,20 +1867,32 @@ video::-webkit-media-controls-fullscreen-button {
 	.content .section._01 .title-block .main-title {
 		font-size: 64px;
 	}
+	.content .section._01 .title-block .project-logo {
+		width: 118px;
+	}
 }
 @media screen and (max-height: 900px) {
 	.content .section._01 .title-block .main-title {
 		font-size: 62px;
+	}
+	.content .section._01 .title-block .project-logo {
+		width: 117px;
 	}
 }
 @media screen and (max-height: 850px) {
 	.content .section._01 .title-block .main-title {
 		font-size: 60px;
 	}
+	.content .section._01 .title-block .project-logo {
+		width: 116px;
+	}
 }
 @media screen and (max-height: 800px) {
 	.content .section._01 .title-block .main-title {
 		font-size: 58px;
+	}
+	.content .section._01 .title-block .project-logo {
+		width: 115px;
 	}
 }
 /* @media screen and (max-width: 340px) { */
