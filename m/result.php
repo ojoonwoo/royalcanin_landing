@@ -168,7 +168,8 @@
 
                     (adviceArray.length-i!==1) ? adv_temp_subject += resultObject[adviceArray[i]].subject+", " : adv_temp_subject += resultObject[adviceArray[i]].subject;
                 }
-                adv_subject = "<span><b>"+adv_temp_subject+"</b>에 대해<br>다양한 신호를 보내고 있어요!</span>";
+                // adv_subject = "<span><b>"+adv_temp_subject+"</b>에 대해<br>다양한 신호를 보내고 있어요!</span>";
+                adv_subject = "<span><b>"+adv_temp_subject+"</b>에 대해 다양한 신호를 보내고 있어요!</span>";
             } else {
                 adv_icon.push("./images/advice_icon_doctor.png");
                 adv_msg = adviceObject.doctor.msg;

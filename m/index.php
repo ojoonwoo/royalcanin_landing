@@ -499,11 +499,7 @@
             });
 
             if(targetVideo == 'infl') {
-                $('.object._tail').addClass('shake');
                 playerInfl.loadVideoById(targetKey, 0);
-                setTimeout(function() {
-                    $('.object._tail').removeClass('shake');
-                }, 3000);
             } else {
                 playerTips.loadVideoById(targetKey, 0);
             }

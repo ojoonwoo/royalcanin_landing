@@ -417,24 +417,27 @@ button.with-icon:after {
 	top: 22.5px;
 	left: -16.5px;
 	z-index: 0;
-}
-.content .section._02 .infl-video-container .yt-container img._tail.shake {
 	animation-name: shakeTail;
 	animation-duration: 3s;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in;
 	animation-fill-mode: both;
-	/* animation-play-state: paused; */
 	animation-iteration-count: infinite;
 }
+/* .content .section._02 .infl-video-container .yt-container img._tail.shake {
+
+} */
 @keyframes shakeTail {
 	0% {
 		transform: rotate(0deg);
 	}
-	30% {
-		transform: rotate(9deg);	
+	20% {
+		transform: rotate(5deg);
 	}
-	70% {
-		transform: rotate(-9deg);
+	40% {
+		transform: rotate(0deg);
+	}
+	60% {
+		transform: rotate(-5deg);
 	}
 	100% {
 		transform: rotate(0deg);

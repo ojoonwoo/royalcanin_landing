@@ -120,11 +120,11 @@
                     <button type="button" class="popup-close" data-popup="@close"></button>
                     <div class="title-block">
                         <p class="title">가까운 동물병원에서 쉽게 진단 받으세요!</p>
-                        <p class="sub"><b>총 <em>?</em>건</b>이 검색되었습니다.</p>
+                        <p class="sub"><b>총 <em id="hospi-cnt"></em>건</b>이 검색되었습니다.</p>
                     </div>
                     <div class="list-block">
                         <ul>
-                            <li>
+                            <!-- <li>
                                 <button type="button" class="hospi-trigger">
                                     <div>
                                         <span class="chk-shape"></span>
@@ -178,7 +178,7 @@
                                         <p class="h-addr">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</p>
                                     </div>
                                 </button>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <button type="button" class="type-01 hospi-select">선택 완료</button>
@@ -254,7 +254,7 @@
                 }
 
                 $.ajax({
-                    url: "./ajax_find_hospital.php",
+                    url: "../ajax_find_hospital.php",
                     type: 'POST',
                     data: {
                         "sido"       : $("#sido").val(),
@@ -262,9 +262,10 @@
                     },
                     // data: JSON.stringify(checkedList),
                     success: function (response) {
-                        console.log(response);
+                        var res = JSON.parse(response);
                         royalcaninCat.popup.show($('#hospi-popup'));
-                        $(".list-block ul").html(response);
+                        $("#hospi-cnt").text(res.cnt);
+                        $(".list-block ul").html(res.html);
                     },
                     error: function(jqXHR, errMsg) {
                         // Handle error
