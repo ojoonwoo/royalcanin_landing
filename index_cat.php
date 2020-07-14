@@ -144,14 +144,15 @@
                         <b>나의 주치의력을 테스트 해 보시고 반려묘의 신호는 물론 무료 건강검진권 당첨의 기회도 잡으세요!</b>
                     </p>
                     <div class="date-block">
-                        <dl>
+                        <p>참여기간  : 2020. 07. 30 ~ 08. 30  /  당첨자 확인 : 2020. 09. 30 </p>
+                        <!-- <dl>
                             <dt>참여기간</dt>
                             <dd>0000. 00. 00 ~ 0000. 00. 00</dd>
                         </dl>
                         <dl>
                             <dt>당첨자 확인</dt>
                             <dd>0000. 00. 00</dd>
-                        </dl>
+                        </dl> -->
                     </div>
                     <img src="./images/section_03_group.png" alt="" class="img-group">
                     <a href="./gate.php" class="type-01" id="go-sub">시작하기</a>

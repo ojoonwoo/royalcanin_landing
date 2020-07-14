@@ -524,9 +524,9 @@ button.with-icon:after {
 	font-size: 38px;
 }
 .content .section._03 .title-block .sub {
-	margin: 10px 0 20px;
+	margin: 13px 0 20px;
 	font-size: 20px;
-	line-height: 1.2;
+	line-height: 1.3;
 	letter-spacing: -0.05em;
 	font-weight: 500;
 }
@@ -534,6 +534,10 @@ button.with-icon:after {
 	color: #e3001a;
 }
 .content .section._03 .date-block {
+	font-size: 16px;
+	font-weight: 700;
+}
+.content .section._03 .date-block p {
 	text-align: center;
 	font-size: 0;
 }
