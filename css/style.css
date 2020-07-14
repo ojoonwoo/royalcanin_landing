@@ -386,7 +386,8 @@ button.with-icon:after {
 }
 .content .section._02 .infl-video-container {
 	position: relative;
-	background: #e3001a url(../images/main_02_bg_pattern.png) left;
+	background: #e3001a url(../images/main_02_bg_pattern.png) left / 462px 284px ;
+	/* background: url(../images/copyright.png) center / 247px auto #333333 no-repeat; */
 	/* background-color: #e3001a; */
 	padding: 20px 20px 120px;
 	margin-bottom: 28.4%;
