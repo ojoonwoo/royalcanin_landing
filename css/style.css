@@ -366,7 +366,7 @@ button.with-icon:after {
 	padding: 60px 0 49px;
 }
 .content .section._02 > .title-block {
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 }
 .content .section._02 .title-block .tt {
 	display: inline-block;
@@ -380,15 +380,18 @@ button.with-icon:after {
 }
 .content .section._02 .title-block .sub {
 	font-size: 20px;
-	font-weight: 700;
+	font-weight: 500;
 	color: #e3001a;
 	letter-spacing: -0.05em;
 }
 .content .section._02 .infl-video-container {
 	position: relative;
 	background: #e3001a url(../images/main_02_bg_pattern.png) left / 462px 284px repeat-x;
-	padding: 20px 20px 120px;
+	padding: 20px 20px 114px;
 	margin-bottom: 28.4%;
+}
+.content .section._02 .infl-video-container .title-block {
+	margin-bottom: 10px;
 }
 .content .section._02 .infl-video-container .title-block .title span {
 	color: #ffffff;
@@ -396,6 +399,7 @@ button.with-icon:after {
 	letter-spacing: -0.05em;
 	font-weight: 500;
 	line-height: 1.4;
+	vertical-align: middle;
 }
 .content .section._02 .infl-video-container .title-block .title span b {
 	font-size: 24px;
