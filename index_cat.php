@@ -170,29 +170,6 @@
                         </div>
                     </div>
                     <a href="./gate.php" class="type-01" id="go-sub">시작하기</a>
-                    <div class="dash-line"></div>
-                    <div class="benefit-area">
-                        <p class="tt">참여 혜택!</p>
-                        <p class="sub">증정품은 추첨을 통해 제공됩니다.</p>
-                        <ul>
-                            <li>
-                                <div class="cnt-ball">
-                                    <span>100명</span>
-                                </div>
-                                <img src="./images/benefit_img_01.png" alt="10만원 상당의 건강검진권 100명">
-                                <p>10만원 상당의<br><b>건강검진권</b></p>
-                                <button type="button" data-popup="#reward1-popup">건강검진권 사용안내</button>
-                            </li>
-                            <li>
-                                <div class="cnt-ball">
-                                    <span>50명</span>
-                                </div>
-                                <img src="./images/benefit_img_02.png" alt="혈뇨검출 체외진단기 헤마츄리아 디텍션 50명">
-                                <p>혈뇨검출 체외진단기<br><b>헤마츄리아 디텍션</b></p>
-                                <button type="button" data-popup="#reward2-popup">헤마츄리아 사용법</button>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </section>
             <section class="section _04" id="section4">

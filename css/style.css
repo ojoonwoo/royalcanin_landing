@@ -543,7 +543,7 @@ button.with-icon:after {
 }
 .content .section._03 .bg-graph {
 	position: relative;
-	padding-top: 24px;
+	padding: 24px 0 20px;
 	width: 1042px;
 	margin: 0 auto;
 }
