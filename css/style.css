@@ -753,6 +753,7 @@ button.with-icon:after {
 	color: #e3001a;
 	/* text-decoration: underline; */
 	border-bottom: 1px solid #e3001a;
+	padding-bottom: 3px;
 }
 .content .section._04 .article-list li:nth-child(3n) {
 	margin-right: 0;
@@ -772,7 +773,7 @@ button.with-icon:after {
 	display: inline-block;
 	vertical-align: middle;
 	margin: 32px 0 0 25px;
-	padding-bottom: 3px;
+	padding-bottom: 4px;
 }
 .content .section._04 .article-list li a .text span {
 	display: block;
