@@ -86,7 +86,7 @@ img {
 	color: #140d0d;
 	margin-left: 52px;
 }
-#header nav li:after {
+#header nav li:before {
 	position: absolute;
 	top: 1px;
 	right: -26px;
