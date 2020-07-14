@@ -154,7 +154,9 @@
                             <dd>0000. 00. 00</dd>
                         </dl> -->
                     </div>
-                    <img src="./images/section_03_group.png" alt="" class="img-group">
+                    <div class="bg-graph">
+                        <img src="./images/section_03_group.png" alt="" class="img-group">
+                    </div>
                     <a href="./gate.php" class="type-01" id="go-sub">시작하기</a>
                     <div class="dash-line"></div>
                     <div class="benefit-area">
