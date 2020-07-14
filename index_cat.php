@@ -116,14 +116,14 @@
                                     <button type="button" class="tab-trigger" data-key="CAInhDnQFaA">
                                         <img src="./images/infl_tab_thumb_02_common.png" alt="" class="thumb">
                                         <span>예민보스 집사의 #주치의 프로젝트</span>
-                                        <img src="./images/main_02_play_btn.png" alt="" class="play-btn">
+                                        <img src="./images/main_02_play_btn_common.png" alt="" class="play-btn">
                                     </button>
                                 </li>
                                 <li>
                                     <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM">
                                         <img src="./images/infl_tab_thumb_03_common.png" alt="" class="thumb">
                                         <span>현명 집사의 #주치의 프로젝트</span>
-                                        <img src="./images/main_02_play_btn.png" alt="" class="play-btn">
+                                        <img src="./images/main_02_play_btn_common.png" alt="" class="play-btn">
                                     </button>
                                 </li>
                             </ul>
