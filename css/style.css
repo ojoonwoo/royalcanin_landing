@@ -544,23 +544,27 @@ button.with-icon:after {
 .content .section._03 .bg-graph {
 	position: relative;
 	padding-top: 24px;
-}
-.content .section._03 .bg-graph img {
+	width: 1042px;
 	margin: 0 auto;
 }
-.content .section._03 .bg-graph span {
+.content .section._03 .bg-graph .prize {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.content .section._03 .bg-graph .prize span {
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 1.2;
 	letter-spacing: -0.05em;
 }
-.content .section._03 .bg-graph span b {
+.content .section._03 .bg-graph .prize span b {
 	font-size: 16px;
 	font-weight: 800;
 	line-height: 1.2;
 	letter-spacing: -0.05em;
 }
-.content .section._03 .bg-graph button {
+.content .section._03 .bg-graph .prize button {
 	font-size: 13px;
 	font-weight: 800;
 	letter-spacing: -0.05em;
