@@ -95,7 +95,7 @@ img {
 	height: 15px;
 	background: #c5c5c5;
 }
-#header nav li:first-child:before {
+#header nav li:last-child:before {
 	display: none;
 }
 #header nav li.active{
