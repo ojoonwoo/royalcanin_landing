@@ -566,6 +566,7 @@ button.with-icon:after {
 	line-height: 1.2;
 	letter-spacing: -0.05em;
 	display: block;
+	padding: 12px 0 18px;
 }
 .content .section._03 .bg-graph .prize span b {
 	font-size: 16px;
