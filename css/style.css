@@ -676,12 +676,13 @@ button.with-icon:after {
 }
 .content .section._04 .tab-container-wrap {
 	overflow-x: hidden;
-	margin-top: 26px;
+	margin-top: 53px;
 }
 .content .section._04 .tab-container {
 	width: auto;
 	display: flex;
 	flex-wrap: nowrap;
+	justify-content: center;
 	overflow-x: auto;
 	border-top: 1px solid #e3001a;
 	border-bottom: 3px solid #e4e4e4;
