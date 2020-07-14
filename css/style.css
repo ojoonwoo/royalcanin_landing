@@ -707,17 +707,17 @@ button.with-icon:after {
 }
 .content .section._04 .tab-container li:before {
 	position: absolute;
-	top: 1px;
-	right: -26px;
+	top: 32px;
+	right: 0;
 	content: '';
 	width: 1px;
-	height: 15px;
+	height: 51px;
 	background: #c5c5c5;
 }
 
 .content .section._04 .tab-container li button {
 	position: relative;
-	padding: 20px 33px 17px;
+	padding: 20px 27px 17px;
 	text-align: center;
 }
 .content .section._04 .tab-container li button:after {
