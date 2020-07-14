@@ -144,8 +144,10 @@
         var visit_hospital = "";
         $(document).on('click', '.chk-trigger', function() {
             var $this = $(this);
+            if(!$this.hasClass('is-active')) {
+                royalcaninCat.popup.show($('#agree-popup'));
+            }
             $this.toggleClass('is-active');
-            royalcaninCat.popup.show($('#agree-popup'));
         });
         $(document).on('click', '.fake-radio', function() {
             var $this = $(this);
