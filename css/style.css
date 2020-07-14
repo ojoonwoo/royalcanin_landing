@@ -704,6 +704,7 @@ button.with-icon:after {
 	/* flex-shrink: 0; */
 	display: inline-block;
 	position: relative;
+	width: 154px;
 }
 .content .section._04 .tab-container li:before {
 	position: absolute;
@@ -717,7 +718,7 @@ button.with-icon:after {
 
 .content .section._04 .tab-container li button {
 	position: relative;
-	padding: 20px 27px 17px;
+	padding: 20px 25px 17px;
 	text-align: center;
 }
 .content .section._04 .tab-container li button:after {
