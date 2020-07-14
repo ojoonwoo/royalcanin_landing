@@ -496,12 +496,12 @@
                     $(el).addClass('is-active');
                     $img.attr('src', $img.attr('src').replace('common', 'active'));
                     if(targetVideo == 'infl')
-                        $playBtn.attr('src', $img.attr('src').replace('common', 'active'));
+                        $playBtn.attr('src', $playBtn.attr('src').replace('common', 'active'));
                 } else {
                     $(el).removeClass('is-active');
                     $img.attr('src', $img.attr('src').replace('active', 'common'));
                     if(targetVideo == 'infl')
-                        $playBtn.attr('src', $img.attr('src').replace('active', 'common'));
+                        $playBtn.attr('src', $playBtn.attr('src').replace('active', 'common'));
                 }
             });
 
