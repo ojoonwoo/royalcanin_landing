@@ -425,6 +425,7 @@
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(2).addClass("active");
             } else  {
+                console.log("scroll");
                 // 스크롤 현재 위치 섹션 4
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(3).addClass("active");
