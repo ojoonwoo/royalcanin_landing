@@ -88,7 +88,7 @@
             </div>
             <a href="javascript:void(0)" class="type-01 go-next" id="go-next">다음으로</a>
             <!-- 팝업 결정 나면 작업 -->
-            <div class="popup _agree" id="other-popup">
+            <div class="popup _agree" id="agree-popup">
                 <div class="inner">
                     <button type="button" class="popup-close" data-popup="@close"></button>
                     <div class="agree-wrap">
@@ -128,12 +128,11 @@
                                 각종 서비스•상품 및 타사 서비스와 결합된 상품에 대하여 홍보, 가입
                                 권유, 프로모션, 이벤트 목적으로 본인에게 정보/광고를 전화, SMS, 
                                 MMS, 이메일, 우편 등을 통해 전달 합니다. 회사는 마케팅 / 홍보를 위하여 
-                                고객의 개인 정보 이용에 동의를 구하며, 동의 거부 시에도 이벤트 참여는
-                                가능하나 할인 및 이벤트 정보 안내 등 서비스는 제한될 수 있습니다.
+                                고객의 개인 정보 이용에 동의를 구하며, 동의 거부 시 이벤트 참여와 
+                                이벤트 정보 안내 등 서비스 제한이 있을 수 있습니다.
                             </p>
                         </div>
                     </div>
-                    <button type="button" class="type-01" data-popup="@close">확인</button>
                 </div>
             </div>
         </div>
@@ -146,6 +145,7 @@
         $(document).on('click', '.chk-trigger', function() {
             var $this = $(this);
             $this.toggleClass('is-active');
+            royalcaninCat.popup.show($('#agree-popup'));
         });
         $(document).on('click', '.fake-radio', function() {
             var $this = $(this);

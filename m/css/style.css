@@ -1068,7 +1068,28 @@ select.select-box {
 .content.__gate #go-next {
 	margin-top: 34px;
 }
-
+#agree-popup .inner {
+	padding: 32px 20px;
+}
+#agree-popup .agree-wrap .block {
+	margin-bottom: 20px;
+}
+#agree-popup .agree-wrap .block:last-child {
+	margin-bottom: 0;
+}
+#agree-popup .agree-wrap .block h5 {
+	font-size: 11px;
+	letter-spacing: -0.05em;
+	font-weight: 800;
+	margin-bottom: 5px;
+	text-align: left;
+}
+#agree-popup .agree-wrap .block p {
+	font-size: 11px;
+	letter-spacing: -0.05em;
+	line-height: 1.5;
+	text-align: left;
+}
 
 .content.__checklist {
 	min-height: calc(100% - 63px);
