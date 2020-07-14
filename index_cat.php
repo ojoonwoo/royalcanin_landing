@@ -156,6 +156,18 @@
                     </div>
                     <div class="bg-graph">
                         <img src="./images/section_03_group.png" alt="" class="img-group">
+                        <div class="prize">
+                            <div class="health">
+                                <img src="./images/main_03_health_prize.png" alt="">
+                                <span>10만원 상당의<br /><b>건강검진권</b></span>
+                                <button type="button">건강검진권 사용안내</button>
+                            </div>
+                            <div class="hema">
+                                <img src="./images/main_03_hema_prize.png" alt="">
+                                <span>혈뇨검출 체외진단기<br /><b>헤마츄리아 디텍션</b></span>
+                                <button type="button">헤마츄리아 사용법</button>
+                            </div>
+                        </div>
                     </div>
                     <a href="./gate.php" class="type-01" id="go-sub">시작하기</a>
                     <div class="dash-line"></div>
