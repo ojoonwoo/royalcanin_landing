@@ -186,43 +186,43 @@
                     <ul class="tab-container" data-video-target="tips">
                         <li>
                             <button type="button" class="tab-trigger is-active" data-key="SauuYLbs_FI">
-                                <img src="" alt="" class="icon">
+                                <img src="" alt="" class="icon thumb">
                                 <span>고양이를 병원에<br>데려가는 꿀팁</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s">
-                                <img src="" alt="" class="icon">
+                                <img src="" alt="" class="icon thumb">
                                 <span>OOO질병이<br>궁금하시다면?</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s">
-                                <img src="" alt="" class="icon">
+                                <img src="" alt="" class="icon thumb">
                                 <span>5가지 징후<br>요로계</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="coy3EAxcrv0">
-                                <img src="" alt="" class="icon">
+                                <img src="" alt="" class="icon thumb">
                                 <span>5가지 징후<br>스트레스</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="hdhT-xC3byo">
-                                <img src="" alt="" class="icon">
+                                <img src="" alt="" class="icon thumb">
                                 <span>5가지 징후<br>신장</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="8JscdpO7oeg">
-                                <img src="" alt="" class="icon">
+                                <img src="" alt="" class="icon thumb">
                                 <span>5가지 징후<br>소화기</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="hmiCvnEDckA">
-                                <img src="" alt="" class="icon">
+                                <img src="" alt="" class="icon thumb">
                                 <span>5가지 징후<br>체중</span>
                             </button>
                         </li>
