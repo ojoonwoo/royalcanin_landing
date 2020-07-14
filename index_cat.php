@@ -409,60 +409,41 @@
         });
 
 
-        // 헤더 햄버거 클릭 이벤트
-        var menuTlEnd = true;
-        $(document).off().on('click', '.gnb-toggle', function() {
-            menuToggle();
-        })
-
-        // 메뉴레이어 토글
-        function menuToggle(callbackFunc, targetURL) {
-            if(menuTlEnd) {
-                menuTlEnd = false;
-                if($('html').hasClass('menu-opened')) {
-                    // menu close animation
-                    var closeTl = gsap.timeline({onComplete: menuTimelineEnd});
-                    closeTl
-                        .to($('#menu-layer li'), {duration: 0.15, y: 5, autoAlpha: 0})
-                        .to($('#menu-layer .cat'), {duration: 0.1, y: 5, autoAlpha: 0})
-                        .set($('#menu-layer'), {display: 'none'})
-                        .to($('#header .logo'), {duration: 0.45, x: 0, ease: "power3.out"})
-                        .to($('.menu-transition-layer'), {duration: 0.45, scale: 0, ease: "sine"}, "-=0.3")
-                } else {
-                    // menu open animation
-                    var openTl = gsap.timeline({onComplete: menuTimelineEnd});
-                    openTl
-                        .to($('.menu-transition-layer'), {duration: 0.45, scale: 1, ease: "sine"})
-                        .to($('#header .logo'), {duration: 0.45, x: -($(window).width()/2-($('#header .logo').width()/2+20)), ease: "power3.out"}, "-=0.3")
-                        .set($('#menu-layer'), {display: 'block'}, "-=0.3")
-                        .to($('#menu-layer .cat'), {duration: 0.1, y: 0, autoAlpha: 1}, "-=0.3")
-                        .to($('#menu-layer .cat'), {duration: 0.2, ease: "linear"}, "-=0.3")
-                        .to($('#menu-layer li'), {duration: 0.35, stagger: 0.15, y: 0, autoAlpha: 1}, "-=0.2")
-                }
-                $('.gnb-toggle').toggleClass('is-active');
+        $(window).on('scroll', function(e) {
+            var curTop = $(this).scrollTop();
+            var headerHeight = $('#header').height();
+            if(curTop < $('#section2').offset().top-headerHeight) {
+                // 스크롤 현재 위치 섹션 1
+                $(".menu li").removeClass("active");
+                $('.menu li').eq(0).addClass("active");
+            } else if(curTop >= $('#section2').offset().top-headerHeight && curTop < $('#section3').offset().top-headerHeight) {
+                // 스크롤 현재 위치 섹션 2
+                $(".menu li").removeClass("active");
+                $('.menu li').eq(1).addClass("active");
+            } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight - ($(window).height()-($('#section4').height()+$('#footer').height()))) {
+                // 스크롤 현재 위치 섹션 3
+                $(".menu li").removeClass("active");
+                $('.menu li').eq(2).addClass("active");
+            } else  {
+                // 스크롤 현재 위치 섹션 4
+                $(".menu li").removeClass("active");
+                $('.menu li').eq(3).addClass("active");
             }
-
-            function menuTimelineEnd() {
-                menuTlEnd = true;
-                $('html').toggleClass('menu-opened scroll-blocking');
-                if(typeof(callbackFunc) == 'function') {
-                    callbackFunc(targetURL);
-                }
-            }
-        }
-
-        // 메뉴레이어 섹션 클릭 이벤트 -> 메뉴레이어 닫고 섹션 이동으로
-        $(document).on('click', '#menu-layer li a', function(e) {
-            e.preventDefault();
-            var targetURL = $(this).attr('data-url');
-            menuToggle(sectionMove, targetURL);
         });
-
+        
+        $(".menu li a").on("click", function(){
+            // 스크롤로 헤더 메뉴 상태 제어시 아래 두줄 삭제 - 준우
+            // $(".menu li").removeClass("active");
+            // $(this).parent('li').addClass("active");
+            var targetURL = $(this).attr('data-url');
+            sectionMove(targetURL);
+        })
+        
         // 섹션 이동
         function sectionMove(target) {
-            gsap.to(window, {duration: 1, scrollTo: { y: target, offsetY: 57 }, ease: "power2"});
+            gsap.to(window, {duration: 1, scrollTo: { y: target, offsetY: 80 }, ease: "power2"});
         }
-        
+
         // 상품영역 탭 이벤트
         $(document).on('click', '.tab-trigger', function() {
             var $this = $(this);
