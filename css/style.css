@@ -680,15 +680,16 @@ button.with-icon:after {
 }
 .content .section._04 .tab-container {
 	width: auto;
-	display: flex;
+	/* display: flex;
 	flex-wrap: nowrap;
 	justify-content: center;
-	overflow-x: auto;
+	overflow-x: auto; */
 	border-top: 1px solid #e3001a;
 	border-bottom: 7px solid #e4e4e4;
 }
 .content .section._04 .tab-container li {
-	flex-shrink: 0;
+	/* flex-shrink: 0; */
+	display: inline-block;
 }
 .content .section._04 .tab-container li button {
 	position: relative;
@@ -699,7 +700,7 @@ button.with-icon:after {
 	content: "";
 	display: block;
 	position: absolute;
-	bottom: 0;
+	bottom: -7px;
 	left: 0;
 	width: 156px;
 	height: 7px;
