@@ -136,50 +136,40 @@
                     <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                     <p class="prj-title">
                         <span class="text">
-                            <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>테스트</em>
+                            <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon2"><em>테스트</em>
                         </span>
                     </p>
                     <p class="sub">
-                        아픈 것을 잘 드러내지 않는 반려묘이기에<br>
-                        세심하게 살펴주는 가장 가까운 주치의로써의 관찰 능력은 필수!<br>
-                        <b>나의 주치의력을 테스트 해 보시고 반려묘의 신호는 물론<br>
-                        무료 건강검진권 당첨의 기회도 잡으세요!</b>
+                        아픈 것을 잘 드러내지 않는 반려묘이기에 세심하게 살펴주는 가장 가까운 주치의로써의 관찰 능력은 필수!<br>
+                        <b>나의 주치의력을 테스트 해 보시고 반려묘의 신호는 물론 무료 건강검진권 당첨의 기회도 잡으세요!</b>
                     </p>
                     <div class="date-block">
-                        <dl>
+                        <p>참여기간  : 2020. 07. 30 ~ 08. 30  /  당첨자 확인 : 2020. 09. 30 </p>
+                        <!-- <dl>
                             <dt>참여기간</dt>
                             <dd>0000. 00. 00 ~ 0000. 00. 00</dd>
                         </dl>
                         <dl>
                             <dt>당첨자 확인</dt>
                             <dd>0000. 00. 00</dd>
-                        </dl>
+                        </dl> -->
                     </div>
-                    <img src="./images/section_03_group.png" alt="" class="img-group">
-                    <a href="./gate.php" class="type-01" id="go-sub">시작하기</a>
-                    <div class="dash-line"></div>
-                    <div class="benefit-area">
-                        <p class="tt">참여 혜택!</p>
-                        <p class="sub">증정품은 추첨을 통해 제공됩니다.</p>
-                        <ul>
-                            <li>
-                                <div class="cnt-ball">
-                                    <span>100명</span>
-                                </div>
-                                <img src="./images/benefit_img_01.png" alt="10만원 상당의 건강검진권 100명">
-                                <p>10만원 상당의<br><b>건강검진권</b></p>
+                    <div class="bg-graph">
+                        <img src="./images/section_03_group.png" alt="" class="img-group">
+                        <div class="prize">
+                            <div class="health">
+                                <img src="./images/main_03_health_prize.png" alt="">
+                                <span>10만원 상당의<br /><b>건강검진권</b></span>
                                 <button type="button" data-popup="#reward1-popup">건강검진권 사용안내</button>
-                            </li>
-                            <li>
-                                <div class="cnt-ball">
-                                    <span>50명</span>
-                                </div>
-                                <img src="./images/benefit_img_02.png" alt="혈뇨검출 체외진단기 헤마츄리아 디텍션 50명">
-                                <p>혈뇨검출 체외진단기<br><b>헤마츄리아 디텍션</b></p>
+                            </div>
+                            <div class="hema">
+                                <img src="./images/main_03_hema_prize.png" alt="">
+                                <span>혈뇨검출 체외진단기<br /><b>헤마츄리아 디텍션</b></span>
                                 <button type="button" data-popup="#reward2-popup">헤마츄리아 사용법</button>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
+                    <a href="./gate.php" class="type-01" id="go-sub">시작하기</a>
                 </div>
             </section>
             <section class="section _04" id="section4">
@@ -188,7 +178,7 @@
                     <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                     <p class="prj-title">
                         <span class="text">
-                            <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>업그레이드 TIPS</em>
+                            <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon2"><em>업그레이드 TIPS</em>
                         </span>
                     </p>
                 </div>
@@ -196,43 +186,43 @@
                     <ul class="tab-container" data-video-target="tips">
                         <li>
                             <button type="button" class="tab-trigger is-active" data-key="SauuYLbs_FI">
-                                <img src="" alt="" class="icon">
+                                <img src="" alt="" class="icon thumb">
                                 <span>고양이를 병원에<br>데려가는 꿀팁</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s">
-                                <img src="" alt="" class="icon">
+                                <img src="" alt="" class="icon thumb">
                                 <span>OOO질병이<br>궁금하시다면?</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s">
-                                <img src="" alt="" class="icon">
+                                <img src="" alt="" class="icon thumb">
                                 <span>5가지 징후<br>요로계</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="coy3EAxcrv0">
-                                <img src="" alt="" class="icon">
+                                <img src="" alt="" class="icon thumb">
                                 <span>5가지 징후<br>스트레스</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="hdhT-xC3byo">
-                                <img src="" alt="" class="icon">
+                                <img src="" alt="" class="icon thumb">
                                 <span>5가지 징후<br>신장</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="8JscdpO7oeg">
-                                <img src="" alt="" class="icon">
+                                <img src="" alt="" class="icon thumb">
                                 <span>5가지 징후<br>소화기</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="hmiCvnEDckA">
-                                <img src="" alt="" class="icon">
+                                <img src="" alt="" class="icon thumb">
                                 <span>5가지 징후<br>체중</span>
                             </button>
                         </li>
@@ -251,7 +241,6 @@
                             <img src="./images/article_img_01.png" alt="" class="thumb">
                             <span class="text">
                                 <span>반려묘 스트레스 확인 방법</span>
-                                <span>자세히 보기 ></span>
                             </span>
                         </a>
                     </li>
@@ -260,7 +249,6 @@
                             <img src="./images/article_img_02.png" alt="" class="thumb">
                             <span class="text">
                                 <span>체중 유지 방법</span>
-                                <span>자세히 보기 ></span>
                             </span>
                         </a>
                     </li>
@@ -269,7 +257,6 @@
                             <img src="./images/article_img_03.png" alt="" class="thumb">
                             <span class="text">
                                 <span>털이 빠지는 이유</span>
-                                <span>자세히 보기 ></span>
                             </span>
                         </a>
                     </li>
@@ -278,7 +265,6 @@
                             <img src="./images/article_img_04.png" alt="" class="thumb">
                             <span class="text">
                                 <span>노령묘 질환</span>
-                                <span>자세히 보기 ></span>
                             </span>
                         </a>
                     </li>
@@ -287,7 +273,6 @@
                             <img src="./images/article_img_05.png" alt="" class="thumb">
                             <span class="text">
                                 <span>요로기계 건강이 중요한 이유</span>
-                                <span>자세히 보기 ></span>
                             </span>
                         </a>
                     </li>
@@ -296,7 +281,6 @@
                             <img src="./images/article_img_06.png" alt="" class="thumb">
                             <span class="text">
                                 <span>소화기계</span>
-                                <span>자세히 보기 ></span>
                             </span>
                         </a>
                     </li>
@@ -425,60 +409,44 @@
         });
 
 
-        // 헤더 햄버거 클릭 이벤트
-        var menuTlEnd = true;
-        $(document).off().on('click', '.gnb-toggle', function() {
-            menuToggle();
-        })
-
-        // 메뉴레이어 토글
-        function menuToggle(callbackFunc, targetURL) {
-            if(menuTlEnd) {
-                menuTlEnd = false;
-                if($('html').hasClass('menu-opened')) {
-                    // menu close animation
-                    var closeTl = gsap.timeline({onComplete: menuTimelineEnd});
-                    closeTl
-                        .to($('#menu-layer li'), {duration: 0.15, y: 5, autoAlpha: 0})
-                        .to($('#menu-layer .cat'), {duration: 0.1, y: 5, autoAlpha: 0})
-                        .set($('#menu-layer'), {display: 'none'})
-                        .to($('#header .logo'), {duration: 0.45, x: 0, ease: "power3.out"})
-                        .to($('.menu-transition-layer'), {duration: 0.45, scale: 0, ease: "sine"}, "-=0.3")
-                } else {
-                    // menu open animation
-                    var openTl = gsap.timeline({onComplete: menuTimelineEnd});
-                    openTl
-                        .to($('.menu-transition-layer'), {duration: 0.45, scale: 1, ease: "sine"})
-                        .to($('#header .logo'), {duration: 0.45, x: -($(window).width()/2-($('#header .logo').width()/2+20)), ease: "power3.out"}, "-=0.3")
-                        .set($('#menu-layer'), {display: 'block'}, "-=0.3")
-                        .to($('#menu-layer .cat'), {duration: 0.1, y: 0, autoAlpha: 1}, "-=0.3")
-                        .to($('#menu-layer .cat'), {duration: 0.2, ease: "linear"}, "-=0.3")
-                        .to($('#menu-layer li'), {duration: 0.35, stagger: 0.15, y: 0, autoAlpha: 1}, "-=0.2")
-                }
-                $('.gnb-toggle').toggleClass('is-active');
+        $(window).on('scroll', function(e) {
+            var curTop = $(this).scrollTop();
+            var headerHeight = $('#header').height();
+            if(curTop < $('#section2').offset().top-headerHeight) {
+                // 스크롤 현재 위치 섹션 1
+                $(".menu li").removeClass("active");
+                $('.menu li').eq(0).addClass("active");
+            } else if(curTop >= $('#section2').offset().top-headerHeight && curTop < $('#section3').offset().top-headerHeight) {
+                // 스크롤 현재 위치 섹션 2
+                $(".menu li").removeClass("active");
+                $('.menu li').eq(1).addClass("active");
+            // } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight - ($(window).height()-($('#section4').height()+$('#footer').height()))) {
+            } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight) {
+                console.log("scroll3");
+                // 스크롤 현재 위치 섹션 3
+                $(".menu li").removeClass("active");
+                $('.menu li').eq(2).addClass("active");
+            } else  {
+                console.log("scroll4");
+                // 스크롤 현재 위치 섹션 4
+                $(".menu li").removeClass("active");
+                $('.menu li').eq(3).addClass("active");
             }
-
-            function menuTimelineEnd() {
-                menuTlEnd = true;
-                $('html').toggleClass('menu-opened scroll-blocking');
-                if(typeof(callbackFunc) == 'function') {
-                    callbackFunc(targetURL);
-                }
-            }
-        }
-
-        // 메뉴레이어 섹션 클릭 이벤트 -> 메뉴레이어 닫고 섹션 이동으로
-        $(document).on('click', '#menu-layer li a', function(e) {
-            e.preventDefault();
-            var targetURL = $(this).attr('data-url');
-            menuToggle(sectionMove, targetURL);
         });
-
+        
+        $(".menu li a").on("click", function(){
+            // 스크롤로 헤더 메뉴 상태 제어시 아래 두줄 삭제 - 준우
+            // $(".menu li").removeClass("active");
+            // $(this).parent('li').addClass("active");
+            var targetURL = $(this).attr('data-url');
+            sectionMove(targetURL);
+        })
+        
         // 섹션 이동
         function sectionMove(target) {
-            gsap.to(window, {duration: 1, scrollTo: { y: target, offsetY: 57 }, ease: "power2"});
+            gsap.to(window, {duration: 1, scrollTo: { y: target, offsetY: 80 }, ease: "power2"});
         }
-        
+
         // 상품영역 탭 이벤트
         $(document).on('click', '.tab-trigger', function() {
             var $this = $(this);
