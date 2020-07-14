@@ -1716,6 +1716,9 @@ html.popup-opened {
 .popup._req {
 	width: 520px;
 }
+.popup._reward {
+	width: 440px;
+}
 .popup .inner {
 	position: relative;
 	background-color: #ffffff;
@@ -1730,6 +1733,104 @@ html.popup-opened {
 	top: -33px;
 	right: 0;
 	background: url(../images/popup_close.png) 50% / cover no-repeat;
+}
+.popup._reward .inner {
+	/* overflow: hidden; */
+	padding-bottom: 0;
+}
+.popup#reward1-popup .title-block {
+	margin-bottom: 12px;
+}
+.popup#reward1-popup .title-block .title {
+	font-size: 19px;
+	font-weight: 500;
+	letter-spacing: -0.05em;
+	color: #e3001a;
+	line-height: 1.2;
+}
+.popup#reward1-popup .title-block .title b {
+	font-weight: 800;
+}
+.popup#reward1-popup .r-img {
+	width: 202px;
+	margin: 0 auto 5px;
+}
+.popup#reward1-popup .text {
+	font-size: 12px;
+	letter-spacing: -0.05em;
+	line-height: 1.3;
+	font-weight: 700;
+	margin-bottom: 35px;
+}
+.popup#reward1-popup .text b {
+	color: #e3001a;
+	font-weight: 800;
+}
+.popup._reward .guide-block {
+	padding: 20px 22px 23px;
+	background-color: #f0f0f0;
+	border-bottom-left-radius: 11px;
+	border-bottom-right-radius: 11px;
+}
+.popup#reward1-popup .guide-block dl {
+	display: flex;
+	text-align: left;
+	font-size: 11px;
+	letter-spacing: -0.05em;
+	font-weight: 700;
+	margin-bottom: 3px;
+	align-items: flex-start;
+}
+.popup#reward1-popup .guide-block dl:last-child {
+	margin-bottom: 0;
+}
+.popup#reward1-popup .guide-block dl dt {
+	flex-shrink: 0;
+}
+.popup#reward1-popup .guide-block dl dd {
+	margin-left: 2px;
+	line-height: 1.2;
+}
+.popup#reward2-popup .title-block {
+	position: relative;
+	text-align: left;
+	margin-bottom: 17px;
+	padding-left: 27px;
+}
+.popup#reward2-popup .title-block .title {
+	font-size: 19px;
+	letter-spacing: -0.05em;
+	color: #e3001a;
+	font-weight: 800;
+	line-height: 1.3;
+	margin-bottom: 8px;
+}
+.popup#reward2-popup .title-block .sub {
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: -0.05em;
+}
+.popup#reward2-popup .title-block .prd-img {
+	position: absolute;
+	top: -12%;
+	right: 7%;
+	/* width: 62px; */
+	width: 18.5%;
+}
+.popup#reward2-popup .r-img {
+	width: 252px;
+	margin: 0 auto 20px;
+}
+.popup#reward2-popup .guide-block {
+	padding: 20px 34px 32px;
+}
+.popup#reward2-popup .guide-block p {
+	font-size: 17px;
+	font-weight: 800;
+	letter-spacing: -0.05em;
+	color: #e3001a;
+	text-align: center;
+	margin-bottom: 31px;
 }
 .popup._req .title-block {
 	margin-bottom: 30px;
