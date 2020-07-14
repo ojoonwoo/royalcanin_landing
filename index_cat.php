@@ -490,8 +490,8 @@
             }
             $container.find('.tab-trigger').each(function (idx, el) {
                 // var $img = $(el).find('img');
-                var $img        = $(el).find('.thumb');
-                var $playBtn    = $(el).find('.play-btn');
+                var $img        = $(el).children('.thumb');
+                var $playBtn    = $(el).children('.play-btn');
                 if($(el).is($this)) {
                     $(el).addClass('is-active');
                     $img.attr('src', $img.attr('src').replace('common', 'active'));
