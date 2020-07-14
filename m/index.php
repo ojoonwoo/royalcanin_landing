@@ -17,7 +17,6 @@
 		$rs_tracking   = $mnv_f->InsertTrackingInfo($mobileYN);
 		// print_r($rs_tracking);
     }
-
     include_once "./head.php";
 ?>
 <body>
@@ -132,6 +131,52 @@
                 </div>
             </section>
             <section class="section _03" id="section3">
+                <?php
+                // if($_COOKIE['cathealth_completed'] == 'Y') {
+                ?>
+                <!-- <div class="wrap-already">
+                    <div class="title-block">
+                        <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
+                        <p class="sub">
+                            반려묘의 더 건강한 삶을 위한<br>건강검진권과 혈뇨검출기가<br>신청되었습니다! 
+                        </p>
+                    </div>
+                    <div class="date-block">
+                        <dl>
+                            <dt>당첨자 발표일 : </dt>
+                            <dd>2020. 09. 14</dd>
+                        </dl>
+                        <dl>
+                            <dt>안내 방법 : </dt>
+                            <dd>당첨되신 분들께는 문자를 통해 개별 안내 드립니다.</dd>
+                        </dl>
+                    </div>
+                    <div class="benefit-area">
+                        <ul>
+                            <li>
+                                <div class="cnt-ball">
+                                    <span>100명</span>
+                                </div>
+                                <img src="./images/benefit_img_01.png" alt="10만원 상당의 건강검진권 100명">
+                                <h5>무료 건강검진권</h5>
+                                <p>10만원 상당의 건강검진권<br></p>
+                            </li>
+                            <li>
+                                <div class="cnt-ball">
+                                    <span>50명</span>
+                                </div>
+                                <img src="./images/benefit_img_02.png" alt="혈뇨검출 체외진단기 헤마츄리아 디텍션 50명">
+                                <p>혈뇨검출 체외진단기<br><b>헤마츄리아 디텍션</b></p>
+                            </li>
+                        </ul>
+                        <div class="noti-img">
+                            <img src="./images/section_03_notice.png" alt="필독! 당첨되지 않은 신청자에게는 별도의 공지가 없는 점 양해 부탁드립니다. 본 건강검진권은 지정된 병원에서만 사용이 가능하며, 선택한 병원 이외의 지점에서 사용 불가합니다.">
+                        </div>
+                    </div>
+                </div> -->
+                <?php
+                // } else {
+                ?>
                 <div class="title-block">
                     <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                     <p class="prj-title">
@@ -145,42 +190,45 @@
                         <b>나의 주치의력을 테스트 해 보시고 반려묘의 신호는 물론<br>
                         무료 건강검진권 당첨의 기회도 잡으세요!</b>
                     </p>
-                    <div class="date-block">
-                        <dl>
-                            <dt>참여기간</dt>
-                            <dd>0000. 00. 00 ~ 0000. 00. 00</dd>
-                        </dl>
-                        <dl>
-                            <dt>당첨자 확인</dt>
-                            <dd>0000. 00. 00</dd>
-                        </dl>
-                    </div>
-                    <img src="./images/section_03_group.png" alt="" class="img-group">
-                    <a href="./gate.php" class="type-01" id="go-sub">시작하기</a>
-                    <div class="dash-line"></div>
-                    <div class="benefit-area">
-                        <p class="tt">참여 혜택!</p>
-                        <p class="sub">증정품은 추첨을 통해 제공됩니다.</p>
-                        <ul>
-                            <li>
-                                <div class="cnt-ball">
-                                    <span>100명</span>
-                                </div>
-                                <img src="./images/benefit_img_01.png" alt="10만원 상당의 건강검진권 100명">
-                                <p>10만원 상당의<br><b>건강검진권</b></p>
-                                <button type="button" data-popup="#reward1-popup">건강검진권 사용안내</button>
-                            </li>
-                            <li>
-                                <div class="cnt-ball">
-                                    <span>50명</span>
-                                </div>
-                                <img src="./images/benefit_img_02.png" alt="혈뇨검출 체외진단기 헤마츄리아 디텍션 50명">
-                                <p>혈뇨검출 체외진단기<br><b>헤마츄리아 디텍션</b></p>
-                                <button type="button" data-popup="#reward2-popup">헤마츄리아 사용법</button>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
+                <div class="date-block">
+                    <dl>
+                        <dt>참여기간</dt>
+                        <dd>0000. 00. 00 ~ 0000. 00. 00</dd>
+                    </dl>
+                    <dl>
+                        <dt>당첨자 확인</dt>
+                        <dd>0000. 00. 00</dd>
+                    </dl>
+                </div>
+                <img src="./images/section_03_group.png" alt="" class="img-group">
+                <a href="./gate.php" class="type-01" id="go-sub">시작하기</a>
+                <div class="dash-line"></div>
+                <div class="benefit-area">
+                    <p class="tt">참여 혜택!</p>
+                    <p class="sub">증정품은 추첨을 통해 제공됩니다.</p>
+                    <ul>
+                        <li>
+                            <div class="cnt-ball">
+                                <span>100명</span>
+                            </div>
+                            <img src="./images/benefit_img_01.png" alt="10만원 상당의 건강검진권 100명">
+                            <p>10만원 상당의<br><b>건강검진권</b></p>
+                            <button type="button" data-popup="#reward1-popup">건강검진권 사용안내</button>
+                        </li>
+                        <li>
+                            <div class="cnt-ball">
+                                <span>50명</span>
+                            </div>
+                            <img src="./images/benefit_img_02.png" alt="혈뇨검출 체외진단기 헤마츄리아 디텍션 50명">
+                            <p>혈뇨검출 체외진단기<br><b>헤마츄리아 디텍션</b></p>
+                            <button type="button" data-popup="#reward2-popup">헤마츄리아 사용법</button>
+                        </li>
+                    </ul>
+                </div>
+                <?php
+                // }
+                ?>
             </section>
             <section class="section _04" id="section4">
                 <img src="./images/section_04_cutie.png" alt="고양이" class="cute">

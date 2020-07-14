@@ -78,42 +78,64 @@
                 <div class="agree-wrap">
                     <button type="button" class="chk-trigger">
                         <span class="chk-shape"></span>
-                        <span class="text">개인정보수집 활용에 동의합니다.</span>
+                        <span class="text">개인정보수집 활용 및 마케팅 활용에 동의합니다. (필수)</span>
                     </button>
-                    <button type="button" class="chk-trigger">
+                    <!-- <button type="button" class="chk-trigger">
                         <span class="chk-shape"></span>
                         <span class="text">마케팅 활용에 동의합니다.</span>
-                    </button>
+                    </button> -->
                 </div>
             </div>
             <a href="javascript:void(0)" class="type-01 go-next" id="go-next">다음으로</a>
             <!-- 팝업 결정 나면 작업 -->
-            <!-- <div class="popup _agree" id="other-popup">
+            <div class="popup _agree" id="other-popup">
                 <div class="inner">
                     <button type="button" class="popup-close" data-popup="@close"></button>
-                    <div class="title-block">
-                        <p class="title">가까운 병원을 검색해 선택해주세요!</p>
-                    </div>
-                    <div class="guide-icon">
-                        <img src="./images/naver_search_guide.png" alt="">
-                    </div>
-                    <a href="https://map.naver.com/v5/search/" class="naver-search" target="_blank">
-                        <img src="./images/button_naver.png" alt="네이버에서 가까운 동물병원 찾기">
-                    </a>
-                    <div class="input-wrapper">
-                        <div class="input-group">
-                            <label for="nv-h-name">동물병원 명</label>
-                            <input type="text" id="nv-h-name" class="input-text" placeholder="동물병원 명을 기입해 주세요.">
+                    <div class="agree-wrap">
+                        <div class="block">
+                            <h5>개인 정보 수집 활용 동의</h5>
+                            <p>
+                                로얄캐닌코리아(이하 ‘회사’라 칭함) 이벤트 진행을 위한 개인 정보 수집
+                                이용을 위하여 다음과 같이 귀하의 동의를 받고자 합니다. 회사는 보다
+                                원활한 서비스 제공을 위하여 고객의 정보를 수집하고 있습니다. 고객의
+                                정보는 이벤트 서비스에 참여하기 위한 필수 정보로서 제공을 원하지
+                                않을 경우 수집하지 않으며, 동의 거부 시 이벤트 참여에 제한을 받을 수
+                                있습니다. 회사는 본 이벤트를 위하여 다음과 같이 고객님의 개인 정보를
+                                수집 및 이용합니다. > 수집 ∙ 이용 목적 : 이벤트 혜택을 제공하기 위한
+                                정보 전달 : 이벤트 혜택 이용에 따른 본인확인, 고지사항 전달 > 수집 필수
+                                항목 : 이름, 휴대 전화번호, 주소 > 보유/이용기간 : 이벤트 종료 후 1년까지
+                                (단, 관계 법령에 따라 필요한 경우 해당 법률에서 정한 기간까지)
+                            </p>
                         </div>
-                        <div class="input-group">
-                            <label for="nv-h-name">동물병원 주소</label>
-                            <input type="text" id="nv-h-addr" class="input-text" placeholder="복사한 동물병원 주소를 붙여넣어 주세요.">
+                        <div class="block">
+                            <h5>제 3자 개인 정보 취급 위탁 동의</h5>
+                            <p>
+                                로얄캐닌코리아(이하 ‘회사’라 칭함)는 서비스 향상과 원활한 진행을
+                                위하여 개인 정보 처리 업무를 외부 전문 업체에 위탁하여 처리하고
+                                있습니다. 고객은 아래와 같은 개인 정보 취급 위탁에 동의하지 않을
+                                권리가 있으며 동의 거부 시 이벤트 참여에 제한을 받을 수 있습니다. > 
+                                취급 위탁업체 / 위탁업무 및 이용목적 : (주)미니버타이징 / 이벤트 대행
+                                및 운영 > 취급 위탁업체 / 위탁업무 및 이용목적 : 로얄캐닌 각 협업 
+                                동물병원 지점 / 이벤트 경품 제공 및 서비스 제공 > 보유 및 이용기간 : 
+                                이벤트 종료 후 1년까지 (단, 관계 법령에 따라 필요한 경우 해 당 법률에서 
+                                정한 기간까지)
+                            </p>
+                        </div>
+                        <div class="block">
+                            <h5>마케팅 활용 수신 동의</h5>
+                            <p>
+                                로얄캐닌코리아(이하 ‘회사’라 칭함)는 수집된 개인 정보를 이용하여
+                                각종 서비스•상품 및 타사 서비스와 결합된 상품에 대하여 홍보, 가입
+                                권유, 프로모션, 이벤트 목적으로 본인에게 정보/광고를 전화, SMS, 
+                                MMS, 이메일, 우편 등을 통해 전달 합니다. 회사는 마케팅 / 홍보를 위하여 
+                                고객의 개인 정보 이용에 동의를 구하며, 동의 거부 시에도 이벤트 참여는
+                                가능하나 할인 및 이벤트 정보 안내 등 서비스는 제한될 수 있습니다.
+                            </p>
                         </div>
                     </div>
-                    <button type="button" class="type-01 hospi-select">입력 완료</button>
-                    <p class="guide-msg">* 병원 선택 전, 해당 주소지가 맞는지 확인해주세요!</p>
+                    <button type="button" class="type-01" data-popup="@close">확인</button>
                 </div>
-            </div> -->
+            </div>
         </div>
         <div id="footer">
             <span class="for-a11y">Copyright © 2020. ROYAL CANIN all rights reserved.</span>
@@ -159,8 +181,8 @@
                 return false;
             }
 
-            if (agree_num < 2) {
-                alert("약관에 모두 동의하셔야만 이벤트에 참여하실 수 있습니다.")
+            if (agree_num < 1) {
+                alert("약관에 동의하셔야만 이벤트에 참여하실 수 있습니다.")
                 return false;
             }
 

@@ -41,7 +41,6 @@ switch ($_REQUEST['exec'])
 			$flag ="N";
 
 		echo $flag;
-
 	break;
 }
 
