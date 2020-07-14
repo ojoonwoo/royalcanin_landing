@@ -109,18 +109,21 @@
                                     <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw">
                                         <img src="./images/infl_tab_thumb_01_active.png" alt="" class="thumb">
                                         <span>프로 집사의 #주치의 프로젝트</span>
+                                        <img src="./images/main_02_play_btn_active.png" alt="" class="play-btn">
                                     </button>
                                 </li>
                                 <li>
                                     <button type="button" class="tab-trigger" data-key="CAInhDnQFaA">
                                         <img src="./images/infl_tab_thumb_02_common.png" alt="" class="thumb">
                                         <span>예민보스 집사의 #주치의 프로젝트</span>
+                                        <img src="./images/main_02_play_btn_common.png" alt="" class="play-btn">
                                     </button>
                                 </li>
                                 <li>
                                     <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM">
                                         <img src="./images/infl_tab_thumb_03_common.png" alt="" class="thumb">
                                         <span>현명 집사의 #주치의 프로젝트</span>
+                                        <img src="./images/main_02_play_btn_common.png" alt="" class="play-btn">
                                     </button>
                                 </li>
                             </ul>
@@ -486,13 +489,19 @@
                 return;
             }
             $container.find('.tab-trigger').each(function (idx, el) {
-                var $img = $(el).find('img');
+                // var $img = $(el).find('img');
+                var $img        = $(el).children('.thumb');
+                var $playBtn    = $(el).children('.play-btn');
                 if($(el).is($this)) {
                     $(el).addClass('is-active');
                     $img.attr('src', $img.attr('src').replace('common', 'active'));
+                    if(targetVideo == 'infl')
+                        $playBtn.attr('src', $playBtn.attr('src').replace('common', 'active'));
                 } else {
                     $(el).removeClass('is-active');
                     $img.attr('src', $img.attr('src').replace('active', 'common'));
+                    if(targetVideo == 'infl')
+                        $playBtn.attr('src', $playBtn.attr('src').replace('active', 'common'));
                 }
             });
 
