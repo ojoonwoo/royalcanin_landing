@@ -178,7 +178,7 @@
                     <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                     <p class="prj-title">
                         <span class="text">
-                            <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>업그레이드 TIPS</em>
+                            <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon2"><em>업그레이드 TIPS</em>
                         </span>
                     </p>
                 </div>
