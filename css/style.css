@@ -549,14 +549,23 @@ button.with-icon:after {
 }
 .content .section._03 .bg-graph .prize {
 	position: absolute;
-	top: 0;
-	right: 0;
+	bottom: 74px;
+	right: 90px;
+	font-size: 0;
+}
+.content .section._03 .bg-graph .prize .health {
+	display: inline-block;
+	margin-right: 60px;
+}
+.content .section._03 .bg-graph .prize .hema {
+	display: inline-block;
 }
 .content .section._03 .bg-graph .prize span {
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 1.2;
 	letter-spacing: -0.05em;
+	display: block;
 }
 .content .section._03 .bg-graph .prize span b {
 	font-size: 16px;
