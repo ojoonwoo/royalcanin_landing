@@ -736,6 +736,9 @@ button.with-icon:after {
 }
 #player-tips {
 	display: block;
+	width: 1100px;
+	height: 566px;
+	margin: 0 auto;
 }
 
 .content .section._04 .article-list li {
