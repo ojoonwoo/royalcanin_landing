@@ -507,6 +507,10 @@ button.with-icon:after {
 .content .section._02 .tab-container li .tab-trigger.is-active span {
 	opacity: 1;
 }
+.content .section._02 .tab-container li .tab-trigger .play-btn {
+	display: inline-block;
+	margin: 22px 0 0 90px;
+}
 
 .content .section._03 {
 	padding: 40px 0 48px;
