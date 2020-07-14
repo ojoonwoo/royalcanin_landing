@@ -136,14 +136,12 @@
                     <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                     <p class="prj-title">
                         <span class="text">
-                            <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>테스트</em>
+                            <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon2"><em>테스트</em>
                         </span>
                     </p>
                     <p class="sub">
-                        아픈 것을 잘 드러내지 않는 반려묘이기에<br>
-                        세심하게 살펴주는 가장 가까운 주치의로써의 관찰 능력은 필수!<br>
-                        <b>나의 주치의력을 테스트 해 보시고 반려묘의 신호는 물론<br>
-                        무료 건강검진권 당첨의 기회도 잡으세요!</b>
+                        아픈 것을 잘 드러내지 않는 반려묘이기에 세심하게 살펴주는 가장 가까운 주치의로써의 관찰 능력은 필수!<br>
+                        <b>나의 주치의력을 테스트 해 보시고 반려묘의 신호는 물론 무료 건강검진권 당첨의 기회도 잡으세요!</b>
                     </p>
                     <div class="date-block">
                         <dl>

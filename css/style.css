@@ -518,17 +518,17 @@ button.with-icon:after {
 }
 
 .content .section._03 {
-	padding: 40px 0 48px;
+	padding: 60px 0 48px;
 }
 .content._main .section .title-block .prj-title .text em {
-	font-size: 20px;
+	font-size: 38px;
 }
 .content .section._03 .title-block .sub {
 	margin: 10px 0 20px;
-	font-size: 12px;
+	font-size: 20px;
 	line-height: 1.2;
 	letter-spacing: -0.05em;
-	font-weight: 700;
+	font-weight: 500;
 }
 .content .section._03 .title-block .sub b {
 	color: #e3001a;
@@ -903,6 +903,13 @@ select.select-box {
 	vertical-align: middle;
 	width: 30px;
 	height: 21.5px;
+}
+.content .title-block .prj-title .text .icon2 {
+	display: inline-block;
+	margin: 0 5px 0 4px;
+	vertical-align: middle;
+	width: 53px;
+	height: 38px;
 }
 
 
