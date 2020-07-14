@@ -420,7 +420,8 @@
                 // 스크롤 현재 위치 섹션 2
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(1).addClass("active");
-            } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight - ($(window).height()-($('#section4').height()+$('#footer').height()))) {
+            // } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight - ($(window).height()-($('#section4').height()+$('#footer').height()))) {
+            } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight) {
                 console.log("scroll3");
                 // 스크롤 현재 위치 섹션 3
                 $(".menu li").removeClass("active");
