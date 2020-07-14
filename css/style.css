@@ -288,7 +288,34 @@ button.with-icon:after {
 	/* right: -18%; */
 	right: 0;
 	z-index: 0;
+	-webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+ @-webkit-keyframes slide-in-fwd-center {
+	0% {
+	  -webkit-transform: translateZ(-1400px);
+			  transform: translateZ(-1400px);
+	  opacity: 0;
+	}
+	100% {
+	  -webkit-transform: translateZ(0);
+			  transform: translateZ(0);
+	  opacity: 1;
+	}
+  }
+  @keyframes slide-in-fwd-center {
+	0% {
+	  -webkit-transform: translateZ(-1400px);
+			  transform: translateZ(-1400px);
+	  opacity: 0;
+	}
+	100% {
+	  -webkit-transform: translateZ(0);
+			  transform: translateZ(0);
+	  opacity: 1;
+	}
+  }
+  
 .content .section._01 .scoll-down-group {
 	position: absolute;
 	bottom: 6.2%;
@@ -753,7 +780,7 @@ button.with-icon:after {
 	color: #e3001a;
 	/* text-decoration: underline; */
 	border-bottom: 1px solid #e3001a;
-	padding-bottom: 3px;
+	padding-bottom: 0px;
 }
 .content .section._04 .article-list li:nth-child(3n) {
 	margin-right: 0;
@@ -773,7 +800,7 @@ button.with-icon:after {
 	display: inline-block;
 	vertical-align: middle;
 	margin: 32px 0 0 25px;
-	padding-bottom: 4px;
+	padding-bottom: 1px;
 }
 .content .section._04 .article-list li a .text span {
 	display: block;
