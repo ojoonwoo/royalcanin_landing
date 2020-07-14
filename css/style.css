@@ -1725,9 +1725,12 @@ html.popup-opened {
 .popup .inner {
 	position: relative;
 	background-color: #ffffff;
-	padding: 60px 0 50px;
+	padding: 70px 0 50px;
 	border-radius: 11px;
 	text-align: center;
+}
+.popup#reward1-popup .inner {
+	padding: 60px 0 50px;
 }
 .popup .popup-close {
 	width: 26px;
@@ -1806,7 +1809,7 @@ html.popup-opened {
 	color: #e3001a;
 	font-weight: 800;
 	line-height: 1.2;
-	margin-bottom: 8px;
+	margin-bottom: 12px;
 }
 .popup#reward2-popup .title-block .sub {
 	font-size: 16px;
@@ -1818,7 +1821,7 @@ html.popup-opened {
 	top: -12%;
 	right: 7%;
 	/* width: 62px; */
-	width: 18.5%;
+	width: 87px;
 }
 .popup#reward2-popup .r-img {
 	width: 252px;
