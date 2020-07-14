@@ -534,12 +534,12 @@ button.with-icon:after {
 	color: #e3001a;
 }
 .content .section._03 .date-block {
-	font-size: 16px;
-	font-weight: 700;
-}
-.content .section._03 .date-block p {
 	text-align: center;
 	font-size: 0;
+}
+.content .section._03 .date-block p {
+	font-size: 16px;
+	font-weight: 700;
 }
 .content .section._03 .date-block dl {
 	display: inline-block;
