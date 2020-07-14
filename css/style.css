@@ -732,7 +732,7 @@ button.with-icon:after {
 	background-color: #e3001a;
 }
 .content .section._04 .tips-video-container {
-	padding: 20px 20px 6.5px;
+	padding: 20px 20px 38px;
 }
 #player-tips {
 	display: block;
@@ -754,11 +754,11 @@ button.with-icon:after {
 }
 .content .section._04 .article-list li a {
 	display: block;
-	padding: 10px 20px;
+	/* padding: 10px 20px; */
 	font-size: 0;
 }
 .content .section._04 .article-list li a .thumb {
-	width: 59.5px;
+	width: 357px;
 	margin-right: 31px;
 	display: inline-block;
 	vertical-align: middle;
@@ -772,15 +772,16 @@ button.with-icon:after {
 	letter-spacing: -0.05em;
 	font-weight: 700;
 }
-.content .section._04 .article-list li a .text span:first-child {
-	font-size: 13px;
+.content .section._04 .article-list li a .text span {
+	font-size: 16px;
+	font-weight: 700;
 	margin-bottom: 7px;
 }
-.content .section._04 .article-list li a .text span:last-child {
+/* .content .section._04 .article-list li a .text span:last-child {
 	font-size: 11px;
 	color: #868686;
 	text-decoration: underline;
-}
+} */
 
 #footer {
 	background: url(../images/copyright.png) center / 338px auto #333333 no-repeat;

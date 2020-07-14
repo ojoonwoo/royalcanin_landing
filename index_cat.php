@@ -241,7 +241,6 @@
                             <img src="./images/article_img_01.png" alt="" class="thumb">
                             <span class="text">
                                 <span>반려묘 스트레스 확인 방법</span>
-                                <span>자세히 보기 ></span>
                             </span>
                         </a>
                     </li>
@@ -250,7 +249,6 @@
                             <img src="./images/article_img_02.png" alt="" class="thumb">
                             <span class="text">
                                 <span>체중 유지 방법</span>
-                                <span>자세히 보기 ></span>
                             </span>
                         </a>
                     </li>
@@ -259,7 +257,6 @@
                             <img src="./images/article_img_03.png" alt="" class="thumb">
                             <span class="text">
                                 <span>털이 빠지는 이유</span>
-                                <span>자세히 보기 ></span>
                             </span>
                         </a>
                     </li>
@@ -268,7 +265,6 @@
                             <img src="./images/article_img_04.png" alt="" class="thumb">
                             <span class="text">
                                 <span>노령묘 질환</span>
-                                <span>자세히 보기 ></span>
                             </span>
                         </a>
                     </li>
@@ -277,7 +273,6 @@
                             <img src="./images/article_img_05.png" alt="" class="thumb">
                             <span class="text">
                                 <span>요로기계 건강이 중요한 이유</span>
-                                <span>자세히 보기 ></span>
                             </span>
                         </a>
                     </li>
@@ -286,7 +281,6 @@
                             <img src="./images/article_img_06.png" alt="" class="thumb">
                             <span class="text">
                                 <span>소화기계</span>
-                                <span>자세히 보기 ></span>
                             </span>
                         </a>
                     </li>
