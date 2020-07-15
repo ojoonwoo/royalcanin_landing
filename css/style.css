@@ -2008,15 +2008,15 @@ html.popup-opened {
 	width: 100%;
 }
 #complete-popup .inner {
-	padding: 38px 0 46px;
+	padding: 50px 0 62px;
 }
 #complete-popup .title-block .project-logo {
-	width: 47px;
+	width: 73px;
 	margin: 0 auto 16px;
 }
 #complete-popup .title-block .sub {
-	font-size: 20px;
-	font-weight: 800;
+	font-size: 24px;
+	font-weight: 700;
 	letter-spacing: -0.05em;
 	color: #e3001a;
 	line-height: 1.3;
@@ -2032,16 +2032,16 @@ html.popup-opened {
 #complete-popup .date-block dl dt {
 	display: inline-block;
 	vertical-align: middle;
-	font-size: 12px;
+	font-size: 14px;
 	letter-spacing: -0.05em;
-	font-weight: 800;
+	font-weight: 700;
 	margin-right: 3px;
 }
 #complete-popup .date-block dl dd {
 	display: inline-block;
 	vertical-align: middle;
 	letter-spacing: -0.05em;
-	font-size: 12px;
+	font-size: 14px;
 }
 #complete-popup .benefit-area ul {
 	display: flex;

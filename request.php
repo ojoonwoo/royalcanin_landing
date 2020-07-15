@@ -232,7 +232,7 @@
                         <div class="title-block">
                             <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                             <p class="sub">
-                                반려묘의 더 건강한 삶을 위한<br>건강검진권과 혈뇨검출기가<br>신청되었습니다! 
+                                반려묘의 더 건강한 삶을 위한<br>건강검진권과 혈뇨검출기가 신청되었습니다! 
                             </p>
                         </div>
                         <div class="date-block">
