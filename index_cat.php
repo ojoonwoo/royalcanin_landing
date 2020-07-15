@@ -173,7 +173,7 @@
                 </div>
             </section>
             <section class="section _04" id="section4">
-                <img src="./images/section_04_cutie.png" alt="고양이" class="cute">
+                <!-- <img src="./images/section_04_cutie.png" alt="고양이" class="cute"> -->
                 <div class="title-block">
                     <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                     <p class="prj-title">
