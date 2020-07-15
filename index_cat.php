@@ -190,43 +190,43 @@
                     <ul class="tab-container" data-video-target="tips">
                         <li>
                             <button type="button" class="tab-trigger is-active" data-key="SauuYLbs_FI">
-                                <img src="./images/tips_tab_icon_01_active.png" alt="" class="icon thumb" style="width:19.5px">
+                                <img src="./images/tips_tab_icon_01_active.png" alt="" class="icon thumb" style="width:27px">
                                 <span>동물병원 쉽게<br />데려가는 방법</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s">
-                                <img src="./images/tips_tab_icon_02_common.png" alt="" class="icon thumb" style="width:17px">
+                                <img src="./images/tips_tab_icon_02_common.png" alt="" class="icon thumb" style="width:24px">
                                 <span>반려묘에게<br />치명적인 질병은?</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s">
-                                <img src="./images/tips_tab_icon_03_common.png" alt="" class="icon thumb" style="width:18px">
+                                <img src="./images/tips_tab_icon_03_common.png" alt="" class="icon thumb" style="width:26px">
                                 <span>체중관리가 필요할 때<br />보이는 행동 5</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="coy3EAxcrv0">
-                                <img src="./images/tips_tab_icon_04_common.png" alt="" class="icon thumb" style="width:19.5px">
+                                <img src="./images/tips_tab_icon_04_common.png" alt="" class="icon thumb" style="width:28px">
                                 <span>반려묘의 소화기<br />위험신호</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="hdhT-xC3byo">
-                                <img src="./images/tips_tab_icon_05_common.png" alt="" class="icon thumb" style="width:23.5px">
+                                <img src="./images/tips_tab_icon_05_common.png" alt="" class="icon thumb" style="width:32px">
                                 <span>신장 관리<br />적색 신호</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="8JscdpO7oeg">
-                                <img src="./images/tips_tab_icon_06_common.png" alt="" class="icon thumb" style="width:14px">
+                                <img src="./images/tips_tab_icon_06_common.png" alt="" class="icon thumb" style="width:20px">
                                 <span>반려묘의<br />스트레스 신호</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="hmiCvnEDckA">
-                                <img src="./images/tips_tab_icon_07_common.png" alt="" class="icon thumb" style="width:18.5px">
+                                <img src="./images/tips_tab_icon_07_common.png" alt="" class="icon thumb" style="width:29px">
                                 <span>반려묘의<br />요로계 위험신호</span>
                             </button>
                         </li>
