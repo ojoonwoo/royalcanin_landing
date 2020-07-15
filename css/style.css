@@ -2106,6 +2106,11 @@ html.popup-opened {
 	line-height: 1.5;
 	text-align: left;
 }
+#agree-popup button {
+	width: 278px;
+	height: 64px;
+	border-radius: 32px;
+}
 
 /* .content-wrap .inner .box-area .box img,
 .content-wrap .inner .box-area .box video {
