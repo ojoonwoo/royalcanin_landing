@@ -434,6 +434,7 @@ button.with-icon:after {
 	top: 76px; */
 	width: 568px;
 	height: 322px;
+	position: relative;
 }
 
 .content .section._02 .infl-video-container .yt-container img.object {
@@ -464,7 +465,7 @@ button.with-icon:after {
 	transform: translate(-50%, -50%);
 	top: 50%;
 	left: 50%;
-	font-size: 14px;
+	font-size: 22px;
 	font-weight: 800;
 	color: #ffffff;
 }

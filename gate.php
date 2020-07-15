@@ -99,13 +99,13 @@
                         </div>
                     </div>
                     <div class="agree-wrap">
-                        <button type="button" class="chk-trigger">
+                        <!-- <button type="button" class="chk-trigger">
                             <span class="chk-shape"></span>
                             <span class="text">개인정보수집 활용에 동의합니다.</span>
-                        </button>
+                        </button> -->
                         <button type="button" class="chk-trigger">
                             <span class="chk-shape"></span>
-                            <span class="text">마케팅 활용에 동의합니다.</span>
+                            <span class="text">개인정보 수집 및마케팅 활용에 동의합니다.(필수)</span>
                         </button>
                     </div>
                 </div>
