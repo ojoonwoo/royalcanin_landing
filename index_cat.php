@@ -140,7 +140,7 @@
                     <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                     <p class="prj-title">
                         <span class="text">
-                            <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon2"><em>테스트</em>
+                            <em>주치의</em><img src="./images/icon_power2.png" alt="력" class="icon2"><em>테스트</em>
                         </span>
                     </p>
                     <p class="sub">
