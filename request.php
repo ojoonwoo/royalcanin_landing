@@ -431,7 +431,7 @@
 
             $doc.on('click', '#btn-complete', function() {
                 alert('참여가 완료되었습니다!');
-                location.href="./index.php#section4";
+                location.href="./index_cat.php#section4";
             });
         });
         
