@@ -346,32 +346,32 @@
     //    after the API code downloads.
     var playerInfl, playerTips;
     var playerWidth = $('.yt-container').width();
-    function onYouTubeIframeAPIReady() {
-        playerInfl = new YT.Player('player-infl', {
-            height: playerWidth*9/16,
-            width: playerWidth,
-            videoId: '3_6h0o-t3Vw',
-            playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': 'http://royalcaninevent2020.com', 'playsinline': 1},
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
-        });
-        playerTips = new YT.Player('player-tips', {
-            height: playerWidth*9/16,
-            width: playerWidth,
-            videoId: 'SauuYLbs_FI',
-            playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': 'http://royalcaninevent2020.com', 'playsinline': 1},
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
-        });
-    }
+    // function onYouTubeIframeAPIReady() {
+    //     playerInfl = new YT.Player('player-infl', {
+    //         height: playerWidth*9/16,
+    //         width: playerWidth,
+    //         videoId: '3_6h0o-t3Vw',
+    //         playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': 'http://royalcaninevent2020.com', 'playsinline': 1},
+    //         events: {
+    //             'onReady': onPlayerReady,
+    //             'onStateChange': onPlayerStateChange
+    //         }
+    //     });
+    //     playerTips = new YT.Player('player-tips', {
+    //         height: playerWidth*9/16,
+    //         width: playerWidth,
+    //         videoId: 'SauuYLbs_FI',
+    //         playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': 'http://royalcaninevent2020.com', 'playsinline': 1},
+    //         events: {
+    //             'onReady': onPlayerReady,
+    //             'onStateChange': onPlayerStateChange
+    //         }
+    //     });
+    // }
 
     // 4. The API will call this function when the video player is ready.
     function onPlayerReady(event) {
-        // event.target.playVideo();
+        event.target.playVideo();
     }
 
     // 5. The API calls this function when the player's state changes.
