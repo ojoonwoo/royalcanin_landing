@@ -2106,7 +2106,7 @@ html.popup-opened {
 	line-height: 1.5;
 	text-align: left;
 }
-#agree-popup button {
+#agree-popup .type-01 {
 	width: 278px;
 	height: 64px;
 	border-radius: 32px;
