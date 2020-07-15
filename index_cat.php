@@ -459,6 +459,7 @@
             if($this.hasClass('is-active')) {
                 return;
             }
+            console.log('click');
             $container.find('.tab-trigger').each(function (idx, el) {
                 // var $img = $(el).find('img');
                 var $img        = $(el).children('.thumb');
