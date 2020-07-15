@@ -121,9 +121,9 @@
                                 <label for="req-phone1">휴대 전화번호</label>
                             </div>
                             <div class="input">
-                                <input type="text" class="input-text" id="req-phone1" placeholder="">
-                                <input type="text" class="input-text" id="req-phone2" placeholder="">
-                                <input type="text" class="input-text" id="req-phone3" placeholder="">
+                                <input type="text" class="input-text" id="req-phone1" placeholder="" onkeyup="only_num(this);chk_len(this, 3, 2)">
+                                <input type="text" class="input-text" id="req-phone2" placeholder="" onkeyup="only_num(this);chk_len(this, 4, 3)">
+                                <input type="text" class="input-text" id="req-phone3" placeholder="" onkeyup="only_num(this);chk_len(this, 4, 0)">
                                 <p class="guide-msg">* 본 무료 건강검진권과 헤마츄리아는 추첨을 통해 제공되며, 추첨은 별개로 진행됩니다.</p>
                             </div>
                         </div>
@@ -435,6 +435,50 @@
             });
         });
         
+        function only_num(obj)
+        {
+            var inText = obj.value;
+            var outText = "";
+            var flag = true;
+            var ret;
+            for(var i = 0; i < inText.length; i++)
+            {
+                ret = inText.charCodeAt(i);
+                if((ret < 48) || (ret > 57))
+                {
+                    flag = false;
+                }
+                else
+                {
+                    outText += inText.charAt(i);
+                }
+            }
+
+            if(flag == false)
+            {
+                alert("전화번호는 숫자입력만 가능합니다.");
+                obj.value = outText;
+                obj.focus();
+                return false;
+            }
+            return true;
+        }
+
+        function chk_len(obj, len, num)
+        {
+            if(obj.value.length >= len) {
+                // alert("전화번호는 11자를 초과할 수 없습니다.");
+                // obj.value = obj.value.slice(0, -(obj.value.length-4));
+
+                if (num == 0)
+                    $("#req-phone3").blur();
+                else
+                    $("req-phone"+num).focus();
+                return false;
+            }
+            return;
+        }
+
     </script>
 </body>
 </html>

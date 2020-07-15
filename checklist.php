@@ -167,7 +167,7 @@
                 },
                 nextStep: function() {
                     if(currentStep>3) {
-                        alert('로딩&결과 페이지로 이동합니다.');
+                        // alert('로딩&결과 페이지로 이동합니다.');
                         this.submit();
                         return;
                     } else {
