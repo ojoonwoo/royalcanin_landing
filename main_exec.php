@@ -24,7 +24,7 @@ switch ($_REQUEST['exec'])
 		echo $flag;
 
 	break;
-	case "insert_member_data" :
+	case "update_member_data" :
 		$mnv_f          = new mnv_function();
 		$my_db          = $mnv_f->Connect_MySQL();
 		$gubun          = $mnv_f->MobileCheck();
@@ -36,7 +36,7 @@ switch ($_REQUEST['exec'])
 		$phoneNumber	= $_REQUEST['phoneNumber'];
 		$mb_serial		= $_REQUEST['serial'];
 
-		$query 		= "INSERT INTO member_info(mb_ipaddr, mb_gubun, mb_cat_name, mb_cat_birth, mb_visit_hospital, mb_serial) values('".$_SERVER['REMOTE_ADDR']."','".$gubun."','".$mb_cat_name."','".$mb_cat_birth."','".$mb_visit_hospital."','".$mb_serial."')";
+		$query 		= "UPDATE member_info SET mb_sudo='".$sudoYN."', mb_select_hospital_name='".$hospiName."', mb_select_hospital_addr='".$hospiAddr."', mb_name='".$userName."', mb_phone='".$phoneNumber."', mb_regdate='".date('Y-m-d H:i:s')."' WHERE mb_serial='".$mb_serial."' ";
 		$result 	= mysqli_query($my_db, $query);
 
 		if ($result)

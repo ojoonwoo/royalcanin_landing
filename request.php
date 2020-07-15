@@ -405,7 +405,7 @@
                     url: "./main_exec.php",
                     type: 'POST',
                     data: {
-                        "exec"          : "insert_member_data",
+                        "exec"          : "update_member_data",
                         "sudoYN"        : sudoYN,
                         "hospiName"     : hospiName,
                         "hospiAddr"     : hospiAddr,
