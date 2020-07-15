@@ -303,10 +303,32 @@
                 }
 
                 // 입력한 정보 저장 & 참여 완료 쿠키 생성
+                $.ajax({
+                    url: "./main_exec.php",
+                    type: 'POST',
+                    data: {
+                        "exec"          : "update_member_data",
+                        "sudoYN"        : sudoYN,
+                        "hospiName"     : hospiName,
+                        "hospiAddr"     : hospiAddr,
+                        "userName"      : userName,
+                        "phoneNumber"   : phoneNumber,
+                        "serial"    : "<?php echo $serial?>"
+                    },
+                    success: function (response) {
+                        console.log(response);
+                        setCookie("cathealth_completed","Y","7") //변수, 변수값, 저장기간
+                        royalcaninCat.popup.show($('#complete-popup'));
+                    },
+                    error: function(jqXHR, errMsg) {
+                        // Handle error
+                        console.log(errMsg);
+                    }
+                });
 
-                alert('입력한 정보 저장 & 쿠키 생성');
-                setCookie("cathealth_completed","Y","7") //변수, 변수값, 저장기간
-                royalcaninCat.popup.show($('#complete-popup'));
+                // alert('입력한 정보 저장 & 쿠키 생성');
+                // setCookie("cathealth_completed","Y","7") //변수, 변수값, 저장기간
+                // royalcaninCat.popup.show($('#complete-popup'));
             });
 
             $doc.on('click', '#btn-complete', function() {
