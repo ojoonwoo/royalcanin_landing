@@ -160,7 +160,7 @@ img {
 	background: url(../images/menu_arrow.png) 94% 50% / 8px 14.5px no-repeat;
 }
 #menu-layer ul li a .p-name {
-	font-size: 20px;
+	font-size: 19px;
 	font-weight: 700;
 	letter-spacing: -0.05em;
 }
@@ -188,6 +188,7 @@ img {
 button {
 	font-family: 'Noto Sans Korean', dotum, '돋움', sans-serif;
 	line-height: 1;
+	color: #333333;
 }
 a.type-01 {
 	position: relative;
@@ -538,7 +539,7 @@ button.with-icon:after {
 .content .section._03 .title-block .sub {
 	margin: 10px 0 20px;
 	font-size: 12px;
-	line-height: 1.2;
+	line-height: 1.3;
 	letter-spacing: -0.05em;
 	font-weight: 700;
 }
@@ -680,7 +681,7 @@ button.with-icon:after {
 	flex-basis: 150px;
 }
 .content .section._04 .tab-container li {
-	flex-basis: 100px;
+	flex-basis: 130px;
 	flex-grow: 1;
 	flex-shrink: 0;
 	position: relative;
@@ -702,14 +703,14 @@ button.with-icon:after {
 .content .section._04 .tab-container li button {
 	position: relative;
 	/* padding: 8px 27px 17px; */
-	padding: 8px 15px 17px;
+	padding: 8px 0 15px;
 	text-align: center;
 }
 .content .section._04 .tab-container li button:after {
 	content: "";
 	display: block;
 	position: absolute;
-	bottom: 7px;
+	bottom: 5px;
 	left: 50%;
 	width: 5px;
 	height: 5px;
@@ -722,10 +723,6 @@ button.with-icon:after {
 .content .section._04 .tab-container li button .icon {
 	margin: 0 auto 5px;
 	display: block;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	background-color: #e9e9e9;
 }
 .content .section._04 .tab-container li button span {
 	font-size: 13px;
@@ -740,9 +737,6 @@ button.with-icon:after {
 }
 .content .section._04 .tab-container li button.is-active:after {
 	transform: scale(1);
-}
-.content .section._04 .tab-container li button.is-active .icon {
-	background-color: #e3001a;
 }
 .content .section._04 .tips-video-container {
 	padding: 20px 20px 6.5px;
