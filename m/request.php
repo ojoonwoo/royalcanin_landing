@@ -141,7 +141,7 @@
                     <div class="date-block">
                         <dl>
                             <dt>당첨자 발표일 : </dt>
-                            <dd>2020. 09. 14</dd>
+                            <dd>2020.9.14</dd>
                         </dl>
                         <dl>
                             <dt>안내 방법 : </dt>
@@ -153,7 +153,7 @@
                             <li>
                                 <img src="./images/benefit_img_01.png" alt="10만원 상당의 건강검진권 100명">
                                 <h5>무료 건강검진권</h5>
-                                <p>10만원 상당의 건강검진권</p>
+                                <p>10만원 상당의 건강검진권이<br> 추첨을 통해 제공됩니다.</p>
                             </li>
                             <li>
                                 <img src="./images/benefit_img_02.png" alt="혈뇨검출 체외진단기 헤마츄리아 디텍션 50명">
@@ -165,7 +165,7 @@
                             <img src="./images/section_03_notice.png" alt="필독! 당첨되지 않은 신청자에게는 별도의 공지가 없는 점 양해 부탁드립니다. 본 건강검진권은 지정된 병원에서만 사용이 가능하며, 선택한 병원 이외의 지점에서 사용 불가합니다.">
                         </div>
                     </div>
-                    <button type="button" class="type-01" id="btn-complete">참여 완료</button>
+                    <button type="button" class="type-01" id="btn-complete">확인</button>
                 </div>
             </div>
         </div>
@@ -309,7 +309,7 @@
                 setCookie("cathealth_completed","Y","7") //변수, 변수값, 저장기간
                 royalcaninCat.popup.show($('#complete-popup'));
             });
-            
+
             $doc.on('click', '#btn-complete', function() {
                 alert('참여가 완료되었습니다!');
                 location.href="./index.php#section4";

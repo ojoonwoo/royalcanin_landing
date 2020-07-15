@@ -100,10 +100,8 @@
                     <div class="yt-container">
                         <img src="./images/yt_container_cat_body.png" alt="" class="object _body">
                         <img src="./images/yt_container_cat_tail.png" alt="" class="object _tail">
-                        <div id="player-infl">
-                            <!-- youtube video -->
-                            <!-- <img src="./images/infl_video_sample.jpg" alt=""> -->
-                        </div>
+                        <div class="comming-soon"><span>COMMING SOON</span></div>
+                        <div id="player-infl" class="player"></div>
                     </div>
                 </div>
                 <!-- 활성탭에 따른 컨텐츠 변경 -->
@@ -112,19 +110,19 @@
                         <li>
                             <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw">
                                 <img src="./images/infl_tab_thumb_01_active.png" alt="" class="thumb">
-                                <span>프로 집사의<br>#주치의 프로젝트</span>
+                                <span>뽀양의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="CAInhDnQFaA">
                                 <img src="./images/infl_tab_thumb_02_common.png" alt="" class="thumb">
-                                <span>예민보스 집사의<br>#주치의 프로젝트</span>
+                                <span>지안스캣의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM">
-                                <img src="./images/infl_tab_thumb_03_common.png" alt="" class="thumb">
-                                <span>현명 집사의<br>#주치의 프로젝트</span>
+                            <button type="button" class="tab-trigger" data-key="">
+                                <img src="./images/infl_tab_thumb_03_soon.png" alt="" class="thumb">
+                                <span>아리랑의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
                     </ul>
@@ -288,9 +286,7 @@
                 </div>
                 <div class="tips-video-container">
                     <div class="yt-container">
-                        <div id="player-tips">
-                            <!-- youtube video -->
-                        </div>
+                        <div id="player-tips" class="player"></div>
                     </div>
                 </div>
                 <ul class="article-list">
@@ -547,7 +543,14 @@
             });
 
             if(targetVideo == 'infl') {
-                playerInfl.loadVideoById(targetKey, 0);
+                if(targetKey == '') {
+                    playerInfl.stopVideo();
+                    $('#player-infl').css('opacity', '0');
+                    $('.comming-soon').show();
+                } else {
+                    $('#player-infl').css('opacity', '1');
+                    playerInfl.loadVideoById(targetKey, 0);
+                }
             } else {
                 playerTips.loadVideoById(targetKey, 0);
             }
