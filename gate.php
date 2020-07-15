@@ -155,6 +155,7 @@
                                     이벤트 정보 안내 등 서비스 제한이 있을 수 있습니다.
                                 </p>
                             </div>
+                            <button type="button" class="type-01" id="btn-confirm">확인</button>
                         </div>
                     </div>
                 </div>

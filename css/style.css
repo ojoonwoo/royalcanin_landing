@@ -1764,6 +1764,9 @@ html.popup-opened {
 .popup#complete-popup {
 	width: 520px;
 }
+.popup#agree-popup {
+	width: 520px;
+}
 .popup .inner {
 	position: relative;
 	background-color: #ffffff;
@@ -2081,7 +2084,8 @@ html.popup-opened {
 	margin-top: 29px;
 }
 #agree-popup .inner {
-	padding: 32px 20px;
+	padding: 40px 30px;
+	width: inherit;
 }
 #agree-popup .agree-wrap .block {
 	margin-bottom: 20px;
@@ -2090,14 +2094,14 @@ html.popup-opened {
 	margin-bottom: 0;
 }
 #agree-popup .agree-wrap .block h5 {
-	font-size: 11px;
+	font-size: 13px;
 	letter-spacing: -0.05em;
 	font-weight: 800;
 	margin-bottom: 5px;
 	text-align: left;
 }
 #agree-popup .agree-wrap .block p {
-	font-size: 11px;
+	font-size: 13px;
 	letter-spacing: -0.05em;
 	line-height: 1.5;
 	text-align: left;
