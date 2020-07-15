@@ -20,7 +20,7 @@
     <div id="container">
         <div id="header">
             <div class="inner">
-                <a href="./" class="logo">
+                <a href="./index_cat.php" class="logo">
                     <img src="./images/logo.png" alt="로얄캐닌 홈으로">
                 </a>
                 <nav class="menu">
@@ -44,7 +44,7 @@
         <div class="content _sub __result">
             <div class="inner">
                 <div class="sub-header">
-                    <a href="javascript:void(0)" id="go-before"></a>
+                    <a href="javascript:history.back()" id="go-before"></a>
                     <a href="./" id="go-index"></a>
                 </div>
                 <div class="loading-layer">
