@@ -1505,6 +1505,14 @@ select.select-box {
 	line-height: 1.35;
 	color: #e3001a;
 }
+.content.__result .notice-block {
+}
+.content.__result .notice-block p {
+	font-size: 12px;
+	font-weight: 500;
+	color: #333;
+	text-decoration: underline;
+}
 .content.__result .go-next {
 	margin: 61px auto 89px;
 }

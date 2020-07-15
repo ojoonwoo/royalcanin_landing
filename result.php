@@ -100,6 +100,9 @@
                         </p>
                     </div>
                 </div>
+                <div class="notice-block">
+                    <p>* 결과는 보호자가 인식하는 반려묘 신호 전도에 따라 상이할 수 있는 참고용으로, 수의사 선생님의 소견이나 수의학적 치료를 대체할 수 없습니다.</p>
+                </div>
                 <a href="./request.php?serial=<?php echo $serial?>" class="type-01 go-next">건강검진권 신청하기</a>
             </div>
         </div>
