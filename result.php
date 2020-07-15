@@ -25,17 +25,17 @@
                 </a>
                 <nav class="menu">
                     <ul>
-                        <li class="active">
-                            <a href="./#section1">메인</a>
+                        <li>
+                            <a href="index_cat.php#section1">메인</a>
                         </li>
                         <li>
-                            <a href="./#section2">주치의 프로젝트</a>
+                            <a href="index_cat.php#section2">주치의 프로젝트</a>
                         </li>
                         <li>
-                            <a href="./#section3">주치의력 테스트</a>
+                            <a href="index_cat.php#section3">주치의력 테스트</a>
                         </li>
                         <li>
-                            <a href="./#section4">주치의력 업그레이드 TIPS</a>
+                            <a href="index_cat.php#section4">주치의력 업그레이드 TIPS</a>
                         </li>
                     </ul>
                 </nav>

@@ -149,14 +149,6 @@
                     </p>
                     <div class="date-block">
                         <p>참여기간  : 2020. 07. 30 ~ 08. 30  /  당첨자 확인 : 2020. 09. 30 </p>
-                        <!-- <dl>
-                            <dt>참여기간</dt>
-                            <dd>0000. 00. 00 ~ 0000. 00. 00</dd>
-                        </dl>
-                        <dl>
-                            <dt>당첨자 확인</dt>
-                            <dd>0000. 00. 00</dd>
-                        </dl> -->
                     </div>
                     <div class="bg-graph">
                         <img src="./images/section_03_group.png" alt="" class="img-group">
