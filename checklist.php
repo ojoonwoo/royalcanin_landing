@@ -17,16 +17,16 @@
                 <nav class="menu">
                     <ul>
                         <li class="active">
-                            <a href="javascript:void(0)" data-url="#section1">메인</a>
+                            <a href="./#section1">메인</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)" data-url="#section2">주치의 프로젝트</a>
+                            <a href="./#section2">주치의 프로젝트</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)" data-url="#section3">주치의력 테스트</a>
+                            <a href="./#section3">주치의력 테스트</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)" data-url="#section4">주치의력 업그레이드 TIPS</a>
+                            <a href="./#section4">주치의력 업그레이드 TIPS</a>
                         </li>
                     </ul>
                 </nav>

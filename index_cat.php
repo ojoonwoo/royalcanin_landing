@@ -95,18 +95,19 @@
                     </div>
                     <div class="review-area">
                         <div class="yt-container">
-                            <img src="./images/yt_container_cat_body.png" alt="" class="object _body">
-                            <img src="./images/yt_container_cat_tail.png" alt="" class="object _tail">
+                            <!-- <img src="./images/yt_container_cat_body.png" alt="" class="object _body">
+                            <img src="./images/yt_container_cat_tail.png" alt="" class="object _tail"> -->
                             <div id="player-infl">
                                 <!-- youtube video -->
-                                <!-- <img src="./images/infl_video_sample.jpg" alt=""> -->
+                                <img src="./images/infl_video_sample.jpg" alt="">
                             </div>
                         </div>
                         <!-- 활성탭에 따른 컨텐츠 변경 -->
                         <div class="tab-container-wrap">
                             <ul class="tab-container" data-video-target="infl">
                                 <li>
-                                    <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw">
+                                    <!-- <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw"> -->
+                                    <button type="button" class="tab-trigger is-active" data-key="commingsoon">
                                         <img src="./images/infl_tab_thumb_01_active.png" alt="" class="thumb">
                                         <span>프로 집사의 #주치의 프로젝트</span>
                                         <img src="./images/main_02_play_btn_active.png" alt="" class="play-btn">
@@ -114,13 +115,15 @@
                                 </li>
                                 <li>
                                     <button type="button" class="tab-trigger" data-key="CAInhDnQFaA">
+                                    <!-- <button type="button" class="tab-trigger" data-key="commingsoon"> -->
                                         <img src="./images/infl_tab_thumb_02_common.png" alt="" class="thumb">
                                         <span>예민보스 집사의 #주치의 프로젝트</span>
                                         <img src="./images/main_02_play_btn_common.png" alt="" class="play-btn">
                                     </button>
                                 </li>
                                 <li>
-                                    <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM">
+                                    <!-- <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM"> -->
+                                    <button type="button" class="tab-trigger" data-key="commingsoon">
                                         <img src="./images/infl_tab_thumb_03_common.png" alt="" class="thumb">
                                         <span>현명 집사의 #주치의 프로젝트</span>
                                         <img src="./images/main_02_play_btn_common.png" alt="" class="play-btn">
@@ -173,7 +176,7 @@
                 </div>
             </section>
             <section class="section _04" id="section4">
-                <img src="./images/section_04_cutie.png" alt="고양이" class="cute">
+                <!-- <img src="./images/section_04_cutie.png" alt="고양이" class="cute"> -->
                 <div class="title-block">
                     <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                     <p class="prj-title">
@@ -347,7 +350,7 @@
         playerInfl = new YT.Player('player-infl', {
             height: playerWidth*9/16,
             width: playerWidth,
-            videoId: '3_6h0o-t3Vw',
+            videoId: '3_6h0o-t3Vw00000',
             playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': 'http://royalcaninevent2020.com', 'playsinline': 1},
             events: {
                 'onReady': onPlayerReady,
@@ -474,7 +477,10 @@
             });
 
             if(targetVideo == 'infl') {
-                playerInfl.loadVideoById(targetKey, 0);
+                if (targetKey == "commingsoon")
+                     playerInfl.loadVideoById(targetKey, 0);
+                else
+                    playerInfl.loadVideoById(targetKey, 0);
             } else {
                 playerTips.loadVideoById(targetKey, 0);
             }
