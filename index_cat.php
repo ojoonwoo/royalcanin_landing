@@ -114,8 +114,8 @@
                                     </button>
                                 </li>
                                 <li>
-                                    <!-- <button type="button" class="tab-trigger" data-key="CAInhDnQFaA"> -->
-                                    <button type="button" class="tab-trigger" data-key="commingsoon">
+                                    <button type="button" class="tab-trigger" data-key="CAInhDnQFaA">
+                                    <!-- <button type="button" class="tab-trigger" data-key="commingsoon"> -->
                                         <img src="./images/infl_tab_thumb_02_common.png" alt="" class="thumb">
                                         <span>예민보스 집사의 #주치의 프로젝트</span>
                                         <img src="./images/main_02_play_btn_common.png" alt="" class="play-btn">
