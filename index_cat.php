@@ -95,8 +95,8 @@
                     </div>
                     <div class="review-area">
                         <div class="yt-container">
-                            <img src="./images/yt_container_cat_body.png" alt="" class="object _body">
-                            <img src="./images/yt_container_cat_tail.png" alt="" class="object _tail">
+                            <!-- <img src="./images/yt_container_cat_body.png" alt="" class="object _body">
+                            <img src="./images/yt_container_cat_tail.png" alt="" class="object _tail"> -->
                             <div id="player-infl">
                                 <!-- youtube video -->
                                 <!-- <img src="./images/infl_video_sample.jpg" alt=""> -->
