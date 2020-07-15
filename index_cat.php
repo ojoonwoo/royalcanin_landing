@@ -97,7 +97,8 @@
                         <div class="yt-container">
                             <!-- <img src="./images/yt_container_cat_body.png" alt="" class="object _body">
                             <img src="./images/yt_container_cat_tail.png" alt="" class="object _tail"> -->
-                            <div id="player-infl">
+                            <div class="comming-soon"><span>COMMING SOON</span></div>
+                            <div id="player-infl" class="player">
                                 <!-- youtube video -->
                                 <!-- <img src="./images/infl_video_sample.jpg" alt=""> -->
                             </div>
@@ -477,10 +478,14 @@
             });
 
             if(targetVideo == 'infl') {
-                if (targetKey == "commingsoon")
-                     playerInfl.loadVideoById(targetKey, 0);
-                else
+                if(targetKey == '') {
+                    playerInfl.stopVideo();
+                    $('#player-infl').css('opacity', '0');
+                    $('.comming-soon').show();
+                } else {
+                    $('#player-infl').css('opacity', '1');
                     playerInfl.loadVideoById(targetKey, 0);
+                }
             } else {
                 playerTips.loadVideoById(targetKey, 0);
             }

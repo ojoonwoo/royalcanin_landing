@@ -444,6 +444,30 @@ button.with-icon:after {
 	display: block;
 	z-index: 1;
 }
+.yt-container {
+	background-color: #6d6e71;
+}
+.yt-container .player {
+	background-color: #6d6e71;
+}
+.yt-container .comming-soon {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #6d6e71;
+}
+.yt-container .comming-soon span {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	font-size: 14px;
+	font-weight: 800;
+	color: #ffffff;
+}
 .content .section._02 .infl-video-container .yt-container img._body {
 	width: 60px;
 	left: -5px;
