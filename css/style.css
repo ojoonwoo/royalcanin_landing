@@ -1761,6 +1761,9 @@ html.popup-opened {
 .popup#reward2-popup {
 	width: 520px;
 }
+.popup#complete-popup {
+	width: 520px;
+}
 .popup .inner {
 	position: relative;
 	background-color: #ffffff;
