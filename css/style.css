@@ -745,6 +745,8 @@ button.with-icon:after {
 	position: relative;
 	padding: 18px 10px 19px;
 	text-align: center;
+	display: block;
+	width: 100%;
 }
 .content .section._04 .tab-container li button:after {
 	content: "";
@@ -752,6 +754,7 @@ button.with-icon:after {
 	position: absolute;
 	bottom: -7px;
 	left: 0;
+	right: 0;
 	width: 156px;
 	height: 7px;
 	background-color: #e3001a;
