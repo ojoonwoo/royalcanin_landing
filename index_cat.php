@@ -484,10 +484,18 @@
                     $('.comming-soon').show();
                 } else {
                     $('#player-infl').css('opacity', '1');
-                    playerInfl.loadVideoById(targetKey, 0);
+                    playerInfl.cueVideoById({
+                        'videoId': targetKey,
+                        'startSeconds': 0,
+                        'suggestedQuality': 'large'
+                    });
                 }
             } else {
-                playerTips.loadVideoById(targetKey, 0);
+                playerTips.cueVideoById({
+                    'videoId': targetKey,
+                    'startSeconds': 0,
+                    'suggestedQuality': 'large'
+                });
             }
         });
 
