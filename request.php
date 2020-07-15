@@ -280,15 +280,22 @@
             $doc.on('click', '.loc-trigger', function() {
                 var $this = $(this);
                 var location = $(this).attr('data-loc');
-                if($this.hasClass('is-active')) {
-                    return;
-                }
+                // if($this.hasClass('is-active')) {
+                //     return;
+                // }
                 $('.loc-trigger').not($this).removeClass('is-active');
                 $this.addClass('is-active');
 
                 if(location=='other') {
+                    $('.for-central').val('');
                     royalcaninCat.popup.show($('#other-popup'));
+                } else {
+                    $('#nv-h-name, #nv-h-addr').val('');
+                    $('.for-central').show();
                 }
+                hospiName = "",
+                hospiAddr = "";
+                $('#req-addr').val('');
             });
             $doc.on('click', '.hospi-trigger', function() {
                 var $this = $(this);
@@ -314,6 +321,9 @@
                     alert("병원정보를 "+act+"해주세요!");
                     return;
                 }
+            });
+            $doc.on('click', '#other-popup .popup-close', function() {
+                $('[data-loc="central"]').trigger('click');
             });
             $doc.on('click', '#addr-search', function() {
                 // 주소검색 ajax callback {
