@@ -157,7 +157,7 @@
                 return false;
             }
 
-            if (agree_num < 2) {
+            if (agree_num < 1) {
                 alert("약관에 모두 동의하셔야만 이벤트에 참여하실 수 있습니다.")
                 return false;
             }
