@@ -99,7 +99,7 @@
                             <img src="./images/yt_container_cat_tail.png" alt="" class="object _tail"> -->
                             <div id="player-infl">
                                 <!-- youtube video -->
-                                <img src="./images/infl_video_sample.jpg" alt="">
+                                <!-- <img src="./images/infl_video_sample.jpg" alt=""> -->
                             </div>
                         </div>
                         <!-- 활성탭에 따른 컨텐츠 변경 -->
@@ -350,7 +350,7 @@
         playerInfl = new YT.Player('player-infl', {
             height: playerWidth*9/16,
             width: playerWidth,
-            videoId: '3_6h0o-t3Vw00000',
+            videoId: '3_6h0o-t3Vw',
             playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': 'http://royalcaninevent2020.com', 'playsinline': 1},
             events: {
                 'onReady': onPlayerReady,
