@@ -478,7 +478,7 @@
 
             if(targetVideo == 'infl') {
                 if (targetKey == "commingsoon")
-                    //  playerInfl.loadVideoById(targetKey, 0);
+                     playerInfl.loadVideoById(targetKey, 0);
                 else
                     playerInfl.loadVideoById(targetKey, 0);
             } else {
