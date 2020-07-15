@@ -24,6 +24,29 @@ switch ($_REQUEST['exec'])
 		echo $flag;
 
 	break;
+	case "update_member_data" :
+		$mnv_f          = new mnv_function();
+		$my_db          = $mnv_f->Connect_MySQL();
+		$gubun          = $mnv_f->MobileCheck();
+
+		$sudoYN			= $_REQUEST['sudoYN'];
+		$hospiName		= $_REQUEST['hospiName'];
+		$hospiAddr		= $_REQUEST['hospiAddr'];
+		$userName		= $_REQUEST['userName'];
+		$phoneNumber	= $_REQUEST['phoneNumber'];
+		$mb_serial		= $_REQUEST['serial'];
+
+		$query 		= "UPDATE member_info SET mb_sudo='".$sudoYN."', mb_select_hospital_name='".$hospiName."', mb_select_hospital_addr='".$hospiAddr."', mb_name='".$userName."', mb_phone='".$phoneNumber."', mb_regdate='".date('Y-m-d H:i:s')."' WHERE mb_serial='".$mb_serial."' ";
+		$result 	= mysqli_query($my_db, $query);
+
+		if ($result)
+			$flag ="Y"; 
+		else
+			$flag ="N";
+
+		echo $flag;
+
+	break;
 	case "insert_check_data" :
 		$mnv_f          = new mnv_function();
 		$my_db          = $mnv_f->Connect_MySQL();

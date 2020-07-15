@@ -1764,6 +1764,9 @@ html.popup-opened {
 .popup#complete-popup {
 	width: 520px;
 }
+.popup#agree-popup {
+	width: 520px;
+}
 .popup .inner {
 	position: relative;
 	background-color: #ffffff;
@@ -2079,6 +2082,34 @@ html.popup-opened {
 #complete-popup #btn-complete {
 	width: 278px;
 	margin-top: 29px;
+}
+#agree-popup .inner {
+	padding: 40px 30px;
+	width: inherit;
+}
+#agree-popup .agree-wrap .block {
+	margin-bottom: 20px;
+}
+#agree-popup .agree-wrap .block:last-child {
+	margin-bottom: 0;
+}
+#agree-popup .agree-wrap .block h5 {
+	font-size: 13px;
+	letter-spacing: -0.05em;
+	font-weight: 800;
+	margin-bottom: 5px;
+	text-align: left;
+}
+#agree-popup .agree-wrap .block p {
+	font-size: 13px;
+	letter-spacing: -0.05em;
+	line-height: 1.5;
+	text-align: left;
+}
+#agree-popup .type-01 {
+	width: 278px;
+	height: 64px;
+	border-radius: 32px;
 }
 
 /* .content-wrap .inner .box-area .box img,
