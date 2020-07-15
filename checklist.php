@@ -6,6 +6,10 @@
     // if ($_SESSION['miniver_serial'] != $serial || !$_SESSION['miniver_serial'] || !$serial) {
     //     echo "<script>location.href = 'index.php';</script>";
     // }
+
+    $query = "SELECT mb_cat_name FROM member_info WHERE mb_serial='".$serial."'";
+    $result 	= mysqli_query($my_db, $query);
+    $data   = mysqli_fetch_array($result);
 ?>
 <body>
     <div id="container">
@@ -45,7 +49,7 @@
                             <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon"><em>테스트</em></span>
                     </div>
                     <div class="subject">
-                        우리 반려묘 OO!<br><b>혹시 이런 모습을 보이나요?</b>
+                        우리 반려묘 <?php echo $data['mb_cat_name']?>!<br><b>혹시 이런 모습을 보이나요?</b>
                     </div>
                 </div>
                 <!-- <div class="indicator-block"> -->
