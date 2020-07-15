@@ -15,10 +15,9 @@
 <body>
     <div id="container">
         <div class="content _sub __request">
-            <div class="sub-header">
-                <a href="javascript:void(0)" id="go-before"></a>
-                <a href="./" id="go-index"></a>
-            </div>
+            <?php
+            include_once "./sub_header.php";
+            ?>
             <div class="title-block">
                 <div class="prj-title">
                     <img src="./images/project_logo.svg" class="project-logo" alt="고양이 주치의 프로젝트">

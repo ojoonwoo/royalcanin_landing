@@ -243,43 +243,43 @@
                         <li>
                             <button type="button" class="tab-trigger is-active" data-key="SauuYLbs_FI">
                                 <img src="" alt="" class="icon">
-                                <span>고양이를 병원에<br>데려가는 꿀팁</span>
+                                <span>동물병원 쉽게<br>데려가는 방법</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s">
+                            <button type="button" class="tab-trigger" data-key="SauuYLbs_FI">
                                 <img src="" alt="" class="icon">
-                                <span>OOO질병이<br>궁금하시다면?</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s">
-                                <img src="" alt="" class="icon">
-                                <span>5가지 징후<br>요로계</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="tab-trigger" data-key="coy3EAxcrv0">
-                                <img src="" alt="" class="icon">
-                                <span>5가지 징후<br>스트레스</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="tab-trigger" data-key="hdhT-xC3byo">
-                                <img src="" alt="" class="icon">
-                                <span>5가지 징후<br>신장</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="tab-trigger" data-key="8JscdpO7oeg">
-                                <img src="" alt="" class="icon">
-                                <span>5가지 징후<br>소화기</span>
+                                <span>반려묘에게<br>치명적인 질병은?</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="hmiCvnEDckA">
                                 <img src="" alt="" class="icon">
-                                <span>5가지 징후<br>체중</span>
+                                <span>체중관리가<br>필요할 때 보이는 행동 5</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-trigger" data-key="8JscdpO7oeg">
+                                <img src="" alt="" class="icon">
+                                <span>반려묘의<br>소화기 위험신호</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-trigger" data-key="hdhT-xC3byo">
+                                <img src="" alt="" class="icon">
+                                <span>신장 관리<br>적색 신호</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-trigger" data-key="coy3EAxcrv0">
+                                <img src="" alt="" class="icon">
+                                <span>반려묘의<br>스트레스 신호</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s">
+                                <img src="" alt="" class="icon">
+                                <span>반려묘의<br>요로계 위험신호</span>
                             </button>
                         </li>
                     </ul>

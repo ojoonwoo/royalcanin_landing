@@ -15,10 +15,9 @@
 <body>
     <div id="container">
         <div class="content _sub __checklist">
-            <div class="sub-header">
-                <a href="javascript:void(0)" id="go-before"></a>
-                <a href="./" id="go-index"></a>
-            </div>
+            <?php
+            include_once "./sub_header.php";
+            ?>
             <div class="title-block">
                 <div class="prj-title">
                     <img src="./images/project_logo.svg" class="project-logo" alt="고양이 주치의 프로젝트">
@@ -120,13 +119,14 @@
                         if(isAnimate) return false;
                         _this.nextStep();
                     });
-                    $doc.on('click', '#go-before', function() {
+                    $doc.on('click', '#go-before', function(e) {
                         if(isAnimate) return false;
                         _this.prevStep();
                     });
                 },
                 prevStep: function() {
                     if(currentStep<1) {
+                        history.back();
                         return;
                     } else {
                         this.stepAnimate('prev');
@@ -141,7 +141,6 @@
                     }
                 },
                 stepAnimate: function(direction) {
-                    // console.log('step animation start');
                     isAnimate = true;
                     var stepTl = gsap.timeline({onComplete: function(){
                         (direction==='next') ? currentStep++ : currentStep--;
@@ -152,7 +151,6 @@
                             $('#go-next').text('다음으로');
                         }
                         $('.list-wrapper .group').removeClass('is-current').eq(currentStep).addClass('is-current');
-                        // console.log('step animation end');
                     }});
                     if(direction === 'next') {
                         stepTl
