@@ -110,7 +110,7 @@
                                     <!-- <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw"> -->
                                     <button type="button" class="tab-trigger is-active" data-key="commingsoon">
                                         <img src="./images/infl_tab_thumb_01_active.png" alt="" class="thumb">
-                                        <span>프로 집사의 #주치의 프로젝트</span>
+                                        <span>뽀양의 #주치의 프로젝트</span>
                                         <img src="./images/main_02_play_btn_active.png" alt="" class="play-btn">
                                     </button>
                                 </li>
@@ -118,15 +118,15 @@
                                     <button type="button" class="tab-trigger" data-key="CAInhDnQFaA">
                                     <!-- <button type="button" class="tab-trigger" data-key="commingsoon"> -->
                                         <img src="./images/infl_tab_thumb_02_common.png" alt="" class="thumb">
-                                        <span>예민보스 집사의 #주치의 프로젝트</span>
+                                        <span>지안스캣의 #주치의 프로젝트</span>
                                         <img src="./images/main_02_play_btn_common.png" alt="" class="play-btn">
                                     </button>
                                 </li>
                                 <li>
                                     <!-- <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM"> -->
-                                    <button type="button" class="tab-trigger" data-key="commingsoon">
+                                    <button type="button" class="tab-trigger" data-key="">
                                         <img src="./images/infl_tab_thumb_03_common.png" alt="" class="thumb">
-                                        <span>현명 집사의 #주치의 프로젝트</span>
+                                        <span>아리랑의 #주치의 프로젝트</span>
                                         <img src="./images/main_02_play_btn_common.png" alt="" class="play-btn">
                                     </button>
                                 </li>
