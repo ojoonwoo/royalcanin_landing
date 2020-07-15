@@ -446,7 +446,7 @@ button.with-icon:after {
 	z-index: 1;
 }
 .yt-container {
-	background-color: #6d6e71;
+	/* background-color: #6d6e71; */
 }
 .yt-container .player {
 	background-color: #6d6e71;
@@ -787,7 +787,7 @@ button.with-icon:after {
 #player-tips {
 	display: block;
 	width: 1100px;
-	height: 566px;
+	height: 619px;
 	margin: 0 auto;
 }
 
