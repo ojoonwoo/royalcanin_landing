@@ -417,6 +417,31 @@ button.with-icon:after {
 	top: 22.5px;
 	left: -16.5px;
 	z-index: 0;
+	animation-name: shakeTail;
+	animation-duration: 3s;
+	animation-timing-function: ease-in;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+}
+/* .content .section._02 .infl-video-container .yt-container img._tail.shake {
+
+} */
+@keyframes shakeTail {
+	0% {
+		transform: rotate(0deg);
+	}
+	20% {
+		transform: rotate(5deg);
+	}
+	40% {
+		transform: rotate(0deg);
+	}
+	60% {
+		transform: rotate(-5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
 }
 .content .section._02 .tab-container-wrap {
 	padding: 0 20px;
@@ -453,7 +478,7 @@ button.with-icon:after {
 	background-color: #e3001a;
 	border-radius: 50%;
 	transform: scale(0);
-	transition: scale 1s ease;
+	transition: all 0.1s ease;
 }
 .content .section._02 .tab-container li .tab-trigger .thumb {
 	border-radius: 5px;
@@ -470,12 +495,14 @@ button.with-icon:after {
 }
 .content .section._02 .tab-container li .tab-trigger.is-active {
 	background-color: #e3001a;
+	transition: all 0.1s linear;
 }
 .content .section._02 .tab-container li .tab-trigger.is-active:before {
 	transform: scale(1);
 }
 .content .section._02 .tab-container li .tab-trigger.is-active span {
 	opacity: 1;
+	transition: all 0.1s linear;
 }
 
 .content .section._03 {
@@ -601,7 +628,6 @@ button.with-icon:after {
 	letter-spacing: -0.05em;
 }
 
-
 .content .section._04 {
 	padding: 40px 0 18px;
 }
@@ -626,12 +652,33 @@ button.with-icon:after {
 	border-top: 1px solid #e3001a;
 	border-bottom: 3px solid #e4e4e4;
 }
+.content .section._04 .tab-container li:first-child {
+	flex-basis: 150px;
+}
 .content .section._04 .tab-container li {
+	flex-basis: 100px;
+	flex-grow: 1;
 	flex-shrink: 0;
+	position: relative;
+}
+.content .section._04 .tab-container li:last-child:after {
+	content: none;
+}
+.content .section._04 .tab-container li:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 1px;
+	height: 29px;
+	margin-top: -14px;
+	background-color: #cbcdcf;
 }
 .content .section._04 .tab-container li button {
 	position: relative;
-	padding: 8px 27px 17px;
+	/* padding: 8px 27px 17px; */
+	padding: 8px 15px 17px;
 	text-align: center;
 }
 .content .section._04 .tab-container li button:after {
@@ -646,6 +693,7 @@ button.with-icon:after {
 	border-radius: 50%;
 	margin-left: -3px;
 	transform: scale(0);
+	transition: all 0.1s ease;
 }
 .content .section._04 .tab-container li button .icon {
 	margin: 0 auto 5px;
@@ -660,6 +708,7 @@ button.with-icon:after {
 	font-weight: 700;
 	letter-spacing: -0.05em;
 	line-height: 1.3;
+	transition: color 0.1s ease;
 }
 .content .section._04 .tab-container li button.is-active span {
 	color: #e3001a;
@@ -726,6 +775,7 @@ input.input-text {
 	height: 45px;
 	background-color: #f0f0f0;
 	font-family: 'Noto Sans Korean';
+	font-size: 14px;
 	font-weight: 700;
 	letter-spacing: -0.05em;
 	padding: 0 20px;
@@ -743,6 +793,7 @@ select.select-box {
 	background-position: 94% 50%;
 	background-repeat: no-repeat;
 	font-family: 'Noto Sans Korean';
+	font-size: 14px;
 	font-weight: 700;
 	letter-spacing: -0.05em;
 	padding: 0 20px;
@@ -987,7 +1038,13 @@ select.select-box {
 }
 .content.__gate .input-wrapper .agree-wrap .chk-trigger {
 	border: 1px solid #f0f0f0;
-	height: 33px;
+	/* padding-right: 40px; */
+	/* height: 33px; */
+	padding: 10px 40px 10px 66px;
+}
+.content.__gate .input-wrapper .agree-wrap .chk-trigger .text {
+	line-height: 1.3;
+	/* padding: 10px 0; */
 }
 .content.__gate .input-wrapper .agree-wrap .chk-trigger:first-child {
 	margin-bottom: 10px;
@@ -1013,7 +1070,28 @@ select.select-box {
 .content.__gate #go-next {
 	margin-top: 34px;
 }
-
+#agree-popup .inner {
+	padding: 32px 20px;
+}
+#agree-popup .agree-wrap .block {
+	margin-bottom: 20px;
+}
+#agree-popup .agree-wrap .block:last-child {
+	margin-bottom: 0;
+}
+#agree-popup .agree-wrap .block h5 {
+	font-size: 11px;
+	letter-spacing: -0.05em;
+	font-weight: 800;
+	margin-bottom: 5px;
+	text-align: left;
+}
+#agree-popup .agree-wrap .block p {
+	font-size: 11px;
+	letter-spacing: -0.05em;
+	line-height: 1.5;
+	text-align: left;
+}
 
 .content.__checklist {
 	min-height: calc(100% - 63px);
@@ -1378,7 +1456,7 @@ select.select-box {
 .content.__request .input-wrapper .tip {
 	margin: 23px 0 26px;
 	font-size: 0;
-	text-align: center;
+	text-align: left;
 }
 .content.__request .input-wrapper .tip span {
 	display: inline-block;
@@ -1752,6 +1830,76 @@ html.popup-opened {
 	font-weight: 700;
 }
 
+#complete-popup .title-block .project-logo {
+	width: 47px;
+	margin: 0 auto 16px;
+}
+#complete-popup .title-block .sub {
+	font-size: 20px;
+	font-weight: 800;
+	letter-spacing: -0.05em;
+	color: #e3001a;
+	line-height: 1.3;
+	margin-bottom: 20px;
+}
+#complete-popup .date-block {
+	text-align: center;
+	margin-bottom: 28px;
+}
+#complete-popup .date-block dl:first-child {
+	margin-bottom: 5px;
+}
+#complete-popup .date-block dl dt {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 12px;
+	letter-spacing: -0.05em;
+	font-weight: 800;
+	margin-right: 3px;
+}
+#complete-popup .date-block dl dd {
+	display: inline-block;
+	vertical-align: middle;
+	letter-spacing: -0.05em;
+	font-size: 12px;
+}
+#complete-popup .benefit-area ul {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	margin-bottom: 31px;
+}
+#complete-popup .benefit-area ul li {
+	text-align: center;
+	margin-right: 30px;
+}
+#complete-popup .benefit-area ul li:last-child {
+	margin-right: 0;
+}
+#complete-popup .benefit-area ul li img {
+	width: 137px;
+	margin: 0 auto 10px;
+}
+#complete-popup .benefit-area ul li h5 {
+	font-size: 12px;
+	font-weight: 800;
+	letter-spacing: -0.05em;
+	margin-bottom: 7px;
+}
+#complete-popup .benefit-area ul li p {
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: -0.05em;
+	line-height: 1.2;
+}
+#complete-popup .benefit-area .noti-img {
+	margin-top: 38px;
+	padding: 0 20px;
+}
+#complete-popup #btn-complete {
+	width: 201px;
+	margin-top: 25px;
+}
 @media screen and (max-width: 350px) {
 	.content .section._03 .date-block {
 		padding: 0 20px;
@@ -1765,5 +1913,8 @@ html.popup-opened {
 	}
 	.popup#reward2-popup .title-block .sub {
 		font-size: 10px;
+	}
+	.content.__request .input-wrapper .tip span {
+		margin-bottom: 3px;
 	}
 }

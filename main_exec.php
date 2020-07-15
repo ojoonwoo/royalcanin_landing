@@ -41,7 +41,23 @@ switch ($_REQUEST['exec'])
 			$flag ="N";
 
 		echo $flag;
+	break;
+	case "insert_member_date" :
+		// $mnv_f          = new mnv_function();
+		// $my_db          = $mnv_f->Connect_MySQL();
+		// $gubun          = $mnv_f->MobileCheck();
+	
+		// $mb_serial		= $_REQUEST['mb_serial'];
 
+		// $query 		= "UPDATE member_info SET mb_check='".$mb_check."' WHERE mb_serial='".$mb_serial."'";
+		// $result 	= mysqli_query($my_db, $query);
+	
+		// if ($result)
+		// 	$flag ="Y"; 
+		// else
+		// 	$flag ="N";
+	
+		// echo $flag;
 	break;
 }
 

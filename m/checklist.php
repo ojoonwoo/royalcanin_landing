@@ -127,7 +127,6 @@
                 },
                 prevStep: function() {
                     if(currentStep<1) {
-                        alert('반려묘 정보 페이지로 돌아갑니다.');
                         return;
                     } else {
                         this.stepAnimate('prev');
@@ -135,7 +134,6 @@
                 },
                 nextStep: function() {
                     if(currentStep>3) {
-                        alert('로딩&결과 페이지로 이동합니다.');
                         this.submit();
                         return;
                     } else {
@@ -202,7 +200,6 @@
                     if(checklist.urinary.checkedLength >= 3 || Number($('#cat-age').val()) >= 8) {
                         hematuria = "Y";
                     }
-                    alert(hematuria);
                     // 체크 정보 db update 후 callback에서 result로 serial같이 넘김
                     // 데이터 저장
                     $.ajax({

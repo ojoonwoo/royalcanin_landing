@@ -8,9 +8,15 @@
     $query = "SELECT hospital_name, hospital_addr FROM hospital_list WHERE 1 AND hospital_addr like '%".$sido." ".$sigungu."%'";
     $result = mysqli_query($my_db, $query);
 
-    print_r($query);
+    $html = "";
+    $return_arr = [];
+    $i=0;
     while($data = mysqli_fetch_array($result)) {
-        echo "<li><button type='button' class='hospi-trigger'><div><span class='chk-shape'></span></div><div><p class='h-name'>".$data['hospital_name']."</p><p class='h-addr'>".$data['hospital_addr']."</p></div></button></li>";
-
+        $html .= "<li><button type='button' class='hospi-trigger'><div><span class='chk-shape'></span></div><div><p class='h-name'>".$data['hospital_name']."</p><p class='h-addr'>".$data['hospital_addr']."</p></div></button></li>";
+        $i++;
     }
+    $return_arr['html'] = $html;
+    $return_arr['cnt'] = $i;
+
+    echo json_encode($return_arr, JSON_UNESCAPED_UNICODE);
 ?>

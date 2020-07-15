@@ -12,8 +12,8 @@
 	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="RoyalCanin" />
-		<meta property="og:url" content="http://www.royalcaninevent2020.com/ccn/" />
-		<meta property="og:image" content="http://www.royalcaninevent2020.com/ccn/images/share_image.jpg" />
+		<meta property="og:url" content="http://www.royalcaninevent2020.com/cathealth/" />
+		<meta property="og:image" content="http://www.royalcaninevent2020.com/cathealth/images/share_image.jpg" />
 		<meta property="og:description" content="[RoyalCanin] 고양이 주치의 프로젝트" />
 		<title>RoyalCanin</title>
 		<link type="image/icon" rel="shortcut icon" href="http://www.royalcaninevent2020.com/ccn/images/favicon.ico" />
