@@ -309,13 +309,19 @@
                     act = "선택";
                     hospiName = $('.hospi-trigger.is-active').find('.h-name').text();
                     hospiAddr = $('.hospi-trigger.is-active').find('.h-addr').text();
+                    sudoYN = "Y";
                 } else {
                     act = "입력";
                     hospiName = $('#nv-h-name').val();
                     hospiAddr = $('#nv-h-addr').val();
+                    sudoYN = "N";
                 }
 
                 if(hospiName.length>0 && hospiAddr.length>0) {
+                    if(popupId==='other-popup') {
+                        $('.for-central').hide();
+                    }
+                    $('#req-addr').val(hospiAddr+" "+hospiName);
                     royalcaninCat.popup.close($('#'+popupId));
                 } else {
                     alert("병원정보를 "+act+"해주세요!");
