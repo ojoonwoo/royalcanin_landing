@@ -226,6 +226,46 @@
                         <p class="guide-msg">* 병원 선택 전, 해당 주소지가 맞는지 확인해주세요!</p>
                     </div>
                 </div>
+                <div class="popup _complete" id="complete-popup">
+                    <div class="inner">
+                        <button type="button" class="popup-close" data-popup="@close"></button>
+                        <div class="title-block">
+                            <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
+                            <p class="sub">
+                                반려묘의 더 건강한 삶을 위한<br>건강검진권과 혈뇨검출기가<br>신청되었습니다! 
+                            </p>
+                        </div>
+                        <div class="date-block">
+                            <dl>
+                                <dt>당첨자 발표일 : </dt>
+                                <dd>2020.9.14</dd>
+                            </dl>
+                            <dl>
+                                <dt>안내 방법 : </dt>
+                                <dd>당첨되신 분들께는 문자를 통해 개별 안내 드립니다.</dd>
+                            </dl>
+                        </div>
+                        <div class="benefit-area">
+                            <ul>
+                                <li>
+                                    <img src="./images/benefit_img_01.png" alt="10만원 상당의 건강검진권 100명">
+                                    <h5>무료 건강검진권</h5>
+                                    <p>10만원 상당의 건강검진권이<br> 추첨을 통해 제공됩니다.</p>
+                                </li>
+                                <li>
+                                    <img src="./images/benefit_img_02.png" alt="혈뇨검출 체외진단기 헤마츄리아 디텍션 50명">
+                                    <h5>혈뇨검출 체외진단기</h5>
+                                    <p>헤마츄리아 디텍션</p>
+                                </li>
+                            </ul>
+                            <div class="noti-img">
+                                <img src="./images/section_03_notice.png" alt="필독! 당첨되지 않은 신청자에게는 별도의 공지가 없는 점 양해 부탁드립니다. 본 건강검진권은 지정된 병원에서만 사용이 가능하며, 선택한 병원 이외의 지점에서 사용 불가합니다.">
+                            </div>
+                        </div>
+                        <button type="button" class="type-01" id="btn-complete">확인</button>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div id="footer">
@@ -325,6 +365,35 @@
                         console.log(errMsg);
                     }
                 });
+            });
+            $doc.on('click', '.go-next', function() {
+                console.log("수도권:", sudoYN)
+                console.log("병원명:", hospiName);
+                console.log("병원주소:", hospiAddr);
+                var phoneRule = /^(?:(010-?\d{4})|(01[1|6|7|8|9]-?\d{3,4}))-?\d{4}$/;
+                var userName = $('#req-name').val();
+                var phoneNumber = $('#req-phone1').val()+$('#req-phone2').val()+$('#req-phone3').val();
+
+                if(userName.trim().length<1) {
+                    alert('보호자 이름을 올바르게 입력해주세요!');
+                    $('#req-name').focus();
+                    return;
+                }
+                if(!phoneRule.test(phoneNumber)) {
+                    alert('휴대 전화번호를 올바르게 입력해주세요!');
+                    return;
+                }
+
+                // 입력한 정보 저장 & 참여 완료 쿠키 생성
+
+                alert('입력한 정보 저장 & 쿠키 생성');
+                setCookie("cathealth_completed","Y","7") //변수, 변수값, 저장기간
+                royalcaninCat.popup.show($('#complete-popup'));
+            });
+
+            $doc.on('click', '#btn-complete', function() {
+                alert('참여가 완료되었습니다!');
+                location.href="./index.php#section4";
             });
         });
         
