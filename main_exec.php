@@ -24,6 +24,29 @@ switch ($_REQUEST['exec'])
 		echo $flag;
 
 	break;
+	case "insert_member_data" :
+		$mnv_f          = new mnv_function();
+		$my_db          = $mnv_f->Connect_MySQL();
+		$gubun          = $mnv_f->MobileCheck();
+
+		$sudoYN			= $_REQUEST['sudoYN'];
+		$hospiName		= $_REQUEST['hospiName'];
+		$hospiAddr		= $_REQUEST['hospiAddr'];
+		$userName		= $_REQUEST['userName'];
+		$phoneNumber	= $_REQUEST['phoneNumber'];
+		$mb_serial		= $_REQUEST['serial'];
+
+		$query 		= "INSERT INTO member_info(mb_ipaddr, mb_gubun, mb_cat_name, mb_cat_birth, mb_visit_hospital, mb_serial) values('".$_SERVER['REMOTE_ADDR']."','".$gubun."','".$mb_cat_name."','".$mb_cat_birth."','".$mb_visit_hospital."','".$mb_serial."')";
+		$result 	= mysqli_query($my_db, $query);
+
+		if ($result)
+			$flag ="Y"; 
+		else
+			$flag ="N";
+
+		echo $flag;
+
+	break;
 	case "insert_check_data" :
 		$mnv_f          = new mnv_function();
 		$my_db          = $mnv_f->Connect_MySQL();
