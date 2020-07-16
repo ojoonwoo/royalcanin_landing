@@ -28,8 +28,8 @@
     opacity: 1;
 	/* -webkit-animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) 4s both;
             animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) 4s both; */
-    -webkit-animation: scale-in-center 0.5s ease-in-out 4s both;
-    animation: scale-in-center 0.5s ease-in-out 4s both;
+    -webkit-animation: scale-in-center 0.5s ease-in-out 6s both;
+    animation: scale-in-center 0.5s ease-in-out 6s both;
 }
 .main-anim1 {
     opacity: 0;
@@ -50,18 +50,18 @@
 }
 .is-load .main-anim2 {
     opacity: 1;
-	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
-	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
-}
-.is-load .main-anim3 {
-    opacity: 1;
 	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
 	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
 }
+.is-load .main-anim3 {
+    opacity: 1;
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 4s both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 4s both;
+}
 .content .section._01 .title-block .sub-title {
     opacity: 1;
-	-webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 3s both;
-	        animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 3s both;    
+	-webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 5s both;
+	        animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 5s both;    
 }
 
 @-webkit-keyframes scale-in-center {
