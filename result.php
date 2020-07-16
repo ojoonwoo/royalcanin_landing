@@ -265,7 +265,7 @@
             options: {
                 responsive: true,
                 // aspectRatio: 0.93,
-                aspectRatio: 1,
+                aspectRatio: 0.95,
                 animation: {
                     // easing: 'easeInQuad',
                     duration: 5000,
