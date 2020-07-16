@@ -458,8 +458,10 @@
     }
     </script>
     <script>
+        $(window).load(function () {
+            $("body").addClass("is-load");
+        });
         $(document).ready(function() {
-            $("body").addClass('is-load');
             paramObj = get_query();
             // paramValArr = Object.values(paramObj);
             paramValArr = get_param_arr(paramObj);
