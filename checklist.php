@@ -15,9 +15,6 @@
     <div id="container">
         <div id="header">
             <div class="inner">
-                <?php
-                include_once "./sub_header.php";
-                ?>
                 <nav class="menu">
                     <ul>
                         <li>

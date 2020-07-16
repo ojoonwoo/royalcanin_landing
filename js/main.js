@@ -1,108 +1,114 @@
-var $win = $(window),
-	$doc = $(document),
-	$html = $('html'),
-	$body = $('body');
+$(function(){
+	var $win = $(window),
+		$doc = $(document),
+		$html = $('html'),
+		$body = $('body');
 
-window.royalcaninUI = {};
+	window.royalcaninCat = {};
 
-// 레이어 팝업
-royalcaninUI.popup = {
-	bind: function () {
-		$doc
-			.on('click', '[data-popup]', function (e) {
+	// 레이어 팝업
+	royalcaninCat.popup = {
+		bind : function(){
+			$doc
+				.on('click', '[data-popup]', function(e){
 				var $this = $(this),
 					$html = $('html'),
 					val = $this.attr('data-popup');
 
-				if (val.match('@close')) {
-					royalcaninUI.popup.close($this.closest('.popup'));
+				if (val.match('@close')){
+					royalcaninCat.popup.close($this.closest('.popup'));
 				} else {
-					royalcaninUI.popup.show($(val));
+					royalcaninCat.popup.show($(val));
 				}
 
-				if ($this.is('a')) {
+				if ($this.is('a')){
 					e.preventDefault();
 				}
 			})
-			.on('click', '[data-popup-close]', function (e) {
+				.on('click', '[data-popup-close]', function(e){
 				var $this = $(this),
 					val = $this.attr('data-popup-close');
 
-				royalcaninUI.popup.close($(val));
+					royalcaninCat.popup.close($(val));
 
-				if ($this.is('a')) {
+				if ($this.is('a')){
 					e.preventDefault();
 				}
+			})
+				.on('click', '.popup-wrap.is-opened .out-area', function(e) {
+					// var $target = $(e.target);
+					var $this = $(this);
+					royalcaninCat.popup.close($this.siblings('.popup'));
+					// if(e.target)
 			});
-	},
-	show: function ($popup) {
-		if ($popup.length) {
-			var $wrap = $popup.parent(),
-				$html = $('html');
+		},
+		show : function($popup){
+			if ($popup.length){
+				var $wrap = $popup.parent(),
+					$html = $('html');
 
 
-			if (!$wrap.hasClass('popup-wrap')) {
-				$popup.wrap('<div class="popup-wrap"></div>');
-				$wrap = $popup.parent();
-			}
+				if (!$wrap.hasClass('popup-wrap')){
+					$popup.wrap('<div class="popup-wrap"></div>');
+					$wrap = $popup.parent();
+					$wrap.append('<div class="out-area"></div>');
+				}
 
-			if (!$wrap.hasClass('is-opened')) {
-				$wrap
-					.stop().fadeIn(100, function () {
+				if (!$wrap.hasClass('is-opened')){
+					$wrap
+						.stop().fadeIn(10, function(){
 						$popup.trigger('afterPopupOpened', $wrap);
 					})
-					.addClass('is-opened');
-			}
-
-			if (!$html.hasClass('popup-opened')) {
-				$html.addClass('popup-opened');
-			}
-
-			$popup.trigger('popupOpened', $wrap);
-		}
-	},
-	close: function ($popup) {
-		if ($popup.length) {
-			var $wrap = $popup.parent(),
-				$html = $('html');
-
-			$wrap.stop().fadeOut(100, function () {
-				$wrap.removeClass('is-opened');
-
-				if (!$('.popup-wrap.is-opened').length) {
-					$html.removeClass('popup-opened');
+						.addClass('is-opened');
 				}
-				// console.log("close");
-				checklist = {};
-				checklistEl = "";
-				$('.checklist.step2').html("");
 
-				//					$popup.trigger('afterpopupClosed', $wrap);
-			});
-
-			$popup.trigger('popupClosed', $wrap);
-		}
-	}
-};
-royalcaninUI.popup.bind();
-
-$win.load(function () {
-	$("body").addClass("is-load");
-});
-
-
-$doc.ready(function() {
-	$('.link-btn').on('click', function () {
-		var targetURL = $(this).attr('data-url');
-		var type = $(this).attr('data-link-type');
-		setTimeout(function() {
-			if (type == "_self") {
-				location.href = targetURL;
-			} else {
-				var win = window.open(targetURL, '_blank');
-				win.focus();
+				if (!$html.hasClass('popup-opened')){
+					$html.addClass('popup-opened');
+				}
+				$popup.trigger('popupOpened', $wrap);
 			}
-		}, 200);
+		},
+		close : function($popup){
+			if ($popup.length){
+				var $wrap = $popup.parent(),
+					$html = $('html');
+
+				$wrap.stop().fadeOut(10, function(){
+					$wrap.removeClass('is-opened');
+
+					if (!$('.popup-wrap.is-opened').length){
+						$html.removeClass('popup-opened');
+					}
+
+					//					$popup.trigger('afterpopupClosed', $wrap);
+				});
+				// if($popup.attr('data-popup-info')) {
+				// 	click_tracking($popup.attr('data-popup-info')+' 팝업 클로즈');
+				// }
+				$popup.trigger('popupClosed', $wrap);
+			}
+		}
+	};
+	royalcaninCat.popup.bind();
+
+	$win.load(function () {
+		$("body").addClass("is-load");
+	});
+
+
+	$doc.ready(function() {
+		$('.link-btn').on('click', function () {
+			var targetURL = $(this).attr('data-url');
+			var type = $(this).attr('data-link-type');
+			setTimeout(function() {
+				if (type == "_self") {
+					location.href = targetURL;
+				} else {
+					var win = window.open(targetURL, '_blank');
+					win.focus();
+				}
+			}, 200);
+		});
 	});
 });
 
