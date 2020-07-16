@@ -34,8 +34,20 @@
 }
 @-webkit-keyframes slide-in-left {
 	0% {
-	  -webkit-transform: translateX(-300px);
-			  transform: translateX(-300px);
+	  -webkit-transform: translateX(-100px);
+			  transform: translateX(-100px);
+	  opacity: 0;
+	}
+	100% {
+	  -webkit-transform: translateX(0);
+			  transform: translateX(0);
+	  opacity: 1;
+	}
+  }
+  @keyframes slide-in-left {
+	0% {
+	  -webkit-transform: translateX(-100px);
+			  transform: translateX(-100px);
 	  opacity: 0;
 	}
 	100% {
