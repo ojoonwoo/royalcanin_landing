@@ -24,7 +24,7 @@
 .content .section._01 .cat {
     opacity: 0;
 }
-.is_load .content .section._01 .cat {
+.is-load .content .section._01 .cat {
     opacity: 1;
 	-webkit-animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) 6s both;
             animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) 6s both;
@@ -38,17 +38,17 @@
 .main-anim3 {
     opacity: 0;
 }
-.is_load .main-anim1 {
+.is-load .main-anim1 {
     opacity: 1;
 	-webkit-animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
             animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
-.is_load .main-anim2 {
+.is-load .main-anim2 {
     opacity: 1;
 	-webkit-animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2s both;
             animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2s both;
 }
-.is_load .main-anim3 {
+.is-load .main-anim3 {
     opacity: 1;
 	-webkit-animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 4s both;
             animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 4s both;
