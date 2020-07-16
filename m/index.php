@@ -100,7 +100,7 @@
                     <div class="yt-container">
                         <img src="./images/yt_container_cat_body.png" alt="" class="object _body">
                         <img src="./images/yt_container_cat_tail.png" alt="" class="object _tail">
-                        <div class="comming-soon"><span>COMMING SOON</span></div>
+                        <div class="comming-soon"><span>COMING SOON</span></div>
                         <div id="player-infl" class="player"></div>
                     </div>
                 </div>
@@ -294,7 +294,7 @@
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/is-your-cat-stressed" target="_blank">
                             <img src="./images/article_img_01.png" alt="" class="thumb">
                             <span class="text">
-                                <span>반려묘 스트레스 확인 방법</span>
+                                <span>반려묘의 스트레스를 덜어주고 싶어요</span>
                                 <span>자세히 보기 ></span>
                             </span>
                         </a>
@@ -303,7 +303,7 @@
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/keeping-your-cat-at-a-healthy-weight" target="_blank">
                             <img src="./images/article_img_02.png" alt="" class="thumb">
                             <span class="text">
-                                <span>체중 유지 방법</span>
+                                <span>체중이 크게 늘어 걱정이에요</span>
                                 <span>자세히 보기 ></span>
                             </span>
                         </a>
@@ -312,7 +312,7 @@
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/my-cat-is-losing-its-hair" target="_blank">
                             <img src="./images/article_img_03.png" alt="" class="thumb">
                             <span class="text">
-                                <span>털이 빠지는 이유</span>
+                                <span>털이 왜 자꾸 빠지는걸까요?</span>
                                 <span>자세히 보기 ></span>
                             </span>
                         </a>
@@ -321,7 +321,7 @@
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/common-illnesses-in-older-cats" target="_blank">
                             <img src="./images/article_img_04.png" alt="" class="thumb">
                             <span class="text">
-                                <span>노령묘 질환</span>
+                                <span>노령묘는 무엇을 조심해야 할까요?</span>
                                 <span>자세히 보기 ></span>
                             </span>
                         </a>
@@ -330,7 +330,7 @@
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/how-your-cats-diet-affects-its-urinary-health" target="_blank">
                             <img src="./images/article_img_05.png" alt="" class="thumb">
                             <span class="text">
-                                <span>요로기계 건강이 중요한 이유</span>
+                                <span>요로기계 질환이 잦은 이유</span>
                                 <span>자세히 보기 ></span>
                             </span>
                         </a>
@@ -339,7 +339,7 @@
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/what-makes-a-cats-digestive-system-healthy" target="_blank">
                             <img src="./images/article_img_06.png" alt="" class="thumb">
                             <span class="text">
-                                <span>소화기계</span>
+                                <span>소화기계를 건강히 만드는 비결</span>
                                 <span>자세히 보기 ></span>
                             </span>
                         </a>

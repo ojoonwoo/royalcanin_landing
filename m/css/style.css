@@ -307,6 +307,7 @@ button.with-icon:after {
 	animation-iteration-count: infinite;
 	animation-duration: 1.75s;
 	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
 }
 .content .section._01 .scoll-down-group .anim._2 {
 	position: relative;
@@ -329,6 +330,7 @@ button.with-icon:after {
 	animation-iteration-count: infinite;
 	animation-duration: 1.75s;
 	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
 	transform-origin: 50% 100%;
 }
 @keyframes footDown {
@@ -1182,6 +1184,9 @@ select.select-box {
 	opacity: 0;
 	visibility: hidden;
 }
+.content.__checklist .list-wrapper li:last-child {
+	margin-bottom: 0;
+}
 .content.__checklist .list-wrapper .group:first-child li {
 	opacity: 1;
 	visibility: visible;
@@ -1363,7 +1368,7 @@ select.select-box {
 	letter-spacing: -0.05em;
 	font-weight: 700;
 	line-height: 1.3;
-	margin-bottom: 16px;
+	margin-bottom: 13px;
 }
 .content.__result .advice-block .adv-subject b {
 	font-weight: 800;
@@ -1377,7 +1382,8 @@ select.select-box {
 	line-height: 1.35;
 	margin-bottom: 2px;
 }
-.content.__result .advice-block .adv-text .default-msg {
+.content.__result .advice-block .adv-text .default-msg,
+.content.__result .advice-block .adv-text .doctor-msg {
 	display: block;
 	font-size: 12px;
 	font-weight: 800;

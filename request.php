@@ -1,11 +1,11 @@
 <?php
     include_once "./head.php";
 
-    include_once "./include/autoload.php";
-    $mnv_f 			= new mnv_function();
-    $my_db      = $mnv_f->Connect_MySQL();
-
     $serial = $_GET['serial'];
+
+    if ($_SESSION['miniver_serial'] != $serial || !$_SESSION['miniver_serial'] || !$serial) {
+        echo "<script>location.href = 'index_cat.php';</script>";
+    }
 
     $query = "SELECT mb_cat_name FROM member_info WHERE 1 AND mb_serial = '".$serial."'";
     $result = mysqli_query($my_db, $query);
@@ -27,7 +27,7 @@
                         <li>
                             <a href="index_cat.php#section2">주치의 프로젝트</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="index_cat.php#section3">주치의력 테스트</a>
                         </li>
                         <li>
@@ -39,11 +39,9 @@
         </div>
         <div class="content _sub __request">
             <div class="inner">
-
-                <div class="sub-header">
-                    <a href="javascript:history.back()" id="go-before"></a>
-                    <!-- <a href="./" id="go-index"></a> -->
-                </div>
+                <?php
+                include_once "./sub_header.php";
+                ?>
                 <div class="title-block">
                     <div class="prj-title">
                         <img src="./images/project_logo.svg" class="project-logo" alt="고양이 주치의 프로젝트">
@@ -75,7 +73,7 @@
                                 <label for="sido">동물병원 찾기</label>
                             </div>
                             <div class="input">
-                                <select id="sido" class="select-box">
+                                <select id="sido" class="select-box for-central">
                                     <option value="" selected>시/도</option>
 <?php
     $query = "SELECT sido FROM juso_info WHERE 1 GROUP BY sido";
@@ -88,10 +86,10 @@
     }
 ?>                            
                                 </select>
-                                <select id="sigugun" class="select-box">
+                                <select id="sigugun" class="select-box for-central">
                                     <option value="" selected>시/구/군</option>
                                 </select>
-                                <button type="button" id="addr-search"><span class="for-a11y">찾기</span></button>
+                                <button type="button" id="addr-search" class="for-central"><span class="for-a11y">찾기</span></button>
                             </div>
                         </div>
                     </div>
@@ -100,18 +98,18 @@
                             <div class="label">
                             </div>
                             <div class="input">
-                                <input type="text" class="input-text" id="req-addr" placeholder="내가 선택한 병원" readonly>
+                                <input type="text" class="input-text" id="req-addr" placeholder="내가 선택한 동물병원" readonly>
                                 <p class="guide-msg">* 건강검진권, 헤마츄리아 당첨 시 선택한 동물병원에서만 검진 및 수령이 가능하며 변경이 불가하니 신중하게 선택해주세요.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" style="margin-bottom: 40px;margin-top: 20px;">
                         <div class="input-group">
                             <div class="label">
                                 <label for="req-name">보호자 이름</label>
                             </div>
                             <div class="input">
-                                <input type="text" class="input-text" id="req-name" placeholder="">
+                                <input type="text" class="input-text" id="req-name" placeholder="보호자 이름을 입력해주세요.">
                             </div>
                         </div>
                     </div>
@@ -276,6 +274,8 @@
         // serial 없으면 고양이 정보입력으로 튕길것
         var $doc = $(document);
         var hospiName = "";
+        var hospiAddr = "";
+        var sudoYN = "";
         $doc.ready(function() {
             $doc.on('click', '.loc-trigger', function() {
                 var $this = $(this);
@@ -291,7 +291,7 @@
                     royalcaninCat.popup.show($('#other-popup'));
                 } else {
                     $('#nv-h-name, #nv-h-addr').val('');
-                    $('.for-central').show();
+                    $('.for-central').attr('disabled', false);
                 }
                 hospiName = "",
                 hospiAddr = "";
@@ -319,7 +319,7 @@
 
                 if(hospiName.length>0 && hospiAddr.length>0) {
                     if(popupId==='other-popup') {
-                        $('.for-central').hide();
+                        $('.for-central').attr('disabled', true);
                     }
                     $('#req-addr').val(hospiAddr+" "+hospiName);
                     royalcaninCat.popup.close($('#'+popupId));

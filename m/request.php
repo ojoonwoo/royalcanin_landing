@@ -1,11 +1,11 @@
 <?php
     include_once "./head.php";
 
-    include_once "../include/autoload.php";
-    $mnv_f 			= new mnv_function();
-    $my_db      = $mnv_f->Connect_MySQL();
-
     $serial = $_GET['serial'];
+
+    if ($_SESSION['miniver_serial'] != $serial || !$_SESSION['miniver_serial'] || !$serial) {
+        echo "<script>location.href = 'index.php';</script>";
+    }
 
     $query = "SELECT mb_cat_name FROM member_info WHERE 1 AND mb_serial = '".$serial."'";
     $result = mysqli_query($my_db, $query);
@@ -67,14 +67,14 @@
                 </div>
                 <div class="row">
                     <div class="input-group">
-                        <input type="text" class="input-text" id="req-addr" placeholder="내가 선택한 병원" readonly>
+                        <input type="text" class="input-text" id="req-addr" placeholder="내가 선택한 동물병원" readonly>
                         <p class="guide-msg">* 건강검진권, 헤마츄리아 당첨 시 선택한 동물병원에서만 검진 및 수령이 가능하며 변경이 불가하니 신중하게 선택해주세요.</p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" style="margin-bottom: 26px;">
                     <div class="input-group">
                         <label for="req-name">보호자 이름</label>
-                        <input type="text" class="input-text" id="req-name" placeholder="">
+                        <input type="text" class="input-text" id="req-name" placeholder="보호자 이름을 입력해주세요.">
                     </div>
                 </div>
                 <div class="row">
@@ -193,7 +193,7 @@
                     royalcaninCat.popup.show($('#other-popup'));
                 } else {
                     $('#nv-h-name, #nv-h-addr').val('');
-                    $('.for-central').show();
+                    $('.for-central').attr('disabled', false);
                 }
                 hospiName = "",
                 hospiAddr = "";
@@ -221,7 +221,7 @@
 
                 if(hospiName.length>0 && hospiAddr.length>0) {
                     if(popupId==='other-popup') {
-                        $('.for-central').hide();
+                        $('.for-central').attr('disabled', true);
                     }
                     $('#req-addr').val(hospiAddr+" "+hospiName);
                     royalcaninCat.popup.close($('#'+popupId));
