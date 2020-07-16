@@ -459,6 +459,7 @@
     </script>
     <script>
         $(window).on('load', function(){
+            console.log('aaa');
             $("body").addClass("is-load");
         })
         // $(window).load(function () {
