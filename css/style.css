@@ -1275,7 +1275,7 @@ select.select-box {
 }
 .content.__checklist #go-next {
 	/* display: block; */
-	margin: 39px auto 89px;
+	margin: 39px auto 98px;
 	/* width: 201px; */
 }
 
@@ -1479,7 +1479,8 @@ select.select-box {
 	line-height: 1.35;
 	margin-bottom: 2px;
 }
-.content.__result .advice-block .adv-text .default-msg {
+.content.__result .advice-block .adv-text .default-msg,
+.content.__result .advice-block .adv-text .doctor-msg {
 	display: block;
 	font-size: 16px;
 	font-weight: 700;

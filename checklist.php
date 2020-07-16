@@ -15,6 +15,9 @@
     <div id="container">
         <div id="header">
             <div class="inner">
+                <a href="./index_cat.php" class="logo">
+                    <img src="./images/logo.png" alt="로얄캐닌 홈으로">
+                </a>
                 <nav class="menu">
                     <ul>
                         <li>
