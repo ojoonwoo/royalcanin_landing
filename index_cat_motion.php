@@ -458,10 +458,10 @@
     }
     </script>
     <script>
-        $(window).on('load', function(){
-            console.log('aaa');
-            $("body").addClass("is-load");
-        })
+        // $(window).on('load', function(){
+        //     console.log('aaa');
+        //     $("body").addClass("is-load");
+        // })
         // $(window).load(function () {
         // });
         $(document).ready(function() {
