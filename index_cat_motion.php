@@ -24,61 +24,44 @@
 .content .section._01 .cat {
     opacity: 0;
 }
-.is_load .content .section._01 .cat {
-    opacity: 1;
-	-webkit-animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) 6s both;
-            animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) 6s both;
-}
-.main-anim1 {
+.content .section._01 .title-block {
     opacity: 0;
 }
-.main-anim2 {
-    opacity: 0;
-}
-.main-anim3 {
-    opacity: 0;
-}
-.is_load .main-anim1 {
+.content .section._01 .title-block {
     opacity: 1;
-	-webkit-animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-            animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	-webkit-animation: slide-in-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both;
+			animation: slide-in-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both;
 }
-.is_load .main-anim2 {
+.is-load .content .section._01 .cat {
     opacity: 1;
-	-webkit-animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2s both;
-            animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2s both;
+    -webkit-animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.5s both;
+    animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.5s both;
 }
-.is_load .main-anim3 {
-    opacity: 1;
-	-webkit-animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 4s both;
-            animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 4s both;
-}
-
-@-webkit-keyframes scale-in-center {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 1;
+@-webkit-keyframes slide-in-left {
+	0% {
+	  -webkit-transform: translateX(-50px);
+			  transform: translateX(-50px);
+	  opacity: 0;
+	}
+	100% {
+	  -webkit-transform: translateX(0);
+			  transform: translateX(0);
+	  opacity: 1;
+	}
   }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
+  @keyframes slide-in-left {
+	0% {
+	  -webkit-transform: translateX(-50px);
+			  transform: translateX(-50px);
+	  opacity: 0;
+	}
+	100% {
+	  -webkit-transform: translateX(0);
+			  transform: translateX(0);
+	  opacity: 1;
+	}
   }
-}
-@keyframes scale-in-center {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fade-in {
+  @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -468,6 +451,7 @@
             paramObj = get_query();
             // paramValArr = Object.values(paramObj);
             paramValArr = get_param_arr(paramObj);
+            $("body").addClass("is-load");
 
             // 메인 섹션 1 한화면에 보일 수 있도록 조정
             // var winwidth = $(window).width();
