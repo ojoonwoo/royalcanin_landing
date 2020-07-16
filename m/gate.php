@@ -204,7 +204,9 @@
                             location.href = "./checklist.php?serial=<?php echo $serial?>";
                         }, 200);
                     }else{
-                        alert('error');
+                        console.log('error');
+                        alert("참여자가 많아 접속이 지연되고 있습니다. 다시 시도해 주세요!")
+                        location.reload();
                     }
                 },
                 error: function(jqXHR, errMsg) {
