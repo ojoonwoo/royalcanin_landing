@@ -188,6 +188,7 @@
         });
         function loadingEnd() {
             myChart.data.datasets[0].data = [resultObject.weight.point, resultObject.stress.point, resultObject.urinary.point, resultObject.kidney.point, resultObject.gastro.point];
+            // myChart.data.datasets[0].data = [100, 100, 100, 100, 100];
             myChart.update();
             for(var i=0; i<adviceArray.length; i++) {
                 $('.chart-wrapper .labels .'+adviceArray[i]).addClass('is-active');
