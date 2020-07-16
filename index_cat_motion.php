@@ -22,12 +22,36 @@
 ?>
 <style>
 .content .section._01 .cat {
-	-webkit-animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
-            animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+    opacity: 0;
+}
+.is_load .content .section._01 .cat {
+    opacity: 1;
+	-webkit-animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) 6s both;
+            animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) 6s both;
 }
 .main-anim1 {
-	-webkit-animation: fade-in 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-            animation: fade-in 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    opacity: 0;
+}
+.main-anim2 {
+    opacity: 0;
+}
+.main-anim3 {
+    opacity: 0;
+}
+.is_load .main-anim1 {
+    opacity: 1;
+	-webkit-animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+.is_load .main-anim2 {
+    opacity: 1;
+	-webkit-animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2s both;
+            animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2s both;
+}
+.is_load .main-anim3 {
+    opacity: 1;
+	-webkit-animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 4s both;
+            animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) 4s both;
 }
 
 @-webkit-keyframes scale-in-center {
@@ -434,6 +458,12 @@
     }
     </script>
     <script>
+        // $(window).on('load', function(){
+        //     console.log('aaa');
+        //     $("body").addClass("is-load");
+        // })
+        // $(window).load(function () {
+        // });
         $(document).ready(function() {
             paramObj = get_query();
             // paramValArr = Object.values(paramObj);
