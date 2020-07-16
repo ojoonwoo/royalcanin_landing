@@ -938,7 +938,7 @@ select.select-box {
 	letter-spacing: -0.05em;
 	color: #333333;
 	line-height: 1.2;
-	transition: all 0.25s ease;
+	/* transition: color 0.25s ease; */
 }
 /* :active, */
 .content .chk-trigger:active {
