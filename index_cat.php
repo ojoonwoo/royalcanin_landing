@@ -226,7 +226,7 @@
                 <ul class="article-list">
                     <li>
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/is-your-cat-stressed" target="_blank">
-                            <div cla="img">
+                            <div class="img">
                                 <img src="./images/article_img_01.png" alt="" class="thumb">
                             </div>
                             <span class="text">
@@ -236,7 +236,7 @@
                     </li>
                     <li>
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/keeping-your-cat-at-a-healthy-weight" target="_blank">
-                            <div cla="img">
+                            <div class="img">
                                 <img src="./images/article_img_02.png" alt="" class="thumb">
                             </div>
                             <span class="text">
@@ -246,7 +246,7 @@
                     </li>
                     <li>
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/my-cat-is-losing-its-hair" target="_blank">
-                            <div cla="img">
+                            <div class="img">
                                 <img src="./images/article_img_03.png" alt="" class="thumb">
                             </div>
                             <span class="text">
@@ -256,7 +256,7 @@
                     </li>
                     <li>
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/common-illnesses-in-older-cats" target="_blank">
-                            <div cla="img">
+                            <div class="img">
                                 <img src="./images/article_img_04.png" alt="" class="thumb">
                             </div>
                             <span class="text">
@@ -266,7 +266,7 @@
                     </li>
                     <li>
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/how-your-cats-diet-affects-its-urinary-health" target="_blank">
-                            <div cla="img">
+                            <div class="img">
                                 <img src="./images/article_img_05.png" alt="" class="thumb">
                             </div>
                             <span class="text">
@@ -276,7 +276,7 @@
                     </li>
                     <li>
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/what-makes-a-cats-digestive-system-healthy" target="_blank">
-                            <div cla="img">
+                            <div class="img">
                                 <img src="./images/article_img_06.png" alt="" class="thumb">
                             </div>
                             <span class="text">
