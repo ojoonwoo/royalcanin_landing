@@ -40,8 +40,8 @@
 }
 .is-load .main-anim1 {
     opacity: 1;
-	-webkit-animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-            animation: fade-in 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 .is-load .main-anim2 {
     opacity: 1;
@@ -91,6 +91,30 @@
     opacity: 0;
   }
   100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
     opacity: 1;
   }
 }
