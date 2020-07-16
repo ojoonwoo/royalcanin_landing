@@ -91,9 +91,9 @@ $(function(){
 	};
 	royalcaninCat.popup.bind();
 
-	$win.load(function () {
-		$("body").addClass("is-load");
-	});
+	// $win.load(function () {
+	// 	$("body").addClass("is-load");
+	// });
 
 
 	$doc.ready(function() {

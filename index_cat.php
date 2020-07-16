@@ -378,6 +378,7 @@
             paramObj = get_query();
             // paramValArr = Object.values(paramObj);
             paramValArr = get_param_arr(paramObj);
+            $("body").addClass("is-load");
 
             // 메인 섹션 1 한화면에 보일 수 있도록 조정
             // var winwidth = $(window).width();
