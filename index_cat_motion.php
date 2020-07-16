@@ -50,13 +50,13 @@
 }
 .is-load .main-anim2 {
     opacity: 1;
-	-webkit-animation: text-focus-in 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
-            animation: text-focus-in 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1s both;
 }
 .is-load .main-anim3 {
     opacity: 1;
-	-webkit-animation: text-focus-in 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2s both;
-            animation: text-focus-in 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 2s both;
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
+	        animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2s both;
 }
 .content .section._01 .title-block .sub-title {
     opacity: 1;
