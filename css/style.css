@@ -743,8 +743,10 @@ button.with-icon:after {
 
 .content .section._04 .tab-container li button {
 	position: relative;
-	padding: 20px 25px 17px;
+	padding: 18px 10px 19px;
 	text-align: center;
+	display: block;
+	width: 100%;
 }
 .content .section._04 .tab-container li button:after {
 	content: "";
@@ -752,18 +754,19 @@ button.with-icon:after {
 	position: absolute;
 	bottom: -7px;
 	left: 0;
+	right: 0;
 	width: 156px;
 	height: 7px;
 	background-color: #e3001a;
 	transform: scale(0);
 }
 .content .section._04 .tab-container li button .icon {
-	margin: 0 auto 12px;
+	margin: 0 auto 8px;
 	display: block;
-	width: 24px;
-	height: 24px;
+	/* width: 24px;
+	height: 24px; */
 	border-radius: 50%;
-	background-color: #e9e9e9;
+	/* background-color: #e9e9e9; */
 }
 .content .section._04 .tab-container li button span {
 	font-size: 16px;
@@ -779,7 +782,7 @@ button.with-icon:after {
 	transform: scale(1);
 }
 .content .section._04 .tab-container li button.is-active .icon {
-	background-color: #e3001a;
+	/* background-color: #e3001a; */
 }
 .content .section._04 .tips-video-container {
 	padding: 20px 20px 38px;
@@ -872,8 +875,8 @@ select.select-box {
 	height: 45px;
 	background-color: #f0f0f0;
 	background-image: url(../images/select_arrow.png);
-	background-size: 10px 6px;
-	background-position: 94% 50%;
+	background-size: 9px 6px;
+	background-position: 91% 50%;
 	background-repeat: no-repeat;
 	font-family: 'Noto Sans Korean';
 	font-weight: 500;

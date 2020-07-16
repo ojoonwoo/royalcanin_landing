@@ -31,7 +31,7 @@
     <div id="container">
         <div id="header">
             <div class="inner">
-                <a href="./" class="logo">
+                <a href="./index_cat.php" class="logo">
                     <img src="./images/logo.png" alt="로얄캐닌 홈으로">
                 </a>
                 <nav class="menu">
@@ -140,7 +140,7 @@
                     <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                     <p class="prj-title">
                         <span class="text">
-                            <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon2"><em>테스트</em>
+                            <em>주치의</em><img src="./images/icon_power2.png" alt="력" class="icon2"><em>테스트</em>
                         </span>
                     </p>
                     <p class="sub">
@@ -149,14 +149,6 @@
                     </p>
                     <div class="date-block">
                         <p>참여기간  : 2020. 07. 30 ~ 08. 30  /  당첨자 확인 : 2020. 09. 30 </p>
-                        <!-- <dl>
-                            <dt>참여기간</dt>
-                            <dd>0000. 00. 00 ~ 0000. 00. 00</dd>
-                        </dl>
-                        <dl>
-                            <dt>당첨자 확인</dt>
-                            <dd>0000. 00. 00</dd>
-                        </dl> -->
                     </div>
                     <div class="bg-graph">
                         <img src="./images/section_03_group.png" alt="" class="img-group">
@@ -182,7 +174,7 @@
                     <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                     <p class="prj-title">
                         <span class="text">
-                            <em>주치의</em><img src="./images/icon_power.png" alt="력" class="icon2"><em>업그레이드 TIPS</em>
+                            <em>주치의</em><img src="./images/icon_power2.png" alt="력" class="icon2"><em>업그레이드 TIPS</em>
                         </span>
                     </p>
                 </div>
@@ -190,44 +182,44 @@
                     <ul class="tab-container" data-video-target="tips">
                         <li>
                             <button type="button" class="tab-trigger is-active" data-key="SauuYLbs_FI">
-                                <img src="" alt="" class="icon thumb">
-                                <span>고양이를 병원에<br>데려가는 꿀팁</span>
+                                <img src="./images/tips_tab_icon_01_active.png" alt="" class="icon thumb" style="width:27px">
+                                <span>동물병원 쉽게<br />데려가는 방법</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s">
-                                <img src="" alt="" class="icon thumb">
-                                <span>OOO질병이<br>궁금하시다면?</span>
+                                <img src="./images/tips_tab_icon_02_common.png" alt="" class="icon thumb" style="width:24px">
+                                <span>반려묘에게<br />치명적인 질병은?</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s">
-                                <img src="" alt="" class="icon thumb">
-                                <span>5가지 징후<br>요로계</span>
+                                <img src="./images/tips_tab_icon_03_common.png" alt="" class="icon thumb" style="width:26px">
+                                <span>체중관리가 필요할 때<br />보이는 행동 5</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="coy3EAxcrv0">
-                                <img src="" alt="" class="icon thumb">
-                                <span>5가지 징후<br>스트레스</span>
+                                <img src="./images/tips_tab_icon_04_common.png" alt="" class="icon thumb" style="width:28px">
+                                <span>반려묘의 소화기<br />위험신호</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="hdhT-xC3byo">
-                                <img src="" alt="" class="icon thumb">
-                                <span>5가지 징후<br>신장</span>
+                                <img src="./images/tips_tab_icon_05_common.png" alt="" class="icon thumb" style="width:32px">
+                                <span>신장 관리<br />적색 신호</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="8JscdpO7oeg">
-                                <img src="" alt="" class="icon thumb">
-                                <span>5가지 징후<br>소화기</span>
+                                <img src="./images/tips_tab_icon_06_common.png" alt="" class="icon thumb" style="width:20px">
+                                <span>반려묘의<br />스트레스 신호</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="hmiCvnEDckA">
-                                <img src="" alt="" class="icon thumb">
-                                <span>5가지 징후<br>체중</span>
+                                <img src="./images/tips_tab_icon_07_common.png" alt="" class="icon thumb" style="width:29px">
+                                <span>반려묘의<br />요로계 위험신호</span>
                             </button>
                         </li>
                     </ul>
@@ -484,10 +476,18 @@
                     $('.comming-soon').show();
                 } else {
                     $('#player-infl').css('opacity', '1');
-                    playerInfl.loadVideoById(targetKey, 0);
+                    playerInfl.cueVideoById({
+                        'videoId': targetKey,
+                        'startSeconds': 0,
+                        'suggestedQuality': 'large'
+                    });
                 }
             } else {
-                playerTips.loadVideoById(targetKey, 0);
+                playerTips.cueVideoById({
+                    'videoId': targetKey,
+                    'startSeconds': 0,
+                    'suggestedQuality': 'large'
+                });
             }
         });
 

@@ -150,7 +150,7 @@
                 },
                 error: function(jqXHR, errMsg) {
                     // Handle error
-                    alert(errMsg);
+                    console.log(errMsg);
                 }
             });
         }

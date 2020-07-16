@@ -80,9 +80,9 @@
                 <div class="row">
                     <div class="input-group _tel">
                         <label for="req-phone1">휴대 전화번호</label>
-                        <input type="text" class="input-text" id="req-phone1" placeholder="">
-                        <input type="text" class="input-text" id="req-phone2" placeholder="">
-                        <input type="text" class="input-text" id="req-phone3" placeholder="">
+                        <input type="text" class="input-text" id="req-phone1" placeholder="" onkeyup="only_num(this);lengthCheck(this, 3)">
+                        <input type="text" class="input-text" id="req-phone2" placeholder="" onkeyup="only_num(this);lengthCheck(this, 4)">
+                        <input type="text" class="input-text" id="req-phone3" placeholder="" onkeyup="only_num(this);lengthCheck(this, 4)">
                         <p class="guide-msg">* 본 무료 건강검진권과 헤마츄리아는 추첨을 통해 제공되며, 추첨은 별개로 진행됩니다.</p>
                     </div>
                 </div>
@@ -303,17 +303,87 @@
                 }
 
                 // 입력한 정보 저장 & 참여 완료 쿠키 생성
+                $.ajax({
+                    url: "./main_exec.php",
+                    type: 'POST',
+                    data: {
+                        "exec"          : "update_member_data",
+                        "sudoYN"        : sudoYN,
+                        "hospiName"     : hospiName,
+                        "hospiAddr"     : hospiAddr,
+                        "userName"      : userName,
+                        "phoneNumber"   : phoneNumber,
+                        "serial"    : "<?php echo $serial?>"
+                    },
+                    success: function (response) {
+                        console.log(response);
+                        setCookie("cathealth_completed","Y","7") //변수, 변수값, 저장기간
+                        royalcaninCat.popup.show($('#complete-popup'));
+                    },
+                    error: function(jqXHR, errMsg) {
+                        // Handle error
+                        console.log(errMsg);
+                    }
+                });
 
-                alert('입력한 정보 저장 & 쿠키 생성');
-                setCookie("cathealth_completed","Y","7") //변수, 변수값, 저장기간
-                royalcaninCat.popup.show($('#complete-popup'));
+                // alert('입력한 정보 저장 & 쿠키 생성');
+                // setCookie("cathealth_completed","Y","7") //변수, 변수값, 저장기간
+                // royalcaninCat.popup.show($('#complete-popup'));
             });
 
             $doc.on('click', '#btn-complete', function() {
-                alert('참여가 완료되었습니다!');
+                // alert('참여가 완료되었습니다!');
                 location.href="./index.php#section4";
             });
         });
+
+        function only_num(obj)
+        {
+            var inText = obj.value;
+            var outText = "";
+            var flag = true;
+            var ret;
+            for(var i = 0; i < inText.length; i++)
+            {
+                ret = inText.charCodeAt(i);
+                if((ret < 48) || (ret > 57))
+                {
+                    flag = false;
+                }
+                else
+                {
+                    outText += inText.charAt(i);
+                }
+            }
+
+            if(flag == false)
+            {
+                alert("전화번호는 숫자입력만 가능합니다.");
+                obj.value = outText;
+                obj.focus();
+                return false;
+            }
+            return true;
+        }
+
+        function lengthCheck(obj, ln) {
+            var $obj = $(obj);
+            var regExp = /^[0-9]+$/;
+            
+            if(!regExp.test($obj.val())) {
+                $obj.val($obj.val().replace(/[^0-9]/g, ""));
+            } else {
+                if($obj.val().length>=ln) {
+                    // $obj.is('input:last-child') ? $obj.blur() : $obj.next().focus();
+                    if ($obj.attr("id") == "req-phone1")
+                        $("#req-phone2").focus();
+                    else if ($obj.attr("id") == "req-phone2")
+                        $("#req-phone3").focus();
+                    else
+                        $obj.blur();
+                }
+            }
+        }
         
     </script>
 </body>

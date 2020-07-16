@@ -16,22 +16,22 @@
     <div id="container">
         <div id="header">
             <div class="inner">
-                <a href="./" class="logo">
+                <a href="./index_cat.php" class="logo">
                     <img src="./images/logo.png" alt="로얄캐닌 홈으로">
                 </a>
                 <nav class="menu">
                     <ul>
-                        <li class="active">
-                            <a href="./#section1">메인</a>
+                        <li>
+                            <a href="index_cat.php#section1">메인</a>
                         </li>
                         <li>
-                            <a href="./#section2">주치의 프로젝트</a>
+                            <a href="index_cat.php#section2">주치의 프로젝트</a>
                         </li>
                         <li>
-                            <a href="./#section3">주치의력 테스트</a>
+                            <a href="index_cat.php#section3">주치의력 테스트</a>
                         </li>
                         <li>
-                            <a href="./#section4">주치의력 업그레이드 TIPS</a>
+                            <a href="index_cat.php#section4">주치의력 업그레이드 TIPS</a>
                         </li>
                     </ul>
                 </nav>
@@ -41,8 +41,8 @@
             <div class="inner">
 
                 <div class="sub-header">
-                    <a href="javascript:void(0)" id="go-before"></a>
-                    <a href="./" id="go-index"></a>
+                    <a href="javascript:history.back()" id="go-before"></a>
+                    <!-- <a href="./" id="go-index"></a> -->
                 </div>
                 <div class="title-block">
                     <div class="prj-title">
@@ -121,9 +121,9 @@
                                 <label for="req-phone1">휴대 전화번호</label>
                             </div>
                             <div class="input">
-                                <input type="text" class="input-text" id="req-phone1" placeholder="">
-                                <input type="text" class="input-text" id="req-phone2" placeholder="">
-                                <input type="text" class="input-text" id="req-phone3" placeholder="">
+                                <input type="text" class="input-text" id="req-phone1" placeholder="" onkeyup="only_num(this);lengthCheck(this, 3)">
+                                <input type="text" class="input-text" id="req-phone2" placeholder="" onkeyup="only_num(this);lengthCheck(this, 4)">
+                                <input type="text" class="input-text" id="req-phone3" placeholder="" onkeyup="only_num(this);lengthCheck(this, 4)">
                                 <p class="guide-msg">* 본 무료 건강검진권과 헤마츄리아는 추첨을 통해 제공되며, 추첨은 별개로 진행됩니다.</p>
                             </div>
                         </div>
@@ -430,11 +430,59 @@
             });
 
             $doc.on('click', '#btn-complete', function() {
-                alert('참여가 완료되었습니다!');
-                location.href="./index.php#section4";
+                // alert('참여가 완료되었습니다!');
+                location.href="./index_cat.php#section4";
             });
         });
         
+        function only_num(obj)
+        {
+            var inText = obj.value;
+            var outText = "";
+            var flag = true;
+            var ret;
+            for(var i = 0; i < inText.length; i++)
+            {
+                ret = inText.charCodeAt(i);
+                if((ret < 48) || (ret > 57))
+                {
+                    flag = false;
+                }
+                else
+                {
+                    outText += inText.charAt(i);
+                }
+            }
+
+            if(flag == false)
+            {
+                alert("전화번호는 숫자입력만 가능합니다.");
+                obj.value = outText;
+                obj.focus();
+                return false;
+            }
+            return true;
+        }
+
+        function lengthCheck(obj, ln) {
+            var $obj = $(obj);
+            var regExp = /^[0-9]+$/;
+            
+            if(!regExp.test($obj.val())) {
+                $obj.val($obj.val().replace(/[^0-9]/g, ""));
+            } else {
+                if($obj.val().length>=ln) {
+                    // $obj.is('input:last-child') ? $obj.blur() : $obj.next().focus();
+                    if ($obj.attr("id") == "req-phone1")
+                        $("#req-phone2").focus();
+                    else if ($obj.attr("id") == "req-phone2")
+                        $("#req-phone3").focus();
+                    else
+                        $obj.blur();
+                }
+            }
+        }
+
     </script>
 </body>
 </html>

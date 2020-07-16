@@ -3,9 +3,9 @@
 
     $serial = $_GET['serial'];
 
-    // if ($_SESSION['miniver_serial'] != $serial || !$_SESSION['miniver_serial'] || !$serial) {
-    //     echo "<script>location.href = 'index.php';</script>";
-    // }
+    if ($_SESSION['miniver_serial'] != $serial || !$_SESSION['miniver_serial'] || !$serial) {
+        echo "<script>location.href = 'index.php';</script>";
+    }
 
     $query = "SELECT mb_cat_name FROM member_info WHERE mb_serial='".$serial."'";
     $result 	= mysqli_query($my_db, $query);
@@ -15,22 +15,22 @@
     <div id="container">
         <div id="header">
             <div class="inner">
-                <a href="./" class="logo">
+                <a href="./index_cat.php" class="logo">
                     <img src="./images/logo.png" alt="로얄캐닌 홈으로">
                 </a>
                 <nav class="menu">
                     <ul>
-                        <li class="active">
-                            <a href="./#section1">메인</a>
+                        <li>
+                            <a href="index_cat.php#section1">메인</a>
                         </li>
                         <li>
-                            <a href="./#section2">주치의 프로젝트</a>
+                            <a href="index_cat.php#section2">주치의 프로젝트</a>
                         </li>
                         <li>
-                            <a href="./#section3">주치의력 테스트</a>
+                            <a href="index_cat.php#section3">주치의력 테스트</a>
                         </li>
                         <li>
-                            <a href="./#section4">주치의력 업그레이드 TIPS</a>
+                            <a href="index_cat.php#section4">주치의력 업그레이드 TIPS</a>
                         </li>
                     </ul>
                 </nav>
@@ -39,7 +39,7 @@
         <div class="content _sub __checklist">
             <div class="inner">
                 <div class="sub-header">
-                    <a href="javascript:void(0)" id="go-before"></a>
+                    <a href="javascript:history.back()" id="go-before"></a>
                     <a href="./" id="go-index"></a>
                 </div>
                 <div class="title-block">
@@ -136,7 +136,7 @@
                         },
                         error: function(jqXHR, errMsg) {
                             // Handle error
-                            alert(errMsg);
+                            console.log(errMsg);
                         }
                     });
                     this.bind();
@@ -167,7 +167,7 @@
                 },
                 nextStep: function() {
                     if(currentStep>3) {
-                        alert('로딩&결과 페이지로 이동합니다.');
+                        // alert('로딩&결과 페이지로 이동합니다.');
                         this.submit();
                         return;
                     } else {
