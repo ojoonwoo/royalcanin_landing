@@ -34,8 +34,8 @@
 }
 .is-load .content .section._01 .cat {
     opacity: 1;
-    -webkit-animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
-    animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+    -webkit-animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 @-webkit-keyframes slide-in-left {
 	0% {
