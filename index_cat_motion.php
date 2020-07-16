@@ -458,9 +458,11 @@
     }
     </script>
     <script>
-        $(window).load(function () {
+        $(window).on('load', function(){
             $("body").addClass("is-load");
-        });
+        })
+        // $(window).load(function () {
+        // });
         $(document).ready(function() {
             paramObj = get_query();
             // paramValArr = Object.values(paramObj);
