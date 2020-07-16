@@ -80,9 +80,9 @@
                 <div class="row">
                     <div class="input-group _tel">
                         <label for="req-phone1">휴대 전화번호</label>
-                        <input type="text" class="input-text" id="req-phone1" placeholder="" onkeyup="only_num(this);lengthCheck(this, 3)">
-                        <input type="text" class="input-text" id="req-phone2" placeholder="" onkeyup="only_num(this);lengthCheck(this, 4)">
-                        <input type="text" class="input-text" id="req-phone3" placeholder="" onkeyup="only_num(this);lengthCheck(this, 4)">
+                        <input type="tel" class="input-text" id="req-phone1" placeholder="" onkeyup="only_num(this);lengthCheck(this, 3)">
+                        <input type="tel" class="input-text" id="req-phone2" placeholder="" onkeyup="only_num(this);lengthCheck(this, 4)">
+                        <input type="tel" class="input-text" id="req-phone3" placeholder="" onkeyup="only_num(this);lengthCheck(this, 4)">
                         <p class="guide-msg">* 본 무료 건강검진권과 헤마츄리아는 추첨을 통해 제공되며, 추첨은 별개로 진행됩니다.</p>
                     </div>
                 </div>
@@ -304,7 +304,7 @@
 
                 // 입력한 정보 저장 & 참여 완료 쿠키 생성
                 $.ajax({
-                    url: "./main_exec.php",
+                    url: "../main_exec.php",
                     type: 'POST',
                     data: {
                         "exec"          : "update_member_data",
