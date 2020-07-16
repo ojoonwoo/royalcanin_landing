@@ -86,9 +86,9 @@ royalcaninUI.popup = {
 };
 royalcaninUI.popup.bind();
 
-$win.load(function () {
-	$("body").addClass("is-load");
-});
+// $win.load(function () {
+// 	$("body").addClass("is-load");
+// });
 
 // var paramObj = {};
 // var paramValResultArr = [];
