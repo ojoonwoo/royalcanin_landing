@@ -21,7 +21,8 @@
 		<link rel="stylesheet" href="./css/font.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
 		<link rel="stylesheet" href="./css/style.css?ver=2006291519">
-		<script src="./js/jquery-3.3.1.min.js"></script>
+        <!-- <script src="./js/jquery-3.3.1.min.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
 		<script src="./js/m_main.js"></script>
 	</head>
