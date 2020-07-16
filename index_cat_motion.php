@@ -25,6 +25,10 @@
 	-webkit-animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
             animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
 }
+.main-anim1 {
+	-webkit-animation: fade-in 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            animation: fade-in 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
 
 @-webkit-keyframes scale-in-center {
   0% {
@@ -50,6 +54,23 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 </style>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -89,9 +110,9 @@
                     <h1 class="title-block">
                         <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                         <div class="main-title">
-                            <p>고양이는</p>
-                            <p class="bg-line">아파도 숨기는 사실,</p>
-                            <p>알고 계세요?</p>
+                            <p class="main-anim1">고양이는</p>
+                            <p class="bg-line main-anim2">아파도 숨기는 사실,</p>
+                            <p class="main-anim3">알고 계세요?</p>
                         </div>
                         <div class="sub-title">
                             <p>반려묘가 숨기고 있을지 모를</p>
