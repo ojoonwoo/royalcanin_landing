@@ -306,7 +306,7 @@ button.with-icon:after {
 	animation-name: footDown;
 	animation-iteration-count: infinite;
 	animation-duration: 1.75s;
-	animation-timing-function: ease-out;
+	animation-timing-function: ease-in-out;
 	animation-direction: alternate;
 }
 .content .section._01 .scoll-down-group .anim._2 {
@@ -329,7 +329,7 @@ button.with-icon:after {
 	animation-name: footMark;
 	animation-iteration-count: infinite;
 	animation-duration: 1.75s;
-	animation-timing-function: ease-out;
+	animation-timing-function: ease-in-out;
 	animation-direction: alternate;
 	transform-origin: 50% 100%;
 }

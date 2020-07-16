@@ -7,7 +7,7 @@
         echo "<script>location.href = 'index_cat.php';</script>";
     }
 
-    $query = "SELECT mb_cat_name FROM member_info WHERE mb_serial='".$serial."'";
+    $query = "SELECT mb_cat_name, mb_cat_birth FROM member_info WHERE mb_serial='".$serial."'";
     $result 	= mysqli_query($my_db, $query);
     $data   = mysqli_fetch_array($result);
 ?>
@@ -50,20 +50,12 @@
                     <div class="subject">
                         우리 반려묘 <?php echo $data['mb_cat_name']?>!<br><b>혹시 이런 모습을 보이나요?</b>
                     </div>
+                    <input type="hidden" id="cat-age" value="<?=(date("Y")-$data['mb_cat_birth'])?>">
                 </div>
-                <!-- <div class="indicator-block"> -->
-                    <div class="guide">
-                        <img src="./images/icon_chkguide.png" alt="터치 가이드 이미지" class="icon">
-                        <span>해당되는 항목을 모두 체크해주세요.</span>
-                    </div>
-                    <!-- <ul class="indicator">
-                        <li class="is-current"></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul> -->
-                <!-- </div> -->
+                <div class="guide">
+                    <img src="./images/icon_chkguide.png" alt="터치 가이드 이미지" class="icon">
+                    <span>해당되는 항목을 모두 체크해주세요.</span>
+                </div>
                 <div class="checklist-container">
                     <div class="list-wrapper">
                         <ul class="group is-current" data-cate="weight"></ul>
@@ -221,6 +213,9 @@
                         // console.log('key:', key);
                         // console.log('length:', len);
                     }
+                    if(checklist.urinary.checkedLength >= 3 || Number($('#cat-age').val()) >= 8) {
+                        hematuria = "Y";
+                    }
 
                     console.log(checklist);
                     // 체크 정보 db update 후 callback에서 result로 serial같이 넘김
@@ -231,7 +226,8 @@
                         data: {
                             "exec"          : "insert_check_data",
                             "mb_check"      : JSON.stringify(checklist),
-                            "mb_serial"    : "<?php echo $serial?>"
+                            "mb_serial"    : "<?php echo $serial?>",
+                            "mb_result"     : hematuria
                         },
                         success: function (response) {
                             if (response == "Y") {
