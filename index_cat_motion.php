@@ -32,10 +32,15 @@
 	-webkit-animation: slide-in-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both;
 			animation: slide-in-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both;
 }
+.is-load .content .section._01 .cat {
+    opacity: 1;
+    -webkit-animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s both;
+    animation: fade-in 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 2s both;
+}
 @-webkit-keyframes slide-in-left {
 	0% {
-	  -webkit-transform: translateX(-100px);
-			  transform: translateX(-100px);
+	  -webkit-transform: translateX(-50px);
+			  transform: translateX(-50px);
 	  opacity: 0;
 	}
 	100% {
@@ -46,8 +51,8 @@
   }
   @keyframes slide-in-left {
 	0% {
-	  -webkit-transform: translateX(-100px);
-			  transform: translateX(-100px);
+	  -webkit-transform: translateX(-50px);
+			  transform: translateX(-50px);
 	  opacity: 0;
 	}
 	100% {
@@ -56,14 +61,23 @@
 	  opacity: 1;
 	}
   }
-
-.is-load .content .section._01 .cat {
+  @-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
-	/* -webkit-animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) 4s both;
-            animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) 4s both; */
-    -webkit-animation: scale-in-center 0.5s ease-in-out 2s both;
-    animation: scale-in-center 0.5s ease-in-out 2s both;
+  }
 }
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 </style>
 <body>
     <!-- Google Tag Manager (noscript) -->
