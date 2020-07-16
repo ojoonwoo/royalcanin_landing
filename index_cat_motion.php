@@ -28,8 +28,8 @@
     opacity: 1;
 	/* -webkit-animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) 4s both;
             animation: scale-in-center 2s cubic-bezier(0.175, 0.885, 0.320, 1.275) 4s both; */
-    -webkit-animation: scale-in-center 0.5s ease-in-out 5.5s both;
-    animation: scale-in-center 0.5s ease-in-out 5.5s both;
+    -webkit-animation: scale-in-center 0.5s ease-in-out 5s both;
+    animation: scale-in-center 0.5s ease-in-out 5s both;
 }
 .main-anim1 {
     opacity: 0;
@@ -63,13 +63,13 @@
 }
 .content .section._01 .title-block .sub-title {
     opacity: 1;
-	-webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 6s both;
-	        animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 6s both;    
+	-webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 5s both;
+	        animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 5s both;    
 }
 .content .section._01 .title-block .project-logo {
     opacity: 1;
-	-webkit-animation: bounce-in-top 1.1s 7.5s both;
-	        animation: bounce-in-top 1.1s 7.5s both;    
+	-webkit-animation: bounce-in-top 1.1s 7s both;
+	        animation: bounce-in-top 1.1s 7s both;    
 }
 
 @-webkit-keyframes scale-in-center {
