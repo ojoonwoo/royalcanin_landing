@@ -59,7 +59,7 @@
                         <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                         <div class="main-title">
                             <p>고양이는</p>
-                            <p class="bg-line">아파도 숨기는 사실,</p>
+                            <p class="bg-line">아파도 숨기는 사실<em>,</em></p>
                             <p>알고 계세요?</p>
                         </div>
                         <div class="sub-title">
@@ -67,7 +67,6 @@
                             <p><b>건강 이상 신호 확인</b>해보고</p>
                             <p><b>무료 건강검진의 기회</b>도 받아보세요!</p>
                         </div>
-                        <!-- <img src="./images/main_01_title.png" alt="고양이는 아파도 숨기는 사실, 알고 계세요? 반려묘가 숨기고 있을지 모를 건강 신호 확인해보고 무료 건강검진의 기회도 받아보세요!" class="title"> -->
                     </h1>
                     <img src="./images/main_01_cat.png" alt="고양이" class="cat resize-elm" data-width="0.51">
                     <!-- scroll down -->
@@ -90,44 +89,37 @@
                             <span class="quotes">“</span>
                             <span>반려묘를 꿰뚫어보는 <b>프로 집사도 주치의가 필요해요</b></span>
                             <span class="quotes">”</span>
-                            <!-- <span>사랑하는 반려묘 앞에서는 <br><b>누구보다 예민해져야해요</b></span> -->
                         </div>
                     </div>
                     <div class="review-area">
                         <div class="yt-container">
-                            <!-- <img src="./images/yt_container_cat_body.png" alt="" class="object _body">
-                            <img src="./images/yt_container_cat_tail.png" alt="" class="object _tail"> -->
-                            <div class="comming-soon"><span>COMMING SOON</span></div>
+                            <div class="comming-soon"><span>COMING SOON</span></div>
                             <div id="player-infl" class="player">
-                                <!-- youtube video -->
-                                <!-- <img src="./images/infl_video_sample.jpg" alt=""> -->
                             </div>
                         </div>
                         <!-- 활성탭에 따른 컨텐츠 변경 -->
                         <div class="tab-container-wrap">
                             <ul class="tab-container" data-video-target="infl">
                                 <li>
-                                    <!-- <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw"> -->
-                                    <button type="button" class="tab-trigger is-active" data-key="commingsoon">
+                                    <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw">
                                         <img src="./images/infl_tab_thumb_01_active.png" alt="" class="thumb">
                                         <span>뽀양의 #주치의 프로젝트</span>
-                                        <img src="./images/main_02_play_btn_active.png" alt="" class="play-btn">
+                                        <div class="play-btn"></div>
                                     </button>
                                 </li>
                                 <li>
                                     <button type="button" class="tab-trigger" data-key="CAInhDnQFaA">
-                                    <!-- <button type="button" class="tab-trigger" data-key="commingsoon"> -->
                                         <img src="./images/infl_tab_thumb_02_common.png" alt="" class="thumb">
                                         <span>지안스캣의 #주치의 프로젝트</span>
-                                        <img src="./images/main_02_play_btn_common.png" alt="" class="play-btn">
+                                        <div class="play-btn"></div>
                                     </button>
                                 </li>
                                 <li>
                                     <!-- <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM"> -->
                                     <button type="button" class="tab-trigger" data-key="">
-                                        <img src="./images/infl_tab_thumb_03_common.png" alt="" class="thumb">
+                                        <img src="./images/infl_tab_thumb_03_soon.png" alt="" class="thumb">
                                         <span>아리랑의 #주치의 프로젝트</span>
-                                        <img src="./images/main_02_play_btn_common.png" alt="" class="play-btn">
+                                        <div class="play-btn"></div>
                                     </button>
                                 </li>
                             </ul>
@@ -236,7 +228,7 @@
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/is-your-cat-stressed" target="_blank">
                             <img src="./images/article_img_01.png" alt="" class="thumb">
                             <span class="text">
-                                <span>반려묘 스트레스 확인 방법</span>
+                                <span>반려묘의 스트레스를 덜어주고 싶어요</span>
                             </span>
                         </a>
                     </li>
@@ -244,7 +236,7 @@
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/keeping-your-cat-at-a-healthy-weight" target="_blank">
                             <img src="./images/article_img_02.png" alt="" class="thumb">
                             <span class="text">
-                                <span>체중 유지 방법</span>
+                                <span>체중이 크게 늘어 걱정이에요</span>
                             </span>
                         </a>
                     </li>
@@ -252,7 +244,7 @@
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/my-cat-is-losing-its-hair" target="_blank">
                             <img src="./images/article_img_03.png" alt="" class="thumb">
                             <span class="text">
-                                <span>털이 빠지는 이유</span>
+                                <span>털이 왜 자꾸 빠지는걸까요?</span>
                             </span>
                         </a>
                     </li>
@@ -260,7 +252,7 @@
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/common-illnesses-in-older-cats" target="_blank">
                             <img src="./images/article_img_04.png" alt="" class="thumb">
                             <span class="text">
-                                <span>노령묘 질환</span>
+                                <span>노령묘는 무엇을 조심해야 할까요?</span>
                             </span>
                         </a>
                     </li>
@@ -268,7 +260,7 @@
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/how-your-cats-diet-affects-its-urinary-health" target="_blank">
                             <img src="./images/article_img_05.png" alt="" class="thumb">
                             <span class="text">
-                                <span>요로기계 건강이 중요한 이유</span>
+                                <span>요로기계 질환이 잦은 이유</span>
                             </span>
                         </a>
                     </li>
@@ -276,7 +268,7 @@
                         <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/what-makes-a-cats-digestive-system-healthy" target="_blank">
                             <img src="./images/article_img_06.png" alt="" class="thumb">
                             <span class="text">
-                                <span>소화기계</span>
+                                <span>소화기계를 건강히 만드는 비결</span>
                             </span>
                         </a>
                     </li>
@@ -341,20 +333,20 @@
     var playerWidth = $('.yt-container').width();
     function onYouTubeIframeAPIReady() {
         playerInfl = new YT.Player('player-infl', {
-            height: playerWidth*9/16,
+            height: Math.round(playerWidth*9/16),
             width: playerWidth,
             videoId: '3_6h0o-t3Vw',
-            playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': 'http://royalcaninevent2020.com', 'playsinline': 1},
+            playerVars: {'enablejsapi': 1, 'autoplay': 0, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': window.location.href, 'playsinline': 1, 'widget_refferer:': window.location.href},
             events: {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
             }
         });
         playerTips = new YT.Player('player-tips', {
-            height: playerWidth*9/16,
+            height: Math.round(playerWidth*9/16),
             width: playerWidth,
             videoId: 'SauuYLbs_FI',
-            playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': 'http://royalcaninevent2020.com', 'playsinline': 1},
+            playerVars: {'enablejsapi': 1, 'autoplay': 0, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': window.location.href, 'playsinline': 1, 'widget_refferer:': window.location.href},
             events: {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
@@ -364,7 +356,7 @@
 
     // 4. The API will call this function when the video player is ready.
     function onPlayerReady(event) {
-        event.target.playVideo();
+        // event.target.playVideo();
     }
 
     // 5. The API calls this function when the player's state changes.
@@ -418,12 +410,10 @@
                 $('.menu li').eq(1).addClass("active");
             // } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight - ($(window).height()-($('#section4').height()+$('#footer').height()))) {
             } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight) {
-                console.log("scroll3");
                 // 스크롤 현재 위치 섹션 3
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(2).addClass("active");
             } else  {
-                console.log("scroll4");
                 // 스크롤 현재 위치 섹션 4
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(3).addClass("active");
@@ -455,17 +445,13 @@
             $container.find('.tab-trigger').each(function (idx, el) {
                 // var $img = $(el).find('img');
                 var $img        = $(el).children('.thumb');
-                var $playBtn    = $(el).children('.play-btn');
+                // var $playBtn    = $(el).children('.play-btn');
                 if($(el).is($this)) {
                     $(el).addClass('is-active');
                     $img.attr('src', $img.attr('src').replace('common', 'active'));
-                    if(targetVideo == 'infl')
-                        $playBtn.attr('src', $playBtn.attr('src').replace('common', 'active'));
                 } else {
                     $(el).removeClass('is-active');
                     $img.attr('src', $img.attr('src').replace('active', 'common'));
-                    if(targetVideo == 'infl')
-                        $playBtn.attr('src', $playBtn.attr('src').replace('active', 'common'));
                 }
             });
 

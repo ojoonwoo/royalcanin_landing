@@ -1,15 +1,11 @@
 <?php
     include_once "./head.php";
 
-    include_once "../include/autoload.php";
-    $mnv_f 			= new mnv_function();
-    $my_db      = $mnv_f->Connect_MySQL();
-
     $serial = $_GET['serial'];
 
-    // if ($_SESSION['miniver_serial'] != $serial || !$_SESSION['miniver_serial'] || !$serial) {
-    //     echo "<script>location.href = 'index.php';</script>";
-    // }
+    if ($_SESSION['miniver_serial'] != $serial || !$_SESSION['miniver_serial'] || !$serial) {
+        echo "<script>location.href = 'index_cat.php';</script>";
+    }
 
     $query = "SELECT mb_cat_name, mb_cat_birth, mb_check FROM member_info WHERE 1 AND mb_serial = '".$serial."'";
     $result = mysqli_query($my_db, $query);
@@ -31,7 +27,7 @@
                         <li>
                             <a href="index_cat.php#section2">주치의 프로젝트</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="index_cat.php#section3">주치의력 테스트</a>
                         </li>
                         <li>
@@ -43,10 +39,9 @@
         </div>
         <div class="content _sub __result">
             <div class="inner">
-                <div class="sub-header">
-                    <a href="javascript:history.back()" id="go-before"></a>
-                    <a href="./" id="go-index"></a>
-                </div>
+                <?php
+                include_once "./sub_header.php";
+                ?>
                 <div class="loading-layer">
                     <div class="wrapper">
                         <img src="./images/project_logo.svg" class="project-logo" alt="고양이 주치의 프로젝트">
@@ -68,8 +63,8 @@
                 <div class="cat-block">
                     <img src="./images/result_cat.jpg" alt="고양이">
                     <div class="info">
-                        <div class="name-bx"><span>이름:</span><span><?=$cat_info['mb_cat_name']?></span></div>
-                        <div class="age-bx"><span>나이:</span><span><?=(date("Y")-$cat_info['mb_cat_birth'])?>세</span></div>
+                        <div class="name-bx"><span>이름 :</span><span><?=$cat_info['mb_cat_name']?></span></div>
+                        <div class="age-bx"><span>나이 :</span><span><?=(date("Y")-$cat_info['mb_cat_birth'])?>세</span></div>
                         <div class="ksfm-logo">
                             <img src="./images/result_graph_logo.png" alt="">
                         </div>
@@ -101,7 +96,7 @@
                     </div>
                 </div>
                 <div class="notice-block">
-                    <p>* 결과는 보호자가 인식하는 반려묘 신호 전도에 따라 상이할 수 있는 참고용으로, 수의사 선생님의 소견이나 수의학적 치료를 대체할 수 없습니다.</p>
+                    <p>* 결과는 보호자가 인식하는 반려묘 신호 정도에 따라 상이할 수 있는 참고용으로, 수의사 선생님의 소견이나 수의학적 치료를 대체할 수 없습니다.</p>
                 </div>
                 <a href="./request.php?serial=<?php echo $serial?>" class="type-01 go-next">건강검진권 신청하기</a>
             </div>
@@ -215,6 +210,7 @@
         });
         function loadingEnd() {
             myChart.data.datasets[0].data = [resultObject.weight.point, resultObject.stress.point, resultObject.urinary.point, resultObject.kidney.point, resultObject.gastro.point];
+            // myChart.data.datasets[0].data = [100, 100, 100, 100, 100];
             myChart.update();
             for(var i=0; i<adviceArray.length; i++) {
                 $('.chart-wrapper .labels .'+adviceArray[i]).addClass('is-active');
@@ -265,7 +261,7 @@
             options: {
                 responsive: true,
                 // aspectRatio: 0.93,
-                aspectRatio: 0.95,
+                aspectRatio: 0.96,
                 animation: {
                     // easing: 'easeInQuad',
                     duration: 5000,

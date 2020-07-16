@@ -90,15 +90,21 @@ $win.load(function () {
 	$("body").addClass("is-load");
 });
 
-// var paramObj = {};
-// var paramValResultArr = [];
-// $(document).ready(function() {
-// 	// issue=digest&counseling=N
-// 	paramObj = get_query();
-// 	paramValResultArr = Object.values(paramObj);
 
-// 	getResultInfo(resultIssue);
-// });
+$doc.ready(function() {
+	$('.link-btn').on('click', function () {
+		var targetURL = $(this).attr('data-url');
+		var type = $(this).attr('data-link-type');
+		setTimeout(function() {
+			if (type == "_self") {
+				location.href = targetURL;
+			} else {
+				var win = window.open(targetURL, '_blank');
+				win.focus();
+			}
+		}, 200);
+	});
+});
 
 function get_query(){
 	var url = document.location.href;
@@ -117,18 +123,28 @@ function get_param_arr(obj) {
 	return arr;
 }
 
-
-$doc.ready(function() {
-	$('.link-btn').on('click', function () {
-		var targetURL = $(this).attr('data-url');
-		var type = $(this).attr('data-link-type');
-		setTimeout(function() {
-			if (type == "_self") {
-				location.href = targetURL;
-			} else {
-				var win = window.open(targetURL, '_blank');
-				win.focus();
-			}
-		}, 200);
-	});
-});
+// 쿠키 생성 함수
+function setCookie(cName, cValue, cDay){
+	var expire = new Date();
+	expire.setDate(expire.getDate() + cDay);
+	cookies = cName + '=' + escape(cValue) + '; path=/ '; // 한글 깨짐을 막기위해 escape(cValue)를 합니다.
+	if(typeof cDay != 'undefined') cookies += ';expires=' + expire.toGMTString() + ';';
+	document.cookie = cookies;
+}
+	
+	
+	
+// 쿠키 가져오기 함수
+function getCookie(cName) {
+	cName = cName + '=';
+	var cookieData = document.cookie;
+	var start = cookieData.indexOf(cName);
+	var cValue = '';
+	if(start != -1) {
+		start += cName.length;
+		var end = cookieData.indexOf(';', start);
+		if(end == -1) end = cookieData.length;
+		cValue = cookieData.substring(start, end);
+	}
+	return unescape(cValue);
+}

@@ -3,16 +3,8 @@
 
     $serial = $mnv_f->create_serial();
 
-    // print_r($serial);
 ?>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-
-    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TSHTM5"
-
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-
-    <!-- End Google Tag Manager (noscript) -->
     <div id="container">
         <div id="header">
             <div class="inner">
@@ -27,7 +19,7 @@
                         <li>
                             <a href="index_cat.php#section2">주치의 프로젝트</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="index_cat.php#section3">주치의력 테스트</a>
                         </li>
                         <li>
@@ -39,10 +31,9 @@
         </div>
         <div class="content _sub __gate">
             <div class="inner">
-                <div class="sub-header">
-                    <a href="javascript:history.back()" id="go-before"></a>
-                    <!-- <a href="./" id="go-index"></a> -->
-                </div>
+                <?php
+                include_once "./sub_header.php";
+                ?>
                 <div class="title-block">
                     <div class="prj-title">
                         <img src="./images/project_logo.svg" class="project-logo" alt="고양이 주치의 프로젝트">
@@ -105,7 +96,7 @@
                         </button> -->
                         <button type="button" class="chk-trigger">
                             <span class="chk-shape"></span>
-                            <span class="text">개인정보 수집 및마케팅 활용에 동의합니다.(필수)</span>
+                            <span class="text">개인정보 수집 및마케팅 활용에 동의합니다. (필수)</span>
                         </button>
                     </div>
                 </div>

@@ -4,7 +4,7 @@
     $serial = $_GET['serial'];
 
     if ($_SESSION['miniver_serial'] != $serial || !$_SESSION['miniver_serial'] || !$serial) {
-        echo "<script>location.href = 'index.php';</script>";
+        echo "<script>location.href = 'index_cat.php';</script>";
     }
 
     $query = "SELECT mb_cat_name FROM member_info WHERE mb_serial='".$serial."'";
@@ -15,9 +15,9 @@
     <div id="container">
         <div id="header">
             <div class="inner">
-                <a href="./index_cat.php" class="logo">
-                    <img src="./images/logo.png" alt="로얄캐닌 홈으로">
-                </a>
+                <?php
+                include_once "./sub_header.php";
+                ?>
                 <nav class="menu">
                     <ul>
                         <li>
@@ -26,7 +26,7 @@
                         <li>
                             <a href="index_cat.php#section2">주치의 프로젝트</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="index_cat.php#section3">주치의력 테스트</a>
                         </li>
                         <li>
@@ -38,10 +38,9 @@
         </div>
         <div class="content _sub __checklist">
             <div class="inner">
-                <div class="sub-header">
-                    <a href="javascript:history.back()" id="go-before"></a>
-                    <a href="./" id="go-index"></a>
-                </div>
+                <?php
+                include_once "./sub_header.php";
+                ?>
                 <div class="title-block">
                     <div class="prj-title">
                         <img src="./images/project_logo.svg" class="project-logo" alt="고양이 주치의 프로젝트">
@@ -55,7 +54,7 @@
                 <!-- <div class="indicator-block"> -->
                     <div class="guide">
                         <img src="./images/icon_chkguide.png" alt="터치 가이드 이미지" class="icon">
-                        <span>해당되는 항목을 모두 터치해주세요.</span>
+                        <span>해당되는 항목을 모두 체크해주세요.</span>
                     </div>
                     <!-- <ul class="indicator">
                         <li class="is-current"></li>
@@ -159,7 +158,7 @@
                 },
                 prevStep: function() {
                     if(currentStep<1) {
-                        alert('반려묘 정보 페이지로 돌아갑니다.');
+                        history.back();
                         return;
                     } else {
                         this.stepAnimate('prev');
@@ -175,7 +174,6 @@
                     }
                 },
                 stepAnimate: function(direction) {
-                    console.log('step animation start');
                     isAnimate = true;
                     var stepTl = gsap.timeline({onComplete: function(){
                         (direction==='next') ? currentStep++ : currentStep--;
@@ -186,21 +184,20 @@
                             $('#go-next').text('다음으로');
                         }
                         $('.list-wrapper .group').removeClass('is-current').eq(currentStep).addClass('is-current');
-                        console.log('step animation end');
                     }});
                     if(direction === 'next') {
                         stepTl
                         .to($groupEl.eq(currentStep).find('li'), {duration: 0.55, autoAlpha: 0})
                         .to($wrapperEl, {duration: 0.55, x: "-="+100+'%'}, "-=0.55")
                         .to($groupEl.eq(currentStep+1).find('li'), {stagger: 0.15, autoAlpha: 1}, "-=0.45")
-                        .to($indicatorEl.find('li').eq(currentStep), {duration: 0.2, width: 6}, "-=1.1")
+                        .to($indicatorEl.find('li').eq(currentStep), {duration: 0.2, width: 4}, "-=1.1")
                         .to($indicatorEl.find('li').eq(currentStep+1), {duration: 0.5, width: 21, ease: "elastic.out(1, 0.6)"}, "-=0.6");
                         
                     } else {
                         stepTl
                         .to($wrapperEl, {duration: 0.55, x: "+="+100+'%'})
                         .to($groupEl.eq(currentStep-1).find('li'), {stagger: 0.15, autoAlpha: 1}, "-=0.45")
-                        .to($indicatorEl.find('li').eq(currentStep), {duration: 0.2, width: 6}, "-=1.1")
+                        .to($indicatorEl.find('li').eq(currentStep), {duration: 0.2, width: 4}, "-=1.1")
                         .to($indicatorEl.find('li').eq(currentStep-1), {duration: 0.5, width: 21, ease: "elastic.out(1, 0.6)"}, "-=0.6")
                         .set($groupEl.eq(currentStep).find('li'), {autoAlpha: 0});
                     }

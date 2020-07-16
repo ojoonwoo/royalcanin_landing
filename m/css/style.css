@@ -1184,6 +1184,9 @@ select.select-box {
 	opacity: 0;
 	visibility: hidden;
 }
+.content.__checklist .list-wrapper li:last-child {
+	margin-bottom: 0;
+}
 .content.__checklist .list-wrapper .group:first-child li {
 	opacity: 1;
 	visibility: visible;

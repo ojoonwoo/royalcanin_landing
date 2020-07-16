@@ -1,15 +1,11 @@
 <?php
     include_once "./head.php";
 
-    include_once "../include/autoload.php";
-    $mnv_f 			= new mnv_function();
-    $my_db      = $mnv_f->Connect_MySQL();
-
     $serial = $_GET['serial'];
 
-    // if ($_SESSION['miniver_serial'] != $serial || !$_SESSION['miniver_serial'] || !$serial) {
-    //     echo "<script>location.href = 'index.php';</script>";
-    // }
+    if ($_SESSION['miniver_serial'] != $serial || !$_SESSION['miniver_serial'] || !$serial) {
+        echo "<script>location.href = 'index.php';</script>";
+    }
 
     $query = "SELECT mb_cat_name, mb_cat_birth, mb_check FROM member_info WHERE 1 AND mb_serial = '".$serial."'";
     $result = mysqli_query($my_db, $query);
@@ -44,8 +40,8 @@
             <div class="cat-block">
                 <img src="./images/result_cat.jpg" alt="고양이">
                 <div class="info">
-                    <div class="name-bx"><span>이름:</span><span><?=$cat_info['mb_cat_name']?></span></div>
-                    <div class="age-bx"><span>나이:</span><span><em id="age-num"><?=(date("Y")-$cat_info['mb_cat_birth'])?></em>세</span></div>
+                    <div class="name-bx"><span>이름 :</span><span><?=$cat_info['mb_cat_name']?></span></div>
+                    <div class="age-bx"><span>나이 :</span><span><em id="age-num"><?=(date("Y")-$cat_info['mb_cat_birth'])?></em>세</span></div>
                 </div>
             </div>
             <div class="chart-block">
