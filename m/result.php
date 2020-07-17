@@ -172,8 +172,16 @@
             }, 2000);
         });
         function loadingEnd() {
-            myChart.data.datasets[0].data = [resultObject.weight.point, resultObject.stress.point, resultObject.urinary.point, resultObject.kidney.point, resultObject.gastro.point];
-            // myChart.data.datasets[0].data = [100, 100, 100, 100, 100];
+            var returnPoints = [];
+            for (var key in resultObject) {
+                if(Number(resultObject[key].point) === 0) {
+                    returnPoints.push(15);
+                } else {
+                    returnPoints.push(resultObject[key].point);
+                }
+            }
+            // myChart.data.datasets[0].data = [resultObject.weight.point, resultObject.stress.point, resultObject.urinary.point, resultObject.kidney.point, resultObject.gastro.point];
+            myChart.data.datasets[0].data = returnPoints;
             myChart.update();
             for(var i=0; i<adviceArray.length; i++) {
                 $('.chart-wrapper .labels .'+adviceArray[i]).addClass('is-active');
