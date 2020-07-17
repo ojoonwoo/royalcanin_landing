@@ -101,7 +101,7 @@
                         <div class="tab-container-wrap">
                             <ul class="tab-container" data-video-target="infl">
                                 <li>
-                                    <button type="button" class="tab-trigger is-active _1" data-key="3_6h0o-t3Vw">
+                                    <button type="button" class="tab-trigger is-active _1" data-key="3_6h0o-t3Vw" style="border:0">
                                         <img src="./images/infl_tab_thumb_01_active.png" alt="" class="thumb">
                                         <span>뽀양의 #주치의 프로젝트</span>
                                         <div class="play-btn"></div>
@@ -492,7 +492,7 @@
                     $this.css("border","0");
                 }else{
                     console.log('3');
-                    $(".content .section._02 .tab-container li .tab-trigger ._3").css('border-bottom','1px solid #dcdcdc');
+                    $(".content .section._02 .tab-container li .tab-trigger ._1").css('border-bottom','1px solid #dcdcdc');
                     $this.css("border","0");
                 }
             } else {
