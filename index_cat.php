@@ -484,15 +484,15 @@
 
                 if ($this.hasClass('_1')) {
                     console.log('1');
-                    $(".content .section._02 .tab-container li .tab-trigger ._2").css('border-bottom','1px solid #dcdcdc');
+                    $(".tab-trigger._2").css('border-bottom','1px solid #dcdcdc');
                     $this.css("border","0");
                 }else if ($this.hasClass('_2')) {
                     console.log('2');
-                    $(".content .section._02 .tab-container li .tab-trigger ._1").css('border','0');
+                    $(".tab-trigger._1").css('border','0');
                     $this.css("border","0");
                 }else{
                     console.log('3');
-                    $(".content .section._02 .tab-container li .tab-trigger ._1").css('border-bottom','1px solid #dcdcdc');
+                    $(".tab-trigger._1").css('border-bottom','1px solid #dcdcdc');
                     $this.css("border","0");
                 }
             } else {
