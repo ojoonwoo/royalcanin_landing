@@ -24,7 +24,7 @@
                             <a href="index_cat.php#section1">메인</a>
                         </li>
                         <li>
-                            <a href="index_cat.php#section2">주치의 프로젝트</a>
+                            <a href="index_cat.php#section2">주치의 프로젝트</a>
                         </li>
                         <li class="active">
                             <a href="index_cat.php#section3">주치의력 테스트</a>
