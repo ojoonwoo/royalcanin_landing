@@ -192,11 +192,11 @@
                 <div class="date-block">
                     <dl>
                         <dt>참여기간</dt>
-                        <dd>2020. 07. 30 ~ 2020. 08. 30</dd>
+                        <dd>2020. 7. 27 ~ 2020. 9. 4</dd>
                     </dl>
                     <dl>
-                        <dt>당첨자 확인</dt>
-                        <dd>2020. 09. 30</dd>
+                        <dt>당첨자 발표</dt>
+                        <dd>2020. 9. 14</dd>
                     </dl>
                 </div>
                 <img src="./images/section_03_group.png" alt="" class="img-group">
@@ -358,7 +358,7 @@
                 <div class="guide-block">
                     <dl>
                         <dt>사용 기간 : </dt>
-                        <dd> 2020. 9. 15 ~ 2020. 12. 31</dd>
+                        <dd>2020. 9. 15 ~ 2020. 12. 31</dd>
                     </dl>
                     <dl>
                         <dt>유의사항 : </dt>
