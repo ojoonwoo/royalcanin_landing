@@ -192,11 +192,11 @@
                 <div class="date-block">
                     <dl>
                         <dt>참여기간</dt>
-                        <dd>0000. 00. 00 ~ 0000. 00. 00</dd>
+                        <dd>2020. 07. 30 ~ 2020. 08. 30</dd>
                     </dl>
                     <dl>
                         <dt>당첨자 확인</dt>
-                        <dd>0000. 00. 00</dd>
+                        <dd>2020. 09. 30</dd>
                     </dl>
                 </div>
                 <img src="./images/section_03_group.png" alt="" class="img-group">
