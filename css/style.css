@@ -590,7 +590,6 @@ button.with-icon:after {
 }
 .content .section._02 .tab-container li .tab-trigger.is-active {
 	background-color: #fbdbdf;
-	border: 0;
 }
 .content .section._02 .tab-container li .tab-trigger.is-active:before {
 	transform: scale(1);
