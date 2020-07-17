@@ -116,7 +116,7 @@
                     <div class="row">
                         <div class="input-group _tel">
                             <div class="label">
-                                <label for="req-phone1">휴대 전화번호</label>
+                                <label for="req-phone1">휴대폰 번호</label>
                             </div>
                             <div class="input">
                                 <input type="text" class="input-text" id="req-phone1" placeholder="" onkeyup="only_num(this);lengthCheck(this, 3)">
@@ -163,61 +163,6 @@
                         </div>
                         <div class="list-block">
                             <ul>
-                                <li>
-                                    <button type="button" class="hospi-trigger">
-                                        <div>
-                                            <span class="chk-shape"></span>
-                                        </div>
-                                        <div>
-                                            <p class="h-name">로얄 동물병원</p>
-                                            <p class="h-addr">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</p>
-                                        </div>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="hospi-trigger">
-                                        <div>
-                                            <span class="chk-shape"></span>
-                                        </div>
-                                        <div>
-                                            <p class="h-name">로얄 동물병원</p>
-                                            <p class="h-addr">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</p>
-                                        </div>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="hospi-trigger">
-                                        <div>
-                                            <span class="chk-shape"></span>
-                                        </div>
-                                        <div>
-                                            <p class="h-name">로얄 동물병원</p>
-                                            <p class="h-addr">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</p>
-                                        </div>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="hospi-trigger">
-                                        <div>
-                                            <span class="chk-shape"></span>
-                                        </div>
-                                        <div>
-                                            <p class="h-name">로얄 동물병원</p>
-                                            <p class="h-addr">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</p>
-                                        </div>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="hospi-trigger">
-                                        <div>
-                                            <span class="chk-shape"></span>
-                                        </div>
-                                        <div>
-                                            <p class="h-name">로얄 동물병원</p>
-                                            <p class="h-addr">주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소주소</p>
-                                        </div>
-                                    </button>
-                                </li>
                             </ul>
                         </div>
                         <button type="button" class="type-01 hospi-select">선택 완료</button>

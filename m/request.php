@@ -79,7 +79,7 @@
                 </div>
                 <div class="row">
                     <div class="input-group _tel">
-                        <label for="req-phone1">휴대 전화번호</label>
+                        <label for="req-phone1">휴대폰 번호</label>
                         <input type="tel" class="input-text" id="req-phone1" placeholder="" onkeyup="only_num(this);lengthCheck(this, 3)">
                         <input type="tel" class="input-text" id="req-phone2" placeholder="" onkeyup="only_num(this);lengthCheck(this, 4)">
                         <input type="tel" class="input-text" id="req-phone3" placeholder="" onkeyup="only_num(this);lengthCheck(this, 4)">
