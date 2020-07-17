@@ -116,7 +116,7 @@
                                 </li>
                                 <li>
                                     <!-- <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM"> -->
-                                    <button type="button" class="tab-trigger" data-key="">
+                                    <button type="button" class="tab-trigger _last" data-key="">
                                         <img src="./images/infl_tab_thumb_03_soon.png" alt="" class="thumb">
                                         <span>아리랑의 #주치의 프로젝트</span>
                                         <div class="play-btn"></div>
