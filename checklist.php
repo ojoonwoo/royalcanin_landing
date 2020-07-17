@@ -195,6 +195,8 @@
                     }
                 },
                 submit: function() {
+                    var hematuria = "N";
+
                     $('.chk-trigger').each(function(idx, el) {
                         var key = $(this).closest('.group').attr('data-cate');
                         var question = $(this).find('.text').text();
