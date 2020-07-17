@@ -53,9 +53,10 @@ switch ($_REQUEST['exec'])
 		$gubun          = $mnv_f->MobileCheck();
 
 		$mb_check		= $_REQUEST['mb_check'];
+		$mb_result		= $_REQUEST['mb_result'];
 		$mb_serial		= $_REQUEST['mb_serial'];
 
-		$query 		= "UPDATE member_info SET mb_check='".$mb_check."' WHERE mb_serial='".$mb_serial."'";
+		$query 		= "UPDATE member_info SET mb_check='".$mb_check."', mb_result='".$mb_result."' WHERE mb_serial='".$mb_serial."'";
 		$result 	= mysqli_query($my_db, $query);
 
 		if ($result)
