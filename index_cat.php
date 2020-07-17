@@ -483,11 +483,13 @@
                 }
 
                 if ($this.hasClass('_1')) {
-                    // $(".content .section._02 .tab-container li .tab-trigger").css('border-bottom','1px solid #dcdcdc')
+                    $(".content .section._02 .tab-container li .tab-trigger ._2").css('border-bottom','1px solid #dcdcdc')
                     $this.css("border","0");
-                }else if ($this.hasClass('_1')) {
+                }else if ($this.hasClass('_2')) {
+                    $(".content .section._02 .tab-container li .tab-trigger ._1").css('border','0')
                     $this.css("border","0");
                 }else{
+                    $(".content .section._02 .tab-container li .tab-trigger ._3").css('border-bottom','1px solid #dcdcdc')
                     $this.css("border","0");
                 }
             } else {
