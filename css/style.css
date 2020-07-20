@@ -421,7 +421,7 @@ button.with-icon:after {
 		transform: translateY(0%);
 	}
 	to {
-		transform: translateY(130%);
+		transform: translateY(100%);
 	}
 }
 @keyframes footMark {
