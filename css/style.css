@@ -394,8 +394,8 @@ button.with-icon:after {
 	        animation-duration: 1.75s;
 	-webkit-animation-timing-function: ease-in-out;
 	        animation-timing-function: ease-in-out;
-	-webkit-animation-direction: alternate;
-	        animation-direction: alternate;
+	/* -webkit-animation-direction: alternate;
+	        animation-direction: alternate; */
 }
 .content .section._01 .scoll-down-group .anim._2 {
 	position: relative;
@@ -422,8 +422,8 @@ button.with-icon:after {
 	        animation-duration: 1.75s;
 	-webkit-animation-timing-function: ease-in-out;
 	        animation-timing-function: ease-in-out;
-	-webkit-animation-direction: alternate;
-	        animation-direction: alternate;
+	/* -webkit-animation-direction: alternate;
+	        animation-direction: alternate; */
 	transform-origin: 50% 100%;
 }
 @-webkit-keyframes footDown {
@@ -431,7 +431,7 @@ button.with-icon:after {
 		transform: translateY(0%);
 	}
 	to {
-		transform: translateY(100%);
+		transform: translateY(120%);
 	}
 }
 @keyframes footDown {
