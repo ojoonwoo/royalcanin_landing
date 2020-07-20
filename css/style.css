@@ -186,6 +186,9 @@ button {
 	font-family: 'Noto Sans Korean', dotum, '돋움', sans-serif;
 	line-height: 1;
 }
+select::-ms-expand {
+	display: none;
+}
 a.type-01 {
 	position: relative;
 	width: 278px;
