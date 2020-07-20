@@ -1948,3 +1948,10 @@ html.popup-opened {
 		margin-bottom: 3px;
 	}
 }
+@media screen and (min-height: 630px) {
+	#menu-layer .cat {
+		position: absolute;
+		bottom: 0;
+		margin: 0;
+	}
+}
