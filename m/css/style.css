@@ -335,10 +335,10 @@ button.with-icon:after {
 }
 @keyframes footDown {
 	from {
-		transform: translateY(-10%);
+		transform: translateY(0%);
 	}
 	to {
-		transform: translateY(110%);
+		transform: translateY(120%);
 	}
 }
 @keyframes footMark {
