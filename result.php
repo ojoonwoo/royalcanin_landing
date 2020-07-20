@@ -154,10 +154,10 @@
             if(Number(len)>=3) {
                 adviceArray.push(key);
             }
-            console.log('key:', key);
-            console.log('length', len);
-            console.log('point', point);
-            console.log('value:', catInfo[key]);
+            // console.log('key:', key);
+            // console.log('length', len);
+            // console.log('point', point);
+            // console.log('value:', catInfo[key]);
 
             resultObject[key].point = point;
         }

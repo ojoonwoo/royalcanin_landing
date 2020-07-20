@@ -264,8 +264,6 @@
                         console.log(errMsg);
                     }
                 });
-                // royalcaninCat.popup.show($('#hospi-popup'));
-                // }
             });
             $doc.on('change', '#sido', function() {
                 $.ajax({
@@ -316,7 +314,6 @@
                         "serial"    : "<?php echo $serial?>"
                     },
                     success: function (response) {
-                        console.log(response);
                         setCookie("cathealth_completed","Y","7") //변수, 변수값, 저장기간
                         royalcaninCat.popup.show($('#complete-popup'));
                     },
