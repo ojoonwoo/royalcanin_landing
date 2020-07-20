@@ -101,14 +101,14 @@
                         <div class="tab-container-wrap">
                             <ul class="tab-container" data-video-target="infl">
                                 <li>
-                                    <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw">
+                                    <button type="button" class="tab-trigger is-active _1" data-key="3_6h0o-t3Vw" style="border:0">
                                         <img src="./images/infl_tab_thumb_01_active.png" alt="" class="thumb">
                                         <span>뽀양의 #주치의 프로젝트</span>
                                         <div class="play-btn"></div>
                                     </button>
                                 </li>
                                 <li>
-                                    <button type="button" class="tab-trigger" data-key="CAInhDnQFaA">
+                                    <button type="button" class="tab-trigger _2" data-key="CAInhDnQFaA">
                                         <img src="./images/infl_tab_thumb_02_common.png" alt="" class="thumb">
                                         <span>지안스캣의 #주치의 프로젝트</span>
                                         <div class="play-btn"></div>
@@ -116,7 +116,7 @@
                                 </li>
                                 <li>
                                     <!-- <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM"> -->
-                                    <button type="button" class="tab-trigger" data-key="">
+                                    <button type="button" class="tab-trigger _last _3" data-key="">
                                         <img src="./images/infl_tab_thumb_03_soon.png" alt="" class="thumb">
                                         <span>아리랑의 #주치의 프로젝트</span>
                                         <div class="play-btn"></div>
@@ -480,6 +480,20 @@
                         'startSeconds': 0,
                         'suggestedQuality': 'large'
                     });
+                }
+
+                if ($this.hasClass('_1')) {
+                    console.log('1');
+                    $(".tab-trigger._2").css('border-bottom','1px solid #dcdcdc');
+                    $this.css("border","0");
+                }else if ($this.hasClass('_2')) {
+                    console.log('2');
+                    $(".tab-trigger._1").css('border','0');
+                    $this.css("border","0");
+                }else{
+                    console.log('3');
+                    $(".tab-trigger._1").css('border-bottom','1px solid #dcdcdc');
+                    $this.css("border","0");
                 }
             } else {
                 playerTips.cueVideoById({
