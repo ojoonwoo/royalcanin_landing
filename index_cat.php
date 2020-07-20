@@ -191,13 +191,13 @@
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s">
+                            <button type="button" class="tab-trigger" data-key="hmiCvnEDckA">
                                 <img src="./images/tips_tab_icon_03_common.png" alt="" class="icon thumb" style="width:26px">
                                 <span>체중관리가 필요할 때<br />보이는 행동 5</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="coy3EAxcrv0">
+                            <button type="button" class="tab-trigger" data-key="8JscdpO7oeg">
                                 <img src="./images/tips_tab_icon_04_common.png" alt="" class="icon thumb" style="width:28px">
                                 <span>반려묘의 소화기<br />위험신호</span>
                             </button>
@@ -209,13 +209,13 @@
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="8JscdpO7oeg">
+                            <button type="button" class="tab-trigger" data-key="coy3EAxcrv0">
                                 <img src="./images/tips_tab_icon_06_common.png" alt="" class="icon thumb" style="width:20px">
                                 <span>반려묘의<br />스트레스 신호</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="hmiCvnEDckA">
+                            <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s">
                                 <img src="./images/tips_tab_icon_07_common.png" alt="" class="icon thumb" style="width:29px">
                                 <span>반려묘의<br />요로계 위험신호</span>
                             </button>
@@ -484,7 +484,7 @@
                     playerInfl.cueVideoById({
                         'videoId': targetKey,
                         'startSeconds': 0,
-                        'suggestedQuality': 'large'
+                        'suggestedQuality': 'default'
                     });
                 }
 
@@ -502,7 +502,7 @@
                 playerTips.cueVideoById({
                     'videoId': targetKey,
                     'startSeconds': 0,
-                    'suggestedQuality': 'large'
+                    'suggestedQuality': 'default'
                 });
             }
         });

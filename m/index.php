@@ -552,14 +552,14 @@
                     playerInfl.cueVideoById({
                         'videoId': targetKey,
                         'startSeconds': 0,
-                        'suggestedQuality': 'large'
+                        'suggestedQuality': 'default'
                     });
                 }
             } else {
                 playerTips.cueVideoById({
                     'videoId': targetKey,
                     'startSeconds': 0,
-                    'suggestedQuality': 'large'
+                    'suggestedQuality': 'default'
                 });
             }
         });
