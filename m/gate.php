@@ -69,7 +69,7 @@
                 <div class="agree-wrap">
                     <button type="button" class="chk-trigger">
                         <span class="chk-shape"></span>
-                        <span class="text">개인정보수집 및 마케팅 활용에 동의 (필수)</span>
+                        <span class="text">개인정보 수집 및 마케팅 활용에 동의 (필수)</span>
                     </button>
                     <!-- <button type="button" class="chk-trigger">
                         <span class="chk-shape"></span>
@@ -108,7 +108,7 @@
                                 취급 위탁업체 / 위탁업무 및 이용목적 : 미니버타이징(주) / 이벤트 대행
                                 및 운영<br />> 취급 위탁업체 / 위탁업무 및 이용목적 : 로얄캐닌 각 협업 
                                 동물병원 지점 / 이벤트 경품 제공 및 서비스 제공<br />> 보유 및 이용기간 : 
-                                이벤트 종료 후 1년까지 (단, 관계 법령에 따라 필요한 경우 해 당 법률에서 
+                                이벤트 종료 후 1년까지 (단, 관계 법령에 따라 필요한 경우 해당 법률에서 
                                 정한 기간까지)
                             </p>
                         </div>
@@ -170,7 +170,7 @@
             }
 
             if (visit_hospital == "") {
-                alert("최근 1년내 동물병원에 방문하신적이 있으신지 선택해 주세요.");
+                alert("최근 1년 내 동물병원에 방문하신적이 있으신지 선택해 주세요.");
                 return false;
             }
 
