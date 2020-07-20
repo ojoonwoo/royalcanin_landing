@@ -1162,11 +1162,14 @@ select.select-box {
 	padding-bottom: 35px;
 } */
 
+.content.__gate .title-block {
+	margin-bottom: 16px;
+}
 .content.__gate .cat-block {
-	margin-bottom: 36px;
+	margin-bottom: 24px;
 }
 .content.__gate .cat-block img {
-	margin: 0 auto;
+	margin: 0 auto 0 33%;
 }
 .content.__gate .input-wrapper .message {
 	text-align: left;

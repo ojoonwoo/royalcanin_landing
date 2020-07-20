@@ -20,7 +20,7 @@
 		<link rel="stylesheet" href="./css/reset.css">
 		<link rel="stylesheet" href="./css/font.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
-		<link rel="stylesheet" href="./css/style.css?ver=2006291519">
+		<link rel="stylesheet" href="./css/style.css?ver=200720">
 		<script src="../js/jquery-3.3.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
 		<script src="../js/m_main.js"></script>
