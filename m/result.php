@@ -126,12 +126,19 @@
             if(Number(len)>=3) {
                 adviceArray.push(key);
             }
-            console.log('key:', key);
-            console.log('length', len);
-            console.log('point', point);
-            console.log('value:', catInfo[key]);
+            // console.log('key:', key);
+            // console.log('length', len);
+            // console.log('point', point);
+            // console.log('value:', catInfo[key]);
 
             resultObject[key].point = point;
+
+            // 그래프 표현을 위해서(0 -> 15) presentPoint 속성 추가
+            if(Number(resultObject[key].point) === 0) {
+                resultObject[key].presentPoint = 15;
+            } else {
+                resultObject[key].presentPoint = point;
+            }
         }
         $doc.ready(function() {
 
@@ -172,16 +179,8 @@
             }, 2000);
         });
         function loadingEnd() {
-            var returnPoints = [];
-            for (var key in resultObject) {
-                if(Number(resultObject[key].point) === 0) {
-                    returnPoints.push(15);
-                } else {
-                    returnPoints.push(resultObject[key].point);
-                }
-            }
             // myChart.data.datasets[0].data = [resultObject.weight.point, resultObject.stress.point, resultObject.urinary.point, resultObject.kidney.point, resultObject.gastro.point];
-            myChart.data.datasets[0].data = returnPoints;
+            myChart.data.datasets[0].data = [resultObject.weight.presentPoint, resultObject.stress.presentPoint, resultObject.urinary.presentPoint, resultObject.kidney.presentPoint, resultObject.gastro.presentPoint];
             myChart.update();
             for(var i=0; i<adviceArray.length; i++) {
                 $('.chart-wrapper .labels .'+adviceArray[i]).addClass('is-active');
