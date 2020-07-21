@@ -1836,6 +1836,16 @@ html.popup-opened {
 	display: block;
 	opacity: 1;
 }
+.popup-wrap.is-opened .out-area {
+	content: "";
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+}
 .popup-wrap:before {
 	content: "";
 	display: inline-block;
@@ -1855,6 +1865,7 @@ html.popup-opened {
 	white-space: normal;
 	word-break: keep-all;
 	word-wrap: break-word;
+	z-index: 2;
 	text-align: left;
 	/* -webkit-transition: all 0.35s ease; */
 	transition: all 0.35s ease;

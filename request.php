@@ -273,9 +273,10 @@
                     return;
                 }
             });
-            $doc.on('click', '#other-popup .popup-close', function() {
+            $doc.on('click', '#other-popup .popup-close, #other-popup + .out-area', function() {
                 $('[data-loc="central"]').trigger('click');
             });
+            
             $doc.on('click', '#addr-search', function() {
                 // 주소검색 ajax callback {
                 if ($("#sido").val() == "") {
@@ -374,7 +375,7 @@
                 // royalcaninCat.popup.show($('#complete-popup'));
             });
 
-            $doc.on('click', '#btn-complete', function() {
+            $doc.on('click', '#btn-complete, #complete-popup .popup-close, #complete-popup + .out-area', function() {
                 // alert('참여가 완료되었습니다!');
                 location.href="./index_cat.php#section4";
             });
