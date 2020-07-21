@@ -1956,3 +1956,13 @@ html.popup-opened {
 		margin: 0;
 	}
 }
+@media screen and (max-height: 530px) {
+	.content .section._01 .scoll-down-group .anim._1 {
+		animation-iteration-count: 0;
+		transform: translateY(100%);
+	}
+	.content .section._01 .scoll-down-group .anim._2:before {
+		display: none;
+		animation-iteration-count: 0;
+	}
+}
