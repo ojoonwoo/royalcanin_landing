@@ -1948,6 +1948,12 @@ html.popup-opened {
 	.content.__request .input-wrapper .tip span {
 		margin-bottom: 3px;
 	}
+	#complete-popup .benefit-area ul {
+		padding: 0 20px;
+	}
+	#complete-popup .date-block dl dd {
+		line-height: 1.3;
+	}
 }
 @media screen and (min-height: 630px) {
 	#menu-layer .cat {
@@ -1957,12 +1963,15 @@ html.popup-opened {
 	}
 }
 @media screen and (max-height: 530px) {
-	.content .section._01 .scoll-down-group .anim._1 {
+	.content .section._01 .scoll-down-group {
+		bottom: 1.5%;
+	}
+	/* .content .section._01 .scoll-down-group .anim._1 {
 		animation-iteration-count: 0;
 		transform: translateY(100%);
 	}
 	.content .section._01 .scoll-down-group .anim._2:before {
 		display: none;
 		animation-iteration-count: 0;
-	}
+	} */
 }
