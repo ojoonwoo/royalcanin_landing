@@ -21,8 +21,8 @@
 		<link rel="stylesheet" href="./css/font.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
 		<link rel="stylesheet" href="./css/style.css?ver=200720">
-		<script src="./js/widget_api.js"></script>
-		<script src="./js/player_api.js"></script>
+		<!-- <script src="./js/widget_api.js"></script>
+		<script src="./js/player_api.js"></script> -->
         <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
 		<script src="./js/main.js"></script>
