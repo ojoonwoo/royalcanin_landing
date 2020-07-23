@@ -59,9 +59,9 @@
 		{
 			$media_name[]	= $media_daily_data['check_media'];
 			$media_cnt[]	= $media_daily_data['media_cnt'];
-			$pc_query		= "SELECT * FROM member_info WHERE 1 AND mb_regdate LIKE  '%".$daily_date."%' AND mb_media='".$media_daily_data['check_media']."' AND mb_gubun='PC'";
+			$pc_query		= "SELECT * FROM member_info WHERE 1 AND mb_regdate LIKE  '%".$daily_date."%' AND mb_gubun='PC'";
 			$pc_count		= mysqli_num_rows(mysqli_query($my_db, $pc_query));
-			$mobile_query	= "SELECT * FROM member_info WHERE 1 AND mb_regdate LIKE  '%".$daily_date."%' AND mb_media='".$media_daily_data['check_media']."' AND mb_gubun='MOBILE'";
+			$mobile_query	= "SELECT * FROM member_info WHERE 1 AND mb_regdate LIKE  '%".$daily_date."%' AND mb_gubun='MOBILE'";
 			$mobile_count	= mysqli_num_rows(mysqli_query($my_db, $mobile_query));
 			// $unique_query	= "SELECT * FROM ".$_gl['design_info_table']." WHERE 1 AND design_regdate LIKE  '%".$daily_date."%' AND design_media='".$media_daily_data['design_media']."' GROUP BY design_ipaddr";
 			// $unique_count	= mysqli_num_rows(mysqli_query($my_db, $unique_query));
