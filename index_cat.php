@@ -489,11 +489,16 @@
                 }
                 $('.infl-video-container .title .dn-title').html($(this).attr('data-title'));
             } else {
-                playerTips.loadVideoById({
+                playerTips.cueVideoById({
                     'videoId': targetKey,
-                    // 'startSeconds': 0,
+                    'startSeconds': 0,
                     'suggestedQuality': 'default'
                 });
+                // playerTips.loadVideoById({
+                //     'videoId': targetKey,
+                //     'startSeconds': 0,
+                //     'suggestedQuality': 'default'
+                // });
             }
         });
 
