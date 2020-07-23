@@ -76,7 +76,7 @@
                                 <select id="sido" class="select-box for-central">
                                     <option value="" selected>시/도</option>
 <?php
-    $query = "SELECT sido FROM juso_info WHERE 1 GROUP BY sido";
+    $query = "SELECT sido FROM juso_info WHERE 1 GROUP BY sido ORDER BY sido ASC";
     $result = mysqli_query($my_db, $query);
 
     while($data = mysqli_fetch_array($result)) {
