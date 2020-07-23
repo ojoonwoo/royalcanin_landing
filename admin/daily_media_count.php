@@ -36,15 +36,15 @@
                 </thead>
                 <tbody>
 <?php
-	$daily_date_query	= "SELECT check_date FROM check_info WHERE 1 Group by substr(check_date,1,10) ORDER BY check_date DESC";
+	$daily_date_query	= "SELECT mb_regdate FROM member_info WHERE 1 Group by substr(mb_regdate,1,10) ORDER BY mb_regdate DESC";
 	$date_res			= mysqli_query($my_db, $daily_date_query);
 	while($date_daily_data = mysqli_fetch_array($date_res))
 	{
-		$daily_date		= substr($date_daily_data['check_date'],0,10);
-		$media_query	= "SELECT check_media, COUNT( check_media ) media_cnt FROM check_info WHERE 1 AND check_date LIKE  '%".$daily_date."%' GROUP BY check_media";
+		$daily_date		= substr($date_daily_data['mb_regdate'],0,10);
+		$media_query	= "SELECT mb_media, COUNT( mb_media ) media_cnt FROM member_info WHERE 1 AND mb_regdate LIKE  '%".$daily_date."%' GROUP BY mb_media";
 		$media_res		= mysqli_query($my_db, $media_query);
 
-		$unique_query	= "SELECT * FROM check_info WHERE 1 AND check_date LIKE  '%".$daily_date."%' GROUP BY check_ipaddr";
+		$unique_query	= "SELECT * FROM member_info WHERE 1 AND mb_regdate LIKE  '%".$daily_date."%' GROUP BY mb_ipaddr";
 		$unique_count	= mysqli_num_rows(mysqli_query($my_db, $unique_query));
 
 		unset($media_name);
