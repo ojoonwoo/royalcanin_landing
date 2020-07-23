@@ -98,10 +98,18 @@
             <thead>
               <tr>
                 <th>순번</th>
-                <th>선택한 건강상태</th>
+                <th>고유번호</th>
+                <th>고양이이름</th>
+                <th>고양이태어난해</th>
+                <th>고양이병원방문여부</th>
                 <th>선택한 체크항목</th>
+                <th>해마추리아여부</th>
+                <th>수도권병원선택여부</th>
+                <th>응모한병원이름</th>
+                <th>응모한병원주소</th>
+                <th>응모자이름</th>
+                <th>응모자연락처</th>
                 <th>유입구분</th>
-                <th>유입매체</th>
                 <th>참여일자</th>
               </tr>
             </thead>
@@ -110,19 +118,19 @@
 	$where = "";
 
 	if ($sDate != "")
-		$where	.= " AND check_date >= '".$sDate."' AND check_date <= '".$eDate." 23:59:59'";
+		$where	.= " AND mb_regdate >= '".$sDate."' AND mb_regdate <= '".$eDate." 23:59:59'";
 
 	if ($search_txt != "")
 	{
 		$where	.= " AND ".$search_type." like '%".$search_txt."%'";
 	}
-	$buyer_count_query = "SELECT count(*) FROM check_info WHERE  1 ".$where."";
+	$buyer_count_query = "SELECT count(*) FROM member_info WHERE  1 ".$where."";
 	list($buyer_count) = @mysqli_fetch_array(mysqli_query($my_db, $buyer_count_query));
 	// print_r($buyer_count);
 	$PAGE_CLASS = new mnv_page($pg,$buyer_count,$page_size,$block_size);
 	$BLOCK_LIST = $PAGE_CLASS->blockList();
 	$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
-	$buyer_list_query = "SELECT * FROM check_info WHERE 1 ".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
+	$buyer_list_query = "SELECT * FROM member_info WHERE 1 ".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
 	$res = mysqli_query($my_db, $buyer_list_query);
 //print_r($buyer_list_query);
 	while ($buyer_data = @mysqli_fetch_array($res))
@@ -135,7 +143,7 @@
 		// $address = $buyer_info[$key]['mb_addr1'].' '.$buyer_info[$key]['mb_addr2'];
 		$sel_status = "";
 		$sel_check 	= "";
-		$check_data = json_decode($buyer_info[$key]['check_data'], true);
+		$check_data = json_decode($buyer_info[$key]['mb_check'], true);
 
 		$i = 0;
 		foreach($check_data as $key2 => $val2) {
@@ -158,11 +166,19 @@
 ?>
               <tr>
                 <td><?php echo $PAGE_UNCOUNT-- ?></td>
-                <td><?php echo $sel_status?></td>
+                <td><?php echo $buyer_info[$key]['mb_serial']?></td>
+                <td><?php echo $buyer_info[$key]['mb_cat_name']?></td>
+                <td><?php echo $buyer_info[$key]['mb_cat_birth']?></td>
+                <td><?php echo $buyer_info[$key]['mb_visit_hospital']?></td>
                 <td><?php echo $sel_check?></td>
-                <td><?php echo $buyer_info[$key]['check_gubun']?></td>
-                <td><?php echo $buyer_info[$key]['check_media']?></td>
-                <td><?php echo $buyer_info[$key]['check_date']?></td>
+                <td><?php echo $buyer_info[$key]['mb_result']?></td>
+                <td><?php echo $buyer_info[$key]['mb_sudo']?></td>
+                <td><?php echo $buyer_info[$key]['mb_select_hospital_name']?></td>
+                <td><?php echo $buyer_info[$key]['mb_select_hospital_addr']?></td>
+                <td><?php echo $buyer_info[$key]['mb_name']?></td>
+                <td><?php echo $buyer_info[$key]['mb_phone']?></td>
+                <td><?php echo $buyer_info[$key]['mb_gubun']?></td>
+                <td><?php echo $buyer_info[$key]['mb_regdate']?></td>
               </tr>
 <?php
 	}
