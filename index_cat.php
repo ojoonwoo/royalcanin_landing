@@ -22,11 +22,8 @@
 ?>
 <body>
     <!-- Google Tag Manager (noscript) -->
-
-    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TSHTM5"
-
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8NN8XM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div id="container">
         <div id="header">
@@ -101,7 +98,7 @@
                         <div class="tab-container-wrap">
                             <ul class="tab-container" data-video-target="infl">
                                 <li>
-                                    <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw" data-title="반려묘를 꿰뚫어보는 <br><b>프로 집사도 주치의가 필요해요</b>">
+                                    <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw" data-title="반려묘를 꿰뚫어보는 <br><b>프로 집사도 주치의가 필요해요</b>" data-gtm-label="프로집사">
                                         <div class="wrapper">
                                             <img src="./images/infl_tab_thumb_01_active.png" alt="" class="thumb">
                                             <span>프로 집사의 #주치의 프로젝트</span>
@@ -110,7 +107,7 @@
                                     </button>
                                 </li>
                                 <li>
-                                    <button type="button" class="tab-trigger" data-key="CAInhDnQFaA" data-title="사랑하는 반려묘 앞에서는 <br><b>누구보다 예민해져야 해요</b>">
+                                    <button type="button" class="tab-trigger" data-key="CAInhDnQFaA" data-title="사랑하는 반려묘 앞에서는 <br><b>누구보다 예민해져야 해요</b>" data-gtm-label="예민보스집사">
                                         <div class="wrapper">
                                             <img src="./images/infl_tab_thumb_02_common.png" alt="" class="thumb">
                                             <span>예민보스 집사의 #주치의 프로젝트</span>
@@ -120,7 +117,7 @@
                                 </li>
                                 <li>
                                     <!-- <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM"> -->
-                                    <button type="button" class="tab-trigger _last" data-key="" data-title="결국은 동물병원에 자주 방문하는 것이 <br><b>가장 현명한 방법이에요</b>">
+                                    <button type="button" class="tab-trigger _last" data-key="" data-title="결국은 동물병원에 자주 방문하는 것이 <br><b>가장 현명한 방법이에요</b>" data-gtm-label="현명집사">
                                         <div class="wrapper">
                                             <img src="./images/infl_tab_thumb_03_soon_common.png" alt="" class="thumb">
                                             <span>현명 집사의 #주치의 프로젝트</span>
