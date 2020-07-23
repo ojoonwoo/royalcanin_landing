@@ -254,6 +254,8 @@
                     act = "선택";
                     hospiName = $('.hospi-trigger.is-active').find('.h-name').text();
                     hospiAddr = $('.hospi-trigger.is-active').find('.h-addr').text();
+                    hospiCode = $('.hospi-trigger.is-active').attr('data-code');
+                    console.log(hospiCode);
                     sudoYN = "Y";
                 } else {
                     act = "입력";
