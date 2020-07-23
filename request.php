@@ -99,7 +99,7 @@
                             </div>
                             <div class="input">
                                 <input type="text" class="input-text" id="req-addr" placeholder="내가 선택한 동물병원" readonly>
-                                <p class="guide-msg">* 건강검진권, 헤마츄리아 당첨 시 선택한 동물병원에서만 검진 및 수령이 가능하며 변경이 불가하니 신중하게 선택해주세요.</p>
+                                <p class="guide-msg">* <b>건강검진권, 헤마츄리아 당첨 시</b> 선택한 동물병원에서만 검진 및 수령이 가능하며 변경이 불가하니 신중하게 선택해주세요.</p>
                             </div>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                                 <input type="text" class="input-text" id="req-phone1" placeholder="" onkeyup="only_num(this);lengthCheck(this, 3)">
                                 <input type="text" class="input-text" id="req-phone2" placeholder="" onkeyup="only_num(this);lengthCheck(this, 4)">
                                 <input type="text" class="input-text" id="req-phone3" placeholder="" onkeyup="only_num(this);lengthCheck(this, 4)">
-                                <p class="guide-msg">* 본 무료 건강검진권과 헤마츄리아는 추첨을 통해 제공되며, 추첨은 별개로 진행됩니다.</p>
+                                <p class="guide-msg">* 건강검진권과 헤마츄리아 디텍션은 추첨을 통해 제공되며, 추첨 결과는 별도 통보됩니다.</p>
                             </div>
                         </div>
                     </div>
@@ -151,7 +151,7 @@
                             </div>
                         </div>
                         <button type="button" class="type-01 hospi-select">입력 완료</button>
-                        <p class="guide-msg">* 병원 선택 전, 해당 주소지가 맞는지 확인해주세요!</p>
+                        <p class="guide-msg">* 병원 선택 전, 해당 주소지가 맞는지 확인해주세요!<br>건강검진권은 선택하신 병원에서만 사용 가능하며, 차후 병원 변경이 불가하니 신중하게 선택해주세요.</p>
                     </div>
                 </div>
                 <div class="popup _req" id="hospi-popup">
@@ -166,7 +166,7 @@
                             </ul>
                         </div>
                         <button type="button" class="type-01 hospi-select">선택 완료</button>
-                        <p class="guide-msg">* 병원 선택 전, 해당 주소지가 맞는지 확인해주세요!</p>
+                        <p class="guide-msg">* 병원 선택 전, 해당 주소지가 맞는지 확인해주세요!<br>건강검진권은 선택하신 병원에서만 사용 가능하며, 차후 병원 변경이 불가하니 신중하게 선택해주세요.</p>
                     </div>
                 </div>
                 <div class="popup _complete" id="complete-popup">
@@ -202,7 +202,7 @@
                                 </li>
                             </ul>
                             <div class="noti-img">
-                                <img src="./images/section_03_notice.png" alt="필독! 당첨되지 않은 신청자에게는 별도의 공지가 없는 점 양해 부탁드립니다. 본 건강검진권은 지정된 병원에서만 사용이 가능하며, 선택한 병원 이외의 지점에서 사용 불가합니다.">
+                                <img src="./images/section_03_notice.png" alt="필독! 당첨되지 않은 신청자에게는 별도의 공지가 없는 점 양해 부탁드립니다. 본 건강검진권은 지정된 병원에서만 사용이 가능하며, 선택한 병원이 아닌 다른 병원에서는 사용이 불가합니다.">
                             </div>
                         </div>
                         <button type="button" class="type-01" id="btn-complete">확인</button>
@@ -329,9 +329,6 @@
                 });
             });
             $doc.on('click', '.go-next', function() {
-                console.log("수도권:", sudoYN)
-                console.log("병원명:", hospiName);
-                console.log("병원주소:", hospiAddr);
                 var phoneRule = /^(?:(010-?\d{4})|(01[1|6|7|8|9]-?\d{3,4}))-?\d{4}$/;
                 var userName = $('#req-name').val();
                 var phoneNumber = $('#req-phone1').val()+$('#req-phone2').val()+$('#req-phone3').val();
@@ -369,10 +366,6 @@
                         console.log(errMsg);
                     }
                 });
-
-                // alert('입력한 정보 저장 & 쿠키 생성');
-                // setCookie("cathealth_completed","Y","7") //변수, 변수값, 저장기간
-                // royalcaninCat.popup.show($('#complete-popup'));
             });
 
             $doc.on('click', '#btn-complete, #complete-popup .popup-close, #complete-popup + .out-area', function() {

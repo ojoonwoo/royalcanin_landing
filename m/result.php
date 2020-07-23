@@ -67,11 +67,14 @@
                 <h5 class="adv-subject"></h5>
                 <p class="adv-text">
                     <span class="adv-msg"></span>
-                    <span class="default-msg">지금 무료 건강검진권을 신청하고<br>가까운 병원에서 수의사 선생님을 만나보세요.</span>
+                    <span class="default-msg">지금 건강검진권을 신청하고<br>가까운 병원에서 수의사 선생님을 만나보세요.</span>
                     <span class="doctor-msg" style="display:none;">유심히 관찰하거나 수의사 선생님과의 정확한 상담으로<br>질병 가능성을 예방해 보세요</span>
                 </p>
             </div>
-            <img src="./images/result_notice.png" alt="* 결과는 보호자가 인식하는 반려묘 신호 정도에 따라 상이할 수 있는 참고용으로, 수의사 선생님의 소견이나 수의학적 치료를 대체할 수 없습니다." class="noti-msg">
+            <div class="notice-block">
+                <p>* 결과는 보호자가 인식하는 반려묘 신호 정도에 따라 상이할 수 있습니다.<br>본 테스트는 참고용이며, 수의사 선생님의 소견이나 수의학적 치료를 대체할 수 없습니다.</p>
+            </div>
+            <!-- <img src="./images/result_notice.png" alt="* 결과는 보호자가 인식하는 반려묘 신호 정도에 따라 상이할 수 있습니다. 본 테스트는 참고용이며, 수의사 선생님의 소견이나 수의학적 치료를 대체할 수 없습니다." class="noti-msg"> -->
             <a href="./request.php?serial=<?php echo $serial?>" class="type-01 go-next">건강검진권 신청하기</a>
         </div>
         <div id="footer">

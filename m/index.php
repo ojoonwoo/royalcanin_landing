@@ -87,13 +87,13 @@
             <section class="section _02" id="section2">
                 <div class="title-block">
                     <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
-                    <p class="tt">#주치의 프로젝트</p>
+                    <p class="tt">#고양이 주치의 프로젝트</p>
                     <p class="sub">직접 경험해본 보호자들이 말한다</p>
                 </div>
                 <div class="infl-video-container">
                     <div class="title-block">
                         <div class="title">
-                            <span>반려묘를 꿰뚫어보는 <br><b>프로 집사도 주치의가 필요해요</b></span>
+                            <span class="dn-title">반려묘를 꿰뚫어보는 <br><b>프로 집사도 주치의가 필요해요</b></span>
                             <!-- <span>사랑하는 반려묘 앞에서는 <br><b>누구보다 예민해져야해요</b></span> -->
                         </div>
                     </div>
@@ -108,21 +108,21 @@
                 <div class="tab-container-wrap">
                     <ul class="tab-container" data-video-target="infl">
                         <li>
-                            <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw">
+                            <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw" data-title="반려묘를 꿰뚫어보는 <br><b>프로 집사도 주치의가 필요해요</b>">
                                 <img src="./images/infl_tab_thumb_01_active.png" alt="" class="thumb">
-                                <span>뽀양의<br>#주치의 프로젝트</span>
+                                <span>프로 집사의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="CAInhDnQFaA">
+                            <button type="button" class="tab-trigger" data-key="CAInhDnQFaA" data-title="사랑하는 반려묘 앞에서는 <br><b>누구보다 예민해져야 해요</b>">
                                 <img src="./images/infl_tab_thumb_02_common.png" alt="" class="thumb">
-                                <span>지안스캣의<br>#주치의 프로젝트</span>
+                                <span>예민보스 집사의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="">
-                                <img src="./images/infl_tab_thumb_03_soon.png" alt="" class="thumb">
-                                <span>아리랑의<br>#주치의 프로젝트</span>
+                            <button type="button" class="tab-trigger" data-key="" data-title="결국은 동물병원에 자주 방문하는 것이 <br><b>가장 현명한 방법이에요</b>">
+                                <img src="./images/infl_tab_thumb_03_soon_common.png" alt="" class="thumb">
+                                <span>현명 집사의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
                     </ul>
@@ -184,9 +184,9 @@
                     </p>
                     <p class="sub">
                         아픈 것을 잘 드러내지 않는 반려묘이기에<br>
-                        세심하게 살펴주는 가장 가까운 주치의로써의 관찰 능력은 필수!<br>
-                        <b>나의 주치의력을 테스트 해 보시고 반려묘의 신호는 물론<br>
-                        무료 건강검진권 당첨의 기회도 잡으세요!</b>
+                        세심하게 살펴주는 가장 가까운 주치의로서의 <em>관찰 능력</em>은 필수!<br>
+                        <b>나의 주치의력을 테스트 해 보고 반려묘의 신호는 물론<br>
+                        10만원 상당의 건강검진권 당첨의 기회도 잡으세요!</b>
                     </p>
                 </div>
                 <div class="date-block">
@@ -199,7 +199,7 @@
                         <dd>2020. 9. 14</dd>
                     </dl>
                 </div>
-                <img src="./images/section_03_group.png" alt="" class="img-group">
+                <img src="./images/section_03_group.jpg" alt="" class="img-group">
                 <a href="./gate.php" class="type-01" id="go-sub">시작하기</a>
                 <div class="dash-line"></div>
                 <div class="benefit-area">
@@ -208,17 +208,17 @@
                     <ul>
                         <li>
                             <div class="cnt-ball">
-                                <span>100명</span>
+                                <span>300명</span>
                             </div>
-                            <img src="./images/benefit_img_01.png" alt="10만원 상당의 건강검진권 100명">
+                            <img src="./images/benefit_img_01.png" alt="10만원 상당의 건강검진권 300명">
                             <p>10만원 상당의<br><b>건강검진권</b></p>
                             <button type="button" data-popup="#reward1-popup">건강검진권 사용안내</button>
                         </li>
                         <li>
                             <div class="cnt-ball">
-                                <span>50명</span>
+                                <span>100명</span>
                             </div>
-                            <img src="./images/benefit_img_02.png" alt="혈뇨검출 체외진단기 헤마츄리아 디텍션 50명">
+                            <img src="./images/benefit_img_02.png" alt="혈뇨검출 체외진단기 헤마츄리아 디텍션 100명">
                             <p>혈뇨검출 체외진단기<br><b>헤마츄리아 디텍션</b></p>
                             <button type="button" data-popup="#reward2-popup">헤마츄리아 사용법</button>
                         </li>
@@ -249,7 +249,13 @@
                         <li>
                             <button type="button" class="tab-trigger" data-key="SauuYLbs_FI">
                                 <img src="./images/tips_tab_icon_02_common.png" alt="" class="icon" style="width:17px">
-                                <span>반려묘에게<br>치명적인 질병은?</span>
+                                <span>반려묘 건강검진<br>자세히 알아보기</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s">
+                                <img src="./images/tips_tab_icon_07_common.png" alt="" class="icon" style="width:18.5px">
+                                <span>반려묘의<br>요로계 위험신호</span>
                             </button>
                         </li>
                         <li>
@@ -259,9 +265,9 @@
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="8JscdpO7oeg">
-                                <img src="./images/tips_tab_icon_04_common.png" alt="" class="icon" style="width:19.5px">
-                                <span>반려묘의 소화기<br>위험신호</span>
+                            <button type="button" class="tab-trigger" data-key="coy3EAxcrv0">
+                                <img src="./images/tips_tab_icon_06_common.png" alt="" class="icon" style="width:14px">
+                                <span>반려묘의<br>스트레스 신호</span>
                             </button>
                         </li>
                         <li>
@@ -271,15 +277,9 @@
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="coy3EAxcrv0">
-                                <img src="./images/tips_tab_icon_06_common.png" alt="" class="icon" style="width:14px">
-                                <span>반려묘의<br>스트레스 신호</span>
-                            </button>
-                        </li>
-                        <li>
-                            <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s">
-                                <img src="./images/tips_tab_icon_07_common.png" alt="" class="icon" style="width:18.5px">
-                                <span>반려묘의<br>요로계 위험신호</span>
+                            <button type="button" class="tab-trigger" data-key="8JscdpO7oeg">
+                                <img src="./images/tips_tab_icon_04_common.png" alt="" class="icon" style="width:19.5px">
+                                <span>반려묘의 소화기<br>위험신호</span>
                             </button>
                         </li>
                     </ul>
@@ -375,7 +375,7 @@
                         소변에 혈액이 섞여 있는 것은<br>여러가지 질병의 신호! 
                     </p>
                     <p class="sub">
-                        대표적으로 재발하는 경향이 있는 요로계 질환
+                        재발 빈도가 높은 요로계 문제가 대표적입니다.
                     </p>
                     <img src="./images/popup_reward_02_prd_img.png" alt="" class="prd-img">
                 </div>
@@ -408,7 +408,7 @@
             height: playerWidth*9/16,
             width: playerWidth,
             videoId: '3_6h0o-t3Vw',
-            playerVars: {'enablejsapi': 1, 'autoplay': 0, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': window.location.href, 'playsinline': 1, 'widget_refferer:': window.location.href},
+            playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': window.location.href, 'playsinline': 1, 'widget_refferer:': window.location.href},
             events: {
                 'onReady': onPlayerReady,
             }
@@ -417,7 +417,7 @@
             height: playerWidth*9/16,
             width: playerWidth,
             videoId: 'SauuYLbs_FI',
-            playerVars: {'enablejsapi': 1, 'autoplay': 0, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': window.location.href, 'playsinline': 1, 'widget_refferer:': window.location.href},
+            playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': window.location.href, 'playsinline': 1, 'widget_refferer:': window.location.href},
             events: {
                 'onReady': onPlayerReady,
             }
@@ -426,7 +426,7 @@
 
     // 4. The API will call this function when the video player is ready.
     function onPlayerReady(event) {
-        // event.target.playVideo();
+        event.target.playVideo();
     }
 
     // 5. The API calls this function when the player's state changes.
@@ -548,15 +548,17 @@
                     $('#player-infl').css('opacity', '0');
                     $('.comming-soon').show();
                 } else {
+                    // switch($(this).idx()) 
                     $('#player-infl').css('opacity', '1');
-                    playerInfl.cueVideoById({
+                    playerInfl.loadVideoById({
                         'videoId': targetKey,
                         'startSeconds': 0,
                         'suggestedQuality': 'default'
                     });
                 }
+                $('.infl-video-container .title span').html($(this).attr('data-title'));
             } else {
-                playerTips.cueVideoById({
+                playerTips.loadVideoById({
                     'videoId': targetKey,
                     'startSeconds': 0,
                     'suggestedQuality': 'default'
