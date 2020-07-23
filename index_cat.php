@@ -491,7 +491,7 @@
             } else {
                 playerTips.loadVideoById({
                     'videoId': targetKey,
-                    'startSeconds': 0,
+                    // 'startSeconds': 0,
                     'suggestedQuality': 'default'
                 });
             }
