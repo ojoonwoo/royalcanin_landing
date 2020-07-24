@@ -1779,13 +1779,15 @@ html.popup-opened {
 .popup#reward2-popup .notice-block {
 	padding: 20px 34px 22px;
 	background: #e3001a;
+	border-bottom-left-radius: 11px;
+	border-bottom-right-radius: 11px;
 }
 .popup#reward2-popup .notice-block p {
 	font-size: 10px;
 	font-weight: 500;
 	letter-spacing: -0.05em;
 	color: #fff;
-	text-align: center;
+	text-align: left;
 	line-height: 1.3;
 }
 .popup#reward2-popup .notice-block p:last-child {
