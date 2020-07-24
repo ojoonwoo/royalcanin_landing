@@ -101,19 +101,19 @@
                 <div class="tab-container-wrap">
                     <ul class="tab-container" data-video-target="infl">
                         <li>
-                            <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw" data-title="반려묘를 꿰뚫어보는 <br><b>프로 집사도 주치의가 필요해요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '프로 집사'});">
+                            <button type="button" class="tab-trigger is-active" data-key="NDzXMytufC0" data-title="반려묘를 꿰뚫어보는 <br><b>프로 집사도 주치의가 필요해요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '프로 집사'});">
                                 <img src="./images/infl_tab_thumb_01_active.png" alt="" class="thumb">
                                 <span>프로 집사의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="CAInhDnQFaA" data-title="사랑하는 반려묘 앞에서는 <br><b>누구보다 예민해져야 해요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '예민보스 집사'});">
+                            <button type="button" class="tab-trigger" data-key="VRINw_maxko" data-title="사랑하는 반려묘 앞에서는 <br><b>누구보다 예민해져야 해요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '예민보스 집사'});">
                                 <img src="./images/infl_tab_thumb_02_common.png" alt="" class="thumb">
                                 <span>예민보스 집사의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="" data-title="결국은 동물병원에 자주 방문하는 것이 <br><b>가장 현명한 방법이에요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '현명 집사'});">
+                            <button type="button" class="tab-trigger" data-key="EQBGrB1450k" data-title="결국은 동물병원에 자주 방문하는 것이 <br><b>가장 현명한 방법이에요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '현명 집사'});">
                                 <img src="./images/infl_tab_thumb_03_soon_common.png" alt="" class="thumb">
                                 <span>현명 집사의<br>#주치의 프로젝트</span>
                             </button>
@@ -358,7 +358,7 @@
         playerInfl = new YT.Player('player-infl', {
             height: playerWidth*9/16,
             width: playerWidth,
-            videoId: '3_6h0o-t3Vw',
+            videoId: 'NDzXMytufC0',
             playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': window.location.href, 'playsinline': 1, 'widget_refferer:': window.location.href},
             events: {
                 'onReady': onPlayerReady,
