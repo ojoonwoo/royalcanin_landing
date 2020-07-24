@@ -412,7 +412,7 @@
 
         });
 
-
+        var inflplay = "N";
         $(window).on('scroll', function(e) {
             var curTop = $(this).scrollTop();
             var headerHeight = $('#header').height();
@@ -425,11 +425,16 @@
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(1).addClass("active");
 
-                playerInfl.loadVideoById({
-                    'videoId': '3_6h0o-t3Vw',
-                    'startSeconds': 0,
-                    'suggestedQuality': 'default'
-                });
+                if (inflplay == "N") {
+                    playerInfl.playVideo();
+                    // playerInfl.loadVideoById({
+                    //     'videoId': '3_6h0o-t3Vw',
+                    //     'startSeconds': 0,
+                    //     'suggestedQuality': 'default'
+                    // });
+
+                    inflplay = "Y";
+                }
             // } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight - ($(window).height()-($('#section4').height()+$('#footer').height()))) {
             } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight) {
                 // 스크롤 현재 위치 섹션 3
