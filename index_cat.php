@@ -103,7 +103,7 @@
                                     </button>
                                 </li>
                                 <li>
-                                    <button type="button" class="tab-trigger" data-key="VRINw_maxko" data-title="사랑하는 반려묘 앞에서는 <br><b>누구보다 예민해져야 해요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '예민보스 집사'});">
+                                    <button type="button" class="tab-trigger" data-key="C_LCqOKWbB0" data-title="사랑하는 반려묘 앞에서는 <br><b>누구보다 예민해져야 해요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '예민보스 집사'});">
                                         <div class="wrapper">
                                             <img src="./images/infl_tab_thumb_02_common.png" alt="" class="thumb">
                                             <span>예민보스 집사의 #주치의 프로젝트</span>
