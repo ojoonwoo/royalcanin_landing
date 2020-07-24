@@ -423,7 +423,7 @@
 
     // 4. The API will call this function when the video player is ready.
     function onPlayerReady(event) {
-        event.target.playVideo();
+        // event.target.playVideo();
     }
 
     // 5. The API calls this function when the player's state changes.
@@ -547,11 +547,16 @@
                 } else {
                     // switch($(this).idx()) 
                     $('#player-infl').css('opacity', '1');
-                    playerInfl.loadVideoById({
+                    playerInfl.cueVideoById({
                         'videoId': targetKey,
                         'startSeconds': 0,
                         'suggestedQuality': 'default'
                     });
+                    // playerInfl.loadVideoById({
+                    //     'videoId': targetKey,
+                    //     'startSeconds': 0,
+                    //     'suggestedQuality': 'default'
+                    // });
                 }
                 $('.infl-video-container .title span').html($(this).attr('data-title'));
             } else {
