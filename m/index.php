@@ -494,29 +494,29 @@
                 } else {
                     // switch($(this).idx()) 
                     $('#player-infl').css('opacity', '1');
-                    playerInfl.cueVideoById({
-                        'videoId': targetKey,
-                        'startSeconds': 0,
-                        'suggestedQuality': 'default'
-                    });
-                    // playerInfl.loadVideoById({
+                    // playerInfl.cueVideoById({
                     //     'videoId': targetKey,
                     //     'startSeconds': 0,
                     //     'suggestedQuality': 'default'
                     // });
+                    playerInfl.loadVideoById({
+                        'videoId': targetKey,
+                        'startSeconds': 0,
+                        'suggestedQuality': 'default'
+                    });
                 }
                 $('.infl-video-container .title span').html($(this).attr('data-title'));
             } else {
-                // playerTips.loadVideoById({
-                //     'videoId': targetKey,
-                //     'startSeconds': 0,
-                //     'suggestedQuality': 'default'
-                // });
-                playerTips.cueVideoById({
+                playerTips.loadVideoById({
                     'videoId': targetKey,
                     'startSeconds': 0,
                     'suggestedQuality': 'default'
                 });
+                // playerTips.cueVideoById({
+                //     'videoId': targetKey,
+                //     'startSeconds': 0,
+                //     'suggestedQuality': 'default'
+                // });
 
             }
         });
