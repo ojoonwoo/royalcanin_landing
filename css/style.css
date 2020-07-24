@@ -1984,8 +1984,10 @@ html.popup-opened {
 	font-weight: 800;
 }
 .popup#reward1-popup .guide-block {
-	padding: 24px 40px 36px;
+	padding: 40px 19px 57px;
 	background-color: #f0f0f0;
+	border-bottom-left-radius: 22px;
+	border-bottom-right-radius: 22px;
 }
 .popup#reward1-popup .guide-block dl {
 	display: flex;
@@ -2048,8 +2050,8 @@ html.popup-opened {
 	margin-bottom: 35px;
 }
 .popup#reward2-popup .notice-block {
-	padding: 20px 34px 22px;
-	background: #e3001a;
+	padding: 25px 19px 55px;
+	background: #959595;
 	border-bottom-left-radius: 22px;
 	border-bottom-right-radius: 22px;
 }

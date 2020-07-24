@@ -301,14 +301,15 @@
                 <img src="./images/popup_reward_01_img.png" alt="" class="r-img">
                 <p class="text"><b>10만원 상당의 건강검진권</b>이<br>추첨을 통해 제공됩니다.</p>
                 <div class="guide-block">
-                    <dl>
+                    <!-- <dl>
                         <dt>사용 기간 : </dt>
                         <dd>2020. 9. 15 ~ 2020. 12. 31</dd>
                     </dl>
                     <dl>
                         <dt>유의사항 : </dt>
                         <dd>10만원 이상 발생하는 비용은 본인 부담입니다. 보다 자세한 관련 사항은 000을 참고하세요.</dd>
-                    </dl>
+                    </dl> -->
+                    <img src="./images/popup_reward_01_notice.png" alt="">
                 </div>
             </div>
         </div>
@@ -330,9 +331,7 @@
                     <img src="./images/popup_reward_02_guide_img.png" alt="">
                 </div>
                 <div class="notice-block">
-                    <p>*본 제품은 동물용 의료기기 제품으로써, 당첨 시 모바일 쿠폰을 통해</p>
-                    <p>선택하신 동물병원에서 제품으로 교환할 수 있습니다.</p>
-                    <p>제품 교환 기간 : 2020. 9. 15 ~ 2020. 9. 29</p>
+                    <img src="./images/popup_reward_02_notice.png" alt="">
                 </div>
             </div>
         </div>
