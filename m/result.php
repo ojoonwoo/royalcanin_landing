@@ -123,7 +123,6 @@
             }
         }
         var adviceArray = [];
-        console.log(catInfo);
         for (var key in catInfo) {
             var len = catInfo[key].checkedLength;
             var point = (len/catInfo[key].list.length)*100;
