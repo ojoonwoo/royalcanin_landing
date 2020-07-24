@@ -411,6 +411,7 @@ button.with-icon:after {
 	z-index: 1;
 }
 .yt-container {
+	position: relative;
 	background-color: #6d6e71;
 }
 .yt-container .player {
@@ -1711,7 +1712,7 @@ html.popup-opened {
 	color: #e3001a;
 	font-weight: 800;
 }
-.popup._reward .guide-block {
+.popup#reward1-popup .guide-block {
 	padding: 20px 22px 23px;
 	background-color: #f0f0f0;
 	border-bottom-left-radius: 11px;
@@ -1776,6 +1777,24 @@ html.popup-opened {
 	color: #e3001a;
 	text-align: center;
 	margin-bottom: 31px;
+}
+.popup#reward2-popup .notice-block {
+	padding: 20px 34px 22px;
+	background: #e3001a;
+	border-bottom-left-radius: 22px;
+	border-bottom-right-radius: 22px;
+}
+.popup#reward2-popup .notice-block p {
+	font-size: 13px;
+	font-weight: 500;
+	letter-spacing: -0.05em;
+	color: #fff;
+	text-align: center;
+	line-height: 1.3;
+}
+.popup#reward2-popup .notice-block p:last-child {
+	font-weight: 700;
+	margin-top: 8px;
 }
 .popup._req .title-block {
 	margin-bottom: 30px;

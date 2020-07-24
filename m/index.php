@@ -230,8 +230,8 @@
                 </div>
                 <div class="tips-video-container">
                     <div class="yt-container">
-                        <div id="player-tips" class="player"></div>
                         <div class="comming-soon"><span>COMING SOON</span></div>
+                        <div id="player-tips" class="player"></div>
                     </div>
                 </div>
                 <ul class="article-list">
@@ -328,6 +328,11 @@
                 <div class="guide-block">
                     <p>헤마츄리아 디텍션 사용방법</p>
                     <img src="./images/popup_reward_02_guide_img.png" alt="">
+                </div>
+                <div class="notice-block">
+                    <p>*본 제품은 동물용 의료기기 제품으로써, 당첨 시 모바일 쿠폰을 통해</p>
+                    <p>선택하신 동물병원에서 제품으로 교환할 수 있습니다.</p>
+                    <p>제품 교환 기간 : 2020. 9. 15 ~ 2020. 9. 29</p>
                 </div>
             </div>
         </div>
@@ -494,38 +499,29 @@
                     $('#player-infl').css('opacity', '0');
                     $('.infl-video-container .comming-soon').show();
                 } else {
-                    // switch($(this).idx()) 
-                    $('#player-infl').css('opacity', '1');
-                    playerInfl.cueVideoById({
+                    $('.infl-video-container .comming-soon').hide();
+                    playerInfl.loadVideoById({
                         'videoId': targetKey,
                         'startSeconds': 0,
                         'suggestedQuality': 'default'
                     });
-                    // playerInfl.loadVideoById({
-                    //     'videoId': targetKey,
-                    //     'startSeconds': 0,
-                    //     'suggestedQuality': 'default'
-                    // });
+                    $('#player-infl').css('opacity', '1');
                 }
                 $('.infl-video-container .title span').html($(this).attr('data-title'));
             } else {
-                // playerTips.loadVideoById({
-                //     'videoId': targetKey,
-                //     'startSeconds': 0,
-                //     'suggestedQuality': 'default'
-                // });
                 if(targetKey == '') {
                     playerTips.stopVideo();
                     $('#player-tips').css('opacity', '0');
                     $('.tips-video-container .comming-soon').show();
                 } else {
-                    playerTips.cueVideoById({
+                    $('.tips-video-container .comming-soon').hide();
+                    playerTips.loadVideoById({
                         'videoId': targetKey,
                         'startSeconds': 0,
                         'suggestedQuality': 'default'
                     });
+                    $('#player-tips').css('opacity', '1');
                 }
-
             }
         });
 

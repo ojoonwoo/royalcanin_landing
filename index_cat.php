@@ -178,7 +178,7 @@
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s" onclick="gtag('event', 'TIPS', {'event_category': '메인페이지', 'event_label': '건강검진 자세히 알아보기'});">
+                            <button type="button" class="tab-trigger" data-key="" onclick="gtag('event', 'TIPS', {'event_category': '메인페이지', 'event_label': '건강검진 자세히 알아보기'});">
                                 <img src="./images/tips_tab_icon_02_common.png" alt="" class="icon thumb" style="width:24px">
                                 <span>반려묘 건강검진<br />자세히 알아보기</span>
                             </button>
@@ -217,9 +217,8 @@
                 </div>
                 <div class="tips-video-container">
                     <div class="yt-container">
-                        <div id="player-tips">
-                            <!-- youtube video -->
-                        </div>
+                        <div class="comming-soon"><span>COMING SOON</span></div>
+                        <div id="player-tips"></div>
                     </div>
                 </div>
                 <ul class="article-list">
@@ -323,6 +322,11 @@
                     <p>헤마츄리아 디텍션 사용방법</p>
                     <img src="./images/popup_reward_02_guide_img.png" alt="">
                 </div>
+                <div class="notice-block">
+                    <p>*본 제품은 동물용 의료기기 제품으로써, 당첨 시 모바일 쿠폰을 통해</p>
+                    <p>선택하신 동물병원에서 제품으로 교환할 수 있습니다.</p>
+                    <p>제품 교환 기간 : 2020. 9. 15 ~ 2020. 9. 29</p>
+                </div>
             </div>
         </div>
         <div id="footer">
@@ -382,9 +386,9 @@
             // done = true;
         }
     }
-    function stopVideo() {
-        // player.stopVideo();
-    }
+    // function stopVideo() {
+    //     // player.stopVideo();
+    // }
     </script>
     <script>
         $(document).ready(function() {
@@ -509,32 +513,31 @@
                 if(targetKey == '') {
                     playerInfl.stopVideo();
                     $('#player-infl').css('opacity', '0');
-                    $('.comming-soon').show();
+                    $('.infl-video-container .comming-soon').show();
                 } else {
-                    $('#player-infl').css('opacity', '1');
-                    // playerInfl.cueVideoById({
-                    //     'videoId': targetKey,
-                    //     'startSeconds': 0,
-                    //     'suggestedQuality': 'default'
-                    // });
+                    $('.infl-video-container .comming-soon').hide();
                     playerInfl.loadVideoById({
                         'videoId': targetKey,
                         'startSeconds': 0,
                         'suggestedQuality': 'default'
                     });
+                    $('#player-infl').css('opacity', '1');
                 }
                 $('.infl-video-container .title .dn-title').html($(this).attr('data-title'));
             } else {
-                // playerTips.cueVideoById({
-                //     'videoId': targetKey,
-                //     'startSeconds': 0,
-                //     'suggestedQuality': 'default'
-                // });
-                playerTips.loadVideoById({
-                    'videoId': targetKey,
-                    'startSeconds': 0,
-                    'suggestedQuality': 'default'
-                });
+                if(targetKey == '') {
+                    playerTips.stopVideo();
+                    $('#player-tips').css('opacity', '0');
+                    $('.tips-video-container .comming-soon').show();
+                } else {
+                    $('.tips-video-container .comming-soon').hide();
+                    playerTips.loadVideoById({
+                        'videoId': targetKey,
+                        'startSeconds': 0,
+                        'suggestedQuality': 'default'
+                    });
+                    $('#player-tips').css('opacity', '1');
+                }
             }
         });
 
