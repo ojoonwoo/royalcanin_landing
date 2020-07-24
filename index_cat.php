@@ -420,6 +420,10 @@
                 // 스크롤 현재 위치 섹션 1
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(0).addClass("active");
+                if (inflplay == "Y") {
+                    playerInfl.stopVideo();
+                    inflplay = "N";
+                }
             } else if(curTop >= $('#section2').offset().top-headerHeight && curTop < $('#section3').offset().top-headerHeight) {
                 // 스크롤 현재 위치 섹션 2
                 $(".menu li").removeClass("active");
@@ -427,12 +431,6 @@
 
                 if (inflplay == "N") {
                     playerInfl.playVideo();
-                    // playerInfl.loadVideoById({
-                    //     'videoId': '3_6h0o-t3Vw',
-                    //     'startSeconds': 0,
-                    //     'suggestedQuality': 'default'
-                    // });
-
                     inflplay = "Y";
                 }
             // } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight - ($(window).height()-($('#section4').height()+$('#footer').height()))) {
@@ -440,10 +438,18 @@
                 // 스크롤 현재 위치 섹션 3
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(2).addClass("active");
+                if (inflplay == "Y") {
+                    playerInfl.stopVideo();
+                    inflplay = "N";
+                }
             } else  {
                 // 스크롤 현재 위치 섹션 4
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(3).addClass("active");
+                if (inflplay == "Y") {
+                    playerInfl.stopVideo();
+                    inflplay = "N";
+                }
             }
         });
         
