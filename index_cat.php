@@ -416,6 +416,7 @@
         var inflplay = "N";
         var tipsplay = "N";
         $(window).on('scroll', function(e) {
+            console.log(playerInfl);
             var curTop = $(this).scrollTop();
             var headerHeight = $('#header').height();
             if(curTop < $('#section2').offset().top-headerHeight) {
