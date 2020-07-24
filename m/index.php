@@ -114,7 +114,7 @@
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="EQBGrB1450k" data-title="결국은 동물병원에 자주 방문하는 것이 <br><b>가장 현명한 방법이에요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '현명 집사'});">
-                                <img src="./images/infl_tab_thumb_03_soon_common.png" alt="" class="thumb">
+                                <img src="./images/infl_tab_thumb_03_common.png" alt="" class="thumb">
                                 <span>현명 집사의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
@@ -448,48 +448,6 @@
                 playerInfl.pauseVideo();
                 playerTips.pauseVideo();
             }
-            // if(curTop < $('#section2').offset().top-headerHeight) {
-            //     // 스크롤 현재 위치 섹션 1
-            //     if (inflplay == "Y") {
-            //         playerInfl.pauseVideo();
-            //         inflplay = "N";
-            //     }
-            //     if (tipsplay == "Y") {
-            //         playerTips.pauseVideo();
-            //         tipsplay = "N";
-            //     }
-            // } else if(curTop >= $('#section2').offset().top-headerHeight && curTop < $('#section3').offset().top-headerHeight) {
-            //     // 스크롤 현재 위치 섹션 2
-            //     if (tipsplay == "Y") {
-            //         playerTips.pauseVideo();
-            //         tipsplay = "N";
-            //     }
-            //     if (inflplay == "N") {
-            //         playerInfl.playVideo();
-            //         inflplay = "Y";
-            //     }
-            // // } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight - ($(window).height()-($('#section4').height()+$('#footer').height()))) {
-            // } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight) {
-            //     // 스크롤 현재 위치 섹션 3
-            //     if (inflplay == "Y") {
-            //         playerInfl.pauseVideo();
-            //         inflplay = "N";
-            //     }
-            //     if (tipsplay == "Y") {
-            //         playerTips.pauseVideo();
-            //         tipsplay = "N";
-            //     }
-            // } else  {
-            //     // 스크롤 현재 위치 섹션 4
-            //     if (inflplay == "Y") {
-            //         playerInfl.pauseVideo();
-            //         inflplay = "N";
-            //     }
-            //     if (tipsplay == "N") {
-            //         playerTips.playVideo();
-            //         tipsplay = "Y";
-            //     }
-            // }
         });
 
         // 헤더 햄버거 클릭 이벤트

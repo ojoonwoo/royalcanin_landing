@@ -114,7 +114,7 @@
                                 <li>
                                     <button type="button" class="tab-trigger _last" data-key="EQBGrB1450k" data-title="결국은 동물병원에 자주 방문하는 것이 <br><b>가장 현명한 방법이에요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '현명 집사'});">
                                         <div class="wrapper">
-                                            <img src="./images/infl_tab_thumb_03_soon_common.png" alt="" class="thumb">
+                                            <img src="./images/infl_tab_thumb_03_common.png" alt="" class="thumb">
                                             <span>현명 집사의 #주치의 프로젝트</span>
                                             <div class="play-btn"></div>
                                         </div>
