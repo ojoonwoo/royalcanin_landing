@@ -191,7 +191,7 @@
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="SauuYLbs_FI" onclick="gtag('event', 'TIPS', {'event_category': '메인페이지', 'event_label': '건강검진 자세히 알아보기'});">
+                            <button type="button" class="tab-trigger" data-key="" onclick="gtag('event', 'TIPS', {'event_category': '메인페이지', 'event_label': '건강검진 자세히 알아보기'});">
                                 <img src="./images/tips_tab_icon_02_common.png" alt="" class="icon" style="width:17px">
                                 <span>반려묘 건강검진<br>자세히 알아보기</span>
                             </button>
@@ -231,6 +231,7 @@
                 <div class="tips-video-container">
                     <div class="yt-container">
                         <div id="player-tips" class="player"></div>
+                        <div class="comming-soon"><span>COMING SOON</span></div>
                     </div>
                 </div>
                 <ul class="article-list">
@@ -336,6 +337,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollToPlugin.min.js"></script>
     <script>
+
     // 2. This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
 
@@ -490,7 +492,7 @@
                 if(targetKey == '') {
                     playerInfl.stopVideo();
                     $('#player-infl').css('opacity', '0');
-                    $('.comming-soon').show();
+                    $('.infl-video-container .comming-soon').show();
                 } else {
                     // switch($(this).idx()) 
                     $('#player-infl').css('opacity', '1');
@@ -512,11 +514,17 @@
                 //     'startSeconds': 0,
                 //     'suggestedQuality': 'default'
                 // });
-                playerTips.cueVideoById({
-                    'videoId': targetKey,
-                    'startSeconds': 0,
-                    'suggestedQuality': 'default'
-                });
+                if(targetKey == '') {
+                    playerTips.stopVideo();
+                    $('#player-tips').css('opacity', '0');
+                    $('.tips-video-container .comming-soon').show();
+                } else {
+                    playerTips.cueVideoById({
+                        'videoId': targetKey,
+                        'startSeconds': 0,
+                        'suggestedQuality': 'default'
+                    });
+                }
 
             }
         });
