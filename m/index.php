@@ -328,6 +328,11 @@
                     <p>헤마츄리아 디텍션 사용방법</p>
                     <img src="./images/popup_reward_02_guide_img.png" alt="">
                 </div>
+                <div class="notice-block">
+                    <p>*본 제품은 동물용 의료기기 제품으로써, 당첨 시 모바일 쿠폰을 통해</p>
+                    <p>선택하신 동물병원에서 제품으로 교환할 수 있습니다.</p>
+                    <p>제품 교환 기간 : 2020. 9. 15 ~ 2020. 9. 29</p>
+                </div>
             </div>
         </div>
         <div id="footer">
