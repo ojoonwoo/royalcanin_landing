@@ -413,6 +413,7 @@
         });
 
         var inflplay = "N";
+        var tipsplay = "N";
         $(window).on('scroll', function(e) {
             var curTop = $(this).scrollTop();
             var headerHeight = $('#header').height();
@@ -420,15 +421,17 @@
                 // 스크롤 현재 위치 섹션 1
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(0).addClass("active");
-                if (inflplay == "Y") {
-                    playerInfl.stopVideo();
-                    inflplay = "N";
-                }
+                playerInfl.stopVideo();
+                playerTips.stopVideo();
+                inflplay = "N";
+                tipsplay = "N";
             } else if(curTop >= $('#section2').offset().top-headerHeight && curTop < $('#section3').offset().top-headerHeight) {
                 // 스크롤 현재 위치 섹션 2
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(1).addClass("active");
 
+                playerTips.stopVideo();
+                tipsplay = "N";
                 if (inflplay == "N") {
                     playerInfl.playVideo();
                     inflplay = "Y";
@@ -438,17 +441,19 @@
                 // 스크롤 현재 위치 섹션 3
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(2).addClass("active");
-                if (inflplay == "Y") {
-                    playerInfl.stopVideo();
-                    inflplay = "N";
-                }
+                playerInfl.stopVideo();
+                playerTips.stopVideo();
+                inflplay = "N";
+                tipsplay = "N";
             } else  {
                 // 스크롤 현재 위치 섹션 4
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(3).addClass("active");
-                if (inflplay == "Y") {
-                    playerInfl.stopVideo();
-                    inflplay = "N";
+                playerInfl.stopVideo();
+                inflplay = "N";
+                if (tipsplay == "N") {
+                    playerTips.playVideo();
+                    tipsplay = "Y";
                 }
             }
         });
