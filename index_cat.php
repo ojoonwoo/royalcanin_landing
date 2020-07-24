@@ -351,7 +351,7 @@
             height: Math.round(playerWidth*9/16),
             width: playerWidth,
             videoId: '3_6h0o-t3Vw',
-            playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': window.location.href, 'playsinline': 1, 'widget_refferer:': window.location.href},
+            playerVars: {'enablejsapi': 1, 'autoplay': 0, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': window.location.href, 'playsinline': 1, 'widget_refferer:': window.location.href},
             events: {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
@@ -424,6 +424,12 @@
                 // 스크롤 현재 위치 섹션 2
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(1).addClass("active");
+
+                playerInfl.loadVideoById({
+                    'videoId': '3_6h0o-t3Vw',
+                    'startSeconds': 0,
+                    'suggestedQuality': 'default'
+                });
             // } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight - ($(window).height()-($('#section4').height()+$('#footer').height()))) {
             } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight) {
                 // 스크롤 현재 위치 섹션 3
