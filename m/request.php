@@ -287,9 +287,15 @@
             });
             $doc.on('click', '.go-next', function() {
                 var phoneRule = /^(?:(010-?\d{4})|(01[1|6|7|8|9]-?\d{3,4}))-?\d{4}$/;
+                var reqAddr = $('#req-addr').val();
                 var userName = $('#req-name').val();
                 var phoneNumber = $('#req-phone1').val()+$('#req-phone2').val()+$('#req-phone3').val();
 
+                if(reqAddr.trim().length<1) {
+                    alert('병원을 선택해주세요!');
+                    $('#req-addr').focus();
+                    return;
+                }
                 if(userName.trim().length<1) {
                     alert('보호자 이름을 올바르게 입력해주세요!');
                     $('#req-name').focus();
