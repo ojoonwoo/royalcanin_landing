@@ -85,8 +85,8 @@
                             <span>최근 1년 내 동물병원에 방문한 적 있나요?</span>
                             <div>
                                 <!-- <button type="button" class="fake-radio is-active">Y</button> -->
-                                <button type="button" class="fake-radio" onclick="gtag('event', '동물병원 방문여부', {'event_category': '게이트페이지', 'event_label': 'Y'});">Y</button>
-                                <button type="button" class="fake-radio" onclick="gtag('event', '동물병원 방문여부', {'event_category': '게이트페이지', 'event_label': 'N'});">N</button>
+                                <button type="button" class="fake-radio">Y</button>
+                                <button type="button" class="fake-radio">N</button>
                             </div>
                         </div>
                     </div>
