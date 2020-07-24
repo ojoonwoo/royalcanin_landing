@@ -234,7 +234,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/keeping-your-cat-at-a-healthy-weight" target="_blank" onclick="gtag('event', 'TIPS아티클', {'event_category': '메인페이지', 'event_label': '체중'});>
+                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/keeping-your-cat-at-a-healthy-weight" target="_blank" onclick="gtag('event', 'TIPS아티클', {'event_category': '메인페이지', 'event_label': '체중'});">
                             <div class="img">
                                 <img src="./images/article_img_02.png" alt="" class="thumb">
                             </div>
@@ -244,7 +244,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/my-cat-is-losing-its-hair" target="_blank" onclick="gtag('event', 'TIPS아티클', {'event_category': '메인페이지', 'event_label': '털'});>
+                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/my-cat-is-losing-its-hair" target="_blank" onclick="gtag('event', 'TIPS아티클', {'event_category': '메인페이지', 'event_label': '털'});">
                             <div class="img">
                                 <img src="./images/article_img_03.png" alt="" class="thumb">
                             </div>
@@ -254,7 +254,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/common-illnesses-in-older-cats" target="_blank" onclick="gtag('event', 'TIPS아티클', {'event_category': '메인페이지', 'event_label': '노령묘'});>
+                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/common-illnesses-in-older-cats" target="_blank" onclick="gtag('event', 'TIPS아티클', {'event_category': '메인페이지', 'event_label': '노령묘'});">
                             <div class="img">
                                 <img src="./images/article_img_04.png" alt="" class="thumb">
                             </div>
@@ -264,7 +264,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/how-your-cats-diet-affects-its-urinary-health" target="_blank" onclick="gtag('event', 'TIPS아티클', {'event_category': '메인페이지', 'event_label': '요로기계'});>
+                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/how-your-cats-diet-affects-its-urinary-health" target="_blank" onclick="gtag('event', 'TIPS아티클', {'event_category': '메인페이지', 'event_label': '요로기계'});">
                             <div class="img">
                                 <img src="./images/article_img_05.png" alt="" class="thumb">
                             </div>
@@ -274,7 +274,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/what-makes-a-cats-digestive-system-healthy" target="_blank" onclick="gtag('event', 'TIPS아티클', {'event_category': '메인페이지', 'event_label': '소화기계'});>
+                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/what-makes-a-cats-digestive-system-healthy" target="_blank" onclick="gtag('event', 'TIPS아티클', {'event_category': '메인페이지', 'event_label': '소화기계'});">
                             <div class="img">
                                 <img src="./images/article_img_06.png" alt="" class="thumb">
                             </div>
