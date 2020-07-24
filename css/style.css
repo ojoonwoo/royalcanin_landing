@@ -2042,6 +2042,18 @@ html.popup-opened {
 	text-align: center;
 	margin-bottom: 35px;
 }
+.popup#reward2-popup .notice-block {
+	padding: 30px 34px 70px;
+	background: #e3001a;
+}
+.popup#reward2-popup .notice-block p {
+	font-size: 22px;
+	font-weight: 800;
+	letter-spacing: -0.05em;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 35px;
+}
 .popup._req .title-block {
 	margin-bottom: 30px;
 }

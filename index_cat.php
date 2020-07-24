@@ -323,6 +323,10 @@
                     <p>헤마츄리아 디텍션 사용방법</p>
                     <img src="./images/popup_reward_02_guide_img.png" alt="">
                 </div>
+                <div class="notice-block">
+                    <p>헤마츄리아 디텍션 사용방법</p>
+                    <img src="./images/popup_reward_02_guide_img.png" alt="">
+                </div>
             </div>
         </div>
         <div id="footer">
