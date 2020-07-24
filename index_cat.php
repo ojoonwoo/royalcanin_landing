@@ -302,6 +302,9 @@
                         <dd>10만원 이상 발생하는 비용은 본인 부담입니다. 보다 자세한 관련 사항은 000을 참고하세요.</dd>
                     </dl>
                 </div>
+                <div class="notice-block">
+                    <img src="./images/popup_reward_01_notice.png" alt="">
+                </div>
             </div>
         </div>
         <div class="popup _reward" id="reward2-popup">

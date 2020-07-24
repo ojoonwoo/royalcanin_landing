@@ -330,7 +330,7 @@
                     <img src="./images/popup_reward_02_guide_img.png" alt="">
                 </div>
                 <div class="notice-block">
-                    <img src="./images/popup_reward_01_notice.png" alt="">
+                    <img src="./images/popup_reward_02_notice.png" alt="">
                 </div>
             </div>
         </div>
