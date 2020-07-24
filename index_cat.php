@@ -396,21 +396,7 @@
             paramValArr = get_param_arr(paramObj);
             $("body").addClass("is-load");
 
-            // 메인 섹션 1 한화면에 보일 수 있도록 조정
-            // var winwidth = $(window).width();
-            // var vh = $(window).height();
-            // $('.section._01').attr('style', 'height:'+ $(window).height()+'px');
-            // $('.section._01 .resize-elm').each(function() {
-            //     var wid = vh*$(this).attr('data-width');
-            //     $(this).attr('style', 'width:'+(wid/winwidth)*100+'%');  
-            // })
-            // $('.menu-transition-layer').css({
-            //     'width': winwidth*4,
-            //     'height': winwidth*4,
-            //     'top': -winwidth+'px',
-            //     'right': -winwidth+'px',
-            // })
-            console.log(window.location.href);
+            // console.log(window.location.href);
         });
 
         var inflplay = "N";
@@ -425,11 +411,11 @@
                 $('.menu li').eq(0).addClass("active");
 
                 if (inflplay == "Y") {
-                    playerInfl.stopVideo();
+                    playerInfl.pauseVideo();
                     inflplay = "N";
                 }
                 if (tipsplay == "Y") {
-                    playerTips.stopVideo();
+                    playerTips.pauseVideo();
                     tipsplay = "N";
                 }
             } else if(curTop >= $('#section2').offset().top-headerHeight && curTop < $('#section3').offset().top-headerHeight) {
@@ -438,7 +424,7 @@
                 $('.menu li').eq(1).addClass("active");
 
                 if (tipsplay == "Y") {
-                    playerTips.stopVideo();
+                    playerTips.pauseVideo();
                     tipsplay = "N";
                 }
                 if (inflplay == "N") {
@@ -451,11 +437,11 @@
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(2).addClass("active");
                 if (inflplay == "Y") {
-                    playerInfl.stopVideo();
+                    playerInfl.pauseVideo();
                     inflplay = "N";
                 }
                 if (tipsplay == "Y") {
-                    playerTips.stopVideo();
+                    playerTips.pauseVideo();
                     tipsplay = "N";
                 }
             } else  {
@@ -463,11 +449,14 @@
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(3).addClass("active");
                 if (inflplay == "Y") {
-                    playerInfl.stopVideo();
+                    playerInfl.pauseVideo();
                     inflplay = "N";
                 }
                 if (tipsplay == "N") {
-                    playerTips.playVideo();
+                    if($('#section4 .tab-trigger.is-active').attr('data-key') != '') {
+                        playerTips.playVideo();
+                    }
+                    // playerTips.playVideo();
                     tipsplay = "Y";
                 }
             }

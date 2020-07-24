@@ -362,6 +362,7 @@
             playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': window.location.href, 'playsinline': 1, 'widget_refferer:': window.location.href},
             events: {
                 'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
             }
         });
         playerTips = new YT.Player('player-tips', {
@@ -371,12 +372,14 @@
             playerVars: {'enablejsapi': 1, 'autoplay': 0, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': window.location.href, 'playsinline': 1, 'widget_refferer:': window.location.href},
             events: {
                 'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
             }
         });
     }
 
     // 4. The API will call this function when the video player is ready.
     function onPlayerReady(event) {
+        // console.log(event);
         // event.target.playVideo();
     }
 
@@ -384,6 +387,13 @@
     //    The function indicates that when playing a video (state=1),
     //    the player should play for six seconds and then stop.
     var done = false;
+    function onPlayerStateChange(event) {
+        // console.log(event);
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+            // setTimeout(stopVideo, 6000);
+            // done = true;
+        }
+    }
     </script>
     <script>
         $(document).ready(function() {
@@ -418,6 +428,69 @@
             // }
         });
 
+        var inflplay = "N";
+        var tipsplay = "N";
+        $(window).on('scroll', function(e) {
+            var curTop = $(this).scrollTop();
+            var headerHeight = $('#header').height();
+
+            if(curTop < $('#section3').offset().top-headerHeight) {
+                // infl video 재생
+                playerTips.pauseVideo();
+                playerInfl.playVideo();
+            } else if(curTop > $('#section4').offset().top-headerHeight) {
+                // tips video 재생   
+                playerInfl.pauseVideo();
+                if($('#section4 .tab-trigger.is-active').attr('data-key') != '') {
+                    playerTips.playVideo();
+                }
+            } else {
+                playerInfl.pauseVideo();
+                playerTips.pauseVideo();
+            }
+            // if(curTop < $('#section2').offset().top-headerHeight) {
+            //     // 스크롤 현재 위치 섹션 1
+            //     if (inflplay == "Y") {
+            //         playerInfl.pauseVideo();
+            //         inflplay = "N";
+            //     }
+            //     if (tipsplay == "Y") {
+            //         playerTips.pauseVideo();
+            //         tipsplay = "N";
+            //     }
+            // } else if(curTop >= $('#section2').offset().top-headerHeight && curTop < $('#section3').offset().top-headerHeight) {
+            //     // 스크롤 현재 위치 섹션 2
+            //     if (tipsplay == "Y") {
+            //         playerTips.pauseVideo();
+            //         tipsplay = "N";
+            //     }
+            //     if (inflplay == "N") {
+            //         playerInfl.playVideo();
+            //         inflplay = "Y";
+            //     }
+            // // } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight - ($(window).height()-($('#section4').height()+$('#footer').height()))) {
+            // } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight) {
+            //     // 스크롤 현재 위치 섹션 3
+            //     if (inflplay == "Y") {
+            //         playerInfl.pauseVideo();
+            //         inflplay = "N";
+            //     }
+            //     if (tipsplay == "Y") {
+            //         playerTips.pauseVideo();
+            //         tipsplay = "N";
+            //     }
+            // } else  {
+            //     // 스크롤 현재 위치 섹션 4
+            //     if (inflplay == "Y") {
+            //         playerInfl.pauseVideo();
+            //         inflplay = "N";
+            //     }
+            //     if (tipsplay == "N") {
+            //         playerTips.playVideo();
+            //         tipsplay = "Y";
+            //     }
+            // }
+        });
 
         // 헤더 햄버거 클릭 이벤트
         var menuTlEnd = true;
