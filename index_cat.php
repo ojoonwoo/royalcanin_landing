@@ -416,7 +416,7 @@
         var inflplay = "N";
         var tipsplay = "N";
         $(window).on('scroll', function(e) {
-            console.log(playerInfl);
+            // console.log(playerInfl);
             var curTop = $(this).scrollTop();
             var headerHeight = $('#header').height();
             if(curTop < $('#section2').offset().top-headerHeight) {
@@ -424,10 +424,12 @@
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(0).addClass("active");
 
-                if (playerInfl && playerTips) {
+                if (inflplay == "Y") {
                     playerInfl.stopVideo();
-                    playerTips.stopVideo();
                     inflplay = "N";
+                }
+                if (tipsplay == "Y") {
+                    playerTips.stopVideo();
                     tipsplay = "N";
                 }
             } else if(curTop >= $('#section2').offset().top-headerHeight && curTop < $('#section3').offset().top-headerHeight) {
@@ -435,36 +437,38 @@
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(1).addClass("active");
 
-                if (playerInfl && playerTips) {
+                if (tipsplay == "Y") {
                     playerTips.stopVideo();
                     tipsplay = "N";
-                    if (inflplay == "N") {
-                        playerInfl.playVideo();
-                        inflplay = "Y";
-                    }
+                }
+                if (inflplay == "N") {
+                    playerInfl.playVideo();
+                    inflplay = "Y";
                 }
             // } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight - ($(window).height()-($('#section4').height()+$('#footer').height()))) {
             } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight) {
                 // 스크롤 현재 위치 섹션 3
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(2).addClass("active");
-                if (playerInfl && playerTips) {
+                if (inflplay == "Y") {
                     playerInfl.stopVideo();
-                    playerTips.stopVideo();
                     inflplay = "N";
+                }
+                if (tipsplay == "Y") {
+                    playerTips.stopVideo();
                     tipsplay = "N";
                 }
             } else  {
                 // 스크롤 현재 위치 섹션 4
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(3).addClass("active");
-                if (playerInfl && playerTips) {
+                if (inflplay == "Y") {
                     playerInfl.stopVideo();
                     inflplay = "N";
-                    if (tipsplay == "N") {
-                        playerTips.playVideo();
-                        tipsplay = "Y";
-                    }
+                }
+                if (tipsplay == "N") {
+                    playerTips.playVideo();
+                    tipsplay = "Y";
                 }
             }
         });
