@@ -1713,7 +1713,7 @@ html.popup-opened {
 	font-weight: 800;
 }
 .popup#reward1-popup .guide-block {
-	padding: 20px 22px 23px;
+	padding: 20px 22px 31px;
 	background-color: #f0f0f0;
 	border-bottom-left-radius: 11px;
 	border-bottom-right-radius: 11px;
@@ -1779,7 +1779,7 @@ html.popup-opened {
 	margin-bottom: 31px;
 }
 .popup#reward2-popup .notice-block {
-	padding: 15px 34px 24px;
+	padding: 20px 14px 31px;
 	background: #959595;
 	border-bottom-left-radius: 11px;
 	border-bottom-right-radius: 11px;
