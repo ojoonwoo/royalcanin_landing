@@ -12,29 +12,25 @@
     $data   = mysqli_fetch_array($result);
 ?>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8NN8XM"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div id="container">
         <div id="header">
             <div class="inner">
-                <a href="./index_cat.php" class="logo">
+                <a href="./index_cat.php" class="logo" onclick="gtag('event', '홈버튼', {'event_category': '체크리스트페이지', 'event_label': '메인로고'});">
                     <img src="./images/logo.png" alt="로얄캐닌 홈으로">
                 </a>
                 <nav class="menu">
                     <ul>
                         <li>
-                            <a href="index_cat.php#section1">메인</a>
+                            <a href="index_cat.php#section1" onclick="gtag('event', 'GNB', {'event_category': '체크리스트페이지', 'event_label': '메인'});">메인</a>
                         </li>
                         <li>
-                            <a href="index_cat.php#section2">주치의 프로젝트</a>
+                            <a href="index_cat.php#section2" onclick="gtag('event', 'GNB', {'event_category': '체크리스트페이지', 'event_label': '주치의 프로젝트'});">주치의 프로젝트</a>
                         </li>
                         <li class="active">
-                            <a href="index_cat.php#section3">주치의력 테스트</a>
+                            <a href="index_cat.php#section3" onclick="gtag('event', 'GNB', {'event_category': '체크리스트페이지', 'event_label': '주치의력 테스트'});">주치의력 테스트</a>
                         </li>
                         <li>
-                            <a href="index_cat.php#section4">주치의력 업그레이드 TIPS</a>
+                            <a href="index_cat.php#section4" onclick="gtag('event', 'GNB', {'event_category': '체크리스트페이지', 'event_label': '주치의력 업그레이드 TIPS'});">주치의력 업그레이드 TIPS</a>
                         </li>
                     </ul>
                 </nav>
@@ -234,7 +230,9 @@
                         hematuria = "Y";
                     }
 
-                    console.log(checklist);
+                    // console.log(checklist);
+                    gtag('event', '이벤트참여', {'event_category': '체크리스트페이지', 'event_label': '이벤트참여_체크리스트'});
+
                     // 체크 정보 db update 후 callback에서 result로 serial같이 넘김
                     // 데이터 저장
                     $.ajax({
@@ -252,7 +250,7 @@
                                     location.href = "./result.php?serial=<?php echo $serial?>";
                                 }, 200);
                             }else{
-
+                                alert('오류입니다. 관리자에게 문의해주세요.');
                             }
                         },
                         error: function(jqXHR, errMsg) {

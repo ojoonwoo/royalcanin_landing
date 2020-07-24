@@ -21,29 +21,25 @@
     include_once "./head.php";
 ?>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8NN8XM"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div id="container">
         <div id="header">
             <div class="inner">
-                <a href="./index_cat.php" class="logo">
+                <a href="./index_cat.php" class="logo" onclick="gtag('event', '홈버튼', {'event_category': '메인페이지', 'event_label': '메인로고'});">
                     <img src="./images/logo.png" alt="로얄캐닌 홈으로">
                 </a>
                 <nav class="menu">
                     <ul>
                         <li class="active">
-                            <a href="javascript:void(0)" data-url="#section1">메인</a>
+                            <a href="javascript:void(0)" data-url="#section1" onclick="gtag('event', 'GNB', {'event_category': '메인페이지', 'event_label': '메인'});">메인</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)" data-url="#section2">주치의 프로젝트</a>
+                            <a href="javascript:void(0)" data-url="#section2" onclick="gtag('event', 'GNB', {'event_category': '메인페이지', 'event_label': '주치의 프로젝트'});">주치의 프로젝트</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)" data-url="#section3">주치의력 테스트</a>
+                            <a href="javascript:void(0)" data-url="#section3" onclick="gtag('event', 'GNB', {'event_category': '메인페이지', 'event_label': '주치의력 테스트'});">주치의력 테스트</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)" data-url="#section4">주치의력 업그레이드 TIPS</a>
+                            <a href="javascript:void(0)" data-url="#section4" onclick="gtag('event', 'GNB', {'event_category': '메인페이지', 'event_label': '주치의력 업그레이드 TIPS'});">주치의력 업그레이드 TIPS</a>
                         </li>
                     </ul>
                 </nav>
@@ -98,7 +94,7 @@
                         <div class="tab-container-wrap">
                             <ul class="tab-container" data-video-target="infl">
                                 <li>
-                                    <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw" data-title="반려묘를 꿰뚫어보는 <br><b>프로 집사도 주치의가 필요해요</b>" data-gtm-label="프로집사">
+                                    <button type="button" class="tab-trigger is-active" data-key="3_6h0o-t3Vw" data-title="반려묘를 꿰뚫어보는 <br><b>프로 집사도 주치의가 필요해요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '프로 집사'});">
                                         <div class="wrapper">
                                             <img src="./images/infl_tab_thumb_01_active.png" alt="" class="thumb">
                                             <span>프로 집사의 #주치의 프로젝트</span>
@@ -107,7 +103,7 @@
                                     </button>
                                 </li>
                                 <li>
-                                    <button type="button" class="tab-trigger" data-key="CAInhDnQFaA" data-title="사랑하는 반려묘 앞에서는 <br><b>누구보다 예민해져야 해요</b>" data-gtm-label="예민보스집사">
+                                    <button type="button" class="tab-trigger" data-key="CAInhDnQFaA" data-title="사랑하는 반려묘 앞에서는 <br><b>누구보다 예민해져야 해요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '예민보스 집사'});">
                                         <div class="wrapper">
                                             <img src="./images/infl_tab_thumb_02_common.png" alt="" class="thumb">
                                             <span>예민보스 집사의 #주치의 프로젝트</span>
@@ -117,7 +113,7 @@
                                 </li>
                                 <li>
                                     <!-- <button type="button" class="tab-trigger" data-key="NWROQ1tCFPM"> -->
-                                    <button type="button" class="tab-trigger _last" data-key="" data-title="결국은 동물병원에 자주 방문하는 것이 <br><b>가장 현명한 방법이에요</b>" data-gtm-label="현명집사">
+                                    <button type="button" class="tab-trigger _last" data-key="" data-title="결국은 동물병원에 자주 방문하는 것이 <br><b>가장 현명한 방법이에요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '현명 집사'});">
                                         <div class="wrapper">
                                             <img src="./images/infl_tab_thumb_03_soon_common.png" alt="" class="thumb">
                                             <span>현명 집사의 #주치의 프로젝트</span>
@@ -151,16 +147,16 @@
                             <div class="health">
                                 <img src="./images/main_03_health_prize.png" alt="">
                                 <span>10만원 상당의<br /><b>건강검진권</b></span>
-                                <button type="button" data-popup="#reward1-popup">건강검진권 사용안내</button>
+                                <button type="button" data-popup="#reward1-popup" onclick="gtag('event', '혜택팝업오픈', {'event_category': '메인페이지', 'event_label': '건강검진권 사용안내'});">건강검진권 사용안내</button>
                             </div>
                             <div class="hema">
                                 <img src="./images/main_03_hema_prize.png" alt="">
                                 <span>혈뇨검출 체외진단기<br /><b>헤마츄리아 디텍션</b></span>
-                                <button type="button" data-popup="#reward2-popup">헤마츄리아 사용법</button>
+                                <button type="button" data-popup="#reward2-popup" onclick="gtag('event', '혜택팝업오픈', {'event_category': '메인페이지', 'event_label': '헤마츄리아 사용법'});">헤마츄리아 사용법</button>
                             </div>
                         </div>
                     </div>
-                    <a href="./gate.php" class="type-01" id="go-sub">시작하기</a>
+                    <a href="./gate.php" class="type-01" id="go-sub" onclick="gtag('event', '이벤트참여', {'event_category': '메인페이지', 'event_label': '이벤트참여_메인'});">시작하기</a>
                 </div>
             </section>
             <section class="section _04" id="section4">
@@ -176,43 +172,43 @@
                 <div class="tab-container-wrap">
                     <ul class="tab-container" data-video-target="tips">
                         <li>
-                            <button type="button" class="tab-trigger is-active" data-key="SauuYLbs_FI">
+                            <button type="button" class="tab-trigger is-active" data-key="SauuYLbs_FI" onclick="gtag('event', 'TIPS', {'event_category': '메인페이지', 'event_label': '동물병원 쉽게 데려가는 방법'});">
                                 <img src="./images/tips_tab_icon_01_active.png" alt="" class="icon thumb" style="width:27px">
                                 <span>동물병원 쉽게<br />데려가는 방법</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s">
+                            <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s" onclick="gtag('event', 'TIPS', {'event_category': '메인페이지', 'event_label': '건강검진 자세히 알아보기'});">
                                 <img src="./images/tips_tab_icon_02_common.png" alt="" class="icon thumb" style="width:24px">
                                 <span>반려묘 건강검진<br />자세히 알아보기</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s">
+                            <button type="button" class="tab-trigger" data-key="nBBb6CvKJ5s" onclick="gtag('event', 'TIPS', {'event_category': '메인페이지', 'event_label': '요로계'});">
                                 <img src="./images/tips_tab_icon_07_common.png" alt="" class="icon thumb" style="width:29px">
                                 <span>반려묘의<br />요로계 위험신호</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="hmiCvnEDckA">
+                            <button type="button" class="tab-trigger" data-key="hmiCvnEDckA" onclick="gtag('event', 'TIPS', {'event_category': '메인페이지', 'event_label': '체중'});">
                                 <img src="./images/tips_tab_icon_03_common.png" alt="" class="icon thumb" style="width:26px">
                                 <span>체중관리가 필요할 때<br />보이는 행동 5</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="coy3EAxcrv0">
+                            <button type="button" class="tab-trigger" data-key="coy3EAxcrv0" onclick="gtag('event', 'TIPS', {'event_category': '메인페이지', 'event_label': '스트레스'});">
                                 <img src="./images/tips_tab_icon_06_common.png" alt="" class="icon thumb" style="width:20px">
                                 <span>반려묘의<br />스트레스 신호</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="hdhT-xC3byo">
+                            <button type="button" class="tab-trigger" data-key="hdhT-xC3byo" onclick="gtag('event', 'TIPS', {'event_category': '메인페이지', 'event_label': '신장'});">
                                 <img src="./images/tips_tab_icon_05_common.png" alt="" class="icon thumb" style="width:32px">
                                 <span>신장 관리<br />적색 신호</span>
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="8JscdpO7oeg">
+                            <button type="button" class="tab-trigger" data-key="8JscdpO7oeg" onclick="gtag('event', 'TIPS', {'event_category': '메인페이지', 'event_label': '소화기'});">
                                 <img src="./images/tips_tab_icon_04_common.png" alt="" class="icon thumb" style="width:28px">
                                 <span>반려묘의 소화기<br />위험신호</span>
                             </button>
@@ -228,7 +224,7 @@
                 </div>
                 <ul class="article-list">
                     <li>
-                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/is-your-cat-stressed" target="_blank">
+                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/is-your-cat-stressed" target="_blank" onclick="gtag('event', 'TIPS아티클', {'event_category': '메인페이지', 'event_label': '스트레스'});">
                             <div class="img">
                                 <img src="./images/article_img_01.png" alt="" class="thumb">
                             </div>
@@ -238,7 +234,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/keeping-your-cat-at-a-healthy-weight" target="_blank">
+                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/keeping-your-cat-at-a-healthy-weight" target="_blank" onclick="gtag('event', 'TIPS아티클', {'event_category': '메인페이지', 'event_label': '체중'});>
                             <div class="img">
                                 <img src="./images/article_img_02.png" alt="" class="thumb">
                             </div>
@@ -248,7 +244,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/my-cat-is-losing-its-hair" target="_blank">
+                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/my-cat-is-losing-its-hair" target="_blank" onclick="gtag('event', 'TIPS아티클', {'event_category': '메인페이지', 'event_label': '털'});>
                             <div class="img">
                                 <img src="./images/article_img_03.png" alt="" class="thumb">
                             </div>
@@ -258,7 +254,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/common-illnesses-in-older-cats" target="_blank">
+                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/common-illnesses-in-older-cats" target="_blank" onclick="gtag('event', 'TIPS아티클', {'event_category': '메인페이지', 'event_label': '노령묘'});>
                             <div class="img">
                                 <img src="./images/article_img_04.png" alt="" class="thumb">
                             </div>
@@ -268,7 +264,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/how-your-cats-diet-affects-its-urinary-health" target="_blank">
+                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/how-your-cats-diet-affects-its-urinary-health" target="_blank" onclick="gtag('event', 'TIPS아티클', {'event_category': '메인페이지', 'event_label': '요로기계'});>
                             <div class="img">
                                 <img src="./images/article_img_05.png" alt="" class="thumb">
                             </div>
@@ -278,7 +274,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/what-makes-a-cats-digestive-system-healthy" target="_blank">
+                        <a href="https://www.royalcanin.com/kr/cats/health-and-wellbeing/what-makes-a-cats-digestive-system-healthy" target="_blank" onclick="gtag('event', 'TIPS아티클', {'event_category': '메인페이지', 'event_label': '소화기계'});>
                             <div class="img">
                                 <img src="./images/article_img_06.png" alt="" class="thumb">
                             </div>

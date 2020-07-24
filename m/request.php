@@ -13,10 +13,6 @@
     $cat_info = mysqli_fetch_array($result);
 ?>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8NN8XM"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div id="container">
         <div class="content _sub __request">
             <?php
@@ -316,6 +312,7 @@
                         "serial"    : "<?php echo $serial?>"
                     },
                     success: function (response) {
+                        gtag('event', '참여완료', {'event_category': '정보입력페이지', 'event_label': '참여완료'});
                         setCookie("cathealth_completed","Y","7") //변수, 변수값, 저장기간
                         royalcaninCat.popup.show($('#complete-popup'));
                     },

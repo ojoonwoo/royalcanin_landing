@@ -13,29 +13,25 @@
     $cat_info = mysqli_fetch_array($result);
 ?>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8NN8XM"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div id="container">
         <div id="header">
             <div class="inner">
-                <a href="./index_cat.php" class="logo">
+                <a href="./index_cat.php" class="logo" onclick="gtag('event', '홈버튼', {'event_category': '정보입력페이지', 'event_label': '메인로고'});">
                     <img src="./images/logo.png" alt="로얄캐닌 홈으로">
                 </a>
                 <nav class="menu">
                     <ul>
                         <li>
-                            <a href="index_cat.php#section1">메인</a>
+                            <a href="index_cat.php#section1" onclick="gtag('event', 'GNB', {'event_category': '정보입력페이지', 'event_label': '메인'});">메인</a>
                         </li>
                         <li>
-                            <a href="index_cat.php#section2">주치의 프로젝트</a>
+                            <a href="index_cat.php#section2" onclick="gtag('event', 'GNB', {'event_category': '정보입력페이지', 'event_label': '주치의 프로젝트'});">주치의 프로젝트</a>
                         </li>
                         <li class="active">
-                            <a href="index_cat.php#section3">주치의력 테스트</a>
+                            <a href="index_cat.php#section3" onclick="gtag('event', 'GNB', {'event_category': '정보입력페이지', 'event_label': '주치의력 테스트'});">주치의력 테스트</a>
                         </li>
                         <li>
-                            <a href="index_cat.php#section4">주치의력 업그레이드 TIPS</a>
+                            <a href="index_cat.php#section4" onclick="gtag('event', 'GNB', {'event_category': '정보입력페이지', 'event_label': '주치의력 업그레이드 TIPS'});">주치의력 업그레이드 TIPS</a>
                         </li>
                     </ul>
                 </nav>
@@ -361,7 +357,8 @@
                         "serial"    : "<?php echo $serial?>"
                     },
                     success: function (response) {
-                        console.log(response);
+                        gtag('event', '참여완료', {'event_category': '정보입력페이지', 'event_label': '참여완료'});
+                        // console.log(response);
                         setCookie("cathealth_completed","Y","7") //변수, 변수값, 저장기간
                         royalcaninCat.popup.show($('#complete-popup'));
                     },

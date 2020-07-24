@@ -13,29 +13,25 @@
     $cat_info = mysqli_fetch_array($result);
 ?>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8NN8XM"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div id="container">
         <div id="header">
             <div class="inner">
-                <a href="./index_cat.php" class="logo">
+                <a href="./index_cat.php" class="logo" onclick="gtag('event', '홈버튼', {'event_category': '결과페이지', 'event_label': '메인로고'});">
                     <img src="./images/logo.png" alt="로얄캐닌 홈으로">
                 </a>
                 <nav class="menu">
                     <ul>
                         <li>
-                            <a href="index_cat.php#section1">메인</a>
+                            <a href="index_cat.php#section1" onclick="gtag('event', 'GNB', {'event_category': '결과페이지', 'event_label': '메인'});">메인</a>
                         </li>
                         <li>
-                            <a href="index_cat.php#section2">주치의 프로젝트</a>
+                            <a href="index_cat.php#section2" onclick="gtag('event', 'GNB', {'event_category': '결과페이지', 'event_label': '주치의 프로젝트'});">주치의 프로젝트</a>
                         </li>
                         <li class="active">
-                            <a href="index_cat.php#section3">주치의력 테스트</a>
+                            <a href="index_cat.php#section3" onclick="gtag('event', 'GNB', {'event_category': '결과페이지', 'event_label': '주치의력 테스트'});">주치의력 테스트</a>
                         </li>
                         <li>
-                            <a href="index_cat.php#section4">주치의력 업그레이드 TIPS</a>
+                            <a href="index_cat.php#section4" onclick="gtag('event', 'GNB', {'event_category': '결과페이지', 'event_label': '주치의력 업그레이드 TIPS'});">주치의력 업그레이드 TIPS</a>
                         </li>
                     </ul>
                 </nav>
@@ -103,7 +99,7 @@
                 <div class="notice-block">
                     <p>* 결과는 보호자가 인식하는 반려묘 신호 정도에 따라 상이할 수 있습니다. 본 테스트는 참고용이며, 수의사 선생님의 소견이나 수의학적 치료를 대체할 수 없습니다.</p>
                 </div>
-                <a href="./request.php?serial=<?php echo $serial?>" class="type-01 go-next">건강검진권 신청하기</a>
+                <a href="./request.php?serial=<?php echo $serial?>" class="type-01 go-next" onclick="gtag('event', '이벤트참여', {'event_category': '결과페이지', 'event_label': '이벤트참여_결과'});">건강검진권 신청하기</a>
             </div>
         </div>
         <div id="footer">

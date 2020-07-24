@@ -13,10 +13,6 @@
     $cat_info = mysqli_fetch_array($result);
 ?>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8NN8XM"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div id="container">
         <div class="content _sub __checklist">
             <?php
@@ -212,6 +208,7 @@
                     if(checklist.urinary.checkedLength >= 3 || Number($('#cat-age').val()) >= 8) {
                         hematuria = "Y";
                     }
+                    gtag('event', '이벤트참여', {'event_category': '체크리스트페이지', 'event_label': '이벤트참여_체크리스트'});
                     // 체크 정보 db update 후 callback에서 result로 serial같이 넘김
                     // 데이터 저장
                     $.ajax({
@@ -229,7 +226,7 @@
                                     location.href = "./result.php?serial=<?php echo $serial?>";
                                 }, 200);
                             }else{
-
+                                alert('오류입니다. 관리자에게 문의해주세요.');
                             }
                         },
                         error: function(jqXHR, errMsg) {

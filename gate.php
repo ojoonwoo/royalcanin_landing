@@ -5,29 +5,25 @@
 
 ?>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8NN8XM"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div id="container">
         <div id="header">
             <div class="inner">
-                <a href="./index_cat.php" class="logo">
+                <a href="./index_cat.php" class="logo" onclick="gtag('event', '홈버튼', {'event_category': '게이트페이지', 'event_label': '메인로고'});">
                     <img src="./images/logo.png" alt="로얄캐닌 홈으로">
                 </a>
                 <nav class="menu">
                     <ul>
                         <li>
-                            <a href="index_cat.php#section1">메인</a>
+                            <a href="index_cat.php#section1" onclick="gtag('event', 'GNB', {'event_category': '게이트페이지', 'event_label': '메인'});">메인</a>
                         </li>
                         <li>
-                            <a href="index_cat.php#section2">주치의 프로젝트</a>
+                            <a href="index_cat.php#section2" onclick="gtag('event', 'GNB', {'event_category': '게이트페이지', 'event_label': '주치의 프로젝트'});">주치의 프로젝트</a>
                         </li>
                         <li class="active">
-                            <a href="index_cat.php#section3">주치의력 테스트</a>
+                            <a href="index_cat.php#section3" onclick="gtag('event', 'GNB', {'event_category': '게이트페이지', 'event_label': '주치의력 테스트'});">주치의력 테스트</a>
                         </li>
                         <li>
-                            <a href="index_cat.php#section4">주치의력 업그레이드 TIPS</a>
+                            <a href="index_cat.php#section4" onclick="gtag('event', 'GNB', {'event_category': '게이트페이지', 'event_label': '주치의력 업그레이드 TIPS'});">주치의력 업그레이드 TIPS</a>
                         </li>
                     </ul>
                 </nav>
@@ -89,8 +85,8 @@
                             <span>최근 1년 내 동물병원에 방문한 적 있나요?</span>
                             <div>
                                 <!-- <button type="button" class="fake-radio is-active">Y</button> -->
-                                <button type="button" class="fake-radio">Y</button>
-                                <button type="button" class="fake-radio">N</button>
+                                <button type="button" class="fake-radio" onclick="gtag('event', '동물병원 방문여부', {'event_category': '게이트페이지', 'event_label': 'Y'});">Y</button>
+                                <button type="button" class="fake-radio" onclick="gtag('event', '동물병원 방문여부', {'event_category': '게이트페이지', 'event_label': 'N'});">N</button>
                             </div>
                         </div>
                     </div>
@@ -106,7 +102,7 @@
                     </div>
                 </div>
                 <!-- <a href="./checklist.php" class="type-01 go-next" id="go-next">다음으로</a> -->
-                <a href="javascript:void(0)" class="type-01 go-next" id="go-next">다음으로</a>
+                <a href="javascript:void(0)" class="type-01 go-next" id="go-next" onclick="gtag('event', '이벤트참여', {'event_category': '게이트페이지', 'event_label': '이벤트참여_게이트'});">다음으로</a>
                 <div class="popup _agree" id="agree-popup">
                     <div class="inner">
                         <button type="button" class="popup-close" data-popup="@close"></button>

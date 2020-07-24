@@ -13,10 +13,6 @@
     $cat_info = mysqli_fetch_array($result);
 ?>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8NN8XM"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div id="container">
         <div class="content _sub __result">
             <?php
@@ -79,7 +75,7 @@
                 <p>* 결과는 보호자가 인식하는 반려묘 신호 정도에 따라 상이할 수 있습니다.<br>본 테스트는 참고용이며, 수의사 선생님의 소견이나 수의학적 치료를 대체할 수 없습니다.</p>
             </div>
             <!-- <img src="./images/result_notice.png" alt="* 결과는 보호자가 인식하는 반려묘 신호 정도에 따라 상이할 수 있습니다. 본 테스트는 참고용이며, 수의사 선생님의 소견이나 수의학적 치료를 대체할 수 없습니다." class="noti-msg"> -->
-            <a href="./request.php?serial=<?php echo $serial?>" class="type-01 go-next">건강검진권 신청하기</a>
+            <a href="./request.php?serial=<?php echo $serial?>" class="type-01 go-next" onclick="gtag('event', '이벤트참여', {'event_category': '결과페이지', 'event_label': '이벤트참여_결과'});">건강검진권 신청하기</a>
         </div>
         <div id="footer">
             <span class="for-a11y">Copyright © 2020. ROYAL CANIN all rights reserved.</span>

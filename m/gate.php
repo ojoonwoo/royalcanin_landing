@@ -5,10 +5,6 @@
 
 ?>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8NN8XM"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div id="container">
         <div class="content _sub __gate">
             <?php
@@ -67,8 +63,8 @@
                     <span>최근 1년 내 동물병원에 방문한 적 있나요?</span>
                     <div>
                         <!-- <button type="button" class="fake-radio is-active">Y</button> -->
-                        <button type="button" class="fake-radio">Y</button>
-                        <button type="button" class="fake-radio">N</button>
+                        <button type="button" class="fake-radio" onclick="gtag('event', '동물병원 방문여부', {'event_category': '게이트페이지', 'event_label': 'Y'});">Y</button>
+                        <button type="button" class="fake-radio" onclick="gtag('event', '동물병원 방문여부', {'event_category': '게이트페이지', 'event_label': 'N'});">N</button>
                     </div>
                 </div>
                 <div class="agree-wrap">
@@ -82,7 +78,7 @@
                     </button> -->
                 </div>
             </div>
-            <a href="javascript:void(0)" class="type-01 go-next" id="go-next">다음으로</a>
+            <a href="javascript:void(0)" class="type-01 go-next" id="go-next" onclick="gtag('event', '이벤트참여', {'event_category': '게이트페이지', 'event_label': '이벤트참여_게이트'});">다음으로</a>
             <!-- 팝업 결정 나면 작업 -->
             <div class="popup _agree" id="agree-popup">
                 <div class="inner">

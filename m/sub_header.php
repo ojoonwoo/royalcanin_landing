@@ -1,6 +1,6 @@
 <div class="sub-header">
-    <a href="javascript:void(0)" id="go-before"></a>
-    <a href="javascript:void(0)" id="go-index"></a>
+    <a href="javascript:void(0)" id="go-before" onclick="gtag('event', 'GNB', {'event_category': '서브ALL페이지', 'event_label': '이전으로'});"></a>
+    <a href="javascript:void(0)" id="go-index" onclick="gtag('event', 'GNB', {'event_category': '서브ALL페이지', 'event_label': '홈으로'});"></a>
 </div>
 <script>
     $(document).on('click', '#go-before', function(e) {
