@@ -409,7 +409,7 @@
             //     'top': -winwidth+'px',
             //     'right': -winwidth+'px',
             // })
-
+            console.log(window.location.href);
         });
 
         var inflplay = "N";
