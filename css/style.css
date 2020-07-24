@@ -1986,6 +1986,8 @@ html.popup-opened {
 .popup#reward1-popup .guide-block {
 	padding: 40px 19px 57px;
 	background-color: #f0f0f0;
+	border-bottom-left-radius: 22px;
+	border-bottom-right-radius: 22px;
 }
 .popup#reward1-popup .guide-block dl {
 	display: flex;
