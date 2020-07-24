@@ -2043,7 +2043,7 @@ html.popup-opened {
 	margin-bottom: 35px;
 }
 .popup#reward2-popup .notice-block {
-	padding: 30px 34px 70px;
+	padding: 20px 34px 22px;
 	background: #e3001a;
 }
 .popup#reward2-popup .notice-block p {
@@ -2052,10 +2052,11 @@ html.popup-opened {
 	letter-spacing: -0.05em;
 	color: #fff;
 	text-align: center;
-	margin-bottom: 35px;
+	line-height: 1.2;
 }
 .popup#reward2-popup .notice-block p:last-child {
 	font-weight: 700;
+	margin-top: 8px;
 }
 .popup._req .title-block {
 	margin-bottom: 30px;
