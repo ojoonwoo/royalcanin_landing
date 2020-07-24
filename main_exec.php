@@ -32,11 +32,12 @@ switch ($_REQUEST['exec'])
 		$sudoYN			= $_REQUEST['sudoYN'];
 		$hospiName		= $_REQUEST['hospiName'];
 		$hospiAddr		= $_REQUEST['hospiAddr'];
+		$hospiCode		= $_REQUEST['hospiCode'];
 		$userName		= $_REQUEST['userName'];
 		$phoneNumber	= $_REQUEST['phoneNumber'];
 		$mb_serial		= $_REQUEST['serial'];
 
-		$query 		= "UPDATE member_info SET mb_sudo='".$sudoYN."', mb_select_hospital_name='".$hospiName."', mb_select_hospital_addr='".$hospiAddr."', mb_name='".$userName."', mb_phone='".$phoneNumber."', mb_regdate='".date('Y-m-d H:i:s')."' WHERE mb_serial='".$mb_serial."' ";
+		$query 		= "UPDATE member_info SET mb_sudo='".$sudoYN."', mb_select_hospital_code='".$hospiCode."', mb_select_hospital_name='".$hospiName."', mb_select_hospital_addr='".$hospiAddr."', mb_name='".$userName."', mb_phone='".$phoneNumber."', mb_regdate='".date('Y-m-d H:i:s')."' WHERE mb_serial='".$mb_serial."' ";
 		$result 	= mysqli_query($my_db, $query);
 
 		if ($result)

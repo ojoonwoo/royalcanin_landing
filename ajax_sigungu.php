@@ -4,7 +4,7 @@
     $my_db      = $mnv_f->Connect_MySQL();
 
     $sido       = $_REQUEST['sido'];
-    $query = "SELECT sigungu FROM juso_info WHERE 1 AND sido = '".$sido."'";
+    $query = "SELECT sigungu FROM juso_info WHERE 1 AND sido = '".$sido."' ORDER BY sigungu ASC";
     $result = mysqli_query($my_db, $query);
 
     echo "<option value='' selected>시/구/군</option>";

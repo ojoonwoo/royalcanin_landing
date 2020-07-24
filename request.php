@@ -76,7 +76,7 @@
                                 <select id="sido" class="select-box for-central">
                                     <option value="" selected>시/도</option>
 <?php
-    $query = "SELECT sido FROM juso_info WHERE 1 GROUP BY sido";
+    $query = "SELECT sido FROM juso_info WHERE 1 GROUP BY sido ORDER BY sido ASC";
     $result = mysqli_query($my_db, $query);
 
     while($data = mysqli_fetch_array($result)) {
@@ -220,6 +220,7 @@
         var $doc = $(document);
         var hospiName = "";
         var hospiAddr = "";
+        var hospiCode = "";
         var sudoYN = "";
         $doc.ready(function() {
             $doc.on('click', '.loc-trigger', function() {
@@ -254,6 +255,8 @@
                     act = "선택";
                     hospiName = $('.hospi-trigger.is-active').find('.h-name').text();
                     hospiAddr = $('.hospi-trigger.is-active').find('.h-addr').text();
+                    hospiCode = $('.hospi-trigger.is-active').attr('data-code');
+                    // console.log(hospiCode);
                     sudoYN = "Y";
                 } else {
                     act = "입력";
@@ -352,6 +355,7 @@
                         "sudoYN"        : sudoYN,
                         "hospiName"     : hospiName,
                         "hospiAddr"     : hospiAddr,
+                        "hospiCode"     : hospiCode,
                         "userName"      : userName,
                         "phoneNumber"   : phoneNumber,
                         "serial"    : "<?php echo $serial?>"

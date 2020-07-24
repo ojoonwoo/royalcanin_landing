@@ -347,7 +347,7 @@
             height: Math.round(playerWidth*9/16),
             width: playerWidth,
             videoId: '3_6h0o-t3Vw',
-            playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': window.location.href, 'playsinline': 1, 'widget_refferer:': window.location.href},
+            playerVars: {'enablejsapi': 1, 'autoplay': 0, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': window.location.href, 'playsinline': 1, 'widget_refferer:': window.location.href},
             events: {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
@@ -357,7 +357,7 @@
             height: Math.round(playerWidth*9/16),
             width: playerWidth,
             videoId: 'SauuYLbs_FI',
-            playerVars: {'enablejsapi': 1, 'autoplay': 1, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': window.location.href, 'playsinline': 1, 'widget_refferer:': window.location.href},
+            playerVars: {'enablejsapi': 1, 'autoplay': 0, 'controls': 1, 'rel': 0, 'loop': 1, 'origin': window.location.href, 'playsinline': 1, 'widget_refferer:': window.location.href},
             events: {
                 'onReady': onPlayerReady,
                 'onStateChange': onPlayerStateChange
@@ -367,7 +367,9 @@
 
     // 4. The API will call this function when the video player is ready.
     function onPlayerReady(event) {
-        event.target.playVideo();
+        // event.target.playVideo();
+        if (window.location.href.indexOf('section4') != -1 )
+            playerTips.playVideo();
     }
 
     // 5. The API calls this function when the player's state changes.
@@ -405,30 +407,66 @@
             //     'top': -winwidth+'px',
             //     'right': -winwidth+'px',
             // })
-
+            console.log(window.location.href);
         });
 
-
+        var inflplay = "N";
+        var tipsplay = "N";
         $(window).on('scroll', function(e) {
+            // console.log(playerInfl);
             var curTop = $(this).scrollTop();
             var headerHeight = $('#header').height();
             if(curTop < $('#section2').offset().top-headerHeight) {
                 // 스크롤 현재 위치 섹션 1
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(0).addClass("active");
+
+                if (inflplay == "Y") {
+                    playerInfl.stopVideo();
+                    inflplay = "N";
+                }
+                if (tipsplay == "Y") {
+                    playerTips.stopVideo();
+                    tipsplay = "N";
+                }
             } else if(curTop >= $('#section2').offset().top-headerHeight && curTop < $('#section3').offset().top-headerHeight) {
                 // 스크롤 현재 위치 섹션 2
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(1).addClass("active");
+
+                if (tipsplay == "Y") {
+                    playerTips.stopVideo();
+                    tipsplay = "N";
+                }
+                if (inflplay == "N") {
+                    playerInfl.playVideo();
+                    inflplay = "Y";
+                }
             // } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight - ($(window).height()-($('#section4').height()+$('#footer').height()))) {
             } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight) {
                 // 스크롤 현재 위치 섹션 3
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(2).addClass("active");
+                if (inflplay == "Y") {
+                    playerInfl.stopVideo();
+                    inflplay = "N";
+                }
+                if (tipsplay == "Y") {
+                    playerTips.stopVideo();
+                    tipsplay = "N";
+                }
             } else  {
                 // 스크롤 현재 위치 섹션 4
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(3).addClass("active");
+                if (inflplay == "Y") {
+                    playerInfl.stopVideo();
+                    inflplay = "N";
+                }
+                if (tipsplay == "N") {
+                    playerTips.playVideo();
+                    tipsplay = "Y";
+                }
             }
         });
         
@@ -474,6 +512,11 @@
                     $('.comming-soon').show();
                 } else {
                     $('#player-infl').css('opacity', '1');
+                    // playerInfl.cueVideoById({
+                    //     'videoId': targetKey,
+                    //     'startSeconds': 0,
+                    //     'suggestedQuality': 'default'
+                    // });
                     playerInfl.loadVideoById({
                         'videoId': targetKey,
                         'startSeconds': 0,
@@ -482,6 +525,11 @@
                 }
                 $('.infl-video-container .title .dn-title').html($(this).attr('data-title'));
             } else {
+                // playerTips.cueVideoById({
+                //     'videoId': targetKey,
+                //     'startSeconds': 0,
+                //     'suggestedQuality': 'default'
+                // });
                 playerTips.loadVideoById({
                     'videoId': targetKey,
                     'startSeconds': 0,
