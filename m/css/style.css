@@ -1710,7 +1710,7 @@ html.popup-opened {
 	color: #e3001a;
 	font-weight: 800;
 }
-.popup._reward .guide-block {
+.popup#reward1-popup .guide-block {
 	padding: 20px 22px 23px;
 	background-color: #f0f0f0;
 	border-bottom-left-radius: 11px;
