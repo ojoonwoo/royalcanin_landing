@@ -4,7 +4,7 @@
     $serial = $_GET['serial'];
 
     if ($_SESSION['miniver_serial'] != $serial || !$_SESSION['miniver_serial'] || !$serial) {
-        echo "<script>location.href = 'index_cat.php';</script>";
+        echo "<script>location.href = 'index.php';</script>";
     }
 
     $query = "SELECT mb_cat_name, mb_cat_birth FROM member_info WHERE mb_serial='".$serial."'";
@@ -15,22 +15,22 @@
     <div id="container">
         <div id="header">
             <div class="inner">
-                <a href="./index_cat.php" class="logo" onclick="gtag('event', '홈버튼', {'event_category': '체크리스트페이지', 'event_label': '메인로고'});">
+                <a href="./index.php" class="logo" onclick="gtag('event', '홈버튼', {'event_category': '체크리스트페이지', 'event_label': '메인로고'});">
                     <img src="./images/logo.png" alt="로얄캐닌 홈으로">
                 </a>
                 <nav class="menu">
                     <ul>
                         <li>
-                            <a href="index_cat.php#section1" onclick="gtag('event', 'GNB', {'event_category': '체크리스트페이지', 'event_label': '메인'});">메인</a>
+                            <a href="index.php#section1" onclick="gtag('event', 'GNB', {'event_category': '체크리스트페이지', 'event_label': '메인'});">메인</a>
                         </li>
                         <li>
-                            <a href="index_cat.php#section2" onclick="gtag('event', 'GNB', {'event_category': '체크리스트페이지', 'event_label': '주치의 프로젝트'});">주치의 프로젝트</a>
+                            <a href="index.php#section2" onclick="gtag('event', 'GNB', {'event_category': '체크리스트페이지', 'event_label': '주치의 프로젝트'});">주치의 프로젝트</a>
                         </li>
                         <li class="active">
-                            <a href="index_cat.php#section3" onclick="gtag('event', 'GNB', {'event_category': '체크리스트페이지', 'event_label': '주치의력 테스트'});">주치의력 테스트</a>
+                            <a href="index.php#section3" onclick="gtag('event', 'GNB', {'event_category': '체크리스트페이지', 'event_label': '주치의력 테스트'});">주치의력 테스트</a>
                         </li>
                         <li>
-                            <a href="index_cat.php#section4" onclick="gtag('event', 'GNB', {'event_category': '체크리스트페이지', 'event_label': '주치의력 업그레이드 TIPS'});">주치의력 업그레이드 TIPS</a>
+                            <a href="index.php#section4" onclick="gtag('event', 'GNB', {'event_category': '체크리스트페이지', 'event_label': '주치의력 업그레이드 TIPS'});">주치의력 업그레이드 TIPS</a>
                         </li>
                     </ul>
                 </nav>
