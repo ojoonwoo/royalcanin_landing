@@ -2039,7 +2039,8 @@ html.popup-opened {
 	margin: 0 auto 23px 40px;
 }
 .popup#reward2-popup .guide-block {
-	padding: 30px 34px 70px;
+	padding: 30px 34px 10px;
+	background-color: #f5f5f5;
 }
 .popup#reward2-popup .guide-block p {
 	font-size: 22px;
@@ -2049,8 +2050,11 @@ html.popup-opened {
 	text-align: center;
 	margin-bottom: 35px;
 }
+.popup#reward2-popup .guide-block img {
+	margin: 0 auto;
+}
 .popup#reward2-popup .notice-block {
-	padding: 25px 19px 55px;
+	padding: 25px 19px 37px;
 	background: #959595;
 	border-bottom-left-radius: 22px;
 	border-bottom-right-radius: 22px;

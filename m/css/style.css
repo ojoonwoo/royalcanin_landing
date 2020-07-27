@@ -1765,10 +1765,11 @@ html.popup-opened {
 }
 .popup#reward2-popup .r-img {
 	width: 266px;
-	margin: 26px auto 20px;
+	margin: 26px auto 20px 27px;
 }
 .popup#reward2-popup .guide-block {
-	padding: 20px 34px 32px;
+	padding: 20px 34px 18px;
+	background-color: #f5f5f5;
 }
 .popup#reward2-popup .guide-block p {
 	font-size: 17px;
