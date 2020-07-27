@@ -342,6 +342,7 @@
 
     // 3. This function creates an <iframe> (and YouTube player)
     //    after the API code downloads.
+    var playersReady = 0;
     var playerInfl, playerTips;
     var playerWidth = $('.yt-container').width();
     function onYouTubeIframeAPIReady() {
@@ -370,6 +371,8 @@
     // 4. The API will call this function when the video player is ready.
     function onPlayerReady(event) {
         // event.target.playVideo();
+        playersReady++;
+
         if (window.location.href.indexOf('section4') != -1 )
             playerTips.playVideo();
     }
@@ -391,11 +394,15 @@
     <script>
         $(document).ready(function() {
             paramObj = get_query();
-            // paramValArr = Object.values(paramObj);
             paramValArr = get_param_arr(paramObj);
             $("body").addClass("is-load");
 
-            // console.log(window.location.href);
+            if(window.location.hash && window.location.hash.match(/#[^?&\/]*/g)[0] == '#section3') {
+                setTimeout(function() {
+                    sectionMove('#section3');
+                }, 200);
+            }
+
         });
 
         var inflplay = "N";
@@ -409,54 +416,64 @@
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(0).addClass("active");
 
-                if (inflplay == "Y") {
-                    playerInfl.pauseVideo();
-                    inflplay = "N";
-                }
-                if (tipsplay == "Y") {
-                    playerTips.pauseVideo();
-                    tipsplay = "N";
+                if(playersReady>=2) {
+                    if (inflplay == "Y") {
+                        playerInfl.pauseVideo();
+                        inflplay = "N";
+                    }
+                    if (tipsplay == "Y") {
+                        playerTips.pauseVideo();
+                        tipsplay = "N";
+                    }
                 }
             } else if(curTop >= $('#section2').offset().top-headerHeight && curTop < $('#section3').offset().top-headerHeight) {
                 // 스크롤 현재 위치 섹션 2
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(1).addClass("active");
 
-                if (tipsplay == "Y") {
-                    playerTips.pauseVideo();
-                    tipsplay = "N";
-                }
-                if (inflplay == "N") {
-                    playerInfl.playVideo();
-                    inflplay = "Y";
+                if(playersReady>=2) {
+                    if (tipsplay == "Y") {
+                        playerTips.pauseVideo();
+                        tipsplay = "N";
+                    }
+                    if (inflplay == "N") {
+                        playerInfl.playVideo();
+                        inflplay = "Y";
+                    }
                 }
             // } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight - ($(window).height()-($('#section4').height()+$('#footer').height()))) {
             } else if(curTop >= $('#section3').offset().top-headerHeight && curTop < $('#section4').offset().top-headerHeight) {
                 // 스크롤 현재 위치 섹션 3
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(2).addClass("active");
-                if (inflplay == "Y") {
-                    playerInfl.pauseVideo();
-                    inflplay = "N";
-                }
-                if (tipsplay == "Y") {
-                    playerTips.pauseVideo();
-                    tipsplay = "N";
+
+                if(playersReady>=2) {
+                    if (inflplay == "Y") {
+                        playerInfl.pauseVideo();
+                        inflplay = "N";
+                    }
+                    if (tipsplay == "Y") {
+                        playerTips.pauseVideo();
+                        tipsplay = "N";
+                    }
                 }
             } else  {
                 // 스크롤 현재 위치 섹션 4
                 $(".menu li").removeClass("active");
                 $('.menu li').eq(3).addClass("active");
-                if (inflplay == "Y") {
-                    playerInfl.pauseVideo();
-                    inflplay = "N";
-                }
-                if (tipsplay == "N") {
-                    if($('#section4 .tab-trigger.is-active').attr('data-key') != '') {
-                        playerTips.playVideo();
+
+                if(playersReady>=2) {
+                    if (inflplay == "Y") {
+                        playerInfl.pauseVideo();
+                        inflplay = "N";
                     }
-                    // playerTips.playVideo();
-                    tipsplay = "Y";
+                    if (tipsplay == "N") {
+                        if($('#section4 .tab-trigger.is-active').attr('data-key') != '') {
+                            playerTips.playVideo();
+                        }
+                        // playerTips.playVideo();
+                        tipsplay = "Y";
+                    }
                 }
             }
         });
