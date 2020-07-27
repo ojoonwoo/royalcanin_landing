@@ -5,7 +5,7 @@
     $mobileYN      = $mnv_f->MobileCheck();
 
     $siteURL = parse_url($mnv_f->siteURL());
-    print_r("<script>console.log(window.location.href);</script>");
+    print_r($_SERVER['REQUEST_URI']);
     exit;
     if ($mobileYN == "PC")
     {
