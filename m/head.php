@@ -33,4 +33,12 @@
 
 		gtag('config', 'UA-173400319-1');
 		</script>
+		<!-- Lightning Bolt Begins -->
+		<script type="text/javascript">
+		var lbTrans = '[TRANSACTION ID]';
+		var lbValue = '[TRANSACTION VALUE]';
+		var lbData = '[Attribute/Value Pairs for Custom Data]';
+		</script>
+		<script type="text/javascript" id="lightning_bolt" src="//cdn-akamai.mookie1.com/LB/LightningBolt.js"></script>
+		<!-- Lightning Bolt Ends -->
 	</head>
