@@ -294,7 +294,7 @@
                 }
 
                 $.ajax({
-                    url: "./ajax_find_hospital2.php",
+                    url: "./ajax_find_hospital.php",
                     type: 'POST',
                     data: {
                         "sido"       : $("#sido").val(),
