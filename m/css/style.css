@@ -1796,8 +1796,11 @@ html.popup-opened {
 	font-weight: 700;
 	margin-top: 8px;
 }
-.popup._req .title-block {
+.popup#other-popup .title-block {
 	margin-bottom: 30px;
+}
+.popup#hospi-popup .title-block {
+	margin-bottom: 12px;
 }
 .popup._req .title-block .title {
 	font-size: 17px;
@@ -1809,6 +1812,9 @@ html.popup-opened {
 	margin-top: 10px;
 	font-size: 10px;
 	letter-spacing: -0.05em;
+}
+.popup#hospi-popup .title-block .sub {
+	margin-top: 8px;
 }
 .popup._req .title-block .sub b {
 	color: #e3001a;

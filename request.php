@@ -160,6 +160,7 @@
                         <div class="title-block">
                             <p class="title">가까운 동물병원에서 쉽게 진단 받으세요!</p>
                             <p class="sub"><b>총 <em id="hospi-cnt"></em>건</b>이 검색되었습니다.</p>
+                            <p class="sub">동물병원 이름에 따라 가나다 순으로 정렬됩니다</p>
                         </div>
                         <div class="list-block">
                             <ul>
