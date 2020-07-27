@@ -342,6 +342,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollToPlugin.min.js"></script>
     <script>
 
+    var playersReady = 0;
     // 2. This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
 
@@ -380,6 +381,7 @@
     function onPlayerReady(event) {
         // console.log(event);
         // event.target.playVideo();
+        playersReady++;
     }
 
     // 5. The API calls this function when the player's state changes.
@@ -397,7 +399,6 @@
     <script>
         $(document).ready(function() {
             paramObj = get_query();
-            // paramValArr = Object.values(paramObj);
             paramValArr = get_param_arr(paramObj);
 
             // 메인 섹션 1 한화면에 보일 수 있도록 조정
@@ -425,6 +426,11 @@
             //         sectionMove('#section3');
             //     }, 200);
             // }
+            if(window.location.hash && window.location.hash.match(/#[^?&\/]*/g)[0] == '#section3') {
+                setTimeout(function() {
+                    sectionMove('#section3');
+                }, 200);
+            }
         });
 
         var inflplay = "N";
@@ -432,20 +438,21 @@
         $(window).on('scroll', function(e) {
             var curTop = $(this).scrollTop();
             var headerHeight = $('#header').height();
-
-            if(curTop < $('#section3').offset().top-headerHeight) {
-                // infl video 재생
-                playerTips.pauseVideo();
-                playerInfl.playVideo();
-            } else if(curTop > $('#section4').offset().top-headerHeight) {
-                // tips video 재생   
-                playerInfl.pauseVideo();
-                if($('#section4 .tab-trigger.is-active').attr('data-key') != '') {
-                    playerTips.playVideo();
+            if(playersReady>=2) {
+                if(curTop < $('#section3').offset().top-headerHeight) {
+                    // infl video 재생
+                    playerTips.pauseVideo();
+                    playerInfl.playVideo();
+                } else if(curTop > $('#section4').offset().top-headerHeight) {
+                    // tips video 재생   
+                    playerInfl.pauseVideo();
+                    if($('#section4 .tab-trigger.is-active').attr('data-key') != '') {
+                        playerTips.playVideo();
+                    }
+                } else {
+                    playerInfl.pauseVideo();
+                    playerTips.pauseVideo();
                 }
-            } else {
-                playerInfl.pauseVideo();
-                playerTips.pauseVideo();
             }
         });
 
