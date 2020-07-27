@@ -102,19 +102,19 @@
                     <ul class="tab-container" data-video-target="infl">
                         <li>
                             <button type="button" class="tab-trigger is-active" data-key="E6RWLdg5DaY" data-title="반려묘를 꿰뚫어보는 <br><b>프로 집사도 주치의가 필요해요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '프로 집사'});">
-                                <img src="./images/infl_tab_thumb_01_active.png" alt="" class="thumb">
+                                <img src="./images/infl_tab_thumb_01_active.png?ver=0727" alt="" class="thumb">
                                 <span>프로 집사의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="C_LCqOKWbB0" data-title="사랑하는 반려묘 앞에서는 <br><b>누구보다 예민해져야 해요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '예민보스 집사'});">
-                                <img src="./images/infl_tab_thumb_02_common.png" alt="" class="thumb">
+                                <img src="./images/infl_tab_thumb_02_common.png?ver=0727" alt="" class="thumb">
                                 <span>예민보스 집사의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="47DFCvOPUz0" data-title="결국은 동물병원에 자주 방문하는 것이 <br><b>가장 현명한 방법이에요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '현명 집사'});">
-                                <img src="./images/infl_tab_thumb_03_common.png" alt="" class="thumb">
+                                <img src="./images/infl_tab_thumb_03_common.png?ver=0727" alt="" class="thumb">
                                 <span>현명 집사의<br>#주치의 프로젝트</span>
                             </button>
                         </li>
@@ -426,9 +426,10 @@
             //         sectionMove('#section3');
             //     }, 200);
             // }
-            if(window.location.hash && window.location.hash.match(/#[^?&\/]*/g)[0] == '#section3') {
+
+            if(window.location.hash && window.location.hash.match(/#[^?&\/]*/g)) {
                 setTimeout(function() {
-                    sectionMove('#section3');
+                    sectionMove(window.location.hash.match(/#[^?&\/]*/g)[0]);
                 }, 200);
             }
         });
