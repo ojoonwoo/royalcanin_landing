@@ -10,7 +10,7 @@
     $total_cnt = mysqli_num_rows($result);
 
     if ($total_cnt < 1) {
-        $query = "SELECT hospital_name, hospital_addr1, hospital_addr2, hospital_addr3, hospital_code FROM hospital_list2 WHERE 1 AND hospital_addr1 like '%".$sido."%' ORDER BY hospital_addr1 ASC, hospital_addr2 ASC, hospital_name ASC";
+        $query = "SELECT hospital_name, hospital_addr1, hospital_addr2, hospital_addr3, hospital_code FROM hospital_list2 WHERE 1 AND hospital_addr1 like '%".$sido."%' ORDER BY hospital_addr2 ASC, hospital_addr3 ASC, hospital_name ASC";
         $result = mysqli_query($my_db, $query);
     }
 
