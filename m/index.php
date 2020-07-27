@@ -6,7 +6,7 @@
 
     $siteURL = parse_url($mnv_f->siteURL());
     // print_r($_SERVER['REQUEST_URI']);
-    echo "<script>console.log(location.href);</script>";
+    echo "<script>console.log(window.location.hash);</script>";
     exit;
     if ($mobileYN == "PC")
     {
