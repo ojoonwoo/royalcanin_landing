@@ -13,7 +13,7 @@ switch ($_REQUEST['exec'])
 		$mb_visit_hospital	= $_REQUEST['cat-visit'];
 		$mb_serial			= $_REQUEST['cat-serial'];
 
-		$query 		= "INSERT INTO member_info(mb_ipaddr, mb_gubun, mb_cat_name, mb_cat_birth, mb_visit_hospital, mb_serial) values('".$_SERVER['REMOTE_ADDR']."','".$gubun."','".$mb_cat_name."','".$mb_cat_birth."','".$mb_visit_hospital."','".$mb_serial."')";
+		$query 		= "INSERT INTO member_info(mb_ipaddr, mb_gubun, mb_cat_name, mb_cat_birth, mb_visit_hospital, mb_serial, mb_checkdate) values('".$_SERVER['REMOTE_ADDR']."','".$gubun."','".$mb_cat_name."','".$mb_cat_birth."','".$mb_visit_hospital."','".$mb_serial."','".date('Y-m-d H:i:s')."')";
 		$result 	= mysqli_query($my_db, $query);
 
 		if ($result)
