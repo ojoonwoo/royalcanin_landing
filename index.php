@@ -315,15 +315,15 @@
                     <p class="sub">
                         재발 빈도가 높은 요로계 문제가 대표적입니다.
                     </p>
-                    <img src="./images/popup_reward_02_prd_img.png" alt="" class="prd-img">
+                    <img src="./images/popup_reward_02_prd_img.png?ver=0720" alt="" class="prd-img">
                 </div>
-                <img src="./images/popup_reward_02_img.png" alt="" class="r-img">
+                <img src="./images/popup_reward_02_img.png?ver=0720" alt="" class="r-img">
                 <div class="guide-block">
                     <p>헤마츄리아 디텍션 사용방법</p>
-                    <img src="./images/popup_reward_02_guide_img.png" alt="">
+                    <img src="./images/popup_reward_02_guide_img.png?ver=0720" alt="">
                 </div>
                 <div class="notice-block">
-                    <img src="./images/popup_reward_02_notice.png" alt="">
+                    <img src="./images/popup_reward_02_notice.png?ver=0720" alt="">
                 </div>
             </div>
         </div>
