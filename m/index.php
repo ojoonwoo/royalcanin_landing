@@ -5,7 +5,7 @@
     $mobileYN      = $mnv_f->MobileCheck();
 
     $siteURL = parse_url($mnv_f->siteURL());
-    print_r($siteURL);
+    print_r($mnv_f->siteURL());
     exit;
     if ($mobileYN == "PC")
     {
