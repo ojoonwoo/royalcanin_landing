@@ -82,8 +82,7 @@ class mnv_function extends mnv_dbi
 					 $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
 		$domainName = $_SERVER['HTTP_HOST'];
 		$uri = $_SERVER['REQUEST_URI'];
-		$query = $_SERVER['QUERY_STRING'];
-		return $protocol.$domainName.$uri.$query;
+		return $protocol.$domainName.$uri;
 	}
 	public function create_serial()
 	{
