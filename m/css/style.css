@@ -687,7 +687,7 @@ button.with-icon:after {
 }
 .content .section._04 .tab-container-wrap {
 	/* overflow-x: hidden; */
-	margin-top: 26px;
+	/* margin-top: 26px; */
 	/* padding: 30px 0; */
 	position: relative;
 }
@@ -706,17 +706,16 @@ button.with-icon:after {
 	flex-basis: 130px;
 	flex-grow: 1;
 	flex-shrink: 0;
-	/* padding: 30px 0; */
+	margin: 26px 0 0;
 	position: relative;
 }
 .content .section._04 .tab-container li:nth-child(2):before {
 	content: "";
-	content: none;
 	display: block;
 	position: absolute;
 	z-index: 10;
-	top: -30px;
-	right: 0;
+	top: -10px;
+	right: -10px;
 	width: 69px;
 	height: 25.5px;
 	background: url(../images/tips_tab_balloon.png) 50% / 69px 25.5px no-repeat;
@@ -738,6 +737,7 @@ button.with-icon:after {
 .content .section._04 .tab-container li button {
 	position: relative;
 	/* padding: 8px 27px 17px; */
+	width: 100%;
 	padding: 8px 0 15px;
 	text-align: center;
 }

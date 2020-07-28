@@ -873,6 +873,17 @@ button.with-icon:after {
 .content .section._04 .tab-container li:last-child:before {
 	content: none;
 }
+.content .section._04 .tab-container li:nth-child(2) button:before {
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: 10;
+	top: -20px;
+	right: -20px;
+	width: 101px;
+	height: 39px;
+	background: url(../images/tips_tab_balloon.png) 50% / 101px 39px no-repeat;
+}
 .content .section._04 .tab-container li button {
 	position: relative;
 	padding: 18px 0 19px;
