@@ -408,8 +408,8 @@
                 }, 200);
             }
 
-            gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '프로 집사'});
-            gtag('event', 'TIPS', {'event_category': '메인페이지', 'event_label': '동물병원 쉽게 데려가는 방법'});
+            // gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '프로 집사'});
+            // gtag('event', 'TIPS', {'event_category': '메인페이지', 'event_label': '동물병원 쉽게 데려가는 방법'});
             
         });
 

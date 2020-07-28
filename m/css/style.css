@@ -686,25 +686,39 @@ button.with-icon:after {
 	width: 101px;
 }
 .content .section._04 .tab-container-wrap {
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 	margin-top: 26px;
+	/* padding: 30px 0; */
+	position: relative;
 }
 .content .section._04 .tab-container {
 	width: auto;
 	display: flex;
 	flex-wrap: nowrap;
 	overflow-x: auto;
-	border-top: 1px solid #e3001a;
-	border-bottom: 3px solid #e4e4e4;
 }
 .content .section._04 .tab-container li:first-child {
 	flex-basis: 150px;
 }
 .content .section._04 .tab-container li {
+	border-top: 1px solid #e3001a;
+	border-bottom: 3px solid #e4e4e4;
 	flex-basis: 130px;
 	flex-grow: 1;
 	flex-shrink: 0;
+	padding: 30px 0;
 	position: relative;
+}
+.content .section._04 .tab-container li:nth-child(2):before {
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: 10;
+	top: -30px;
+	right: 0;
+	width: 69px;
+	height: 25.5px;
+	background: url(../images/tips_tab_balloon.png) 50% / 69px 25.5px no-repeat;
 }
 .content .section._04 .tab-container li:last-child:after {
 	content: none;
