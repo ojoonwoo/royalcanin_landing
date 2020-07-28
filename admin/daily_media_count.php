@@ -96,9 +96,9 @@
                     <td><?=number_format($media_cnt[$i])?></td>
                   </tr>
 <?php
-			$total_media_cnt += $media_cnt[$i];
 			$total_mobile_cnt += $mobile_cnt[$i];
 			$total_pc_cnt += $pc_cnt[$i];
+			$total_media_cnt += $$total_mobile_cnt + $total_pc_cnt;
 			$i++;
 		}
 ?>
