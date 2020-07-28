@@ -181,7 +181,7 @@
                         <li>
                             <button type="button" class="tab-trigger" data-key="f9HZBDrtwkA" onclick="gtag('event', 'TIPS', {'event_category': '메인페이지', 'event_label': '건강검진 자세히 알아보기'});">
                                 <img src="./images/tips_tab_icon_02_common.png" alt="" class="icon thumb" style="width:24px">
-                                <span>반려묘 건강검진<br />자세히 알아보기</span>
+                                <span>반려묘에게<br />치명적인 질병은?</span>
                             </button>
                         </li>
                         <li>
@@ -377,6 +377,9 @@
 
         if (window.location.href.indexOf('section4') != -1 )
             playerTips.playVideo();
+
+
+        
     }
 
     // 5. The API calls this function when the player's state changes.
@@ -386,8 +389,7 @@
     function onPlayerStateChange(event) {
         if (event.data == YT.PlayerState.PLAYING && !done) {
             // console.log(playerInfl.getVideoUrl());
-            console.log(event.target);
-            console.log('시작되었음');
+            // console.log(event.target);
             // setTimeout(stopVideo, 6000);
             // done = true;
         }
