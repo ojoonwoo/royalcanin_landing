@@ -378,8 +378,6 @@
         if (window.location.href.indexOf('section4') != -1 )
             playerTips.playVideo();
 
-
-        
     }
 
     // 5. The API calls this function when the player's state changes.
