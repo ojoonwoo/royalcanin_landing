@@ -26,7 +26,7 @@
                     </span>
                 </div>
                 <div class="subject">
-                    <b><?=$cat_info['mb_cat_name']?>의 건강검진권 신청하기</b>
+                    <b><?=$cat_info['mb_cat_name']?>의 건강 경품 신청하기</b>
                 </div>
             </div>
             <div class="location-selector">
@@ -136,7 +136,7 @@
                     <div class="title-block">
                         <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                         <p class="sub">
-                            반려묘의 더 건강한 삶을 위한<br>건강검진권과 혈뇨검출기가<br>신청되었습니다! 
+                            반려묘의 더 건강한 삶을 위한<br>건강 경품이 신청되었습니다! 
                         </p>
                     </div>
                     <div class="date-block">
@@ -159,11 +159,11 @@
                             <li>
                                 <img src="./images/benefit_img_02.png" alt="혈뇨검출 체외진단기 헤마츄리아 디텍션 50명">
                                 <h5>혈뇨검출 체외진단기</h5>
-                                <p>헤마츄리아 디텍션</p>
+                                <p>헤마츄리아 디텍션<br>제품 교환권</p>
                             </li>
                         </ul>
                         <div class="noti-img">
-                            <img src="./images/section_03_notice.png" alt="필독! 당첨되지 않은 신청자에게는 별도의 공지가 없는 점 양해 부탁드립니다. 본 건강검진권은 지정된 병원에서만 사용이 가능하며, 선택한 병원이 아닌 다른 병원에서는 사용이 불가합니다.">
+                            <img src="./images/section_03_notice.png?ver=200728" alt="필독! 당첨되지 않은 신청자에게는 별도의 공지가 없는 점 양해 부탁드립니다. 본 건강검진권 또는 헤마츄리아 제품 교환권은 지정된 병원에서만 사용/교환 가능하며, 선택한 병원이 아닌 다른 병원에서는 사용/교환이 불가합니다.">
                         </div>
                     </div>
                     <button type="button" class="type-01" id="btn-complete">확인</button>
