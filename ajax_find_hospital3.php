@@ -5,7 +5,7 @@
 
     $sido       = $_REQUEST['sido'];
     $sigungu    = $_REQUEST['sigungu'];
-    $query = "SELECT hospital_name, hospital_addr1, hospital_addr2, hospital_addr3, hospital_addr4, hospital_code FROM hospital_list3 WHERE 1 AND hospital_addr1 like '%".$sido."%' AND hospital_addr2 like '%".$sigungu."%' ORDER BY hospital_name ASC";
+    $query = "SELECT hospital_name, hospital_addr1, hospital_addr2, hospital_addr3, hospital_addr4, hospital_code FROM hospital_list3 WHERE 1 AND hospital_addr1 like '%".$sido."%' AND hospital_addr2 like '%".$sigungu."%' ORDER BY hospital_addr2 ASC, hospital_addr3 ASC, hospital_name ASC";
     $result = mysqli_query($my_db, $query);
     $total_cnt = mysqli_num_rows($result);
 
