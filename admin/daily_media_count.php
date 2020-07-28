@@ -98,7 +98,7 @@
 <?php
 			$total_mobile_cnt += $mobile_cnt[$i];
 			$total_pc_cnt += $pc_cnt[$i];
-			$total_media_cnt += $$total_mobile_cnt + $total_pc_cnt;
+			$total_media_cnt += $total_mobile_cnt + $total_pc_cnt;
 			$i++;
 		}
 ?>
