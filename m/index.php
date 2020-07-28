@@ -196,7 +196,7 @@
                         <li>
                             <button type="button" class="tab-trigger" data-key="f9HZBDrtwkA" onclick="gtag('event', 'TIPS', {'event_category': '메인페이지', 'event_label': '건강검진 자세히 알아보기'});">
                                 <img src="./images/tips_tab_icon_02_common.png" alt="" class="icon" style="width:17px">
-                                <span>반려묘에게<br />치명적인 질병은?</span>
+                                <span>수의사가 알려주는<br />건강검진 팁</span>
                             </button>
                         </li>
                         <li>
