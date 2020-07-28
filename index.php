@@ -136,6 +136,8 @@
                     <p class="sub">
                         아픈 것을 잘 드러내지 않는 반려묘이기에 세심하게 살펴주는 가장 가까운 주치의로서의 <em>관찰 능력</em>은 필수!<br>
                         <b>나의 주치의력을 테스트 해 보고 반려묘의 신호는 물론 10만원 상당의 건강검진권 당첨의 기회도 잡으세요!</b>
+                        <!-- 아파도 숨기는 반려묘, 세심한 <em>관찰 능력</em>은 필수!<br>
+                        <b>나의 주치의력 테스트하고, 건강 경품 당첨 기회 잡자!</b> -->
                     </p>
                     <div class="date-block">
                         <p>참여기간 : 2020. 7. 27 ~ 9. 4&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;당첨자 발표 : 2020. 9. 14</p>
@@ -150,7 +152,7 @@
                             </div>
                             <div class="hema">
                                 <img src="./images/main_03_hema_prize.png" alt="">
-                                <span>혈뇨검출 체외진단기<br /><b>헤마츄리아 디텍션</b></span>
+                                <span>혈뇨검출 체외진단기<br /><b>헤마츄리아 디텍션 교환권</b></span>
                                 <button type="button" data-popup="#reward2-popup" onclick="gtag('event', '혜택팝업오픈', {'event_category': '메인페이지', 'event_label': '헤마츄리아 사용법'});">헤마츄리아 사용법</button>
                             </div>
                         </div>
@@ -177,7 +179,7 @@
                             </button>
                         </li>
                         <li>
-                            <button type="button" class="tab-trigger" data-key="" onclick="gtag('event', 'TIPS', {'event_category': '메인페이지', 'event_label': '건강검진 자세히 알아보기'});">
+                            <button type="button" class="tab-trigger" data-key="f9HZBDrtwkA" onclick="gtag('event', 'TIPS', {'event_category': '메인페이지', 'event_label': '건강검진 자세히 알아보기'});">
                                 <img src="./images/tips_tab_icon_02_common.png" alt="" class="icon thumb" style="width:24px">
                                 <span>반려묘 건강검진<br />자세히 알아보기</span>
                             </button>
@@ -383,6 +385,9 @@
     var done = false;
     function onPlayerStateChange(event) {
         if (event.data == YT.PlayerState.PLAYING && !done) {
+            // console.log(playerInfl.getVideoUrl());
+            console.log(event.target);
+            console.log('시작되었음');
             // setTimeout(stopVideo, 6000);
             // done = true;
         }
