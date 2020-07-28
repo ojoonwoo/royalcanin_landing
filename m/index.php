@@ -382,7 +382,7 @@
 
     // 4. The API will call this function when the video player is ready.
     function onPlayerReady(event) {
-        console.log(event.target);
+        // console.log(event.target);
         // event.target.playVideo();
         playersReady++;
     }
