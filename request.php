@@ -137,7 +137,8 @@
                         <div class="guide-icon">
                             <img src="./images/naver_search_guide.png" alt="">
                         </div>
-                        <a href="https://map.naver.com/v5/search/" class="naver-search" target="_blank">
+                        <a href="https://map.naver.com/?app=N&appmarket=N" class="naver-search" target="_blank">
+                        <!-- <a href="https://map.naver.com/v5/search/" class="naver-search" target="_blank"> -->
                             <img src="./images/button_naver.png" alt="네이버에서 가까운 동물병원 찾기">
                         </a>
                         <div class="input-wrapper">
