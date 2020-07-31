@@ -119,7 +119,7 @@
 	$where = "";
 
 	if ($sDate != "")
-		$where	.= " AND mb_regdate >= '".$sDate."' AND mb_regdate <= '".$eDate." 23:59:59'";
+		$where	.= "AND mb_name is not null AND mb_regdate >= '".$sDate."' AND mb_regdate <= '".$eDate." 23:59:59'";
 
 	if ($search_txt != "")
 	{
