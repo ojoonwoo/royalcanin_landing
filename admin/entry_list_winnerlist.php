@@ -119,7 +119,7 @@
 	$where = "";
 
 	if ($sDate != "")
-		$where	.= "AND mb_name is not null AND mb_regdate >= '".$sDate."' AND mb_regdate <= '".$eDate." 23:59:59'";
+		$where	.= "AND mb_name is not null AND mb_regdate >= '2020-07-27 00:00:00' AND mb_regdate <= '2020-07-30 23:59:59'";
 
 	if ($search_txt != "")
 	{
@@ -131,7 +131,7 @@
 	$PAGE_CLASS = new mnv_page($pg,$buyer_count,$page_size,$block_size);
 	$BLOCK_LIST = $PAGE_CLASS->blockList();
 	$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
-	$buyer_list_query = "SELECT * FROM member_info WHERE 1 ".$where." Order by idx DESC LIMIT $PAGE_CLASS->page_start, $page_size";
+	$buyer_list_query = "SELECT * FROM member_info WHERE 1 ".$where." Order by idx ASC";
 	$res = mysqli_query($my_db, $buyer_list_query);
 //print_r($buyer_list_query);
 	while ($buyer_data = @mysqli_fetch_array($res))
@@ -173,6 +173,9 @@
 			}
 			$i++;
 		}
+		$query = "UPDATE member_info_1 SET mb_urinary='".$urinary_count."' WHERE 1 AND $buyer_info[$key]['idx']";
+		$res = mysqli_query($my_db, $query);
+			
 ?>
               <tr>
                 <td><?php echo $PAGE_UNCOUNT-- ?></td>
