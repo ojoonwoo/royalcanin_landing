@@ -18,7 +18,7 @@
         $url_param_arr1= explode("utm_source=",$url_param);
         $url_param_arr2= explode("&",$url_param_arr1[1]);
         if ($url_param_arr2 == "mms")
-            $saveMMS     = $mnv_f->SaveMMS();
+            $saveMMS     = $mnv_f->SaveMMS('mms');
             
 		$saveMedia     = $mnv_f->SaveMedia();
 		$rs_tracking   = $mnv_f->InsertTrackingInfo($mobileYN);
