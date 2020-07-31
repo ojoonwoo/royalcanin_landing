@@ -242,6 +242,7 @@
                             "exec"          : "insert_check_data",
                             "mb_check"      : JSON.stringify(checklist),
                             "mb_serial"    : "<?php echo $serial?>",
+                            "mb_urinary"     : checklist.urinary.checkedLength,
                             "mb_result"     : hematuria
                         },
                         success: function (response) {
