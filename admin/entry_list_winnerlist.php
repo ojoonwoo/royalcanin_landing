@@ -118,7 +118,6 @@
 <?php
 	$where = "";
 
-	if ($sDate != "")
 		$where	.= "AND mb_name is not null AND mb_regdate >= '2020-07-27 00:00:00' AND mb_regdate <= '2020-07-30 23:59:59'";
 
 	if ($search_txt != "")
