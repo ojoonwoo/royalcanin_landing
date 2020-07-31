@@ -166,9 +166,10 @@ print_r($buyer_list_query);
 			}
 			$i++;
 		}
-		$query = "UPDATE member_info_1 SET mb_urinary='".$urinary_count."' WHERE 1 AND idx='".$buyer_info[$key]['idx']."'";
-		$res = mysqli_query($my_db, $query);
-			print_r($query);
+		print_r($urinary_count);
+		// $query = "UPDATE member_info_1 SET mb_urinary='".$urinary_count."' WHERE 1 AND idx='".$buyer_info[$key]['idx']."'";
+		// $res = mysqli_query($my_db, $query);
+			// print_r($query);
 	}
 ?>
             </tbody>
