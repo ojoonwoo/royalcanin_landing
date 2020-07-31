@@ -146,8 +146,7 @@
 		$sel_check 	= "";
 		$urinary_count = 0;
 		$check_data = json_decode($buyer_info[$key]['mb_check'], true);
-print_r($check_data);
-exit;
+
 		$i = 0;
 		foreach($check_data as $key2 => $val2) {
 
@@ -158,7 +157,9 @@ exit;
 
 			$sel_status .= $comma.$key2;
 
-
+			print_r($val2);
+			exit;
+			
 			$list_count = count($val2['list']);
 			for($j = 0; $j < $list_count; $j++) {
 				if ($val2['list'][$j]['checked'] == "Y")
