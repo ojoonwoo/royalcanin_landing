@@ -157,19 +157,19 @@
 
 			$sel_status .= $comma.$key2;
 
-			print_r($key2);
-			exit;
 			
 			$list_count = count($val2['list']);
 			for($j = 0; $j < $list_count; $j++) {
 				if ($val2['list'][$j]['checked'] == "Y")
 					$sel_check .= $comma.$val2['list'][$j]['question'];
 			}
-			// 요로계 갯수
-			$list_count2 = count($val2['list']);
-			for($j = 0; $j < $list_count2; $j++) {
-				if ($val2['list'][$j]['checked'] == "Y")
-					$sel_check .= $comma.$val2['list'][$j]['question'];
+				// 요로계 갯수
+				if ($key2 == "urinary") {
+				$list_count2 = count($val2['list']);
+				for($j = 0; $j < $list_count2; $j++) {
+					if ($val2['list'][$j]['checked'] == "Y")
+						$urinary_count++;
+				}
 			}
 			$i++;
 		}
@@ -181,7 +181,7 @@
                 <td><?php echo $buyer_info[$key]['mb_cat_birth']?></td>
                 <td><?php echo $buyer_info[$key]['mb_visit_hospital']?></td>
                 <td><?php echo $sel_check?></td>
-                <td><?php echo $sel_check?></td>
+                <td><?php echo $urinary_count?></td>
                 <td><?php echo $buyer_info[$key]['mb_result']?></td>
                 <td><?php echo $buyer_info[$key]['mb_sudo']?></td>
                 <td><?php echo $buyer_info[$key]['mb_select_hospital_name']?></td>
