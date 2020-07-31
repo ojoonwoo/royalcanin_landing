@@ -157,7 +157,7 @@
 
 			$sel_status .= $comma.$key2;
 
-			print_r($val2);
+			print_r($key2);
 			exit;
 			
 			$list_count = count($val2['list']);
