@@ -17,7 +17,7 @@
         $url_param     = $_SERVER['QUERY_STRING'];
         $url_param_arr1= explode("utm_source=",$url_param);
         $url_param_arr2= explode("&",$url_param_arr1[1]);
-        if ($url_param_arr2 == "mms")
+        if ($url_param_arr2[0] == "mms")
             $saveMMS     = $mnv_f->SaveMMS('mms');
             
 		$saveMedia     = $mnv_f->SaveMedia();
