@@ -125,12 +125,6 @@
 	{
 		$where	.= " AND ".$search_type." like '%".$search_txt."%'";
 	}
-	$buyer_count_query = "SELECT count(*) FROM member_info WHERE  1 ".$where."";
-	list($buyer_count) = @mysqli_fetch_array(mysqli_query($my_db, $buyer_count_query));
-	// print_r($buyer_count);
-	$PAGE_CLASS = new mnv_page($pg,$buyer_count,$page_size,$block_size);
-	$BLOCK_LIST = $PAGE_CLASS->blockList();
-	$PAGE_UNCOUNT = $PAGE_CLASS->page_uncount;
 	$buyer_list_query = "SELECT * FROM member_info WHERE 1 ".$where." Order by idx ASC";
 	$res = mysqli_query($my_db, $buyer_list_query);
 //print_r($buyer_list_query);
@@ -175,29 +169,9 @@
 		}
 		$query = "UPDATE member_info_1 SET mb_urinary='".$urinary_count."' WHERE 1 AND $buyer_info[$key]['idx']";
 		$res = mysqli_query($my_db, $query);
-			
-?>
-              <tr>
-                <td><?php echo $PAGE_UNCOUNT-- ?></td>
-                <td><?php echo $buyer_info[$key]['mb_serial']?></td>
-                <td><?php echo $buyer_info[$key]['mb_cat_name']?></td>
-                <td><?php echo $buyer_info[$key]['mb_cat_birth']?></td>
-                <td><?php echo $buyer_info[$key]['mb_visit_hospital']?></td>
-                <td><?php echo $sel_check?></td>
-                <td><?php echo $urinary_count?></td>
-                <td><?php echo $buyer_info[$key]['mb_result']?></td>
-                <td><?php echo $buyer_info[$key]['mb_sudo']?></td>
-                <td><?php echo $buyer_info[$key]['mb_select_hospital_name']?></td>
-                <td><?php echo $buyer_info[$key]['mb_select_hospital_addr']?></td>
-                <td><?php echo $buyer_info[$key]['mb_name']?></td>
-                <td><?php echo $buyer_info[$key]['mb_phone']?></td>
-                <td><?php echo $buyer_info[$key]['mb_gubun']?></td>
-                <td><?php echo $buyer_info[$key]['mb_regdate']?></td>
-              </tr>
-<?php
+print_r($query);			
 	}
 ?>
-              <tr><td colspan="13"><div class="pageing"><?php echo $BLOCK_LIST?></div></td></tr>
             </tbody>
           </table>
         </div>
