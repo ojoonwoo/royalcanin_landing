@@ -4,6 +4,7 @@
     $my_db      = $mnv_f->Connect_MySQL();
     $mobileYN      = $mnv_f->MobileCheck();
 
+    
     $siteURL = parse_url($mnv_f->siteURL());
     if ($mobileYN == "MOBILE")
     {
@@ -13,6 +14,12 @@
 			echo "<script>location.href='./m/index.php';</script>";
 		}
     }else{
+        $url_param     = $_SERVER['QUERY_STRING'];
+        $url_param_arr1= explode("utm_source=",$url_param);
+        $url_param_arr2= explode("&",$url_param_arr1[1]);
+        if ($url_param_arr2 == "mms")
+            $saveMMS     = $mnv_f->SaveMMS();
+            
 		$saveMedia     = $mnv_f->SaveMedia();
 		$rs_tracking   = $mnv_f->InsertTrackingInfo($mobileYN);
 		// print_r($rs_tracking);

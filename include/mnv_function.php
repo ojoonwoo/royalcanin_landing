@@ -77,6 +77,15 @@ class mnv_function extends mnv_dbi
 		// $_SESSION['ss_utm_content']		= $_REQUEST['utm_content'];
 	}
 
+	public function SaveMMS($param)
+	{
+		$_SESSION['ss_MMS']		= $param;
+		// $_SESSION['ss_utm_medium']		= $_REQUEST['utm_medium'];
+		// $_SESSION['ss_utm_source']		= $_REQUEST['utm_source'];
+		// $_SESSION['ss_utm_campaign']	= $_REQUEST['utm_campaign'];
+		// $_SESSION['ss_utm_content']		= $_REQUEST['utm_content'];
+	}
+
 	public function siteURL() {
 		$protocol = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') || 
 					 $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
