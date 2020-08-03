@@ -166,8 +166,8 @@ print_r($buyer_list_query);
 			}
 			$i++;
 		}
-		print_r($buyer_info[$key]['mb_urinary']);
-		if ($buyer_info[$key]['mb_urinary'] == ""){
+		// print_r($buyer_info[$key]['mb_urinary']);
+		if ($buyer_info[$key]['mb_urinary'] == 0){
 			$query = "UPDATE member_info_2 SET mb_urinary='".$urinary_count."' WHERE 1 AND idx='".$buyer_info[$key]['idx']."'";
 			$res = mysqli_query($my_db, $query);
 			print_r($query);
