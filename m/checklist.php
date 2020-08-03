@@ -45,11 +45,11 @@
             </div>
             <div class="checklist-container">
                 <div class="list-wrapper">
-                    <ul class="group is-current" data-cate="weight"></ul>
-                    <ul class="group" data-cate="gastro"></ul>
-                    <ul class="group" data-cate="kidney"></ul>
-                    <ul class="group" data-cate="urinary"></ul>
-                    <ul class="group" data-cate="stress"></ul>
+                <ul class="group is-current"></ul>
+                <ul class="group"></ul>
+                <ul class="group"></ul>
+                <ul class="group"></ul>
+                <ul class="group"></ul>
                 </div>
             </div>
             <button type="button" class="type-01" id="go-next">다음으로</button>
@@ -83,22 +83,34 @@
                         type: 'get',
                         success: function (data) {
                             var object = data;
-                            
+                            var checklistEl = "";
+
                             for (var key in object) {
-                                var checklistEl = "";
                                 checklist[key] = {};
                                 checklist[key].list = [];
                                 object[key].list.forEach(function(item) {
                                     var el = "<li>";
-                                        el += "<button type='button' class='chk-trigger'>";
+                                        el += "<button type='button' class='chk-trigger' data-cate='"+key+"'>";
                                         el += "<span class='chk-shape'></span>";
                                         el += "<span class='text'>"+item.question+"</span>";
                                         el += "</button>";
-                                        el += "</li>";
+                                        el += "</li><br>";
                             
                                     checklistEl += el;
                                 });
-                                $('[data-cate="'+key+'"]').html(checklistEl);
+                                // $('[data-cate="'+key+'"]').html(checklistEl);
+                            }
+
+                            var chkElArray = checklistEl.split('<br>');
+                            chkElArray.splice(-1,1);
+                            chkElArray = chkElArray.sort(function(){return 0.5-Math.random()});
+                            
+                            var groupNum = 0;
+                            for(var j=0; j<chkElArray.length; j++) {
+                                if(j!==0 && j%5===0) {
+                                    groupNum++;
+                                }
+                                $('ul.group').eq(groupNum).append(chkElArray[j]);
                             }
                         },
                         error: function(jqXHR, errMsg) {
@@ -177,7 +189,7 @@
                     var hematuria = "N";
 
                     $('.chk-trigger').each(function(idx, el) {
-                        var key = $(this).closest('.group').attr('data-cate');
+                        var key = $(this).attr('data-cate');
                         var question = $(this).find('.text').text();
                         var pushVal = {"question": question, "checked": $(el).hasClass('is-active') ? "Y" : "N"};
                         checklist[key].list.push(pushVal);
@@ -218,7 +230,7 @@
                                     location.href = "./result.php?serial=<?php echo $serial?>";
                                 }, 200);
                             }else{
-
+                                alert('오류입니다. 관리자에게 문의해주세요.');
                             }
                         },
                         error: function(jqXHR, errMsg) {
