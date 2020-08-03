@@ -243,6 +243,7 @@
                 }
                 hospiName = "",
                 hospiAddr = "";
+                hospiCode = "";
                 $('#req-addr').val('');
             });
             $doc.on('click', '.hospi-trigger', function() {
