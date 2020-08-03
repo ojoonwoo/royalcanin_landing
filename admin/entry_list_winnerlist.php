@@ -118,7 +118,7 @@
 <?php
 	$where = "";
 
-		$where	.= "AND mb_name is not null AND mb_regdate >= '2020-07-27 00:00:00' AND mb_regdate <= '2020-07-30 23:59:59'";
+		$where	.= "AND mb_name is not null";
 
 	if ($search_txt != "")
 	{
@@ -167,8 +167,10 @@ print_r($buyer_list_query);
 			$i++;
 		}
 		// print_r($urinary_count);
-		$query = "UPDATE member_info_2 SET mb_urinary='".$urinary_count."' WHERE 1 AND idx='".$buyer_info[$key]['idx']."'";
-		$res = mysqli_query($my_db, $query);
+		if ($buyer_info[$key]['mb_urinary'] == ""){
+			$query = "UPDATE member_info_2 SET mb_urinary='".$urinary_count."' WHERE 1 AND idx='".$buyer_info[$key]['idx']."'";
+			$res = mysqli_query($my_db, $query);
+		}
 			// print_r($query);
 	}
 ?>
