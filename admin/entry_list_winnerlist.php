@@ -124,7 +124,7 @@
 	{
 		$where	.= " AND ".$search_type." like '%".$search_txt."%'";
 	}
-	$buyer_list_query = "SELECT * FROM member_info_1 WHERE 1 ".$where." Order by idx ASC";
+	$buyer_list_query = "SELECT * FROM member_info_2 WHERE 1 ".$where." Order by idx ASC";
 	$res = mysqli_query($my_db, $buyer_list_query);
 print_r($buyer_list_query);
 	while ($buyer_data = @mysqli_fetch_array($res))
