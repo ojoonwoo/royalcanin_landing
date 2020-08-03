@@ -198,6 +198,8 @@
                     if(checklist.urinary.checkedLength >= 3 || Number($('#cat-age').val()) >= 8) {
                         hematuria = "Y";
                     }
+
+                    gtag('event', '이벤트참여', {'event_category': '체크리스트페이지', 'event_label': '이벤트참여_체크리스트'});
                     // 체크 정보 db update 후 callback에서 result로 serial같이 넘김
                     // 데이터 저장
                     $.ajax({
