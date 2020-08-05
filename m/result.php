@@ -126,7 +126,8 @@
         for (var key in catInfo) {
             var len = catInfo[key].checkedLength;
             var point = (len/catInfo[key].list.length)*100;
-            if(Number(len)>=3) {
+            // if(Number(len)>=3) {
+            if(Number(len)>=2) {
                 adviceArray.push(key);
             }
             // console.log('key:', key);
@@ -265,7 +266,8 @@
                     },
                     ticks: {
                         display: false,
-                        stepSize: 25,
+                        // stepSize: 25,
+                        stepSize: 20,
                         max: 100,
                         suggestedMin: 10,
                         suggestedMax: 100,

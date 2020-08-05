@@ -70,6 +70,7 @@
                         </div>
                     </div>
                 </div>
+                <a href="./request.php?serial=<?php echo $serial?>" class="type-01 go-next" onclick="gtag('event', '이벤트참여', {'event_category': '결과페이지', 'event_label': '이벤트참여_결과'});">건강 경품 신청하기</a>
                 <div class="advice-block">
                     <div class="chart-block">
                         <div class="chart-wrapper">
@@ -99,7 +100,6 @@
                 <div class="notice-block">
                     <p>* 결과는 보호자가 인식하는 반려묘 신호 정도에 따라 상이할 수 있습니다. 본 테스트는 참고용이며, 수의사 선생님의 소견이나 수의학적 치료를 대체할 수 없습니다.</p>
                 </div>
-                <a href="./request.php?serial=<?php echo $serial?>" class="type-01 go-next" onclick="gtag('event', '이벤트참여', {'event_category': '결과페이지', 'event_label': '이벤트참여_결과'});">건강 경품 신청하기</a>
             </div>
         </div>
         <div id="footer">
@@ -151,7 +151,8 @@
         for (var key in catInfo) {
             var len = catInfo[key].checkedLength;
             var point = (len/catInfo[key].list.length)*100;
-            if(Number(len)>=3) {
+            // if(Number(len)>=3) {
+            if(Number(len)>=2) {
                 adviceArray.push(key);
             }
             // console.log('key:', key);
@@ -294,7 +295,8 @@
                     },
                     ticks: {
                         display: false,
-                        stepSize: 25,
+                        // stepSize: 25,
+                        stepSize: 20,
                         max: 100,
                         suggestedMin: 10,
                         suggestedMax: 100,

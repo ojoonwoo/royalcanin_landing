@@ -237,6 +237,7 @@
                 if(location=='other') {
                     $('.for-central').val('');
                     royalcaninCat.popup.show($('#other-popup'));
+                    gtag('event', '주소입력팝업오픈', {'event_category': '정보입력페이지', 'event_label': '그외지역팝업오픈'});
                 } else {
                     $('#nv-h-name, #nv-h-addr').val('');
                     $('.for-central').attr('disabled', false);
@@ -270,6 +271,10 @@
                 if(hospiName.length>0 && hospiAddr.length>0) {
                     if(popupId==='other-popup') {
                         $('.for-central').attr('disabled', true);
+                        gtag('event', '주소입력완료', {'event_category': '정보입력페이지', 'event_label': '그외지역주소선택완료'});
+                    }
+                    if(popupId==='hospi-popup') {
+                        gtag('event', '주소입력완료', {'event_category': '정보입력페이지', 'event_label': '수도권주소선택완료'});
                     }
                     $('#req-addr').val(hospiAddr+" "+hospiName);
                     royalcaninCat.popup.close($('#'+popupId));
@@ -304,6 +309,7 @@
                     success: function (response) {
                         var res = JSON.parse(response);
                         royalcaninCat.popup.show($('#hospi-popup'));
+                        gtag('event', '주소입력팝업오픈', {'event_category': '정보입력페이지', 'event_label': '수도권팝업오픈'});
                         $("#hospi-cnt").text(res.cnt);
                         $(".list-block ul").html(res.html);
                     },

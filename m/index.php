@@ -74,8 +74,10 @@
                     <h1 class="title-block">
                         <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                         <img src="./images/main_01_title.png" alt="고양이는 아파도 숨기는 사실, 알고 계세요? 반려묘가 숨기고 있을지 모를 건강 신호 확인해보고 무료 건강검진의 기회도 받아보세요!" class="title">
+                        <a href="javascript:void(0)" class="type-01" id="sec1-btn" onclick="gtag('event', '주치의력테스트로 점프', {'event_category': '메인페이지', 'event_label': '주치의력테스트로 점프'});sectionMove('#section3');">건강체크하고<br>경품받기<img src="./images/main_01_product.png" alt=""></a>
                     </h1>
-                    <img src="./images/main_01_cat.png" alt="고양이" class="cat resize-elm" data-width="0.51">
+                    <!-- <img src="./images/main_01_cat.png" alt="고양이" class="cat resize-elm" data-width="0.51"> -->
+                    <img src="./images/main_01_cat.png" alt="고양이" class="cat resize-elm" data-width="0.54">
                     <!-- scroll down -->
                     <div class="scoll-down-group">
                         <span class="anim _1"></span>
@@ -109,20 +111,23 @@
                     <ul class="tab-container" data-video-target="infl">
                         <li>
                             <button type="button" class="tab-trigger is-active" data-key="E6RWLdg5DaY" data-title="반려묘를 꿰뚫어보는 <br><b>프로 집사도 주치의가 필요해요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '프로 집사'});">
-                                <img src="./images/infl_tab_thumb_01_active.png?ver=0727" alt="" class="thumb">
-                                <span>프로 집사의<br>#주치의 프로젝트</span>
+                                <img src="./images/infl_tab_thumb_01.svg?ver=0805" alt="" class="thumb" style="width: 26px;height: 29px;">
+                                <!-- <span>프로 집사의<br>#주치의 프로젝트</span> -->
+                                <span>아파도 숨기는 고양이,<br> 도와주세요 수의사님!</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="C_LCqOKWbB0" data-title="사랑하는 반려묘 앞에서는 <br><b>누구보다 예민해져야 해요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '예민보스 집사'});">
-                                <img src="./images/infl_tab_thumb_02_common.png?ver=0727" alt="" class="thumb">
-                                <span>예민보스 집사의<br>#주치의 프로젝트</span>
+                                <img src="./images/infl_tab_thumb_02.svg?ver=0805" alt="" class="thumb" style="width: 28px;height: 24px;">
+                                <!-- <span>예민보스 집사의<br>#주치의 프로젝트</span> -->
+                                <span>캐치! 집사의<br> 건강 신호 캐치 경험담</span>
                             </button>
                         </li>
                         <li>
                             <button type="button" class="tab-trigger" data-key="47DFCvOPUz0" data-title="결국은 동물병원에 자주 방문하는 것이 <br><b>가장 현명한 방법이에요</b>" onclick="gtag('event', '인플루언서', {'event_category': '메인페이지', 'event_label': '현명 집사'});">
-                                <img src="./images/infl_tab_thumb_03_common.png?ver=0727" alt="" class="thumb">
-                                <span>현명 집사의<br>#주치의 프로젝트</span>
+                                <img src="./images/infl_tab_thumb_03.svg?ver=0805" alt="" class="thumb" style="width: 28px;height: 25px;">
+                                <!-- <span>현명 집사의<br>#주치의 프로젝트</span> -->
+                                <span>고양이 건강검진!<br> 언제가 마지막이었나요?</span>
                             </button>
                         </li>
                     </ul>

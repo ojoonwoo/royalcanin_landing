@@ -62,13 +62,11 @@
                         <ul class="group"></ul>
                         <ul class="group"></ul>
                         <ul class="group"></ul>
-                        <ul class="group"></ul>
                     </div>
                 </div>
                 <div class="indicator-block">
                     <ul class="indicator">
                         <li class="is-current"></li>
-                        <li></li>
                         <li></li>
                         <li></li>
                         <li></li>
@@ -130,7 +128,8 @@
                             
                             var groupNum = 0;
                             for(var j=0; j<chkElArray.length; j++) {
-                                if(j!==0 && j%5===0) {
+                                // if(j!==0 && j%5===0) {
+                                if(j!==0 && j%4===0 && j!==chkElArray.length-1) {
                                     groupNum++;
                                 }
                                 $('ul.group').eq(groupNum).append(chkElArray[j]);
@@ -168,7 +167,7 @@
                     }
                 },
                 nextStep: function() {
-                    if(currentStep>3) {
+                    if(currentStep>2) {
                         // alert('로딩&결과 페이지로 이동합니다.');
                         this.submit();
                         return;
@@ -181,7 +180,7 @@
                     var stepTl = gsap.timeline({onComplete: function(){
                         (direction==='next') ? currentStep++ : currentStep--;
                         isAnimate = false;
-                        if(Number(currentStep)===4) {
+                        if(Number(currentStep)===3) {
                             $('#go-next').text('결과 보기');
                         } else {
                             $('#go-next').text('다음으로');

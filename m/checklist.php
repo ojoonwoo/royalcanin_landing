@@ -40,13 +40,11 @@
                     <li></li>
                     <li></li>
                     <li></li>
-                    <li></li>
                 </ul>
             </div>
             <div class="checklist-container">
                 <div class="list-wrapper">
                 <ul class="group is-current"></ul>
-                <ul class="group"></ul>
                 <ul class="group"></ul>
                 <ul class="group"></ul>
                 <ul class="group"></ul>
@@ -107,7 +105,7 @@
                             
                             var groupNum = 0;
                             for(var j=0; j<chkElArray.length; j++) {
-                                if(j!==0 && j%5===0) {
+                                if(j!==0 && j%4===0 && j!==chkElArray.length-1) {
                                     groupNum++;
                                 }
                                 $('ul.group').eq(groupNum).append(chkElArray[j]);
@@ -145,7 +143,7 @@
                     }
                 },
                 nextStep: function() {
-                    if(currentStep>3) {
+                    if(currentStep>2) {
                         this.submit();
                         return;
                     } else {
@@ -157,7 +155,7 @@
                     var stepTl = gsap.timeline({onComplete: function(){
                         (direction==='next') ? currentStep++ : currentStep--;
                         isAnimate = false;
-                        if(Number(currentStep)===4) {
+                        if(Number(currentStep)===3) {
                             $('#go-next').text('결과 보기');
                         } else {
                             $('#go-next').text('다음으로');
