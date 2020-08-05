@@ -1460,6 +1460,7 @@ select.select-box {
 	line-height: 1.36;
 }
 .content.__result .go-next {
+	position: -webkit-sticky;
 	position: sticky;
 	bottom: 10px;
 }
