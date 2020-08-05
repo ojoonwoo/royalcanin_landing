@@ -295,6 +295,7 @@ button.with-icon:after {
 	/* right: -15.5%; */
 	right: -26.5%;
 	z-index: 0;
+	max-width: none;
 }
 .content .section._01 .scoll-down-group {
 	position: absolute;
