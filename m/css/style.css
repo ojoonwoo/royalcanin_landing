@@ -258,7 +258,8 @@ button.with-icon:after {
 }
 .content .section._01 .title-block {
 	position: relative;
-	padding-top: 11.6%;
+	/* padding-top: 11.6%; */
+	padding-top: 8.6%;
 	/* padding-left: 36px; */
 	padding-left: 20px;
 	z-index: 1;
