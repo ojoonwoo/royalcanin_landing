@@ -74,7 +74,7 @@
                     <h1 class="title-block">
                         <img src="./images/project_logo.svg" alt="고양이 주치의 프로젝트" class="project-logo">
                         <img src="./images/main_01_title.png" alt="고양이는 아파도 숨기는 사실, 알고 계세요? 반려묘가 숨기고 있을지 모를 건강 신호 확인해보고 무료 건강검진의 기회도 받아보세요!" class="title">
-                        <a href="javascript:void(0)" class="type-01" id="sec1-btn" onclick="gtag('event', '주치의력테스트로 점프', {'event_category': '메인페이지', 'event_label': '주치의력테스트로 점프'});sectionMove('#section3');">건강체크하고<br>경품받기<img src="./images/main_01_product.png" alt=""></a>
+                        <a href="javascript:void(0)" class="type-01" id="sec1-btn" onclick="gtag('event', '주치의력테스트로 점프', {'event_category': '메인페이지', 'event_label': '주치의력테스트로 점프'});sectionMove('#section3');">건강체크하고<br>경품받기<img src="./images/main_01_product.png?ver=200806" alt=""></a>
                     </h1>
                     <!-- <img src="./images/main_01_cat.png" alt="고양이" class="cat resize-elm" data-width="0.51"> -->
                     <img src="./images/main_01_cat.png" alt="고양이" class="cat resize-elm" data-width="0.54">

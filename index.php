@@ -67,7 +67,7 @@
                             <p><b>건강 이상 신호 확인</b>해보고</p>
                             <p><b>무료 건강검진의 기회</b>도 받아보세요!</p>
                         </div>
-                        <a href="javascript:void(0)" class="type-01" id="sec1-btn" onclick="gtag('event', '주치의력테스트로 점프', {'event_category': '메인페이지', 'event_label': '주치의력테스트로 점프'});sectionMove('#section3');">건강체크하고 경품받기<img src="./images/main_01_product.png" alt=""></a>
+                        <a href="javascript:void(0)" class="type-01" id="sec1-btn" onclick="gtag('event', '주치의력테스트로 점프', {'event_category': '메인페이지', 'event_label': '주치의력테스트로 점프'});sectionMove('#section3');">건강체크하고 경품받기<img src="./images/main_01_product.png?ver=200806" alt=""></a>
                     </h1>
                     <img src="./images/main_01_cat.png" alt="고양이" class="cat resize-elm" data-width="0.51">
                     <!-- scroll down -->
