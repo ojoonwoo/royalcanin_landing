@@ -2468,6 +2468,10 @@ video::-webkit-media-controls-fullscreen-button {
 	} */
 }
 @media screen and (max-height: 850px) {
+	.content .section._01 {
+		/* height: auto; */
+		padding: 0 0 100px;
+	}
 	.content .section._01 .title-block {
 		top: 168px;
 	}
