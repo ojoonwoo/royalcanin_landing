@@ -2468,10 +2468,6 @@ video::-webkit-media-controls-fullscreen-button {
 	} */
 }
 @media screen and (max-height: 850px) {
-	.content .section._01 {
-		/* height: auto; */
-		padding: 0 0 100px;
-	}
 	.content .section._01 .title-block {
 		top: 168px;
 	}
@@ -2484,6 +2480,20 @@ video::-webkit-media-controls-fullscreen-button {
 	/* .content .section._01 .title-block .project-logo {
 		width: 116px;
 	} */
+}
+@media screen and (max-height: 750px) {
+	.content .section._01 {
+		height: auto;
+		padding: 0 0 100px;
+		min-height: 750px;
+	}
+	.content .section._01 .wrapper {
+		overflow: inherit;
+		/* height: au; */
+	}
+	.content .section._01 .cat {
+		height: 80%;
+	}
 }
 
 /* @media screen and (max-width: 340px) { */
