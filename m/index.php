@@ -161,7 +161,17 @@
                     </dl>
                 </div>
                 <img src="./images/section_03_group.jpg" alt="" class="img-group">
+<?
+    if (date('Y-m-d') < '2020-09-05') {
+?>
                 <a href="./gate.php" class="type-01" id="go-sub" onclick="gtag('event', '이벤트참여', {'event_category': '메인페이지', 'event_label': '이벤트참여_메인'});">시작하기</a>
+<?
+    }else{
+?>        
+                <a href="javascript:void(0)" class="type-01" id="go-sub" onclick="alert('이벤트가 종료 되었습니다.');gtag('event', '이벤트참여', {'event_category': '메인페이지', 'event_label': '이벤트참여_메인'});">시작하기</a>
+<?
+    }
+?>                    
                 <div class="dash-line"></div>
                 <div class="benefit-area">
                     <p class="tt">참여 혜택!</p>

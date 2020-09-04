@@ -11,6 +11,11 @@
     $result = mysqli_query($my_db, $query);
 
     $cat_info = mysqli_fetch_array($result);
+
+    if (date('Y-m-d') > '2020-09-04') {
+        exit;
+    }
+
 ?>
 <body>
     <div id="container">

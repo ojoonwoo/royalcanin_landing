@@ -3,7 +3,12 @@
 
     $serial = $mnv_f->create_serial();
 
+    
+    if (date('Y-m-d') > '2020-09-04') {
+        exit;
+    }
 ?>
+
 <body>
     <div id="container">
         <div id="header">
