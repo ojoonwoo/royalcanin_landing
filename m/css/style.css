@@ -1160,7 +1160,7 @@ select.select-box {
 	margin-bottom: 20px;
 }
 .content.__coupon .title-block .prj-title {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	text-align: center;
 	font-size: 0;
 }
@@ -1172,7 +1172,7 @@ select.select-box {
 }
 .content.__coupon .title-block .subject {
 	font-size: 27px;
-	/* line-height: 1.3; */
+	line-height: 1;
 	letter-spacing: -0.05em;
 	color: #e3001a;
 }
