@@ -5,10 +5,7 @@
 ?>
 <body>
     <div id="container">
-        <div class="content _sub __gate">
-            <?php
-            include_once "./sub_header.php";
-            ?>
+        <div class="content _sub __coupon">
             <div class="title-block">
                 <div class="prj-title">
                     <img src="./images/project_logo.svg" class="project-logo" alt="고양이 주치의 프로젝트">
