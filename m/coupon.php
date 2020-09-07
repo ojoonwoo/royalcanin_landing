@@ -36,6 +36,7 @@
                     <dt>사용 가능 병원</dt>
                     <dd>000 동물 병원</dd>
                 </dl>
+                <span>(이외 동물병원은 검진이 불가합니다.)</span>
             </div>
             <a href="javascript:void(0)" class="type-01 go-next" id="go-next" onclick="gtag('event', '이벤트참여', {'event_category': '게이트페이지', 'event_label': '이벤트참여_게이트'});">다음으로</a>
         </div>
