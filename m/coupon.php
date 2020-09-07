@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="cat-block">
-                <img src="./images/gate_cat.jpg" alt="고양이">
+                <img src="./images/coupon_gift_1.png" alt="10만원 상당 건강검진 상품권">
             </div>
             <div class="input-wrapper">
                 <div class="message">

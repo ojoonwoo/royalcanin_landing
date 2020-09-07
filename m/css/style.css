@@ -1175,6 +1175,7 @@ select.select-box {
 	line-height: 1;
 	letter-spacing: -0.05em;
 	color: #e3001a;
+	padding-bottom: 25px;
 }
 .content.__coupon .title-block .sub-title {
 	font-size: 21px;
