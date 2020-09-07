@@ -23,109 +23,21 @@
             <div class="cat-block">
                 <img src="./images/coupon_gift_1.png" alt="10만원 상당 건강검진 상품권">
             </div>
-            <div class="input-wrapper">
-                <div class="message">
-                    세심한 관찰이 필요한<br><b>반려묘 정보를 입력</b>해 주세요
-                </div>
-                <div class="input-group">
-                    <label for="cat-name">반려묘 이름</label>
-                    <input type="text" id="cat-name" class="input-text" placeholder="반려묘 이름을 입력해주세요.">
-                </div>
-                <div class="input-group">
-                    <label for="cat-age">반려묘 출생년도</label>
-                    <select id="cat-age" class="select-box">
-                        <option value="2000">2000</option>
-                        <option value="2001">2001</option>
-                        <option value="2002">2002</option>
-                        <option value="2003">2003</option>
-                        <option value="2004">2004</option>
-                        <option value="2005">2005</option>
-                        <option value="2006">2006</option>
-                        <option value="2007">2007</option>
-                        <option value="2008">2008</option>
-                        <option value="2009">2009</option>
-                        <option value="2010">2010</option>
-                        <option value="2011">2011</option>
-                        <option value="2012">2012</option>
-                        <option value="2013">2013</option>
-                        <option value="2014">2014</option>
-                        <option value="2015">2015</option>
-                        <option value="2016">2016</option>
-                        <option value="2017">2017</option>
-                        <option value="2018">2018</option>
-                        <option value="2019">2019</option>
-                        <option value="2020">2020</option>
-                        <option value="" selected>선택해주세요</option>
-                    </select>
-                </div>
-                <div class="radio-wrap">
-                    <span>최근 1년 내 동물병원에 방문한 적 있나요?</span>
-                    <div>
-                        <!-- <button type="button" class="fake-radio is-active">Y</button> -->
-                        <button type="button" class="fake-radio">Y</button>
-                        <button type="button" class="fake-radio">N</button>
-                    </div>
-                </div>
-                <div class="agree-wrap">
-                    <button type="button" class="chk-trigger">
-                        <span class="chk-shape"></span>
-                        <span class="text">개인정보 수집 및 마케팅 활용에 동의 (필수)</span>
-                    </button>
-                    <!-- <button type="button" class="chk-trigger">
-                        <span class="chk-shape"></span>
-                        <span class="text">마케팅 활용에 동의합니다.</span>
-                    </button> -->
-                </div>
+            <div class="info-block">
+                <dl>
+                    <dt>쿠폰 혜택</dt>
+                    <dd>건강검진 10만원권</dd>
+                </dl>
+                <dl>
+                    <dt>사용 기간</dt>
+                    <dd>2020.9.15 ~ 2020.12.31</dd>
+                </dl>
+                <dl>
+                    <dt>사용 가능 병원</dt>
+                    <dd>000 동물 병원</dd>
+                </dl>
             </div>
             <a href="javascript:void(0)" class="type-01 go-next" id="go-next" onclick="gtag('event', '이벤트참여', {'event_category': '게이트페이지', 'event_label': '이벤트참여_게이트'});">다음으로</a>
-            <!-- 팝업 결정 나면 작업 -->
-            <div class="popup _agree" id="agree-popup">
-                <div class="inner">
-                    <button type="button" class="popup-close" data-popup="@close"></button>
-                    <div class="agree-wrap">
-                        <div class="block">
-                            <h5>개인 정보 수집 활용 동의</h5>
-                            <p>
-                                로얄캐닌코리아(이하 ‘회사’라 칭함) 이벤트 진행을 위한 개인 정보 수집
-                                이용을 위하여 다음과 같이 귀하의 동의를 받고자 합니다.<br />회사는 보다
-                                원활한 서비스 제공을 위하여 고객의 정보를 수집하고 있습니다.<br />고객의
-                                정보는 이벤트 서비스에 참여하기 위한 필수 정보로서 제공을 원하지
-                                않을 경우 수집하지 않으며, 동의 거부 시 이벤트 참여에 제한을 받을 수
-                                있습니다.<br />회사는 본 이벤트를 위하여 다음과 같이 고객님의 개인 정보를
-                                수집 및 이용합니다.<br />> 수집 ∙ 이용 목적 : 이벤트 혜택을 제공하기 위한
-                                정보 전달 : 이벤트 혜택 이용에 따른 본인확인, 고지사항 전달<br />> 수집 필수
-                                항목 : 이름, 휴대 전화번호, 주소<br />> 보유/이용기간 : 이벤트 종료 후 1년까지
-                                (단, 관계 법령에 따라 필요한 경우 해당 법률에서 정한 기간까지)
-                            </p>
-                        </div>
-                        <div class="block">
-                            <h5>제 3자 개인 정보 취급 위탁 동의</h5>
-                            <p>
-                                로얄캐닌코리아(이하 ‘회사’라 칭함)는 서비스 향상과 원활한 진행을
-                                위하여 개인 정보 처리 업무를 외부 전문 업체에 위탁하여 처리하고
-                                있습니다.<br />고객은 아래와 같은 개인 정보 취급 위탁에 동의하지 않을
-                                권리가 있으며 동의 거부 시 이벤트 참여에 제한을 받을 수 있습니다.<br />> 
-                                취급 위탁업체 / 위탁업무 및 이용목적 : 미니버타이징(주) / 이벤트 대행
-                                및 운영<br />> 취급 위탁업체 / 위탁업무 및 이용목적 : 로얄캐닌 각 협업 
-                                동물병원 지점 / 이벤트 경품 제공 및 서비스 제공<br />> 보유 및 이용기간 : 
-                                이벤트 종료 후 1년까지 (단, 관계 법령에 따라 필요한 경우 해당 법률에서 
-                                정한 기간까지)
-                            </p>
-                        </div>
-                        <div class="block">
-                            <h5>마케팅 활용 수신 동의</h5>
-                            <p>
-                                로얄캐닌코리아(이하 ‘회사’라 칭함)는 수집된 개인 정보를 이용하여
-                                각종 서비스•상품 및 타사 서비스와 결합된 상품에 대하여 홍보, 가입
-                                권유, 프로모션, 이벤트 목적으로 본인에게 정보/광고를 전화, SMS, 
-                                MMS, 이메일, 우편 등을 통해 전달 합니다.<br />회사는 마케팅 / 홍보를 위하여 
-                                고객의 개인 정보 이용에 동의를 구하며, 동의 거부 시 이벤트 참여와 
-                                이벤트 정보 안내 등 서비스 제한이 있을 수 있습니다.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div id="footer">
             <span class="for-a11y">Copyright © 2020. ROYAL CANIN all rights reserved.</span>
