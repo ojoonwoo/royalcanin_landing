@@ -1204,19 +1204,22 @@ select.select-box {
 	margin: 0 auto;
 }
 .content.__coupon .info-block {
-	text-align: center;
+	text-align: left;
 	font-size: 0;
+	width: 89.3%;
+	margin: 5px auto 0;
 }
 .content.__coupon .info-block dl {
-	display: inline-block;
+	/* display: inline-block; */
 	font-size: 0;
+	margin-top: 5px;
 }
 .content.__coupon .info-block dl:first-child {
-	margin-right: 8px;
+	margin: 0;
 }
 .content.__coupon .info-block dl dt {
 	display: inline-block;
-	font-size: 11px;
+	font-size: 15px;
 	font-weight: 700;
 	color: #ffffff;
 	letter-spacing: -0.05em;
@@ -1228,7 +1231,7 @@ select.select-box {
 }
 .content.__coupon .info-block dl dd {
 	display: inline-block;
-	font-size: 11px;
+	font-size: 15px;
 	font-weight: 700;
 	letter-spacing: -0.05em;
 	vertical-align: middle;
