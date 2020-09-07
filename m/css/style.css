@@ -1154,7 +1154,7 @@ select.select-box {
 	margin-top: 34px;
 }
 .content.__coupon {
-	padding-bottom: 35px;
+	padding: 40px 0 35px;
 }
 .content.__coupon .title-block {
 	margin-bottom: 20px;
@@ -1167,6 +1167,8 @@ select.select-box {
 .content.__coupon .title-block .prj-title .project-logo {
 	width: 47px;
 	height: 47px;
+	display: block;
+	margin: 0 auto;
 }
 
 .content.__coupon .title-block .prj-title .text em {
