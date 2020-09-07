@@ -14,7 +14,10 @@
                     </span>
                 </div>
                 <div class="subject">
-                    반려묘가 보이는 행동으로<br><b>주치의력을 테스트해보세요!</b>
+                    건강검진권 모바일 쿠폰
+                </div>
+                <div class="sub-title">
+                    반려묘에게<br /><b>건강함을 선물하세요</b>
                 </div>
             </div>
             <div class="cat-block">
