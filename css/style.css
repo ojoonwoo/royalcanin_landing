@@ -2,6 +2,9 @@
 	box-sizing: border-box;
 	outline: 0 none;
 }
+html {
+	font-size: 10px;
+}
 html,
 body {
 	background-color: #ffffff;
@@ -9,29 +12,40 @@ body {
 	padding: 0;
 	width: 100%;
 	line-height: 1;
+	overflow: scroll;
 }
 img {
 	display: block;
-	width: 100%;
+	/* width: 100%; */
 	margin: 0 auto;
 }
 
 .container {
-	max-width: 80%;
+	/* max-width: 1400px; */
 	margin: 0 auto;
+	text-align: center;
+}
+.container .wrapper {
+	/* max-width: 500%; */
+	display: inline-block;
 }
 .container img {
-	width: 1400px;
+	/* width: 1400px; */
+	width: 140rem;
 	margin: 0 auto 0 0;
 }
-.container img.single {
-	width: 700px;
+.pg5 .container img,
+.pg5 .container video {
+	width: 100rem;
 }
 
-@media screen and (max-width: 1400px) {
+.container img.single {
+	width: 70rem;
+	/* width: 700px; */
+}
+
+@media screen and (max-width: 700px) {
 	.container {
-		width: 100%;
-		max-width: none;
 	}
 	.container img {
 		width: 100%;
