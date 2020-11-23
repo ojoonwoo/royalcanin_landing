@@ -39,13 +39,24 @@ img {
 	width: 100rem;
 }
 
+.pg6 .flex-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	width: 140rem;
+}
+
+.pg6 .wrapper img {
+	width: 50%;
+}
+
 .container img.single {
 	width: 70rem;
 	/* width: 700px; */
 }
 
 @media screen and (max-width: 700px) {
-	.container img {
+	.container img,
+	.pg6 .flex-wrap {
 		width: 100%;
 	}
 	.container img.single {
