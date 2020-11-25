@@ -57,6 +57,9 @@ img {
 .scale-up-25 img {
 	width: 175rem;
 }
+.scale-up-25 img.single {
+	width: 87.5rem;
+}
 
 @media screen and (max-width: 700px) {
 	.container img,
